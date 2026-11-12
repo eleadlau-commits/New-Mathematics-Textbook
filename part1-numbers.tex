@@ -59,6 +59,7 @@
   \node[sys] (Wv)  at (4.6,-12.0) {waves on\\[-1pt]the circle};
   \node[sys] (Lz)  at (4.6,-13.4) {$\ell^2(\Z)$};
   \node[sys] (Ct)  at (-4.0,-12.0) {complex\\[-1pt]tangents};
+  \node[sys] (Rs)  at (-0.8,-13.4) {residues};
   % arrows, labelled by chapter
   \draw[ar] (N)  -- node[ch]{1}  (Z);
   \draw[ar] (Z)  -- node[ch]{2}  (Q);
@@ -91,6 +92,7 @@
   \draw[ar] (Lt) -- node[ch]{29} (Wv);
   \draw[ar] (Wv) -- node[ch]{30} (Lz);
   \draw[ar] (Iv) -- node[ch]{31} (Ct);
+  \draw[ar] (Hl) -- node[ch]{32} (Rs);
 \end{tikzpicture}
 \end{center}
 
@@ -141,6 +143,7 @@ Every arrow puts the old numbers \emph{inside} the new ones, except Chapters 3, 
 29. maps on $\mathbb{T}$ $\to$ lists on $\Z$ & survey, arrow, ladder & nothing new (questions $\widehat f(n)$) & every arrow $\mathbb{T} \to S$; the average of rungs comes back & $\times$ (becomes convolution); one rung overshoots \\
 30. $L^2(\mathbb{T})$ $\to$ $\ell^2(\Z)$ & arrow & nothing (an inside) & a matching keeping energy; $\sum 1/n^2 = \pi^2/6$ & the value at a point; ``continuous'' \\
 31. maps $\mathbb{C} \to \mathbb{C}$ $\to$ holomorphic & blur, select & flat at $a$ (Chapter 11 over $\mathbb{C}$) & tangent commutes with $i$; angles kept & angles, where $f' = 0$ \\
+32. holomorphic maps $\to$ closed $f\,dz$ & arrow & nothing new (Chapter 16's blur) & Cauchy; the residue as a normal form & loop integrals, for $\bar z$; ``no hole'' \\
 \end{longtable}
 }
 
@@ -3302,4 +3305,74 @@ So near every $b \ne 0$ there is a map $\log$ with $\exp(\log z) = z$ and $\log'
 \item[\lab{E3}] Compute the derivative of $z^3$ in $\mathbb{C}[\varepsilon]$: expand $(a + \varepsilon)^3$.
 \item[\lab{E4}] At which points does $z^2 + 2z$ keep angles?
 \item[\lab{E5}] Show that $\exp$ cannot be inverted on all of $\mathbb{C} \setminus \{0\}$ by one map, though T3 inverts it near every point. (Chapter 16 counts the turns.)
+\end{lines}
+
+\newpage
+
+%% ==================================================================
+%%  Chapter 32  (Cauchy as a Survives line of Stokes)
+%% ==================================================================
+\section*{Chapter 32. Loops around a holomorphic map}
+\phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter 32. Loops around a holomorphic map \quad holomorphic maps $\to$ closed forms $f\,dz$}{Chapter 32. Loops around a holomorphic map}}
+\begin{center}
+{\normalsize holomorphic maps $\to$ closed forms $f\,dz$ \quad$\cdot$\quad from: Chapters 15, 16, 31 \quad$\cdot$\quad arrow}\\[4pt]
+{\small A map is holomorphic exactly when $f\,dz$ is closed. Then Chapter 16 applies as it stands: loop integrals are kept when a loop is deformed, and around one hole only one number survives.}
+\end{center}
+
+No new blur. One arrow, $f \mapsto f\,dz$, from Chapter 31 into the closed forms of Chapter 15. Everything else is Chapter 16 read through that arrow.
+
+\subsection*{Given}
+
+\begin{lines}
+\item[\lab{G1}] (Chapter 31.) $H(U)$; T1: $\partial_x u = \partial_y v$, $\partial_y u = -\partial_x v$.
+\item[\lab{G2}] (Chapter 15.) $d$, closed and exact forms; T4: on a ball every closed form is exact.
+\item[\lab{G3}] (Chapter 16.) Integrals over paths; T1 (Stokes); T3; the blur B1/B2 and P2 ($H^1$: a closed 1-form is known up to exact forms by its loop integrals); T5 (one hole); T6 (turns are whole).
+\item[\lab{G4}] (To be checked when proofs are written.) Chapters 15 and 16 ask for smooth coefficients. For 1-forms, Stokes (Chapter 16, T1 with $k = 2$) and Chapter 15, T4 use only first derivatives of the coefficients. Chapter 33 shows holomorphic maps are smooth in any case.
+\end{lines}
+
+\subsection*{Definitions}
+
+\begin{lines}
+\item[\lab{D1}] For $f = u + iv$ on $U$: \ $f\,dz := (u\,dx - v\,dy) + i\,(v\,dx + u\,dy)$, a pair of real 1-forms. It is \emph{closed} (\emph{exact}) when both are. \ $\int_\gamma f\,dz := \int_\gamma (u\,dx - v\,dy) + i \int_\gamma (v\,dx + u\,dy)$.
+\item[\lab{D2}] For $a$ in $\mathbb{C}$ and $r > 0$, the circle $\gamma_{a,r}(t) := a + r\,w(t)$, $0 \le t \le 1$.
+\end{lines}
+
+\subsection*{Theorems}
+
+\begin{lines}
+\item[\lab{T1}] (The arrow.) $f$ is in $H(U)$ \ $\iff$ \ $f\,dz$ is closed on $U$. \\
+($d(u\,dx - v\,dy) = -(\partial_x v + \partial_y u)\,dx \wedge dy$ and $d(v\,dx + u\,dy) = (\partial_x u - \partial_y v)\,dx \wedge dy$. Both vanish exactly when Chapter 31, T1 holds.)
+\item[\lab{T2}] (No hole: Cauchy.) If $U$ is a ball (or any region with $H^1(U) = 0$) and $f$ is in $H(U)$, then $\int_\gamma f\,dz = 0$ for every loop $\gamma$ in $U$, and $f = F'$ for some $F$ in $H(U)$. \ (T1, Chapter 15, T4, Chapter 16, T3. $F$ is holomorphic because $dF = f\,dz$ says its tangent is ``multiply by $f$''.)
+\item[\lab{T3}] (Survives: deforming a loop.) If two loops in $U$ are the two ends of a 2-cube in $U$ whose side edges cancel, their integrals of $f\,dz$ agree. \ (Chapter 16, T1: $\int$ over the edge of the 2-cube is $\int$ of $d(f\,dz) = 0$.)
+\item[\lab{T4}] (One hole: the residue appears.) On $U = \mathbb{C} \setminus \{a\}$, \[ \frac{dz}{z - a} = d \log|z - a| \;+\; i\,\theta_a , \] with $\theta_a$ the turning form of Chapter 16, T5 moved to $a$. So every closed $f\,dz$ on $U$ is glued (Chapter 16, B1) to exactly one $c\,\dfrac{dz}{z - a}$, and \[ c = \frac{1}{2\pi i} \int_{\gamma_{a,r}} f\,dz \] for any $r$. Name $c$ the \emph{residue} $\operatorname{res}_a f$. It is the normal-form coordinate of $H^1(U)$, not a computing trick.
+\item[\lab{T5}] (Cauchy's formula: the residue of $f/(z - a)$ is $f(a)$.) If $f$ is holomorphic on a disc $D$ holding $\gamma_{a,r}$ and $a$, then \[ f(a) = \frac{1}{2\pi i} \int_{\gamma_{a,r}} \frac{f(z)}{z - a}\,dz . \] (The integral does not depend on $r$ (T3). Split $f(z) = f(a) + (f(z) - f(a))$. The first part gives $f(a)$ (T4). The second has $|(f(z) - f(a))/(z - a)|$ bounded near $a$, so its integral is at most $2\pi r$ times a bound, which comes near $0$ as $r$ shrinks; being independent of $r$, it is $0$.) \\
+For a loop $\gamma$ in $D \setminus \{a\}$ turning $n$ times around $a$, the integral is $2\pi i\, n\, f(a)$ (Chapter 16, T6).
+\item[\lab{T6}] (At most one: the edge decides the inside.) Two maps holomorphic on a disc that agree on a circle in it agree at every point inside that circle. \ (T5.)
+\end{lines}
+
+\subsection*{Propositions}
+
+\begin{lines}
+\item[\lab{P1}] (The powers.) $\int_{\gamma_{0,1}} z^n\,dz = 0$ for every $n$ in $\Z$ except $n = -1$, where it is $2\pi i$. For $n \ge 0$ this is T2; for $n \le -2$, $z^n = (z^{n+1}/(n+1))'$ on $\mathbb{C} \setminus \{0\}$.
+\item[\lab{P2}] (Dies: $\bar z$.) $\bar z\,dz$ is not closed, and $\int_{\gamma_{0,r}} \bar z\,dz = 2\pi i\,r^2 \ne 0$. T2 needs the Select of Chapter 31.
+\item[\lab{P3}] (Dies: the hole.) $1/z$ is holomorphic on $\mathbb{C} \setminus \{0\}$ and $\int_{\gamma_{0,1}} dz/z = 2\pi i$. So T2 needs ``no hole''; and $1/z$ has no antiderivative on all of $\mathbb{C} \setminus \{0\}$: there is no one $\log$ there.
+\end{lines}
+
+\subsection*{Remarks}
+
+\begin{lines}
+\item[\lab{R1}] (What the method did.) Cauchy's theorem is Stokes plus one line (T1). The residue is a normal form (T4). Cauchy's formula is ``the bounded part dies on small circles'' (T5). No new idea was needed beyond Chapters 15, 16 and 31.
+\item[\lab{R2}] (Avoided.) The Jordan curve theorem: loops are counted by turns (Chapter 16, T6), never by ``inside''.
+\item[\lab{R3}] (Old names.) T1: $f$ holomorphic iff $f\,dz$ closed. T2: Cauchy's theorem (Cauchy--Goursat), primitives. T3: homotopy invariance. T4: residue; $H^1$ of the punctured plane. T5: Cauchy's integral formula; $n$: winding number. T6: a case of the identity theorem.
+\item[\lab{R4}] (Machine check, \texttt{checks/ch32-check.py}.) T1 symbolically for polynomials, $\exp$, $1/z$; P1 for $-5 \le n \le 5$; P2; P3; T4 residues of three maps on several radii; T5 for $\exp$, $\cos$, $1/(z - 3)$ at random points; T3 on a family of squashed loops.
+\end{lines}
+
+\subsection*{Exercises}
+
+\begin{lines}
+\item[\lab{E1}] Compute $\int_{\gamma_{0,2}} e^z/(z - 1)\,dz$ by T5.
+\item[\lab{E2}] Find the residue of $1/(z^2 + 1)$ at $i$. (Write it as $g(z)/(z - i)$.)
+\item[\lab{E3}] Check T1 for $f = z^2$ by writing $u$ and $v$.
+\item[\lab{E4}] Show that $\int_{\gamma_{0,2}} dz/(z^2 + 1) = 0$, using E2 and the residue at $-i$.
+\item[\lab{E5}] Why does T5 not say anything for $\gamma_{a,r}$ when $f$ is only holomorphic on $D \setminus \{a\}$?
 \end{lines}
