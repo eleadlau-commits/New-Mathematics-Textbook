@@ -67,10 +67,8 @@ II.1 The table & systems and tests & ring, field, complete \\
 II.2 Congruences over any ring & one variable row $K$ & ideals; a blur is known by its zero bag \\
 II.3 Vector spaces & a second table; one variable row $V$ & subspaces; dimension as a normal form \\
 II.4 Metric spaces & a third table; one variable row $X$ & complete, compact; what $\cong_{\mathrm{pt}}$ and $\cong_{\mathrm{u}}$ keep \\
-II.5 Modules \emph{(planned)} & one ring acting & ideals and subspaces as one \\
-II.6 Arrows \emph{(planned)} & maps between systems & every arrow is a blur, then an inside \\
-II.7 One class at a time \emph{(planned)} & one class & theorems true in every row at once \\
-II.8 Machines \emph{(planned)} & maps between classes & closing up; the nearest row in a class \\
+II.5 Chapters I.2, I.7, I.14 again & any ring & every equation survives; every ``there is'' needs a condition \\
+II.6 Sizes on vector spaces & a fourth table; rows $\R^n$, $C$, $L^1$, $L^2$, $\ell^2$ & normed, Banach, Hilbert; the parallelogram law \\
 \end{tabular}
 }
 \end{center}
@@ -109,6 +107,24 @@ II.8 Machines \emph{(planned)} & maps between classes & closing up; the nearest 
 \end{tikzpicture}
 \end{center}
 Every compact row is complete (Chapter II.4, T1), so compact sits below complete. $\Z_p$ and $\mathsf{three}$ are in all four classes.
+
+\textbf{A fourth table.} Chapter II.6 crosses the second and third: $+$, scaling and a size.
+
+\begin{center}
+\begin{tikzpicture}[
+    x=1cm, y=1cm,
+    cls/.style={font=\small, inner sep=2pt, align=center},
+    tst/.style={font=\scriptsize, fill=white, inner sep=1pt},
+    ar/.style={-{Stealth[length=4pt]}, thin}]
+  \node[cls] (Nm) at (0, 0)    {normed space\\[-1pt]{\scriptsize all seven rows}};
+  \node[cls] (Bn) at (0,-1.6)  {Banach space\\[-1pt]{\scriptsize $\R^n_2,\ \R^n_\infty,\ C_\infty,\ L^1,\ L^2,\ \ell^2$}};
+  \node[cls] (Hb) at (0,-3.2)  {Hilbert space\\[-1pt]{\scriptsize $\R^n_2,\ L^2,\ \ell^2$}};
+  \draw[ar] (Nm) -- node[tst]{$+\,\mathsf{complete}$} (Bn);
+  \draw[ar] (Bn) -- node[tst]{$+\,\mathsf{par}$} (Hb);
+\end{tikzpicture}
+\end{center}
+
+Modules, arrows, counting in every finite row, and machines between classes were once planned for this part. They need moves kept, not forgotten, so they are written in the next book.
 
 \textbf{Axioms.} None. The Given of Part II is Part I.
 
@@ -692,4 +708,119 @@ A rerun chapter, in the style of II.2: the Given of three Part I chapters is rep
 \item[\lab{E2}] Divide $x^3 + 2x + 1$ by $x^2 + 1$ in $(\Z/3)[x]$.
 \item[\lab{E3}] Which $2 \times 2$ matrices over $\Z$ have an inverse over $\Z$? Give the rule by P11.
 \item[\lab{E4}] Check P12 for $A = \begin{pmatrix} a & b \\ c & d \end{pmatrix}$ by hand.
+\end{lines}
+
+\newpage
+
+%% ==================================================================
+%%  II.6  (normed spaces)
+%% ==================================================================
+\section*{Chapter II.6. Sizes on vector spaces}
+\phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter II.6. Sizes on vector spaces \quad vector spaces with a size $\to$ classes}{Chapter II.6. Sizes on vector spaces}}
+\begin{center}
+{\normalsize vector spaces with a size $\to$ classes \quad$\cdot$\quad from: Chapters I.13, I.20, I.27, I.28, I.30, II.3, II.4 \quad$\cdot$\quad table, class, blur}\\[4pt]
+{\small Chapters II.3 and II.4 together: rows with $+$, scaling and a size. One law, the parallelogram, sorts the rows that have right angles; and in finitely many directions every size is glued to every other.}
+\end{center}
+
+\subsection*{Given}
+
+Part I, and Chapters II.3, II.4. A system here is a vector space over $\R$ (II.3) with a map $x \mapsto |x|$ to $\R$, its \emph{size}.
+
+\subsection*{The rows}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+{\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{3.6cm} >{\raggedright\arraybackslash}p{6.8cm} l@{}}
+\textbf{Row} & \textbf{size} & \textbf{from} \\ \hline
+$\R^n_2$ & $\sqrt{x_1^2 + \dots + x_n^2}$ & I.6, I.13 \\
+$\R^n_\infty$ & $\max |x_i|$ & I.6 \\
+$C_\infty$ & $C[b,c]$ with the largest value of $|f|$ & I.20 \\
+$C_2$ & $C[b,c]$ with $\sqrt{\int_b^c f^2}$ & I.12, I.28 \\
+$L^1$ & $\int |f|$ & I.27 \\
+$L^2$ & $\sqrt{\int f^2}$ & I.28 \\
+$\ell^2$ & $\sqrt{\sum a_n^2}$ on lists indexed by $\Z$ & I.30 \\
+\end{tabular}
+}
+\end{center}
+
+\subsection*{Tests}
+
+\begin{lines}
+\item[\lab{D1}] $\mathsf{size}$: \ $|x| \ge 0$, and $= 0$ only for $x = 0$; \ $|rx| = |r|\,|x|$; \ $|x + y| \le |x| + |y|$. Then $d(x, y) := |x - y|$ passes $\mathsf{dist}$ of II.4.
+\item[\lab{D2}] $\mathsf{par}$ (the parallelogram): \ $|x + y|^2 + |x - y|^2 = 2|x|^2 + 2|y|^2$.
+\item[\lab{D3}] $\mathsf{complete}$: as in II.4, for $d$ of D1.
+\item[\lab{D4}] $\mathsf{findim}$: as in II.3.
+\item[\lab{D5}] $\mathsf{ball}$: the closed ball $|x| \le 1$ passes $\mathsf{compact}$ of II.4.
+\end{lines}
+
+\subsection*{The table}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+{\small
+\setlength{\tabcolsep}{6pt}
+\begin{tabular}{l|ccccc}
+ & $\mathsf{size}$ & $\mathsf{par}$ & $\mathsf{complete}$ & $\mathsf{findim}$ & $\mathsf{ball}$ \\ \hline
+$\R^n_2$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ \\
+$\R^n_\infty$ ($n \ge 2$) & $\checkmark$ & $\cdot$ & $\checkmark$ & $\checkmark$ & $\checkmark$ \\
+$C_\infty$ & $\checkmark$ & $\cdot$ & $\checkmark$ & $\cdot$ & $\cdot$ \\
+$C_2$ & $\checkmark$ & $\checkmark$ & $\cdot$ & $\cdot$ & $\cdot$ \\
+$L^1$ & $\checkmark$ & $\cdot$ & $\checkmark$ & $\cdot$ & $\cdot$ \\
+$L^2$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\cdot$ & $\cdot$ \\
+$\ell^2$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\cdot$ & $\cdot$ \\
+\end{tabular}
+}
+\end{center}
+
+Where each entry comes from:
+\begin{lines}
+\item[\lab{P1}] ($\mathsf{size}$.) The triangle law: for $\R^n_2$, $C_2$, $L^2$, $\ell^2$ by Cauchy--Schwarz (I.28); for the others place by place, or by $\int$ keeping $\le$ (I.12, I.27).
+\item[\lab{P2}] ($\mathsf{par}$.) Passes wherever the size comes from $\langle\,,\rangle$ (I.28): expand both sides. Fails in $\R^2_\infty$ with $(1, 0)$, $(0, 1)$: $1 + 1 \ne 2 + 2$. Fails in $C_\infty$ on $[0, 1]$ with $1$ and $x$: $4 + 1 \ne 2 + 2$. Fails in $L^1$ on $[0, 1]$ with the two halves: $1 + 1 \ne \tfrac12 + \tfrac12$.
+\item[\lab{P3}] ($\mathsf{complete}$.) $\R^n$: I.4 place by place. $C_\infty$: I.20, T1. $L^1$, $L^2$, $\ell^2$: I.27, I.28, I.30 (they were built as closings-up, II.4, T3). $C_2$ fails: ramps rising from $0$ to $1$ ever more steeply at the middle come near themselves in mean square, and near the step, which is not continuous.
+\item[\lab{P4}] ($\mathsf{ball}$.) $\R^n$: closed and bounded (I.13, T7). In $\ell^2$ the lists $e_k$ (one $1$, the rest $0$) are all $\sqrt2$ apart: no part comes near anything. In $C_\infty$, $C_2$, $L^1$, $L^2$: the waves $\sqrt2 \sin(2\pi k x)$ on $[0, 1]$, or tents of height $1$ on disjoint stretches, do the same.
+\end{lines}
+
+\subsection*{Appears}
+
+\begin{lines}
+\item[\lab{N1}] $\operatorname{class}(\mathsf{size})$: every row. \emph{Normed space.}
+\item[\lab{N2}] $\operatorname{class}(\mathsf{size}, \mathsf{complete})$: all but $C_2$. \emph{Banach space.}
+\item[\lab{N3}] $\operatorname{class}(\mathsf{size}, \mathsf{par}, \mathsf{complete})$: $\R^n_2$, $L^2$, $\ell^2$. \emph{Hilbert space.}
+\end{lines}
+
+\subsection*{Theorems}
+
+\begin{lines}
+\item[\lab{T1}] ($\mathsf{par}$ is the whole of right angles.) A size passing $\mathsf{par}$ comes from exactly one $\langle\,,\rangle$ with the laws of I.28, namely \[ \langle x, y \rangle := \tfrac14 \big( |x + y|^2 - |x - y|^2 \big) . \] (At most one: expand. At least one: symmetry is clear; $\langle x + x', y\rangle = \langle x, y\rangle + \langle x', y\rangle$ from $\mathsf{par}$ applied four times; scaling by whole numbers, then fractions, then all reals by nearness, I.5. Classical; the middle step is written when proofs are written.)
+\item[\lab{T2}] (In finitely many directions, every size is glued to every other.) On $\R^n$, for any two sizes there are $c, C > 0$ with $c\,|x| \le |x|' \le C\,|x|$ for all $x$. \ (Compare each with $|\,|_2$. $|x| \le \sum |x_i|\,|e_i| \le B\,|x|_2$. The other way: $|\,|$ is continuous for $|\,|_2$ by the first step, so it has a lowest value $c > 0$ on the sphere $|x|_2 = 1$ (I.13, T7), and scale.) For $\R^n_\infty$ and $\R^n_2$: $c = 1$, $C = \sqrt n$.
+\item[\lab{T3}] (Dies without $\mathsf{findim}$.) On $C[0, 1]$, $|\,|_\infty$ and $\int |f|$ are not within constant factors: a tent of height $1$ and width $2/k$ has largest value $1$ and integral $1/k$.
+\item[\lab{T4}] (Appears in a Hilbert row: arrows to $\R$ are right-angle questions.) In a row of N3, every linear arrow $\phi$ to $\R$ with $|\phi(x)| \le C|x|$ is $x \mapsto \langle x, y\rangle$ for exactly one $y$. \ (If $\phi \ne 0$: its zero bag $Z$ is closed; take $w \notin Z$ and its nearest point $z$ in $Z$ (I.28); $u = w - z$ is at right angles to $Z$; then $y = \phi(u)\, u / |u|^2$. At most one: $\langle x, y - y'\rangle = 0$ for all $x$, take $x = y - y'$.)
+\item[\lab{T5}] (The two infinite Hilbert rows are one.) $L^2(\mathbb{T})$ and $\ell^2$ are matched by a linear arrow keeping size: the list of Fourier coefficients (I.30). Every Hilbert row with a countable list whose span is dense is $\R^n_2$ or $\ell^2$ (classical, reported).
+\end{lines}
+
+\subsection*{Blur: glue two rows by an arrow}
+
+\begin{lines}
+\item[\lab{D6}] $X \cong Y$: there is a linear matching $h : X \to Y$ and $c, C > 0$ with $c|x| \le |hx| \le C|x|$. A blur on rows (as II.4, P6).
+\item[\lab{P5}] (Survives.) $\mathsf{complete}$, $\mathsf{findim}$, $\mathsf{ball}$. \ ($h$ and its inverse carry sequences that come near themselves to such sequences.)
+\item[\lab{P6}] (Dies: $\mathsf{par}$.) $\R^2_\infty \cong \R^2_2$ (T2), and only one passes $\mathsf{par}$. Right angles are not a question about nearness; they need the size itself kept ($c = C = 1$).
+\item[\lab{P7}] (Normal form among finite rows.) Each bag of finite rows holds exactly one $\R^n_2$, $n = \dim$ (T2 and II.3, T2). Among infinite rows there is no such normal form: $C_\infty$, $L^1$ and $\ell^2$ lie in three different bags (classical, reported).
+\end{lines}
+
+\subsection*{Remarks}
+
+\begin{lines}
+\item[\lab{R1}] (What the method did.) Two old tables crossed. One equation ($\mathsf{par}$) sorts the rows, and T1 says that equation is all there is to right angles. T2 is the Appears line ``in finite dimension the size does not matter''; T3 is its Dies witness.
+\item[\lab{R2}] (Old names.) Norm; normed, Banach, Hilbert spaces; D2: the parallelogram law; T1: Jordan--von Neumann, polarisation; T2: all norms on $\R^n$ are equivalent; T4: the Riesz representation theorem; T5: Parseval, separable Hilbert spaces; P4 and T2: Riesz's theorem (the closed ball is compact exactly in finite dimension).
+\item[\lab{R3}] (Machine check, \texttt{checks/p2-ch6-check.py}.) P2's three witnesses and $\mathsf{par}$ for $L^2$ and $\ell^2$ on random members; T2 for $\R^7$ on $2000$ random points; T3's tents; P3's ramps; P4's $e_k$; T1's formula on $\R^5$; T4 on $\R^5$ with a skew $\langle\,,\rangle$.
+\end{lines}
+
+\subsection*{Exercises}
+
+\begin{lines}
+\item[\lab{E1}] Find $c$ and $C$ of T2 for $\sum |x_i|$ and $|\,|_2$ on $\R^n$.
+\item[\lab{E2}] Show that $|\,|_\infty$ on $C[0, 1]$ fails $\mathsf{par}$ with any two members of disjoint support.
+\item[\lab{E3}] In $\R^3_2$, find the $y$ of T4 for $\phi(x) = x_1 - 2x_3$.
+\item[\lab{E4}] Why does T4 need $\mathsf{complete}$? Find where it fails in $C_2$.
 \end{lines}

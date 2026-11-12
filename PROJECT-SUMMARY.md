@@ -32,14 +32,14 @@ Drafts not in ch0 (E's decision): **F8 Loop** (a later chapter blurs by an actio
 
 ## 3. The book (`textbook/`)
 
-`building0-blur.pdf`: 37 chapters of Part I plus Part II.1–II.5, 146 pages; `building1-moves.pdf`: 19 chapters, 48 pages, compiled clean on 12 Nov. Repo: github.com/eleadlau-commits/new-mathematics-textbook. `build.py` assembles and checks (and compiles if pdflatex is present).
+`building0-blur.pdf`: 37 chapters of Part I plus Part II.1–II.6, 150 pages; `building1-moves.pdf`: 19 chapters, 48 pages, compiled clean on 12 Nov. Repo: github.com/eleadlau-commits/new-mathematics-textbook. `build.py` assembles and checks (and compiles if pdflatex is present).
 
 **Part I** (ch1–25): integers, rationals, congruences, reals, nearness, ℝⁿ, polynomials, circle, angles, maps and germs, derivative, integral, several variables, signed area (det), the arrow d, Stokes, orders of magnitude, divisibility, p-adics, sequences of maps, Taylor, exp, ℂ is closed, highest/lowest points, inverting a map, null sets, integrable maps, square-integrable maps, waves on the circle, the two homes of a wave (L² = ℓ²), the complex derivative, loops around a holomorphic map (Cauchy from Stokes), rigidity, poles and valuations.
 **Part II:** II.1 the table, II.2 any ring, II.3 vector spaces, II.4 metric spaces.
 
 **Imports left: three**, all in Remarks only: Weierstrass (ch20), Borel (ch21), Ostrowski (ch19). Ch29's Fejér average (a positive blur of the rungs) now gives Weierstrass, so it can be earned once proofs are written. Ch27 T3 (bags are maps, at most one) and the dominated/monotone lines are marked classical, proof deferred. FTA was de-imported in ch23. MVT became "closed stretches survive" + "rising chains" (ch11).
 
-**Leg 1 (analysis) built 12 Nov:** ch26–30. **Leg 2 (complex analysis):** ch31–34. **Leg 3 (algebra short road):** Building 1 Parts I–II, through the Smith form. **Leg 4 (elliptic curves):** Building 0 ch35–37 (plane, cubic, torus) and Building 1 Part III (group law as a blur, torus carries the law, counts over ℤ/p). **Leg 5 (rest of algebra):** Building 1 II.5–II.14, actions and Sylow through Galois and the quintic (no imports in the core; Hasse, Mordell–Weil, uniformisation reported only). Plans: `WORKPLAN-2.md` (analysis ch26–30, complex analysis C1–C4), `ALGEBRA-PATH.md` (17 chapters), elliptic-curves route (in memory, summarised below).
+**Leg 1 (analysis) built 12 Nov:** ch26–30. **Leg 2 (complex analysis):** ch31–34. **Leg 3 (algebra short road):** Building 1 Parts I–II, through the Smith form. **Leg 4 (elliptic curves):** Building 0 ch35–37 (plane, cubic, torus) and Building 1 Part III (group law as a blur, torus carries the law, counts over ℤ/p). **Leg 5 (rest of algebra):** Building 1 II.5–II.14, actions and Sylow through Galois and the quintic (no imports in the core; Hasse, Mordell–Weil, uniformisation reported only). **Leg 6 (logic):** Building 2 Part I, Proofs and Equally provable. **Building 0 II.6:** sizes on vector spaces (normed, Banach, Hilbert). Plans: `WORKPLAN-2.md` (analysis ch26–30, complex analysis C1–C4), `ALGEBRA-PATH.md` (17 chapters), elliptic-curves route (in memory, summarised below).
 
 **Proofs:** deferred by E (statements only, each checked by a script where a computer can).
 
