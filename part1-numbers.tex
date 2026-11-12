@@ -60,6 +60,7 @@
   \node[sys] (Lz)  at (4.6,-13.4) {$\ell^2(\Z)$};
   \node[sys] (Ct)  at (-4.0,-12.0) {complex\\[-1pt]tangents};
   \node[sys] (Rs)  at (-0.8,-13.4) {residues};
+  \node[sys] (Rg)  at (-0.8,-14.8) {rigid\\[-1pt]maps};
   % arrows, labelled by chapter
   \draw[ar] (N)  -- node[ch]{1}  (Z);
   \draw[ar] (Z)  -- node[ch]{2}  (Q);
@@ -93,6 +94,7 @@
   \draw[ar] (Wv) -- node[ch]{30} (Lz);
   \draw[ar] (Iv) -- node[ch]{31} (Ct);
   \draw[ar] (Hl) -- node[ch]{32} (Rs);
+  \draw[ar] (Rs) -- node[ch]{33} (Rg);
 \end{tikzpicture}
 \end{center}
 
@@ -144,6 +146,7 @@ Every arrow puts the old numbers \emph{inside} the new ones, except Chapters 3, 
 30. $L^2(\mathbb{T})$ $\to$ $\ell^2(\Z)$ & arrow & nothing (an inside) & a matching keeping energy; $\sum 1/n^2 = \pi^2/6$ & the value at a point; ``continuous'' \\
 31. maps $\mathbb{C} \to \mathbb{C}$ $\to$ holomorphic & blur, select & flat at $a$ (Chapter 11 over $\mathbb{C}$) & tangent commutes with $i$; angles kept & angles, where $f' = 0$ \\
 32. holomorphic maps $\to$ closed $f\,dz$ & arrow & nothing new (Chapter 16's blur) & Cauchy; the residue as a normal form & loop integrals, for $\bar z$; ``no hole'' \\
+33. holomorphic maps $\to$ germs & blur & nothing (the germ blur is equality) & power series; Liouville; highest point only on the edge & rigidity, without ``one piece'' \\
 \end{longtable}
 }
 
@@ -3375,4 +3378,80 @@ For a loop $\gamma$ in $D \setminus \{a\}$ turning $n$ times around $a$, the int
 \item[\lab{E3}] Check T1 for $f = z^2$ by writing $u$ and $v$.
 \item[\lab{E4}] Show that $\int_{\gamma_{0,2}} dz/(z^2 + 1) = 0$, using E2 and the residue at $-i$.
 \item[\lab{E5}] Why does T5 not say anything for $\gamma_{a,r}$ when $f$ is only holomorphic on $D \setminus \{a\}$?
+\end{lines}
+
+\newpage
+
+%% ==================================================================
+%%  Chapter 33  (rigidity)
+%% ==================================================================
+\section*{Chapter 33. Rigidity}
+\phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter 33. Rigidity \quad holomorphic maps $\to$ their germs}{Chapter 33. Rigidity}}
+\begin{center}
+{\normalsize holomorphic maps $\to$ their germs \quad$\cdot$\quad from: Chapters 10, 20, 21, 23, 32 \quad$\cdot$\quad blur}\\[4pt]
+{\small Over $\R$ the ladder of Chapter 21 stops short of the germ. Over $\mathbb{C}$ it reaches it. So the germ blur glues nothing: holomorphic maps are as rigid as polynomials.}
+\end{center}
+
+This chapter only blurs, and the answer is that the blur glues nothing. That is a result, and every line below is a reading of it.
+
+\subsection*{Given}
+
+\begin{lines}
+\item[\lab{G1}] (Chapter 32.) $H(U)$; T3 (deforming loops); T5 (Cauchy's formula); the circles $\gamma_{a,r}$.
+\item[\lab{G2}] (Chapter 21.) The rungs $\sim_k$ (flat to order $k$), the ladder; P8: over $\R$ the bottom of the ladder is not the germ.
+\item[\lab{G3}] (Chapter 10.) The germ blur; T4: polynomials are rigid.
+\item[\lab{G4}] (Chapter 20.) T3 (comparison in $M$), T4 (power series).
+\item[\lab{G5}] (Chapter 23.) P5 (far away is large).
+\end{lines}
+
+\subsection*{The blur}
+
+On $H(U)$, $U$ an open region, $a$ in $U$. \ $O$: $+$, $\times$, $f \mapsto f'$.
+
+\begin{lines}
+\item[\lab{B1}] (From below.) The germ blur: $f \sim g$ when $f = g$ on some disc around $a$.
+\item[\lab{B2}] (From above.) The bottom of the ladder of Chapter 21 run over $\mathbb{C}$: keep every $f^{(n)}(a)$.
+\end{lines}
+
+\subsection*{Theorems}
+
+\begin{lines}
+\item[\lab{T1}] (The ladder reaches the germ.) If $f$ is holomorphic on a disc $|z - a| < R$, then on that disc \[ f(z) = \sum_{n \ge 0} c_n (z - a)^n, \qquad c_n = \frac{1}{2\pi i} \int_{\gamma_{a,r}} \frac{f(\zeta)}{(\zeta - a)^{n+1}}\, d\zeta \quad (\text{any } r < R). \] (Cauchy's formula on $\gamma_{a,r}$ with $|z - a| < r$; write $\frac{1}{\zeta - z} = \sum_n \frac{(z - a)^n}{(\zeta - a)^{n+1}}$, which comes near itself in $M$ on the circle (Chapter 20, T3); exchange sum and integral (Chapter 20, P7).)
+\item[\lab{T2}] (Smooth, for free.) A holomorphic map has derivatives of every order, all holomorphic, and $c_n = f^{(n)}(a)/n!$. \ (Chapter 20, T4: a power series may be differentiated term by term; its proof runs the same over $\mathbb{C}$, with discs for stretches.) This pays Chapter 32, G4.
+\item[\lab{T3}] (Appears: the two blurs agree, and both glue only what is equal near $a$.) $f \sim g$ \ $\iff$ \ $f^{(n)}(a) = g^{(n)}(a)$ for every $n$. \ ($\Leftarrow$: T1 on a disc.) Contrast Chapter 21, P8: over $\R$, $\exp(-1/x^2)$ and $0$ agree on every rung and are not glued.
+\item[\lab{T4}] (At most one: one piece.) If $U$ is in one piece and $f, g$ in $H(U)$ have the same germ at one point, then $f = g$ on all of $U$. \ (The points where the germs agree form an open set; by T1 so do the points where they differ; a region in one piece is not two open parts: Chapter 5, T8 along paths.) \\
+Dies without ``one piece'': $0$ on one disc and $1$ on another, apart.
+\item[\lab{T5}] (Zeros stand alone.) If $f$ in $H(U)$ is not $0$ near $a$ and $f(a) = 0$, then $f = (z - a)^k g$ with $g$ holomorphic and $g(a) \ne 0$, for exactly one $k \ge 1$. So the zeros of $f$ are apart from each other. \ (T1: $k$ is the first $n$ with $c_n \ne 0$.)
+\item[\lab{T6}] (Cauchy's bound.) If $|f| \le B$ on $\gamma_{a,r}$, then $|c_n| \le B / r^n$. \ (T1.)
+\item[\lab{T7}] (At most one: Liouville.) A holomorphic map on all of $\mathbb{C}$ with $|f| \le B$ everywhere is constant. \ (T6 with $r$ as large as one likes: $c_n = 0$ for $n \ge 1$.)
+\item[\lab{T8}] (Dies inside: the highest point.) If $U$ is in one piece and $|f|$ takes a highest value at a point $a$ of $U$, then $f$ is constant. \ ($f(a)$ is the average of $f$ over each small $\gamma_{a,r}$ (Chapter 32, T5); an average of numbers of size $\le |f(a)|$ equals $f(a)$ only if all equal $f(a)$; then T4.) \\
+This is Chapter 23, T1 again (``can be lowered''), turned upside down.
+\item[\lab{T9}] (Chapter 23 in two lines.) If a polynomial $p$ of degree $\ge 1$ had no root, $1/p$ would be holomorphic on $\mathbb{C}$ and bounded (Chapter 23, P5 outside a disc; a closed disc inside: Chapter 13, T7). By T7 it would be constant. So $p$ has a root.
+\end{lines}
+
+\subsection*{Propositions}
+
+\begin{lines}
+\item[\lab{P1}] (Survives: $+$, $\times$, $'$; the arrow to lists.) $f \mapsto (c_n)$ respects $+$, sends $\times$ to the product of lists of Chapter 7 (Cauchy product), and $'$ to $(n+1)c_{n+1}$.
+\item[\lab{P2}] (How far the list reaches.) The list of T1 comes near $f$ on every disc around $a$ inside $U$. $1/(1 + z^2)$ at $0$: the list reaches $|z| < 1$ and no further, though on $\R$ the map has no trouble at $\pm 1$. The obstruction is at $\pm i$, off the line.
+\item[\lab{P3}] (Real and imaginary parts.) $u = \operatorname{Re} f$ has $\partial_x^2 u + \partial_y^2 u = 0$, and $u(a)$ is the average of $u$ on each small circle around $a$. \ (T2 and Chapter 31, T1; Chapter 32, T5.)
+\end{lines}
+
+\subsection*{Remarks}
+
+\begin{lines}
+\item[\lab{R1}] (A ladder with a bottom.) Chapter 19: the ladder of $\Z/p^k$ has bottom $\Z_p$ and loses nothing. Chapter 21: the ladder of jets over $\R$ has a bottom that is not the germ. This chapter: over $\mathbb{C}$ the bottom is the germ. Rigidity is ``the ladder loses nothing''.
+\item[\lab{R2}] (Where existence came from.) Nowhere new. T1 is Cauchy's formula plus a series that comes near itself; every other line is an ``at most one'' or a ``dies''.
+\item[\lab{R3}] (Old names.) T1: holomorphic implies analytic (Taylor series). T2: holomorphic maps are infinitely differentiable. T4: the identity theorem; analytic continuation is unique. T5: isolated zeros. T6: Cauchy's estimates. T7: Liouville's theorem. T8: the maximum modulus principle. T9: the fundamental theorem of algebra via Liouville. P3: harmonic functions, mean value property.
+\item[\lab{R4}] (Machine check, \texttt{checks/ch33-check.py}.) T1 for $\exp$, $1/(1 - z)$, $\cos$ (coefficients by the circle integral, sums against values); T5 on $\sin(z)^2 z$; T6; T8 on random polynomials over a grid of a disc (largest $|p|$ on the edge); P2; P3.
+\end{lines}
+
+\subsection*{Exercises}
+
+\begin{lines}
+\item[\lab{E1}] Find the list of T1 for $1/(1 - z)$ at $0$ by the circle integral, and compare with Chapter 17's geometric series.
+\item[\lab{E2}] What is the $k$ of T5 for $\sin(z) - z$ at $0$?
+\item[\lab{E3}] Show that $\exp$ is not bounded on $\mathbb{C}$ without computing: use T7.
+\item[\lab{E4}] On $|z| \le 1$, where does $|z^2 + 1|$ take its largest value?
+\item[\lab{E5}] Why does T4 not contradict Chapter 21, P8?
 \end{lines}
