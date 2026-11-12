@@ -5,12 +5,13 @@ One file per building (a book), one file per part.
 | File | What it is |
 |---|---|
 | `building0-blur.tex` → `.pdf` | **Building 0: Blur.** Contents, rules, Part I (Chapters 1–34), Part II (II.1–II.4). |
-| `building1-moves.tex` → `.pdf` | **Building 1: Moves.** The algebra path and elliptic curves. Part I begun (Chapter 1, Rearrangements). |
+| `building1-moves.tex` → `.pdf` | **Building 1: Moves.** The algebra path and elliptic curves. Part I (Rearrangements, Words), Part II begun. |
 | `building2-loops.tex` → `.pdf` | **Building 2: Loops.** Stub: proofs, provability, loops, Amplify, the edge. |
 | `rules.tex` | Chapter 0, the rules. Shared by every building. |
 | `part1-numbers.tex` | Building 0, Part I: the first floor (map + Chapters 1–34). |
 | `part2-systems.tex` | Building 0, Part II: the second floor (map + II.1–II.4). |
 | `moves-part1.tex` | Building 1, Part I: moves on things. |
+| `moves-part2.tex` | Building 1, Part II: move systems as rows. |
 | `preamble.tex` | Macros. Use only these. |
 | `build.py` | Checks every part and compiles every building: `python3 build.py`. |
 | `checks/` | One machine-check script per chapter (`chN-check.py`). |
