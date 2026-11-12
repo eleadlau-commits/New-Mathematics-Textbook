@@ -537,3 +537,197 @@ On $R$. \ $O$: $\times$.
 \item[\lab{E3}] Factor $x^4 - 1$ into irreducibles over $\Z$, over $\Z[i]$, and over $\Z/5$.
 \item[\lab{E4}] Why does T6 fail for $x^2 + 4$ with $p = 2$?
 \end{lines}
+
+\newpage
+
+%% ==================================================================
+%%  Chapter II.8  (linear maps)
+%% ==================================================================
+\section*{Chapter II.8. Arrows between vector spaces}
+\phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter II.8. Arrows between vector spaces \quad matrices over a field $\to$ their rank; pairs $\to$ $V \otimes W$}{Chapter II.8. Arrows between vector spaces}}
+\begin{center}
+{\normalsize matrices over a field $\to$ their rank; pairs $\to$ $V \otimes W$ \quad$\cdot$\quad from: Chapters II.4; Building 0, Chapters 14, II.3, II.5 \quad$\cdot$\quad blur, build}\\[4pt]
+{\small Chapter II.4 over a field: every $e_i$ is $1$, and only one number is kept, the rank. Then a build and a blur whose Appears line is the whole definition of $V \otimes W$.}
+\end{center}
+
+\subsection*{Given}
+
+\begin{lines}
+\item[\lab{G1}] (Building 0, Chapter II.3, T1--T5.) $\dim$; $\dim V/W = \dim V - \dim W$; all over any field $K$.
+\item[\lab{G2}] (Chapter II.4.) The blur $A \sim PAQ$; $d_k$ kept; the Smith form.
+\item[\lab{G3}] (Building 0, Chapter 14.) $\Lambda$: words in arrows, glued by $v \wedge v \sim 0$.
+\end{lines}
+
+\subsection*{The blur}
+
+On $m \times n$ matrices over a field $K$. \ $O$: none beyond the moves.
+
+\begin{lines}
+\item[\lab{B1}] (From below.) $A \sim PAQ$, $P$, $Q$ with $\det \ne 0$ (Chapter II.4, B1 with $R = K$).
+\item[\lab{B2}] (From above.) Question: the \emph{rank}, the largest $k$ with some $k \times k$ minor $\ne 0$.
+\end{lines}
+
+\subsection*{Propositions}
+
+\begin{lines}
+\item[\lab{P1}] (Appears; normal form.) Each bag holds exactly one $\begin{pmatrix} I_r & 0 \\ 0 & 0 \end{pmatrix}$, with $r$ the rank. \ (Chapter II.4, P4--P6 with $R = K$: every non-zero $e_i$ is a unit, so $1$. Over a field $d_k$ is $1$ or $0$, so all the $d_k$ say only the rank.)
+\item[\lab{P2}] (Row rank is column rank.) $A$ and $A^{\mathsf T}$ have the same minors, so the same rank: the number of independent rows equals the number of independent columns.
+\item[\lab{P3}] (Dies: the entries; and everything but the rank.) $\begin{pmatrix} 1 & 2 \\ 2 & 4 \end{pmatrix} \sim \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix}$.
+\end{lines}
+
+\subsection*{Theorems}
+
+\begin{lines}
+\item[\lab{T1}] (The arrow's own blur. W4.) For a linear arrow $f : V \to W$, the blur ``$f(u) = f(v)$'' is $\sim_{\ker f}$, and $V / \ker f$ matches the image. So \[ \dim V = \dim \ker f + \operatorname{rank} f . \] (G1.) An arrow $V \to V$, $V$ finite, is one-to-one exactly when it is onto.
+\item[\lab{T2}] (Arrows to $K$: the dual.) $V^* :=$ the linear arrows $V \to K$. For finite $V$, $\dim V^* = \dim V$. The arrow $V \to V^{**}$, $v \mapsto (\phi \mapsto \phi(v))$, is chosen by nothing and is a matching. \ Dies: a matching $V \to V^*$ chosen by nothing. (Each one needs a basis; moving the basis moves the matching.)
+\item[\lab{T3}] (Build, then blur: $V \otimes W$.) Build the free vector space on the pairs $(v, w)$. \\
+B1: glue $(v + v', w) \sim (v, w) + (v', w)$, $(v, w + w') \sim (v, w) + (v, w')$, $(cv, w) \sim c(v, w) \sim (v, cw)$, respecting $+$ and scaling. Write $v \otimes w$ for the bag of $(v, w)$. \\
+B2: questions: every map $\beta : V \times W \to U$ that is linear in each place, read on the free space. \\
+Appears: B1 and B2 agree. Read aloud: the maps out of $V \times W$ linear in each place match the linear maps out of $V \otimes W$, by $\beta \mapsto (v \otimes w \mapsto \beta(v, w))$.
+\item[\lab{T4}] (Normal form.) If $e_i$ and $f_j$ are bases, the $e_i \otimes f_j$ are a basis of $V \otimes W$: $\dim = mn$. A member is $\sum c_{ij}\, e_i \otimes f_j$, a matrix $(c_{ij})$; it is one $v \otimes w$ exactly when that matrix has rank $\le 1$. \ Dies: ``every member is some $v \otimes w$'': $e_1 \otimes f_1 + e_2 \otimes f_2$ has rank $2$.
+\end{lines}
+
+\subsection*{Remarks}
+
+\begin{lines}
+\item[\lab{R1}] (Twins.) Building 0, Chapter 14 is T3 with $V = W$ and one more gluing, $v \otimes v \sim 0$. Over $\Z$ the same build gives $\Z/m \otimes \Z/n = \Z/\gcd(m, n)$ (Chapter II.4 on the matrix $\binom{m}{n}$): two clocks of coprime sizes multiply to nothing.
+\item[\lab{R2}] (What the method did.) Chapter II.4 with one change of ring. T1 is W4. The definition of $\otimes$ by its ``universal property'' is an Appears line, not an axiom.
+\item[\lab{R3}] (Old names.) Rank; T1: rank--nullity, first isomorphism theorem for vector spaces; T2: the dual space, the canonical map to the double dual; T3: the tensor product and its universal property; T4: rank-one tensors (pure tensors).
+\item[\lab{R4}] (Machine check, \texttt{checks/b1-p2-ch8-10-check.py}.) P1, P2, T1 on $40$ random matrices over $\Q$ with random moves; T4's rank-$2$ member; R1 for four pairs.
+\end{lines}
+
+\subsection*{Exercises}
+
+\begin{lines}
+\item[\lab{E1}] Find the rank of $\begin{pmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{pmatrix}$ and a basis of its kernel; check T1.
+\item[\lab{E2}] Show that $\mathbb{C} \otimes \mathbb{C}$ over $\R$ has dimension $4$, and over $\mathbb{C}$ dimension $1$.
+\item[\lab{E3}] Is $e_1 \otimes f_1 + e_1 \otimes f_2 + e_2 \otimes f_1 + e_2 \otimes f_2$ a single $v \otimes w$?
+\end{lines}
+
+\newpage
+
+%% ==================================================================
+%%  Chapter II.9  (similarity)
+%% ==================================================================
+\section*{Chapter II.9. One arrow, moved by one change of basis}
+\phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter II.9. One arrow, moved by one change of basis \quad square matrices $\to$ their similarity bags}{Chapter II.9. One arrow, moved by one change of basis}}
+\begin{center}
+{\normalsize square matrices $\to$ their similarity bags \quad$\cdot$\quad from: Chapters II.4, II.8; Building 0, Chapters 23, II.5 \quad$\cdot$\quad blur}\\[4pt]
+{\small Glue $M$ to $PMP^{-1}$. Let $x$ act by $M$ and the space is a module over $K[x]$; Chapter II.4 over $K[x]$ then gives the kept questions and the normal form. The characteristic polynomial is kept but is not enough.}
+\end{center}
+
+\subsection*{Given}
+
+\begin{lines}
+\item[\lab{G1}] (Chapter II.4.) Modules; $\operatorname{coker}$; P4--P6, T1 over $R = K[x]$.
+\item[\lab{G2}] (Building 0, Chapter II.5.) $\det$ over $K[x]$; P12 (Cayley--Hamilton, an equation).
+\item[\lab{G3}] (Building 0, Chapter 23.) Over $\mathbb{C}$ every polynomial splits.
+\end{lines}
+
+\subsection*{The blur}
+
+On $n \times n$ matrices over a field $K$. \ $O$: none beyond the moves (L7: $+$ and $\times$ are not respected; $\times$ by $P$ on one side only would break the gluing).
+
+\begin{lines}
+\item[\lab{B1}] (From below.) $M \sim PMP^{-1}$, $\det P \ne 0$.
+\item[\lab{B2}] (From above.) Questions: the invariant factors $e_1 \mid \dots \mid e_n$ of the matrix $xI - M$ over $K[x]$ (Chapter II.4, P4, made monic).
+\end{lines}
+
+\subsection*{Propositions}
+
+\begin{lines}
+\item[\lab{P1}] (Survives.) $\operatorname{tr}$, $\det$, $\chi_M(x) = \det(xI - M)$, the rank of $(M - \lambda I)^k$ for every $\lambda$, $k$: each is kept by B1. \ ($xI - PMP^{-1} = P(xI - M)P^{-1}$, and Chapter II.4, P1; $\chi_M = e_1 \cdots e_n$ by Chapter II.4, P5.)
+\item[\lab{P2}] (Dies: $\chi_M$ is not enough.) $\begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix}$ and $0$ both have $\chi = x^2$, and are not glued ($0$ is glued only to itself). Their invariant factors are $1, x^2$ and $x, x$.
+\item[\lab{P3}] (The module.) $V = K^n$ with $p(x) \cdot v := p(M)v$ is a $K[x]$-module $V_M$, and it matches $\operatorname{coker}(xI - M)$. Two matrices are glued by B1 exactly when their modules match. \ ($P$ is a matching $V_M \to V_N$ that commutes with $x$.)
+\end{lines}
+
+\subsection*{Theorems}
+
+\begin{lines}
+\item[\lab{T1}] (Appears.) $M \sim N$ $\iff$ $xI - M$ and $xI - N$ have the same invariant factors. \ (P3 and Chapter II.4, T1 over $K[x]$.)
+\item[\lab{T2}] (Normal form over any $K$.) Each bag holds exactly one block matrix whose blocks are the companion matrices of the $e_i \ne 1$: for $e = x^d + c_{d-1}x^{d-1} + \dots + c_0$, the $d \times d$ matrix with $1$s below the diagonal and last column $-c_0, \dots, -c_{d-1}$. \ (Chapter II.4, T1: $V_M$ is a product of $K[x]/(e_i)$, and on $K[x]/(e)$ with basis $1, x, \dots, x^{d-1}$, $x$ acts by the companion matrix.)
+\item[\lab{T3}] (Cayley--Hamilton and the last factor.) $e_n(M) = 0$, and $e_n$ is the monic polynomial of least degree killing $M$; $e_n \mid \chi_M$, so $\chi_M(M) = 0$. \ ($e_n$ kills every $K[x]/(e_i)$; nothing smaller kills $K[x]/(e_n)$.)
+\item[\lab{T4}] (Over $\mathbb{C}$: Jordan.) If $\chi_M$ splits (always over $\mathbb{C}$, G3), each bag holds exactly one block matrix of blocks $\lambda I + N_k$, $N_k$ with $1$s just above the diagonal, up to the order of blocks. The number of blocks for $\lambda$ of size $\ge k$ is $\operatorname{rank}(M - \lambda)^{k-1} - \operatorname{rank}(M - \lambda)^k$. So the ranks of P1 are all the kept questions. \ (Split each $e_i$ into $(x - \lambda)^a$ by Chapter II.7, T7; on $K[x]/(x - \lambda)^a$ with basis $(x - \lambda)^{a-1}, \dots, 1$, $x$ acts by $\lambda I + N_a$.)
+\item[\lab{T5}] (Select: the diagonal bags.) $M$ is glued to a diagonal matrix exactly when $e_n$ has no repeated root in $K$ and splits there. Dies for $\begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix}$ ($e_2 = x^2$) and, over $\R$, for $\begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix}$ ($e_2 = x^2 + 1$).
+\end{lines}
+
+\subsection*{Remarks}
+
+\begin{lines}
+\item[\lab{R1}] (What the method did.) No new idea: let $x$ act, and Chapter II.4 does the rest. The only trap is P2, a kept question that is not all the kept questions.
+\item[\lab{R2}] (A second road, by nearness.) Over $\mathbb{C}$ the diagonal bags come near every matrix (move the diagonal of a Jordan form apart). Cayley--Hamilton is an equation (Building 0, Chapter II.5, P12) true on those, so true everywhere by nearness: the proof in Building 0.
+\item[\lab{R3}] (Old names.) B1: similarity, conjugation; T2: rational canonical form (Frobenius normal form); $e_n$: the minimal polynomial; T3: Cayley--Hamilton; T4: Jordan normal form; T5: diagonalisable.
+\item[\lab{R4}] (Machine check, \texttt{checks/b1-p2-ch8-10-check.py}.) T1 one way on $15$ random similar pairs (invariant factors over $\Q[x]$ by a Smith routine); $\prod e_i = \chi_M$; $e_n(M) = 0$; P2; T4's rank count separating two Jordan types with one $\chi$.
+\end{lines}
+
+\subsection*{Exercises}
+
+\begin{lines}
+\item[\lab{E1}] Find the invariant factors and the Jordan form of $\begin{pmatrix} 2 & 1 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 2 \end{pmatrix}$.
+\item[\lab{E2}] List the similarity bags of $3 \times 3$ matrices over $\mathbb{C}$ with $\chi = (x - 1)^3$.
+\item[\lab{E3}] Show that $M$ and $M^{\mathsf T}$ are always glued.
+\end{lines}
+
+\newpage
+
+%% ==================================================================
+%%  Chapter II.10  (forms)
+%% ==================================================================
+\section*{Chapter II.10. Forms, moved by both sides at once}
+\phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter II.10. Forms, moved by both sides at once \quad symmetric matrices $\to$ their signature}{Chapter II.10. Forms, moved by both sides at once}}
+\begin{center}
+{\normalsize symmetric matrices $\to$ their signature \quad$\cdot$\quad from: Chapters II.8, II.9; Building 0, Chapters 13, 24, 28 \quad$\cdot$\quad blur}\\[4pt]
+{\small Glue $M$ to $P^{\mathsf T} M P$. Over $\R$ two numbers are kept, the plus count and the minus count; over $\mathbb{C}$ only the rank; over $\Z/p$ the rank and whether $\det$ is a square. Allow only turning moves and the eigenvalues are kept: the highest point on the sphere finds them.}
+\end{center}
+
+\subsection*{Given}
+
+\begin{lines}
+\item[\lab{G1}] (Chapter II.8.) Rank, kept by both-side moves.
+\item[\lab{G2}] (Building 0, Chapter 24.) Highest and lowest points: at a highest point of a map on a sphere, its covector is a multiple of that of the sphere's equation. (Building 0, Chapter 13, T7: a highest point exists on a closed bounded set.)
+\item[\lab{G3}] (Building 0, Chapter 28.) $\langle \,,\rangle$, right angles, Cauchy--Schwarz.
+\end{lines}
+
+\subsection*{The blur}
+
+On symmetric $n \times n$ matrices over $K$ ($2 \ne 0$), read as forms $Q(v) = v^{\mathsf T} M v$.
+
+\begin{lines}
+\item[\lab{B1}] (From below.) $M \sim P^{\mathsf T} M P$, $\det P \ne 0$.
+\item[\lab{B2}] (From above, over $\R$.) Questions: the rank, and $p :=$ the largest dimension of a subspace on which $Q > 0$ (except at $0$).
+\end{lines}
+
+\subsection*{Propositions}
+
+\begin{lines}
+\item[\lab{P1}] (Completing squares: at least one diagonal.) Every $M$ is glued to a diagonal one. \ (If some $Q(v) \ne 0$, put $v$ first and clear its row and column; if $Q = 0$ on all $v$ but $M \ne 0$, then $Q(u + w) = 2u^{\mathsf T}Mw \ne 0$ for some $u, w$; repeat on what is left.)
+\item[\lab{P2}] (Survives.) The rank (G1); $\det$ up to a non-zero square (since $\det(P^{\mathsf T}MP)$ is $\det(P)^2 \det M$).
+\item[\lab{P3}] (Dies: the diagonal entries.) $\operatorname{diag}(1, 1) \sim \operatorname{diag}(2, 2)$, even over $\Q$: $P = \begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix}$. And $\operatorname{diag}(1, 1) \not\sim \operatorname{diag}(1, 3)$ over $\Q$: $\det$ differs by $3$, not a square (P2).
+\end{lines}
+
+\subsection*{Theorems}
+
+\begin{lines}
+\item[\lab{T1}] (Appears over $\R$: Sylvester.) Each bag holds exactly one \[ \operatorname{diag}(1, \dots, 1, -1, \dots, -1, 0, \dots, 0), \] with $p$ ones and $q$ minus ones; and $(p, q)$ is kept. \ (P1, then scale each entry by $1/\sqrt{|d_i|}$. Kept: if a diagonal form has $p'$ plus entries, the span of their basis members has $Q > 0$, and any subspace with $Q > 0$ meets the span of the others ($Q \le 0$ there) only in $0$, so has dimension $\le p'$. So $p' = p$ of B2, and $q = \operatorname{rank} - p$.)
+\item[\lab{T2}] (Over $\mathbb{C}$.) Each bag holds exactly one $\operatorname{diag}(1, \dots, 1, 0, \dots, 0)$: only the rank is kept. ($-1$ is a square.)
+\item[\lab{T3}] (Over $\Z/p$, $p$ odd.) Each bag holds exactly one of \[ \operatorname{diag}(1, \dots, 1, 0, \dots, 0), \qquad \operatorname{diag}(1, \dots, 1, c, 0, \dots, 0), \] $c$ a fixed non-square: kept are the rank and whether $\det$ (of the non-zero part) is a square. \ (Every $a x^2 + b y^2$ with $a, b \ne 0$ takes the value $1$: count the $x$ with $ax^2$ in $\{1 - by^2\}$: two sets of $(p + 1)/2$ members in $\Z/p$ must meet. So pairs of entries can be turned into $1, ab$.)
+\item[\lab{T4}] (Turning moves only: the spectral line.) Over $\R$, with $P$ restricted to $P^{\mathsf T} P = I$ (turning moves, keeping $\langle\,,\rangle$), every symmetric $M$ is glued to a diagonal matrix, and the diagonal entries, up to order, are kept: they are the roots of $\chi_M$. \ (At a highest point $v$ of $Q$ on the sphere $|v| = 1$, G2 gives $Mv = \lambda v$. The right-angle space $v^\perp$ is moved into itself by $M$, since $\langle Mw, v\rangle = \langle w, Mv\rangle = \lambda \langle w, v\rangle$. Repeat on $v^\perp$. Kept, because for turning moves $P^{\mathsf T} = P^{-1}$, and Chapter II.9, P1.)
+\end{lines}
+
+\subsection*{Remarks}
+
+\begin{lines}
+\item[\lab{R1}] (Three blurs on one bag of matrices.) $PAQ$ (Chapter II.8: rank), $PMP^{-1}$ (Chapter II.9: invariant factors), $P^{\mathsf T}MP$ (this chapter: signature). T4 is the place two of them agree: for turning moves, $P^{\mathsf T} = P^{-1}$.
+\item[\lab{R2}] (Where existence came from.) P1: a construction (completing squares). T4: a highest point (Building 0, Chapter 13, T7), the analysis floor lending its one existence tool to algebra.
+\item[\lab{R3}] (Reported.) Over $\Q$: two forms are glued exactly when they are glued over $\R$ and over every $\Q_p$ (Hasse--Minkowski; classical; not used).
+\item[\lab{R4}] (Old names.) Quadratic forms, congruence of matrices; T1: Sylvester's law of inertia, signature; T3: classification over finite fields; T4: the spectral theorem for symmetric matrices, the principal axis theorem.
+\item[\lab{R5}] (Machine check, \texttt{checks/b1-p2-ch8-10-check.py}.) T1 on $50$ random forms under random moves (sign counts of eigenvalues); T4 (orthogonal diagonalisation; highest value on the sphere $\le$ largest eigenvalue on $4000$ random points); T3 for $2 \times 2$ forms over $\Z/5, \Z/7, \Z/11$ by listing all moves.
+\end{lines}
+
+\subsection*{Exercises}
+
+\begin{lines}
+\item[\lab{E1}] Find $(p, q)$ for $x^2 + 4xy + y^2$ and for $xy + yz + zx$.
+\item[\lab{E2}] Over $\Z/5$, is $x^2 + y^2$ glued to $x^2 + 2y^2$?
+\item[\lab{E3}] Find the highest value of $2x^2 + 2xy + 2y^2$ on $x^2 + y^2 = 1$, and where it is taken.
+\end{lines}
