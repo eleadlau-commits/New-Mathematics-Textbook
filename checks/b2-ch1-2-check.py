@@ -98,3 +98,17 @@ for a, b in itertools.product(S[:30], repeat=2):
     ok &= equally(a, b) == (rung(a) == rung(b))                           # bags = rungs
 print("rungs seen:", sorted({rung(a) for a in S}, key=lambda r: r)[:8])
 print("ALL", ok)
+# ---- Ch2 P5: boxes of the four shapes (read at depths < N)
+def step(k):
+    f = bot
+    for _ in range(k): f = box(f)
+    return f
+def same(a, b): return all(true_at(a, n) == true_at(b, n) for n in range(N))
+p5 = True
+for a in range(1, 8):
+    p5 &= same(box(neg(step(a))), box(bot))
+    for b in range(a):
+        p5 &= same(box(('imp', step(a), step(b))), step(b + 1))
+for b in range(8): p5 &= same(box(step(b)), step(b + 1))
+print("Ch2 P5:", p5); ok &= p5
+print("ALL with P5", ok)

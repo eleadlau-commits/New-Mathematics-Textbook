@@ -4,7 +4,7 @@
 \part*{Part I. Words about words}
 \phantomsection\addcontentsline{toc}{part}{Part I. Words about words}
 
-Building 0, Chapter 0 writes rules about words; Building 1, Chapter 2 builds words and glues them. Here the words are statements and proofs, and the blurs are ``forget the proof'' and ``forget everything but the truth''.
+Building 0, Chapter 0 writes rules about words; Building 1, Chapter 2 builds words and glues them. Here the words are statements and proofs, and the blurs are ``forget the proof'' and ``forget everything but the answers''. Both chapters are built and blurred inside the part: nothing is imported. Arithmetic, where the famous theorems live, is reached only by arrows in the Remarks, and those arrows are marked Imported.
 
 %% ==================================================================
 %%  Chapter 1  (proofs)
@@ -13,68 +13,82 @@ Building 0, Chapter 0 writes rules about words; Building 1, Chapter 2 builds wor
 \phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter 1. Proofs \quad statements $\to$ what every world says}{Chapter 1. Proofs}}
 \begin{center}
 {\normalsize statements $\to$ what every world says \quad$\cdot$\quad from: Building 0, Chapters 0, 3; Building 1, Chapter 2 \quad$\cdot$\quad build, blur}\\[4pt]
-{\small Statements and proofs are words. Glue two statements when each proves the other; glue them when every world gives them the same answer. The two blurs agree: that is completeness. For the single world of the whole numbers they do not: that is incompleteness.}
+{\small Statements and proofs are words. Glue two statements when each proves the other; glue them when every world gives them the same answer. The two blurs agree.}
 \end{center}
-
-Written for statements built from letters with ``not'', ``and'', ``or'', ``if''. The lines for statements with ``for all'' are stated and reported (T4, T5); their proofs need a design of their own.
 
 \subsection*{Given}
 
 \begin{lines}
 \item[\lab{G1}] (Building 0, Chapter 0, M3.) Words in a list of names; maps on words by recursion.
-\item[\lab{G2}] (Building 1, Chapter 2.) Words, glued by rules from below; B2 by an action on words.
+\item[\lab{G2}] (Building 1, Chapter 2.) Words, glued by rules from below.
 \item[\lab{G3}] (Building 0, Chapter 3.) $\{0, 1\}$ as $\Z/2$.
 \end{lines}
 
 \subsection*{Definitions}
 
 \begin{lines}
-\item[\lab{D1}] (Build, M3.) \emph{Statements}: words in letters $p_1, p_2, \dots$, the name $\bot$, and $\neg$, $\wedge$, $\vee$, $\to$. Write $A \leftrightarrow B$ for $(A \to B) \wedge (B \to A)$.
+\item[\lab{D1}] (Build, M3.) \emph{Statements}: words in letters $p_1, \dots, p_n$, the name $\bot$, and $\neg$, $\wedge$, $\vee$, $\to$. Write $A \leftrightarrow B$ for $(A \to B) \wedge (B \to A)$.
 \item[\lab{D2}] (Build.) A \emph{proof} of $A$: a list of statements ending in $A$, each one an instance of $A \to (B \to A)$, \ $(A \to (B \to C)) \to ((A \to B) \to (A \to C))$, \ $(\neg B \to \neg A) \to (A \to B)$ (with $\neg A := A \to \bot$ and $\wedge$, $\vee$ written through $\to$, $\bot$), or got from two earlier ones $B$ and $B \to A$. Write $\vdash A$. Checking a proof is a recursion; finding one is a search.
 \item[\lab{D3}] A \emph{world}: an arrow from the letters to $\{0, 1\}$. It gives every statement a value, by recursion ($\bot \mapsto 0$, and the usual tables).
 \end{lines}
 
-\subsection*{The blur}
+\subsection*{Blur}
 
-On statements in the letters $p_1, \dots, p_n$. \ $O$: $\neg$, $\wedge$, $\vee$, $\to$.
+The floor: statements of D1. \ $O$: $\neg$, $\wedge$, $\vee$, $\to$.
 
 \begin{lines}
-\item[\lab{B1}] (From below: forget the proof.) $A \sim B$ when $\vdash A \leftrightarrow B$.
-\item[\lab{B2}] (From above: forget all but the answers.) Questions: the value of a statement in each world.
+\item[\lab{B1}] (From below, L5: forget the proof.) Gluings: $A \sim B$ when $\vdash A \leftrightarrow B$. \ Respects: $\neg$, $\wedge$, $\vee$, $\to$.
+\item[\lab{B2}] (From above, L6: forget all but the answers.) Questions: for each world $w$, the value of a statement in $w$. \ Respects: $\neg$, $\wedge$, $\vee$, $\to$.
 \end{lines}
 
 \subsection*{Propositions}
 
 \begin{lines}
-\item[\lab{P1}] (Survives.) $\neg$, $\wedge$, $\vee$, $\to$ all respect B1 and B2. The bags of B2 form $\{0, 1\}^{(\text{worlds})}$, with the operations taken world by world.
-\item[\lab{P2}] (Dies: length; the proof.) $p$ and $\neg\neg p$ are glued, of lengths $1$ and $3$. ``Which proof'' is the first thing forgotten; ``how short a proof can be'' dies with it, and is a question of its own (R2).
-\item[\lab{P3}] (Normal form.) Each bag of B2 holds exactly one ``or'' of full rows, one row for each world giving $1$ (in a fixed order). So there are $2^{2^n}$ bags.
+\item[\lab{P1}] (Survives.) $\neg$, $\wedge$, $\vee$, $\to$ respect B1 (from $\vdash A \leftrightarrow A'$ and $\vdash B \leftrightarrow B'$, prove $\vdash (A \wedge B) \leftrightarrow (A' \wedge B')$ and the others) and B2 (the tables are taken world by world).
+\item[\lab{P2}] (Dies: length.) $p_1$ and $\neg\neg p_1$ are glued; their lengths are $1$ and $3$. ``Which proof'' is the first thing forgotten, and ``how short a proof can be'' goes with it (R1).
+\item[\lab{P3}] (Sound: Z4.) If $A \sim B$ then $A$, $B$ have the same value in every world, in every context. \ (Each axiom is $1$ in every world, and ``from $B$ and $B \to A$, get $A$'' keeps ``$1$ in every world''; then P1.)
+\item[\lab{P4}] (A construction.) If $A$ is $1$ in every world, then $\vdash A$. \ (For each world $w$, prove ``the row of $w$ $\to$ $A$'' by recursion on $A$; then remove the letters one at a time with $\vdash (p \to A) \to ((\neg p \to A) \to A)$.)
+\item[\lab{P5}] (Appears.) $\sim \;=\;$ B2. \ (Z4 by P3. Z5: if $A \not\sim B$, then $A \leftrightarrow B$ is not provable, so by P4 some world $w$ gives it $0$; the separating context is the empty one, and the question is ``the value in $w$''.)
+\item[\lab{P6}] (Normal forms.) Each bag holds exactly one ``or'' of full rows, one row for each world giving $1$ (rows and letters in a fixed order; the empty ``or'' is $\bot$).
+\end{lines}
+
+\subsection*{Notation}
+
+\begin{lines}
+\item[\lab{N1}] Write $\bag{A}$ for the bag of $A$, and $\mathcal{B}_n$ for the bags (M5), with $\neg$, $\wedge$, $\vee$, $\to$ carried over by P1 (Z6). Let $\top := \bag{\bot \to \bot}$.
+\item[\lab{N2}] ``$A$ is provable'' is now ``$\bag{A} = \top$''.
+\end{lines}
+
+\subsection*{Arrow}
+
+\begin{lines}
+\item[\lab{P7}] $\mathcal{B}_n \to \{0, 1\}^{\text{worlds}}$, $\bag{A} \mapsto$ (the value of $A$ in each world). Each of $\neg$, $\wedge$, $\vee$, $\to$: lift (D1), survive (P1), descend (Z6), agree (the tables, world by world). One-to-one by P5 and onto by P6: the arrow is \emph{inside} and a \emph{picture} at once (W2).
 \end{lines}
 
 \subsection*{Theorems}
 
 \begin{lines}
-\item[\lab{T1}] (One way: sound.) If $A \sim B$ then $A$ and $B$ agree in every world. \ (Each axiom is $1$ in every world, and ``from $B$, $B \to A$ get $A$'' keeps ``$1$ in every world''.)
-\item[\lab{T2}] (The other way. A construction.) If $A$ is $1$ in every world, $\vdash A$. \ (For each world $w$, prove ``the row of $w$ $\to$ $A$'' by recursion on $A$; then remove the letters one at a time with $\vdash (p \to A) \to ((\neg p \to A) \to A)$.)
-\item[\lab{T3}] (Appears: completeness.) B1 and B2 agree. So the bags of B1 are exactly $2^{2^n}$, with P3 as normal forms, and ``provable'' is ``true in every world''.
-\item[\lab{T4}] (Reported, classical: with ``for all''.) For statements about a floor with ``for all'' and ``there is'', and a list of axioms $\Gamma$: B1 (each proves the other from $\Gamma$) and B2 (same value in every floor obeying $\Gamma$) agree. The construction in the proof builds a floor out of the words themselves.
-\item[\lab{T5}] (Reported, classical: Appears fails for one world.) Take the axioms of $\N$ (Building 0, Chapter 1, with $+$, $\times$) and replace B2 by the single world $\N$. Then B1 is strictly finer: some statement $G$ is true in $\N$ and is not glued to $\top$. Z4 holds, Z5 fails (Building 0, Chapter 0), with $G$ as witness. The proof codes words as numbers, so that statements about $\N$ speak about statements: a loop of the kind this building is named for.
+\item[\lab{T1}] (Count.) There are exactly $2^{2^n}$ bags. \ (P6, P7.)
+\item[\lab{T2}] (Provable is true.) $\vdash A$ $\iff$ $A$ is $1$ in all $2^n$ worlds. So provability is decided by a finite check, and the check is not a proof (E3).
+\item[\lab{T3}] (Laws.) $\mathcal{B}_n$ with $\wedge$, $\vee$, $\neg$ obeys every equation that $\{0, 1\}$ obeys. \ (Equations: free by Z7 through P7.)
 \end{lines}
 
 \subsection*{Remarks}
 
 \begin{lines}
-\item[\lab{R1}] (A twist.) A statement of the form ``for every $n$, a check on $n$ comes out yes'' can be refuted by one finite witness if it is false. So if it is shown to be neither provable nor refutable, it is true in $\N$. Many open questions about primes (Building 0, Chapter 18) have this form.
-\item[\lab{R2}] (How much proof.) Two sizes, both what dies in B1: \emph{length}, the shortest proof, and \emph{strength}, the first rung of a ladder of axiom lists that proves $A$. The pigeonhole statement for $n + 1$ birds needs proofs of length growing faster than any power of $n$ in the weakest systems (classical, reported), and only a few lines once counting bags is allowed (Building 1, Chapter II.6 uses counts this way).
-\item[\lab{R3}] (Old names.) D1: propositional formulas; D2: a Hilbert system; D3: valuations; B1: the Lindenbaum algebra, a Boolean algebra; T1: soundness; T2, T3: completeness (Post; Kalmár's proof); T4: Gödel's completeness theorem; T5: Gödel's first incompleteness theorem.
-\item[\lab{R4}] (Machine check, \texttt{checks/b2-ch1-2-check.py}.) The axioms on many instances are $1$ in every world; $2^{2^2} = 16$ bags for two letters; P3 normal forms.
+\item[\lab{R1}] (How much proof.) Two sizes die in B1: \emph{length}, the shortest proof, and \emph{strength}, the first rung of a ladder of axiom lists that proves $A$. For the pigeonhole statement with $n + 1$ birds the shortest proofs in weak systems grow faster than any power of $n$ (Imported, classical; no line depends on it). Counting bags makes it a few lines (Building 1, Chapter II.6).
+\item[\lab{R2}] (Imported: with ``for all''. No line of this building depends on it.) For statements about a floor with ``for all'' and ``there is'', and a list of axioms $\Gamma$, B1 (each proves the other from $\Gamma$) and B2 (same value in every floor obeying $\Gamma$) agree. The proof builds a floor out of the words themselves.
+\item[\lab{R3}] (Imported: Appears fails for one world. No line of this building depends on it.) Take the axioms of $\N$ with $+$, $\times$, and replace B2 by the single world $\N$. Then B1 is strictly finer: some $G$ is true in $\N$ and not glued to $\top$. Z4 holds, Z5 fails, with $G$ as witness. The proof codes words as numbers, so that statements about $\N$ speak about statements: a loop of the kind this building is named for. Chapter 2 builds that loop as a floor of its own.
+\item[\lab{R4}] (A twist.) A statement ``for every $n$, a check on $n$ says yes'' is refuted by one finite witness if it is false. So if it is shown to be neither provable nor refutable, it is true in $\N$.
+\item[\lab{R5}] (Old names.) D1: propositional formulas; D2: a Hilbert system; D3: valuations; $\mathcal{B}_n$: the Lindenbaum algebra, the free Boolean algebra on $n$ generators; P3: soundness; P4, P5: completeness (Post; Kalm\'ar's proof); R2: G\"odel's completeness theorem; R3: G\"odel's first incompleteness theorem.
+\item[\lab{R6}] (Machine check, \texttt{checks/b2-ch1-2-check.py}.) The axioms on many instances are $1$ in every world; $2^{2^2} = 16$ bags for two letters; P6 normal forms.
 \end{lines}
 
 \subsection*{Exercises}
 
 \begin{lines}
-\item[\lab{E1}] Write the normal form of P3 for $p \to q$ and for $\neg(p \leftrightarrow q)$.
-\item[\lab{E2}] Show $\vdash p \to p$ from the axioms of D2 in five lines.
+\item[\lab{E1}] Write the normal form of P6 for $p_1 \to p_2$ and for $\neg(p_1 \leftrightarrow p_2)$.
+\item[\lab{E2}] Show $\vdash p_1 \to p_1$ from the axioms of D2 in five lines.
 \item[\lab{E3}] Why does T2 not give a fast way to find proofs?
 \end{lines}
 
@@ -84,57 +98,85 @@ On statements in the letters $p_1, \dots, p_n$. \ $O$: $\neg$, $\wedge$, $\vee$,
 %%  Chapter 2  (provability)
 %% ==================================================================
 \section*{Chapter 2. Equally provable}
-\phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter 2. Equally provable \quad statements $\to$ how provable they are}{Chapter 2. Equally provable}}
+\phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter 2. Equally provable \quad box statements $\to$ how provable they are}{Chapter 2. Equally provable}}
 \begin{center}
-{\normalsize statements $\to$ how provable they are \quad$\cdot$\quad from: Chapter 1; Building 0, Chapters 18, 19, 34 \quad$\cdot$\quad blur, ladder}\\[4pt]
-{\small Glue two statements when the theory proves ``this one is provable exactly when that one is''. Without letters the bags are a ladder of shape $\omega + 1$, and a statement's rung is the first depth at which it fails: a valuation, like $v_p$.}
+{\normalsize box statements $\to$ how provable they are \quad$\cdot$\quad from: Chapter 1; Building 0, Chapters 0, 1 \quad$\cdot$\quad build, blur}\\[4pt]
+{\small Add one sign, $\square$, to statements without letters, and the rules a word ``provable'' would have to obey. Glue two statements when the rules prove ``this one is provable exactly when that one is''. The bags are a ladder of shape $\omega + 1$, and the rung of a statement is the first depth at which it fails: a valuation, like $v_p$.}
 \end{center}
-
-All the lines about arithmetic here rest on three classical results, reported: the conditions on $\square$ (D1), L\"ob's theorem (G2), and the depth reading (G3). The chapter's own work is the blur and its reading.
 
 \subsection*{Given}
 
 \begin{lines}
-\item[\lab{G1}] (Chapter 1, T5.) Statements of arithmetic can speak of proofs. For a statement $A$, $\square A$ is the statement ``$A$ is provable'', and $\vdash A$ gives $\vdash \square A$; $\vdash \square(A \to B) \to (\square A \to \square B)$; $\vdash \square A \to \square\square A$ (reported, classical).
-\item[\lab{G2}] (Reported, classical: L\"ob.) $\vdash \square(\square A \to A) \to \square A$.
-\item[\lab{G3}] (Reported, classical: depth.) For statements built from $\bot$ with $\neg$, $\wedge$, $\vee$, $\to$, $\square$ (no letters): read $A$ at each depth $n = 0, 1, 2, \dots$, with $\square A$ true at depth $n$ when $A$ is true at every depth below $n$. Then $\vdash A$ exactly when $A$ is true at every depth.
+\item[\lab{G1}] (Chapter 1.) Statements, proofs from the three axioms and ``from $B$ and $B \to A$, get $A$''; worlds; P3 (sound).
+\item[\lab{G2}] (Building 0, Chapter 1.) $\N$ with $<$, and recursion on $\N$.
 \end{lines}
 
-\subsection*{The blur}
-
-On statements of arithmetic. \ $O$: $\wedge$, $\square$.
+\subsection*{Definitions}
 
 \begin{lines}
-\item[\lab{B1}] (From below.) $A \approx B$ when $\vdash \square A \leftrightarrow \square B$: ``equally provable''.
-\item[\lab{B2}] (From above, without letters.) Question: $\rho(A) :=$ the first depth at which $A$ is false ($\infty$ if none), the \emph{rung} of $A$.
+\item[\lab{D1}] (Build, M3.) \emph{Box statements}: words in $\bot$, $\to$, $\square$ (no letters), with $\neg$, $\wedge$, $\vee$, $\leftrightarrow$ written through $\to$, $\bot$ as in Chapter 1. Write $\square^0\bot := \bot$, $\square^{k+1}\bot := \square\square^k\bot$, and $\top := \bot \to \bot$.
+\item[\lab{D2}] (Build.) $\vdash A$: $A$ is the end of a list in which each statement is an instance of Chapter 1's three axioms, or of
+\[ \textup{(K)}\ \ \square(A \to B) \to (\square A \to \square B), \qquad \textup{(L)}\ \ \square(\square A \to A) \to \square A, \]
+or follows from earlier ones by ``from $B$ and $B \to A$, get $A$'' or ``from $A$, get $\square A$''.
+\item[\lab{D3}] (Recursion on $\N$, G2.) The value of $A$ at depth $n$: $\bot$ is $0$; $\to$ by its table; $\square A$ is $1$ at depth $n$ when $A$ is $1$ at every depth $m < n$.
+\end{lines}
+
+\subsection*{Blur}
+
+The floor: box statements. \ $O$: $\wedge$, $\square$.
+
+\begin{lines}
+\item[\lab{B1}] (From below, L5.) Gluings: $A \approx B$ when $\vdash \square A \leftrightarrow \square B$. \ Respects: $\wedge$, $\square$.
+\item[\lab{B2}] (From above, L6.) Question: the first depth at which $A$ is $0$, or $\infty$ if there is none. \ Respects: $\wedge$, $\square$.
 \end{lines}
 
 \subsection*{Propositions}
 
 \begin{lines}
-\item[\lab{P1}] (Survives.) $\wedge$ and $\square$. \ ($\square(A \wedge B) \leftrightarrow \square A \wedge \square B$ by G1.)
-\item[\lab{P2}] (Appears inside: L\"ob.) $A \approx (\square A \to A)$ for every $A$. \ (G1 one way, G2 the other.)
-\item[\lab{P3}] (Dies: truth.) $\bot \approx \neg\square\bot$ (P2 with $A = \bot$). $\neg\square\bot$, ``consistency'', is true, and $\bot$ is false.
-\item[\lab{P4}] (Dies: $\vee$ and $\neg$.) $\bot \approx \neg\square\bot$, but $\bot \vee \square\bot$ is not provable while $\neg\square\bot \vee \square\bot$ is.
+\item[\lab{P1}] (Sound.) If $\vdash A$ then $A$ is $1$ at every depth. \ (At a fixed depth, treat each $\square X$ as a letter: Chapter 1's axioms are $1$ there. K: if $A \to B$ and $A$ are $1$ below $n$, so is $B$. L: suppose $\square A \to A$ is $1$ at every $m < n$; if $A$ is $1$ at every $k < m$ then $\square A$ is $1$ at $m$, so $A$ is; by recursion on $m$, $A$ is $1$ below $n$. Both rules keep ``$1$ at every depth''.)
+\item[\lab{P2}] (Read off the question.) Write $\rho(A)$ for the answer of B2. Then $\square A$ is $1$ at depth $n$ exactly when $n \le \rho(A)$. Hence $\rho(\square A) = \rho(A) + 1$, $\rho(A \wedge B) = \min(\rho(A), \rho(B))$, and $\rho(\square^k\bot) = k$.
+\item[\lab{P3}] (Survives.) $\wedge$ and $\square$ respect B1: $\vdash \square(A \wedge B) \leftrightarrow \square A \wedge \square B$, and from $\vdash X \leftrightarrow Y$ get $\vdash \square X \leftrightarrow \square Y$ (rule and K). They respect B2 by P2.
+\item[\lab{P4}] (Steps go one way.) $\vdash \square^i\bot \to \square^j\bot$ when $i \le j$. \ ($\vdash \bot \to \square^{j-i}\bot$; then the rule and K, $i$ times.)
+\item[\lab{P5}] (Four shapes.) By P4, every ``or'' of steps $\square^i\bot$ and negated steps $\neg\square^j\bot$ is provably $\top$, or one of $\square^b\bot$; \ $\neg\square^a\bot$; \ $\square^a\bot \to \square^b\bot$ with $b < a$; \ $\bot$. Their boxes:
+\[ \begin{array}{l} \vdash \square\square^b\bot \leftrightarrow \square^{b+1}\bot, \qquad \vdash \square\neg\square^a\bot \leftrightarrow \square\bot \ \ (a \ge 1), \\[2pt] \vdash \square(\square^a\bot \to \square^b\bot) \leftrightarrow \square^{b+1}\bot \ \ (b < a). \end{array} \]
+(The second: L with $A = \bot$, since $\neg\square^a\bot \to \neg\square\bot$ by P4. The third, one way: $\square^a\bot \to \square^b\bot$ gives $\square^{b+1}\bot \to \square^b\bot$ by P4, box it, and L with $A = \square^b\bot$. The other way: $\square^b\bot$ gives the implication, box it.)
+\item[\lab{P6}] (Normal form; a construction.) For every $A$: $\vdash \square A \leftrightarrow \square^c\bot$ for one $c \ge 1$, or $\vdash \square A$. \ (By recursion on $A$, every box statement is provably a Boolean word in steps; put it as an ``and'' of ``or''s, box it with P3, and use P5; an ``and'' of steps is its lowest step, P4.)
+\item[\lab{P7}] (Appears.) $\approx \;=\;$ B2. \ (Z4: if $A \approx B$, then by P1 $\square A$ and $\square B$ agree at every depth, so $\rho(A) = \rho(B)$ by P2, in every context by P3. Z5: by P6 and P1, $\vdash \square A \leftrightarrow \square^{c}\bot$ forces $c = \rho(A) + 1$, so if $A \not\approx B$ their rungs differ, say $\rho(A) = k < \rho(B)$; the separating context is $X \mapsto \square X$ and the question is ``the value at depth $k + 1$'': $0$ for $\square A$, $1$ for $\square B$.)
+\item[\lab{P8}] (Dies: the value at depth $1$.) $\bot \approx \neg\square\bot$ (both on rung $0$, P2), but at depth $1$, $\bot$ is $0$ and $\neg\square\bot$ is $1$.
+\item[\lab{P9}] (Dies: $\vee$ and $\neg$.) $\bot \approx \neg\square\bot$, but $\bot \vee \square\bot$ is on rung $1$ while $\neg\square\bot \vee \square\bot$ is on rung $\infty$.
+\end{lines}
+
+\subsection*{Notation}
+
+\begin{lines}
+\item[\lab{N1}] The bags are named by their rungs: $0, 1, 2, \dots, \infty$ (P7). Call $\rho(A)$ the \emph{rung} of $A$.
+\item[\lab{N2}] $\square$ and $\wedge$ carried over (P3, Z6): on rungs they are $k \mapsto k + 1$ and $\min$ (P2).
+\end{lines}
+
+\subsection*{Arrow}
+
+\begin{lines}
+\item[\lab{P10}] Bags $\to \N \cup \{\infty\}$, $\bag{A} \mapsto \rho(A)$. $\square$: lift (D1), survive (P3), descend (Z6), agree ($+1$). $\wedge$: the same, agreeing with $\min$. One-to-one (P7) and onto (P2): inside and a picture.
 \end{lines}
 
 \subsection*{Theorems}
 
 \begin{lines}
-\item[\lab{T1}] (Appears, without letters: the bags are the rungs.) $A \approx B$ $\iff$ $\rho(A) = \rho(B)$. \ ($\square A$ is true at depth $n$ exactly when $n \le \rho(A)$; G3.)
-\item[\lab{T2}] (A ladder of shape $\omega + 1$.) Every rung $k = 0, 1, 2, \dots$ and $\infty$ occurs: $\rho(\square^k \bot) = k$, and the provable statements are rung $\infty$. For every $A$ with $\rho(A) = k < \infty$: $\vdash \square A \leftrightarrow \square^{k+1}\bot$, so $\square^{k}\bot$ is a normal form of its bag. No two rungs are glued: that would give $\vdash \square^{k+2}\bot \to \square^{k+1}\bot$, and L\"ob would give $\vdash \square^{k+1}\bot$.
-\item[\lab{T3}] (Survives, read on the rungs.) $\rho(\square A) = \rho(A) + 1$; \ $\rho(A \wedge B) = \min(\rho(A), \rho(B))$. \\
-These are the laws of $v_p$ (Building 0, Chapter 18, D4) and of $\operatorname{ord}_a$ (Building 0, Chapter 34, P1) with ``$\times$'' read as ``$\wedge$'': a rung is the first place a statement stops being glued to the provable ones, as $v_p(a)$ is the first rung at which $a$ stops being glued to $0$.
-\item[\lab{T4}] (Placement.) $\bot$ and consistency $\neg\square\bot$ on rung $0$; $\square\bot$ (``inconsistent'') on rung $1$; ``$\square\bot \to \square\square\bot$'' on rung $\infty$.
+\item[\lab{T1}] (A ladder of shape $\omega + 1$.) The rungs are $0 < 1 < 2 < \dots < \infty$, every one occurs, and $\square^k\bot$ is a normal form of rung $k$, $\top$ of rung $\infty$.
+\item[\lab{T2}] (L\"ob, inside.) $A \approx (\square A \to A)$ for every $A$. \ ($\vdash \square A \to \square(\square A \to A)$ by K; L the other way.)
+\item[\lab{T3}] (Two rungs never glued, straight from L.) $\vdash \square^{k+1}\bot \to \square^k\bot$ never holds: boxing it and L would give $\vdash \square^{k+1}\bot$, against P1.
+\item[\lab{T4}] (Placement.) $\bot$ and $\neg\square\bot$ on rung $0$; $\square\bot$ on rung $1$; $\square\bot \to \square\square\bot$ on rung $\infty$.
 \end{lines}
 
 \subsection*{Remarks}
 
 \begin{lines}
-\item[\lab{R1}] (What is known.) T1--T3 are the letterless normal form of the logic of $\square$ (Boolos, classical). Adding stronger boxes stretches the ladder to the ordinal $\varepsilon_0$, the measure of strength of arithmetic (Beklemishev, reported). The blur B1 with letters, and the mixture of B1 with ``same consequences of the form for every $n$'', are not worked out: open.
-\item[\lab{R2}] (The twin.) The rung is a valuation: it is the fourth time the book meets ``first rung at which not glued'' (Building 0, Chapters 19, 21, 34). Here the ladder stops at $\omega + 1$ instead of having a bottom.
-\item[\lab{R3}] (Old names.) $\square$: the provability predicate; G1: the Hilbert--Bernays--L\"ob conditions; G2: L\"ob's theorem; G3: Solovay's completeness for GL on letterless sentences, read on a line of worlds; P3: Gödel's second incompleteness theorem (consistency is not provable) seen as ``truth dies''.
-\item[\lab{R4}] (Machine check, \texttt{checks/b2-ch1-2-check.py}.) On letterless statements up to size $3$ read at depths below $40$: T1 (bags are rungs), P2 (L\"ob instances), T3 ($\square$ climbs one rung, $\wedge$ is $\min$), T4, P4.
+\item[\lab{R1}] (The twin.) P2 is the law of $v_p$ (Building 0, Chapter 18) and of $\operatorname{ord}_a$ (Building 0, Chapter 34) with $\times$ read as $\wedge$: the rung is the first depth at which a statement stops being glued to $\top$, as $v_p(a)$ is the first rung at which $a$ stops being glued to $0$. Here the ladder ends at $\omega + 1$ instead of running on.
+\item[\lab{R2}] (Imported: the arrow into arithmetic. No line of this chapter depends on it.) Read $\square A$ as ``$A$ is provable from the axioms of $\N$''. That this arrow respects D2 (the conditions on $\square$ and L\"ob's theorem), and that it glues no more than D2 does on box statements (the depth reading), are classical. Under it, P8 says: ``the axioms are consistent'' ($\neg\square\bot$) is true and glued to $\bot$, so it is not provable. Truth dies in the blur; that is the whole content of the second incompleteness theorem seen from here.
+\item[\lab{R3}] (What is known.) P6, P7 are the letterless normal form of the logic of $\square$ (Boolos). Stronger boxes stretch the ladder to the ordinal $\varepsilon_0$ (Beklemishev; Imported, no line depends on it). The blur B1 with letters is not worked out: open.
+\item[\lab{R4}] (Old names.) D2: the logic GL; K: distribution; L: L\"ob's axiom; D3: the frame of the natural numbers read backwards; R2: the Hilbert--Bernays--L\"ob conditions, L\"ob's theorem, Solovay's completeness, G\"odel's second incompleteness theorem.
+\item[\lab{R5}] (Where existence came from.) Every bag exists by M5. That every rung occurs comes from a Build ($\square^k\bot$), and the normal form from recursion on words (P6).
+\item[\lab{R6}] (Machine check, \texttt{checks/b2-ch1-2-check.py}.) On box statements up to size $3$ read at depths below $40$: P2, P5's three boxes, P7 (bags are rungs), T2, T4, P9.
 \end{lines}
 
 \subsection*{Exercises}
@@ -142,5 +184,5 @@ These are the laws of $v_p$ (Building 0, Chapter 18, D4) and of $\operatorname{o
 \begin{lines}
 \item[\lab{E1}] Find the rung of $\square\bot \to \bot$ and of $\square\square\bot \wedge \neg\square\bot$.
 \item[\lab{E2}] Why is $\vee$ not $\max$ on rungs? Find $\rho(A \vee B)$ for $A = \bot$, $B = \square\bot$.
-\item[\lab{E3}] Show from P2 that $A \approx \square A \to A \approx \square(\square A \to A) \to (\square A \to A)$.
+\item[\lab{E3}] Use P5 to find the normal form of $\square(\neg\square\square\bot \vee \square\bot)$.
 \end{lines}
