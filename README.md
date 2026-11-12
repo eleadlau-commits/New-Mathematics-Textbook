@@ -5,7 +5,7 @@ One file per building (a book), one file per part.
 | File | What it is |
 |---|---|
 | `building0-blur.tex` → `.pdf` | **Building 0: Blur.** Contents, rules, Part I (Chapters 1–37), Part II (II.1–II.5). |
-| `building1-moves.tex` → `.pdf` | **Building 1: Moves.** The algebra path and elliptic curves. Part I (Rearrangements, Words), Part II (move systems up to the Smith form), Part III (the group law of a cubic, the torus, counts over ℤ/p). |
+| `building1-moves.tex` → `.pdf` | **Building 1: Moves.** The algebra path and elliptic curves. Part I (Rearrangements, Words), Part II (move systems, Smith form, actions, Sylow, divisibility, linear maps, similarity, forms, extensions, finite fields, Galois, radicals), Part III (the group law of a cubic, the torus, counts over ℤ/p). |
 | `building2-loops.tex` → `.pdf` | **Building 2: Loops.** Stub: proofs, provability, loops, Amplify, the edge. |
 | `rules.tex` | Chapter 0, the rules. Shared by every building. |
 | `part1-numbers.tex` | Building 0, Part I: the first floor (map + Chapters 1–37). |

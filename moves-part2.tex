@@ -843,3 +843,136 @@ So if $f$ is separable, there are exactly $[L : K]$ moves of $L$ that fix $K$ (m
 \item[\lab{E3}] Which fields sit inside $\mathbb{F}_{2^{12}}$?
 \item[\lab{E4}] Factor $x^{16} - x$ over $\Z/2$.
 \end{lines}
+
+\newpage
+
+%% ==================================================================
+%%  Chapter II.13  (the Galois correspondence)
+%% ==================================================================
+\section*{Chapter II.13. The moves of a field and the fields they fix}
+\phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter II.13. The moves of a field and the fields they fix \quad sub move systems $\leftrightarrow$ middle fields}{Chapter II.13. The moves of a field and the fields they fix}}
+\begin{center}
+{\normalsize sub move systems $\leftrightarrow$ middle fields \quad$\cdot$\quad from: Chapters II.2, II.3, II.8, II.11, II.12 \quad$\cdot$\quad blur, picture, count}\\[4pt]
+{\small For a middle field $M$, ask each move what it does on $M$. For a sub move system $H$, glue $H$ to $e$. The two blurs are the same blur: that is the whole correspondence. Two counts make it true.}
+\end{center}
+
+\subsection*{Given}
+
+\begin{lines}
+\item[\lab{G1}] (Chapter II.11.) T1 (degrees multiply); T7: if $L$ is the splitting field of a separable $f$ over $K$, the moves of $L$ fixing $K$ number exactly $[L : K]$, and a matching of middle fields lifts to $L$.
+\item[\lab{G2}] (Chapters II.2, II.3.) Cosets $\sigma H$, Lagrange; kept by relabelling; $G/N$; T1 of II.3 (W4).
+\item[\lab{G3}] (Chapter II.8; Building 0, Chapter II.3.) More unknowns than equations: a nonzero answer.
+\end{lines}
+
+\subsection*{Definitions}
+
+\begin{lines}
+\item[\lab{D1}] $L$: the splitting field of a separable $f$ over $K$. $G := \operatorname{Gal}(L/K)$, the moves of $L$ respecting $+$ and $\times$ and fixing every member of $K$. By G1, $|G| = [L : K]$. $G$ moves the roots of $f$, so sits inside $S_n$.
+\item[\lab{D2}] For a sub move system $H$: $L^H := \{ a : \sigma(a) = a \text{ for all } \sigma \in H \}$, a middle field. For a middle field $K \subseteq M \subseteq L$: $G_M :=$ the $\sigma$ in $G$ that fix every member of $M$.
+\end{lines}
+
+\subsection*{The blur}
+
+On $G$. \ $O$: $\sigma \mapsto \tau\sigma$ (moving on the left).
+
+\begin{lines}
+\item[\lab{B1}] (From below, for a sub move system $H$.) Glue $h \sim e$ for $h$ in $H$, respecting $O$: the bags are the cosets $\sigma H$ (Chapter II.2).
+\item[\lab{B2}] (From above, for a middle field $M$.) Question: ``what does $\sigma$ do on $M$?'', that is $\sigma \mapsto \sigma|_M$.
+\end{lines}
+
+\subsection*{Theorems}
+
+\begin{lines}
+\item[\lab{T1}] (The first count: Artin.) For a sub move system $H$: $[L : L^H] = |H|$. \ ($\le$: if $\alpha_1, \dots, \alpha_m$ in $L$ with $m > |H|$, the $|H|$ equations $\sum_i \sigma(\alpha_i)\, x_i = 0$, $\sigma \in H$, have a nonzero answer in $L$ (G3); take one with fewest nonzero $x_i$, one of them $1$; applying any $\tau$ in $H$ gives another answer, and the difference has fewer nonzero entries, so is $0$; so every $x_i$ is fixed by $H$, and the $\alpha_i$ are dependent over $L^H$. \ $\ge$: $L$ is the splitting field of $f$ over $L^H$, so by G1 it has exactly $[L : L^H]$ moves fixing $L^H$, and $H$ is among them.)
+\item[\lab{T2}] (The second count.) For a middle field $M$: $|G_M| = [L : M]$. \ (G1 over $M$: $L$ is the splitting field of $f$ over $M$.)
+\item[\lab{T3}] (Appears: the two blurs agree.) For $M = L^H$: $\sigma|_M = \tau|_M$ $\iff$ $\sigma H = \tau H$. So B1 for $H$ is B2 for $L^H$, and the cosets of $H$ match the arrows $M \to L$ that lift to $G$. \ ($\sigma|_M = \tau|_M$ means $\tau^{-1}\sigma \in G_M$; and $G_{L^H} = H$: $H \subseteq G_{L^H}$, and both have size $[L : L^H]$ by T1, T2.)
+\item[\lab{T4}] (The correspondence.) $H \mapsto L^H$ and $M \mapsto G_M$ are inverse matchings between the sub move systems of $G$ and the middle fields; bigger $H$ goes to smaller $L^H$; and $[M : K] = |G| / |G_M|$, the number of bags. \ ($G_{L^H} = H$ by T3; $L^{G_M} \supseteq M$ and $[L : L^{G_M}] = |G_M| = [L : M]$ by T1, T2, so equal.)
+\item[\lab{T5}] (Survives: both sides, exactly when $M$ is itself a splitting field.) $G_M$ is kept by relabelling $\iff$ $\sigma(M) = M$ for every $\sigma$ in $G$ $\iff$ $M$ is the splitting field over $K$ of some polynomial. Then restricting to $M$ is a picture $G \to \operatorname{Gal}(M/K)$, onto (G1, lifting), whose own blur is $G_M$ (W4): \[ \operatorname{Gal}(M/K) \text{ matches } G / G_M . \] ($G_{\sigma(M)} = \sigma G_M \sigma^{-1}$, and T4.)
+\item[\lab{T6}] (The sign on the roots.) Let $\delta = \prod_{i < j} (\alpha_i - \alpha_j)$ over the roots of $f$. Each $\sigma$ in $G$ sends $\delta$ to $\operatorname{sgn}(\sigma)\delta$ (Chapter 1, P5). So $G \subseteq A_n$ $\iff$ $\delta \in K$ $\iff$ $\delta^2$, the discriminant, is a square in $K$. \ (T4: $\delta$ is fixed by $G \cap A_n$.)
+\end{lines}
+
+\subsection*{Propositions on examples}
+
+\begin{lines}
+\item[\lab{P1}] ($x^3 - 2$ over $\Q$.) Roots $\sqrt[3]{2}$, $\omega\sqrt[3]{2}$, $\omega^2\sqrt[3]{2}$, $\omega = e^{2\pi i/3}$. $[L : \Q] = 6$, so $G = S_3$. The three sub move systems of size $2$ fix the three fields $\Q(\omega^k \sqrt[3]{2})$, of degree $3$; $A_3$ fixes $\Q(\omega) = \Q(\sqrt{-3})$, of degree $2$, and only that one is kept by relabelling (T5). The discriminant $-108$ is not a square (T6).
+\item[\lab{P2}] ($x^3 - 3x + 1$.) Discriminant $81 = 9^2$: $G = A_3$, a clock of size $3$; one root gives the other two.
+\item[\lab{P3}] (A circle cut in five.) $\Q(\zeta)$, $\zeta = e^{2\pi i/5}$: $G$ matches $(\Z/5)^\times$, a clock of size $4$ ($\sigma_k : \zeta \mapsto \zeta^k$). Its sub move system of size $2$, $\{\sigma_1, \sigma_4\}$, fixes $\zeta + \zeta^{-1} = \tfrac{-1 + \sqrt5}{2}$: the regular pentagon needs only $\sqrt5$.
+\item[\lab{P4}] (Finite fields.) Chapter II.12, T6 and T7 are T4 for $\mathbb{F}_{p^n}$ over $\Z/p$: the sub move systems of $\Z/n$ match the divisors of $n$, and so do the fields inside.
+\item[\lab{P5}] (Dies: ``splitting field over splitting field'' does not chain.) $\Q \subseteq \Q(\sqrt2) \subseteq \Q(\sqrt[4]{2})$: each step is a splitting field ($x^2 - 2$, $x^2 - \sqrt2$), but $\Q(\sqrt[4]{2})$ is not one over $\Q$: it is real, and $x^4 - 2$ has two non-real roots. The twin of Chapter II.3, P4.
+\end{lines}
+
+\subsection*{Remarks}
+
+\begin{lines}
+\item[\lab{R1}] (What the method did.) The correspondence is an Appears line (T3): ``what $\sigma$ does on $M$'' and ``which coset $\sigma$ is in'' are one blur. What makes it true is two counts (T1, T2), and both are proved. T5 is the Survives line of Chapter II.3, read through T4.
+\item[\lab{R2}] (Old names.) $G$: the Galois group; $L/K$: a Galois extension; T1: Artin's theorem; T4: the fundamental theorem of Galois theory; T5: normal extensions correspond to normal subgroups; T6: the discriminant.
+\item[\lab{R3}] (Machine check, \texttt{checks/b1-p2-ch13-14-check.py}.) $|G|$ and ``$G \subseteq A_n$ iff the discriminant is a square'' for $x^3 - 2$, $x^3 - 3x + 1$, $x^4 - 2$, $x^4 + x^3 + x^2 + x + 1$, $x^4 - 10x^2 + 1$, $x^5 - 4x + 2$ (Galois groups by a resolvent routine); P1 degrees; P3; P5.
+\end{lines}
+
+\subsection*{Exercises}
+
+\begin{lines}
+\item[\lab{E1}] Draw the sub move systems of $G$ for $x^4 - 10x^2 + 1$ ($L = \Q(\sqrt2, \sqrt3)$) and the matching middle fields.
+\item[\lab{E2}] For $x^4 - 2$, $G$ is the $8$ moves of a square. Which middle field does the sub move system of turns fix?
+\item[\lab{E3}] Find the middle fields of $\Q(e^{2\pi i/7})$ and their degrees.
+\end{lines}
+
+\newpage
+
+%% ==================================================================
+%%  Chapter II.14  (solvable ladders and radicals)
+%% ==================================================================
+\section*{Chapter II.14. Ladders of comm rungs, and roots}
+\phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter II.14. Ladders of comm rungs, and roots \quad move systems $\to$ ladders of blurs}{Chapter II.14. Ladders of comm rungs, and roots}}
+\begin{center}
+{\normalsize move systems $\to$ ladders of blurs \quad$\cdot$\quad from: Chapters 1, II.3, II.5, II.6, II.7, II.13; Building 0, Chapters 10, 24 \quad$\cdot$\quad ladder, blur}\\[4pt]
+{\small Blur a move system to a $\mathsf{comm}$ one, then blur what is glued, and so on. If the ladder reaches a point, adding $n$-th roots can follow it rung by rung; if not, no formula by roots exists. $A_5$ blurs to nothing $\mathsf{comm}$, so the quintic has no formula.}
+\end{center}
+
+\subsection*{Given}
+
+\begin{lines}
+\item[\lab{G1}] (Chapter II.3.) T2 (blurs of a blur), T3, T4 (the blur to $\mathsf{comm}$), T5 ($A_5$ simple).
+\item[\lab{G2}] (Chapter II.13.) T4, T5; $G \subseteq S_n$ on the roots.
+\item[\lab{G3}] (Chapter II.6.) T4 (Cauchy).
+\item[\lab{G4}] (Chapter 1.) P4 (swaps are enough; adjacent swaps $(i\; i{+}1)$ are enough).
+\end{lines}
+
+\subsection*{Definitions}
+
+\begin{lines}
+\item[\lab{D1}] (The ladder of commutators.) $G^{(0)} := G$; $G^{(k+1)} :=$ the bag of $e$ of the blur of $G^{(k)}$ to $\mathsf{comm}$ (G1, T4): generated by the $xyx^{-1}y^{-1}$. $G$ is \emph{solvable} if some $G^{(k)} = \{e\}$.
+\item[\lab{D2}] $L/K$ is \emph{by roots} if there is a ladder $K = K_0 \subseteq K_1 \subseteq \cdots \subseteq K_r \supseteq L$ with $K_{i+1} = K_i(\beta_i)$, $\beta_i^{n_i} \in K_i$. (Here $K$ holds $\Q$.)
+\end{lines}
+
+\subsection*{Theorems}
+
+\begin{lines}
+\item[\lab{T1}] (Equivalently: a ladder of $\mathsf{comm}$ rungs.) $G$ is solvable $\iff$ there is a ladder $G = N_0 \supseteq N_1 \supseteq \dots \supseteq N_r = \{e\}$, each $N_{i+1}$ kept by relabelling in $N_i$, with $N_i / N_{i+1}$ $\mathsf{comm}$. Pictures and sub move systems of solvable ones are solvable. \ ($G^{(k)}$ lies in every such $N_k$, by G1, T4.)
+\item[\lab{T2}] (Small $S_n$ climb down; big ones do not.) $S_4 \supseteq A_4 \supseteq \{e, (12)(34), (13)(24), (14)(23)\} \supseteq \{e\}$: rungs $\Z/2$, $\Z/3$, $\Z/2 \times \Z/2$. So $S_n$ is solvable for $n \le 4$. For $n \ge 5$, $A_5$ sits inside $S_n$, is simple (G1, T5) and not $\mathsf{comm}$, so its blur to $\mathsf{comm}$ glues nothing: $A_5^{(1)} = A_5$, and $S_n$ is not solvable.
+\item[\lab{T3}] (At most one list of simple rungs.) In any two ladders whose rungs are simple and cannot be refined, the lists of rungs $N_i / N_{i+1}$ agree up to order and matching. \ (Induction on $|G|$, comparing two first rungs $N$, $N'$ through $N \cap N'$ with Chapter II.3, T3.) For $\Z/12$: $\Z/2, \Z/2, \Z/3$ in every ladder.
+\item[\lab{T4}] (One root, one $\mathsf{comm}$ rung.) If $K$ holds the $n$-th roots of $1$ and $\beta^n = a \in K$, then $\operatorname{Gal}(K(\beta)/K)$ is inside the clock $\Z/n$. \ ($\sigma(\beta) = \zeta_\sigma \beta$ with $\zeta_\sigma^n = 1$, and $\sigma \mapsto \zeta_\sigma$ respects $\circ$ and is one-to-one.) And adding the $n$-th roots of $1$ to $\Q$ has group inside $(\Z/n)^\times$, $\mathsf{comm}$.
+\item[\lab{T5}] (By roots $\Rightarrow$ solvable.) If $L$, the splitting field of $f$ over $K$, is by roots, then $\operatorname{Gal}(L/K)$ is solvable. \ (Add all the roots of $1$ needed first; then each rung is T4. Enlarge the ladder to one of splitting fields (Chapter II.13, T5), read off a ladder of $\mathsf{comm}$ rungs of the big group (Chapter II.13, T4, T5), and pass to the picture $\operatorname{Gal}(L/K)$ (T1).)
+\item[\lab{T6}] (A quintic with no formula.) $f = x^5 - 4x + 2$ is irreducible (Eisenstein, $p = 2$; Chapter II.7, T6) and has exactly three real roots (Building 0, Chapter 10: $f(-2) < 0 < f(-1)$, $f(1) < 0 < f(2)$, $f(0) > 0$; $f'$ has two real roots, so no more). So $G \subseteq S_5$ holds: \\
+a $5$-cycle (Cauchy, G3: $5 \mid [\Q(\alpha) : \Q] \mid |G|$; an element of order $5$ in $S_5$ is a $5$-cycle); \\
+a swap (taking complex conjugates fixes three roots and swaps two). \\
+A swap $(a\, b)$ and a $5$-cycle $c$ give all of $S_5$: some power of $c$ sends $a \mapsto b$, so renumbering, $c = (1\,2\,3\,4\,5)$ and the swap is $(1\,2)$; relabelling by powers of $c$ gives every adjacent swap; then G4. So $G = S_5$, not solvable (T2), and by T5 the roots of $f$ cannot be written from $\Q$ with $+$, $-$, $\times$, $\div$ and $n$-th roots.
+\end{lines}
+
+\subsection*{Remarks}
+
+\begin{lines}
+\item[\lab{R1}] (What the method did.) Solvable is a ladder of blurs, each to a $\mathsf{comm}$ floor. ``No formula'' is a Dies line: the ladder of commutators stops at $A_5$, glued by nothing. Its proof is T5, which only climbs ladders already built; the one counting line is Cauchy.
+\item[\lab{R2}] (Reported.) The converse of T5 holds: a solvable group gives a formula by roots (classical; not used).
+\item[\lab{R3}] (Old names.) D1: the derived series; T1: solvable groups; T3: the Jordan--H\"older theorem; T4: Kummer theory, cyclotomic extensions; T5, T6: the Abel--Ruffini theorem, Galois's criterion.
+\item[\lab{R4}] (Machine check, \texttt{checks/b1-p2-ch13-14-check.py}.) $S_n$ solvable exactly for $n \le 4$; $A_5$ equals its commutator; the ladder of $S_4$ has sizes $24, 12, 4, 1$; $x^5 - 4x + 2$ has three real roots and group $S_5$; a swap and a $5$-cycle generate $120$ moves; T4 for $x^3 - 2$ over $\Q(\omega)$ (degree $3$).
+\end{lines}
+
+\subsection*{Exercises}
+
+\begin{lines}
+\item[\lab{E1}] Write the ladder of commutators of $D_4$ and of $S_3$.
+\item[\lab{E2}] Show that every move system of size $p^n$ is solvable (Chapter II.6, T2).
+\item[\lab{E3}] Find a quintic with exactly three real roots and check whether Eisenstein applies.
+\item[\lab{E4}] Why does T6's argument fail for $x^5 - 1$?
+\end{lines}
