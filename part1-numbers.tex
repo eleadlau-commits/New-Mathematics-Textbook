@@ -1208,8 +1208,7 @@ This is the first use of M7: $F$ is far larger than $\R$ (R1).
 \subsection*{Blur}
 
 \begin{lines}
-\item[\lab{B1}] (From below, L5.) Gluings: $f \sim g$ whenever $f$ and $g$ agree on $\operatorname{near}_k(a)$ for some rung $k$. \ Respects: $+$, $\times$. \ Call this blur $\sim$. \\
-Here the gluings are the bag test; this blur is made from above (B2).
+\item[\lab{B1}] (From below, L5.) Gluings: $e \sim 0$ for each $e$ that is $0$ on $\operatorname{near}_k(a)$ for some rung $k$. \ Respects: $+$, $\times$. \ Call this blur $\sim$. ($+$ spreads the gluings: $f \sim g$ exactly when $f - g$ is such an $e$.)
 \item[\lab{B2}] (From above, L6.) Question: $\operatorname{zero}_a$. \ Respects: $+$, $\times$. \ Call this blur $\approx$. \\
 By Z3: \ $f \approx g \iff$ for every $h$: \ $\operatorname{zero}_a(f + h) \Leftrightarrow \operatorname{zero}_a(g + h)$, together with the contexts made with $\times$.
 \item[] Blur $C$. A bag of $\sim$ is a \emph{germ at $a$}. Write $\bag{f}_a$ for the germ of $f$.
@@ -1338,8 +1337,7 @@ Given $C$, the continuous maps, with $+$, $\times$, $\circ$, constants and $\ope
 \subsection*{Blur}
 
 \begin{lines}
-\item[\lab{B1}] (From below, L5.) Gluings: $f \sim g$ whenever $f - g$ is flat at $a$. \ Respects: $+$, $\times$. \ Call this blur $\sim$. \\
-Here the gluings are the bag test; this blur is made from above (B2).
+\item[\lab{B1}] (From below, L5.) Gluings: $e \sim 0$ for each $e$ flat at $a$. \ Respects: $+$, $\times$. \ Call this blur $\sim$. ($+$ spreads the gluings: $f \sim g$ exactly when $f - g$ is flat at $a$.)
 \item[\lab{B2}] (From above, L6.) Question: $\operatorname{flat}_a$. \ Respects: $+$, $\times$. \ Call this blur $\approx$. \\
 By Z3: \ $f \approx g \iff$ for every $h$: \ $\operatorname{flat}_a(f + h) \Leftrightarrow \operatorname{flat}_a(g + h)$, together with the contexts made with $\times$.
 \item[] Blur $C$. A bag of $\sim$ is a \emph{tangent class at $a$}. Write $\bag{f}$ for the class of $f$.
@@ -1548,8 +1546,7 @@ A map $f : \R^n \to \R$ is \emph{continuous at $a$} if it respects nearness at $
 \subsection*{Blur}
 
 \begin{lines}
-\item[\lab{B1}] (From below, L5.) Gluings: $f \sim g$ whenever $f - g$ is flat at $a$. \ Respects: $+$, $\times$. \ Call this blur $\sim$. \\
-Here the gluings are the bag test; this blur is made from above (B2).
+\item[\lab{B1}] (From below, L5.) Gluings: $e \sim 0$ for each $e$ flat at $a$. \ Respects: $+$, $\times$. \ Call this blur $\sim$. ($+$ spreads the gluings: $f \sim g$ exactly when $f - g$ is flat at $a$.)
 \item[\lab{B2}] (From above, L6.) Question: $\operatorname{flat}_a$. \ Respects: $+$, $\times$. \ Call this blur $\approx$.
 \item[] Blur $C(\R^n)$. A bag is a \emph{tangent class at $a$}.
 \end{lines}
@@ -3847,7 +3844,7 @@ On $k[x, y]$, polynomials in two letters. \ $O$: $+$, $\times$.
 \item[\lab{P7}] (The mirror, and the size.) $y \mapsto -y$ respects the gluing; write $\bar f$ for the image of the bag $f$. Then $N(f) := f \bar f = p^2 - q^2 g$ lies in $k[x]$.
 \item[\lab{P8}] (Weight.) $w(p + qy) := \max(2 \deg p,\; 2 \deg q + 3)$; $w(0) := -\infty$. \ The two candidates are even and odd, so they never tie, and $\deg N(f) = w(f)$.
 \item[\lab{P9}] (Weights add.) $w(fg) = w(f) + w(g)$. \ ($\deg N(fg) = \deg N(f) + \deg N(g)$, since $N(fg) = N(f) N(g)$ and G2, T2.) The twin of $\operatorname{ord}$ (G4) with the sign turned: $w(f)$ is the order of the pole of $f$ at $O$.
-\item[\lab{P10}] (Weight $1$ never occurs.) The weights that occur are $0, 2, 3, 4, 5, 6, \dots$: \ $1, x, y, x^2, xy, x^3, \dots$. \ Weight $1$ never occurs: \emph{no function on $C$ has a single simple pole at $O$ and no other}. And $w(f) = 0$ only for the non-zero constants, so these are the only $f$ with an inverse in $k[C]$.
+\item[\lab{P10}] (No weight $1$.) The weights that occur are $0, 2, 3, 4, 5, 6, \dots$, from $1, x, y, x^2, xy, x^3, \dots$ So \emph{no function on $C$ has a single simple pole at $O$ and no other}. And $w(f) = 0$ only for the non-zero constants, so these are the only $f$ with an inverse in $k[C]$.
 \item[\lab{P11}] (Weight counts meetings, for lines.) $y - mx - c$ has weight $3$ and meets $C$ at $3$ affine points, counted (P2, P1: never at $O$). $x - c$ has weight $2$ and meets $C$ at $2$ affine points and once at $O$.
 \end{lines}
 
