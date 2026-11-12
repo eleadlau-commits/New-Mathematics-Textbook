@@ -54,6 +54,7 @@
   \node[sys] (Fm)  at (1.9,-10.6) {forms, $d$};
   \node[sys] (Hl)  at (1.9,-12.0) {holes};
   \node[sys] (Nu)  at (7.0,-9.0)  {maps up to\\[-1pt]null sets};
+  \node[sys] (Lo)  at (7.0,-10.6) {integrable\\[-1pt]maps};
   % arrows, labelled by chapter
   \draw[ar] (N)  -- node[ch]{1}  (Z);
   \draw[ar] (Z)  -- node[ch]{2}  (Q);
@@ -81,6 +82,7 @@
   \draw[ar] (Sv) -- node[ch]{15} (Fm);
   \draw[ar] (Fm) -- node[ch]{16} (Hl);
   \draw[ar] (Lm) -- node[ch]{26} (Nu);
+  \draw[ar] (Nu) -- node[ch]{27} (Lo);
 \end{tikzpicture}
 \end{center}
 
@@ -126,6 +128,7 @@ Every arrow puts the old numbers \emph{inside} the new ones, except Chapters 3, 
 24. maps on $\R^n$ $\to$ highest and lowest points & blur & flat to order $2$ at a point & value, covector, quadratic part & the answer, when $Q$ is $0$ in some direction \\
 25. maps $\R^n \to \R^n$ $\to$ inverses nearby & select & nothing new (tangent blur of 13) & the inverse, with tangent $(DF)^{-1}$ & ``can be inverted'', on a whole bag \\
 26. maps on a stretch $\to$ maps up to a null set & blur & differ only on a null set & none; nothing continuous is glued & the value at a point; ``continuous'' \\
+27. $C[b,c]$ $\to$ $L^1$ & build, select, blur & difference fades in the mean & integrable maps; length, last & $\times$; the value at a point; ``continuous'' \\
 \end{longtable}
 }
 
@@ -2868,4 +2871,101 @@ Twin: $\Q$ can be cut and its stretches are null; $\R$ cannot be cut and its str
 \item[\lab{E3}] Give two glued maps whose largest values differ.
 \item[\lab{E4}] In T1(b), where is ``open'' used? Hold $0 \le x \le 1$ by the two closed stretches $0 \le x \le \tfrac12$ and $\tfrac12 \le x \le 1$ and compare.
 \item[\lab{E5}] Is ``$f$ is $0$ somewhere'' kept by $\sim$? Is ``$f$ is $0$ almost everywhere''?
+\end{lines}
+
+\newpage
+
+%% ==================================================================
+%%  Chapter 27  (integrable maps)
+%% ==================================================================
+\section*{Chapter 27. Integrable maps}
+\phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter 27. Integrable maps \quad $C[b,c]$ $\to$ its closing-up in the mean}{Chapter 27. Integrable maps}}
+\begin{center}
+{\normalsize $C[b,c]$ $\to$ its closing-up in the mean \quad$\cdot$\quad from: Chapters 4, 12, 20, 26 \quad$\cdot$\quad build, select, blur}\\[4pt]
+{\small Close up the continuous maps with a third nearness, the mean. The integral survives for free. What the new members are, and when the integral survives a limit, are the two real lines.}
+\end{center}
+
+Chapter 4 run a third time. No measure is built first: the integral is the question, and length appears at the end as one of its answers.
+
+\subsection*{Given}
+
+\begin{lines}
+\item[\lab{G1}] (Chapter 4.) Build sequences, Select those that come near themselves, Blur those whose difference fades. T6: $\R$ is closed.
+\item[\lab{G2}] (Chapter 12.) $\int_b^c$ on $C[b,c]$, with A1--A4.
+\item[\lab{G3}] (Chapter 20.) $C[b,c]$; the nearness $M$ (D2); ``comes near point by point'' (D4); the powers (P5); the tents (P9); $C[b,c]$ is closed for $M$ (T1).
+\item[\lab{G4}] (Chapter 26.) Null sets, the blur $\sim$ ``equal almost everywhere'', P0 (listing $\Q$), P2, T2 (nothing continuous is glued).
+\end{lines}
+
+\subsection*{Definitions}
+
+\begin{lines}
+\item[\lab{D1}] (Mean nearness.) On $C[b,c]$: \ $f \mathrel{I_k} g$ \ when \ $\int_b^c |f - g| < 10^{-k}$.
+\item[\lab{D2}] (Build, M2; Select, M4.) Sequences $f_0, f_1, \dots$ in $C[b,c]$ that come near themselves in $I$: for every $k$, eventually $f_n \mathrel{I_k} f_m$.
+\end{lines}
+
+\subsection*{The blur}
+
+On the sequences of D2. \ $O$: $+$, scaling, $|\cdot|$ (place by place).
+
+\begin{lines}
+\item[\lab{B1}] (From below.) Gluings: $(e_n) \sim 0$ for each selected sequence that comes near $0$ in $I$.
+\item[\lab{B2}] (From above.) Question: ``comes near $0$ in $I$''.
+\item[\lab{N1}] (Name.) A bag is an \emph{integrable map}. All bags: $L^1[b,c]$. A continuous $f$ sits inside as the bag of $(f, f, f, \dots)$.
+\end{lines}
+
+\subsection*{Propositions}
+
+\begin{lines}
+\item[\lab{P1}] (Appears.) The two blurs agree. (As Chapter 20, P11: the separating context for $(f_n) \not\sim (g_n)$ is $-(g_n)$.)
+\item[\lab{P2}] ($I$ is a nearness; its bottom is equality.) Two steps at rung $k + 1$ give one at rung $k$ (A2, A3: $|f - h| \le |f - g| + |g - h|$). If $f \mathrel{I_k} g$ for every $k$, then $f = g$: a continuous $|f - g|$ that is not $0$ stays above some $t > 0$ on a stretch of positive length, and A3, A4 give $\int |f - g| > 0$.
+\item[\lab{P3}] ($M$ gives $I$; not the reverse.) $\int_b^c |f - g| \le (c - b) \max |f - g|$. Reverse dies: the tent of height $1$ on $\tfrac12 - \tfrac1n \le x \le \tfrac12 + \tfrac1n$ has $\int = \tfrac1n$, and largest value $1$ for every $n$.
+\item[\lab{P4}] (Survives: $+$, scaling, $|\cdot|$.) $\bigl||f| - |g|\bigr| \le |f - g|$, so $|\cdot|$ respects $I$ with the same rung. So do $\max(f, g) = \tfrac12(f + g + |f - g|)$ and $\min$.
+\item[\lab{P5}] (Survives: the integral. The cheapest line in the book.) $\bigl|\int f - \int g\bigr| \le \int |f - g|$: the integral respects $I$ with $m = k$. So $\int$ is a question on every bag, and so is $\int |\cdot|$, the size of a bag.
+\item[\lab{P6}] (Dies: $\times$.) On $0 \le x \le 1$ let $f_n := \min(x^{-1/2}, n)$, continuous. It comes near itself in $I$: $\int |f_n - f_m| \le \int_0^{1/n^2} x^{-1/2} = 2/n$ for $m > n$. But $\int f_n^2 = 1 + 2 \log n$ has no bound, and a sequence that comes near itself in $I$ has bounded integrals (P5). So $(f_n^2)$ is not even selected.
+\item[\lab{P7}] (Dies: the value at a point, the largest value.) The tents of P3 come near $0$ in $I$, so their bag is the bag of $0$; each has the value $1$ at $\tfrac12$.
+\item[\lab{P8}] (Dies: ``continuous''.) Let $s_n$ be $0$ up to $\tfrac12$, rise straight to $1$ at $\tfrac12 + \tfrac1n$, and stay $1$. It comes near itself in $I$. No constant sequence $(g, g, \dots)$ with $g$ continuous shares its bag: that would give $\int_0^{1/2} |g| = 0$ and $\int_{1/2 + \delta}^1 |g - 1| = 0$ for every $\delta > 0$, so $g$ jumps at $\tfrac12$.
+\end{lines}
+
+\subsection*{Theorems}
+
+\begin{lines}
+\item[\lab{T1}] (Closed, F5.) Run this chapter on $L^1[b,c]$ in place of $C[b,c]$: nothing new appears. \ (From each bag of a selected sequence of bags pick one continuous member near enough, rung $n$ for the $n$-th; the proof of Chapter 4, T6 with $\int |\cdot|$ in place of $|\cdot|$.)
+\item[\lab{T2}] (Each bag holds a map. The one existence line.) In every bag there is a sequence $(f_n)$ and a map $f$ on the stretch such that $f_n$ comes near $f$ point by point almost everywhere. \\
+(a) (A size bounds a length.) If $g$ in $C[b,c]$ is $\ge 0$ and $t > 0$, the points where $g > t$ are held by open stretches with lengths adding to at most $\tfrac1t \int g$. \ (Those points form open stretches, each holding a rational, so they are listed by Chapter 26, P0; on finitely many of them $t \cdot \text{length} \le \int g$, by A1, A3, A4.) \\
+(b) Take members with $\int |f_{n+1} - f_n| < 4^{-n}$. By (a), the points where $|f_{n+1} - f_n| > 2^{-n}$ are held by stretches of total length $\le 2^{-n}$. Outside the stretches for all $n \ge m$, the sum of the steps settles, so $f_n(x)$ comes near a limit (G1, T6). The points left over for every $m$ have total $\le 2^{1-m}$ for each $m$: a null set.
+\item[\lab{T3}] (At most one, up to Chapter 26. Classical; the proof is longer and is deferred with the others.) Two sequences in the same bag give maps glued by Chapter 26; sequences in different bags give maps not glued. So $L^1[b,c]$ is a bag of maps up to null sets, not only of sequences.
+\item[\lab{T4}] (Appears: Chapter 26's blur from above.) For maps $f, g$ given by bags (T2, T3): \ $f \sim g$ in the sense of Chapter 26 \ $\iff$ \ $\int |f - g| = 0$. \ This is the question that Chapter 26, B2 postponed.
+\item[\lab{T5}] (The integral through limits: one table.) Three nearnesses of Chapter 20 and this chapter, two questions:
+\begin{center}
+\begin{tabular}{lccc}
+ & in $M$ & in $I$ & point by point \\
+continuous & survives (Ch.\ 20, P6) & dies (P8) & dies (Ch.\ 20, P5) \\
+$\int$ & survives (Ch.\ 20, P7) & survives (P5) & dies (Ch.\ 20, P9) \\
+\end{tabular}
+\end{center}
+The last entry is rescued in two ways (both classical, proofs deferred):
+\item[\lab{T5.1}] (Survives under a roof.) If $f_n$ comes near $f$ point by point almost everywhere and $|f_n| \le G$ for one integrable $G$, then $f$ is integrable and $\int f_n$ comes near $\int f$. \ Dies without the roof: the tents of Chapter 20, P9 ($\int = 1$, limit $0$).
+\item[\lab{T5.2}] (Survives when only rising.) If $f_n \le f_{n+1}$ and the $\int f_n$ have a bound, the limit is integrable and $\int f_n$ comes near its integral. \ Dies without the bound: $\min(1/x, n)$ on $0 < x \le 1$ has $\int = 1 + \log n$.
+\item[\lab{T6}] (Length appears last.) For a set $A$ in the stretch whose $0/1$ map $\chi_A$ is integrable, its \emph{length} is $\int \chi_A$. A stretch gets $c' - b'$; a null set gets $0$. The map $\chi$ of Chapter 12, R3 is glued to $0$, so $\int \chi = 0$, with no rule of choice.
+\end{lines}
+
+\subsection*{Remarks}
+
+\begin{lines}
+\item[\lab{R1}] (Where existence came from.) Once: T2, from ``a size bounds a length'' and $\R$ closed. Everything else is a Survives or Dies line of the nearness $I$.
+\item[\lab{R2}] (Chapter 12, R3 answered.) The area rules there could not decide $\chi$. Here $\chi$ is decided by closing up, not by choosing.
+\item[\lab{R3}] (Sets with no length.) Some sets $A$ have $\chi_A$ in no bag. Showing one exists needs a rule of choice (not in Chapter 0).
+\item[\lab{R4}] (Next.) Probability is this chapter again with $\int 1 = 1$. Chapter 28 squares the size: $\int |f - g|^2$.
+\item[\lab{R5}] (Old names.) $I$: the $L^1$ norm. $L^1$: Lebesgue-integrable functions. T1: Riesz--Fischer. T2: a subsequence converges almost everywhere. T2(a): Chebyshev's (Markov's) inequality. T5.1: dominated convergence. T5.2: monotone convergence. T6: Lebesgue measure.
+\item[\lab{R6}] (Machine check, \texttt{checks/ch27-check.py}.) P3, P6 (exactly, with sympy), P7, P8, T2(a) on random polynomials, the witnesses of T5.1 and T5.2.
+\end{lines}
+
+\subsection*{Exercises}
+
+\begin{lines}
+\item[\lab{E1}] Show that $x^n$ comes near $0$ in $I$ on $0 \le x \le 1$, but not in $M$.
+\item[\lab{E2}] Show that the tents of Chapter 20, P9 come near $0$ point by point but not in $I$.
+\item[\lab{E3}] Prove $\max(f, g) = \tfrac12(f + g + |f - g|)$, and so P4 for $\max$.
+\item[\lab{E4}] What length does T6 give the middle-thirds set of Chapter 26, R2?
+\item[\lab{E5}] Compute $\int_0^1 \min(x^{-1/2}, n)$ and show it comes near $2$.
 \end{lines}
