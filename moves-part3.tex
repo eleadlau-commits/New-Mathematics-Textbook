@@ -51,7 +51,6 @@ On $\Z[C]$. \ $O$: $+$.
 
 \begin{lines}
 \item[\lab{B1}] (From below.) Gluing: $L \cdot C \sim 3\,O$ for every full line $L$.
-\item[\lab{B2}] None here (made from below). Over $\mathbb{C}$ the questions are the torus coordinates: Chapter III.2.
 \item[\lab{P5}] (Bags.) $D \sim 0$ exactly when $D = \sum n_i\,(L_i \cdot C - 3\,O)$, finitely many full lines, $n_i$ in $\Z$. \ (G3; Building 0, Chapter 0, Z2.) For an affine line $\ell$ (G1, P11): $L \cdot C - 3\,O = (\text{its affine points, counted}) - w(\ell)\,O$. The edge glues $3O \sim 3O$: nothing.
 \item[\lab{P6}] (Survives: the degree.) Each gluing has degree $3 - 3 = 0$. So the blur keeps $\deg$, and the bags of degree $0$ are closed under $+$ and undo.
 \item[\lab{P7}] (Two moves on points.) For $P$, $Q$ in $C(k)$ let $P * Q$ be the third point on their line (G1, T1). Then \[ P + Q + (P * Q) \sim 3O, \qquad R + \bar R \sim 2O, \] the second by the upright line through $R$ and its mirror $\bar R$ (G1, P3). So $P + Q \sim O + \overline{P * Q}$: two points are glued to one point plus $O$.
@@ -94,7 +93,8 @@ On $\Z[C]$. \ $O$: $+$.
 \item[\lab{R2}] (Where existence came from.) Twice, both Builds: the third point on a line (G1, T1), and the lift from one rung to the next (P1). Everything else is ``kept'' or ``only one''.
 \item[\lab{R3}] (Kept questions.) The blur keeps the degree (P6). Its bag of $0$ is read through functions by P9's argument: $D$ of degree $0$ is glued to $0$ exactly when it is ``zeros minus poles'' of a product of lines. The same template as Chapter II.4: free thing, gluing, kept questions, normal form.
 \item[\lab{R4}] (Old names.) $\Z[C]$: divisors; B1: linear equivalence (lines generate it on a cubic); $\operatorname{Bag}^0(C)$: the degree-zero Picard group $\operatorname{Pic}^0(C)$, and $\operatorname{Bag}(C)$: $\operatorname{Pic}(C)$; $\operatorname{ord}_P$: the valuation at $P$ (D3: the completed local ring $k[[t]]$, read rung by rung; $t$: a uniformiser); P1: Hensel's lemma; P4: the local ring at a smooth point is a discrete valuation ring, used for one line at a time; P9: ``no function with a single simple pole'', a case of Riemann--Roch; P10: the group law on an elliptic curve; P7: the chord-and-tangent construction; P12: a point of infinite order; $k = \Q$ with finitely many generators: Mordell--Weil (reported, not used).
-\item[\lab{R5}] (Machine check.) \\ \texttt{checks/b1-p3-check.py}: over $\Z/p$, $p = 5, 7, 11, 13$, every smooth $(a, b)$: $O$ does nothing, mirror undoes, $\oplus$ commutes, associativity on all triples (on $12$ points per curve when there are more); P11; P12. \\ \texttt{checks/b1-p3-orders-check.py}: over $\Z/p$, $p = 5, 7, 11$, every smooth $(a, b)$, every affine point: P1 on $8$ rungs; P3 for every full line; P4 both ways on random $f$.
+\item[\lab{R5}] (No from-above line here.) Over a general $k$ this chapter gives only B1 and makes no Appears claim. Over $\mathbb{C}$ the from-above questions are the torus coordinates, and the two agree: Chapter III.2, P6.
+\item[\lab{R6}] (Machine check.) \\ \texttt{checks/b1-p3-check.py}: over $\Z/p$, $p = 5, 7, 11, 13$, every smooth $(a, b)$: $O$ does nothing, mirror undoes, $\oplus$ commutes, associativity on all triples (on $12$ points per curve when there are more); P11; P12. \\ \texttt{checks/b1-p3-orders-check.py}: over $\Z/p$, $p = 5, 7, 11$, every smooth $(a, b)$, every affine point: P1 on $8$ rungs; P3 for every full line; P4 both ways on random $f$.
 \end{lines}
 
 \subsection*{Exercises}
@@ -146,7 +146,7 @@ One arrow, read in the four slots of an Arrow chapter: the arrow, what it respec
 
 \begin{lines}
 \item[\lab{P5}] The blur ``$\phi(z) = \phi(z')$'' on $\mathbb{C}/\Lambda$ is equality: $\phi$ is an inside and a picture (G1, T8). So the torus side has no gluing to undo: for a cubic reached by T8, ``at most one point per bag'' (Chapter III.1, P9) is read off this arrow, and associativity of $\oplus$ is the associativity of $+$ on $\mathbb{C}$, carried. A second road, over $\mathbb{C}$.
-\item[\lab{P6}] (From above, for Chapter III.1's blur.) Over $\mathbb{C}$, for a cubic reached by T8: the question $\sum n_P P \mapsto \sum n_P\, \phi^{-1}(P)$ in $\mathbb{C}/\Lambda$, with the degree, is kept by the gluing $L \cdot C \sim 3O$ (P2), and separates the bags (P5 with Chapter III.1, P8). So over $\mathbb{C}$ Chapter III.1's blur has its B2 and the two agree.
+\item[\lab{P6}] (From above, for Chapter III.1's blur.) Over $\mathbb{C}$, for a cubic reached by T8: the question $\sum n_P P \mapsto \sum n_P\, \phi^{-1}(P)$ in $\mathbb{C}/\Lambda$, with the degree, is kept by the gluing $L \cdot C \sim 3O$ (P2), and separates the bags (P5 with Chapter III.1, P8). So over $\mathbb{C}$ Chapter III.1's blur has a from-above line, and the two agree.
 \end{lines}
 
 \subsection*{Theorems}
