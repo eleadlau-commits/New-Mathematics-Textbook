@@ -976,3 +976,64 @@ A swap $(a\, b)$ and a $5$-cycle $c$ give all of $S_5$: some power of $c$ sends 
 \item[\lab{E3}] Find a quintic with exactly three real roots and check whether Eisenstein applies.
 \item[\lab{E4}] Why does T6's argument fail for $x^5 - 1$?
 \end{lines}
+
+\newpage
+
+%% ==================================================================
+%%  Chapter II.15  (colourings up to symmetry)
+%% ==================================================================
+\section*{Chapter II.15. Colourings up to symmetry}
+\phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter II.15. Colourings up to symmetry \quad colourings $\to$ their bags under a move system}{Chapter II.15. Colourings up to symmetry}}
+\begin{center}
+{\normalsize colourings $\to$ their bags under a move system \quad$\cdot$\quad from: Chapters 1, II.5 \quad$\cdot$\quad blur, count}\\[4pt]
+{\small A move fixes a colouring exactly when the colouring is constant on each of its cycles. So counting bags needs only the cycle counts of the moves, and one polynomial counts the bags of every colouring at once, by colour.}
+\end{center}
+
+The first chapter of the region of counting with symmetry (Building 0, Part III, the map of the regions ahead). It is Chapter II.5, T2 with one more observation.
+
+\subsection*{Given}
+
+\begin{lines}
+\item[\lab{G1}] (Chapter II.5.) A move system $G$ moving a bag; T2: the number of bags is the average number of fixed points.
+\item[\lab{G2}] (Chapter 1, P3.) Each move of a finite bag is a product of cycles on disjoint sets, in one way.
+\end{lines}
+
+\subsection*{Definitions}
+
+\begin{lines}
+\item[\lab{D1}] $G$ moves a finite bag $X$ of $n$ places. A \emph{colouring} is a map $X \to \{1, \dots, c\}$; $G$ moves colourings by $(g \cdot f)(x) := f(g^{-1}x)$.
+\item[\lab{D2}] For $g$ in $G$: $\operatorname{cyc}(g)$, the number of its cycles on $X$, fixed places counted as cycles of length $1$; $j_k(g)$, the number of its cycles of length $k$.
+\item[\lab{D3}] (The cycle polynomial.) $Z_G(p_1, p_2, \dots) := \frac{1}{|G|} \sum_{g \in G} p_1^{j_1(g)} p_2^{j_2(g)} \cdots$.
+\end{lines}
+
+\subsection*{Theorems}
+
+\begin{lines}
+\item[\lab{T1}] (Fixed colourings.) $g$ fixes $f$ $\iff$ $f$ is constant on every cycle of $g$. So $g$ fixes $c^{\operatorname{cyc}(g)}$ colourings.
+\item[\lab{T2}] (The count.) The colourings up to $G$ number \[ \frac{1}{|G|} \sum_{g \in G} c^{\operatorname{cyc}(g)} \;=\; Z_G(c, c, c, \dots) . \] (G1 and T1.)
+\item[\lab{T3}] (By colour.) Put $p_k := r^k + b^k + \dots$ (one letter per colour) in $Z_G$. The coefficient of $r^{a} b^{e} \cdots$ is the number of bags of colourings using red $a$ times, blue $e$ times, and so on. \ (Run G1 inside the set of colourings with those counts, which $G$ keeps; a colouring fixed by $g$ chooses one colour per cycle, and a cycle of length $k$ contributes $k$ places of that colour: the term $p_k$.)
+\end{lines}
+
+\subsection*{Propositions on examples}
+
+\begin{lines}
+\item[\lab{P1}] (Faces of a cube.) The $24$ turns: $1$ with six cycles, $6$ quarter turns about face axes (three cycles), $3$ half turns about face axes (four), $8$ turns about corner axes (two), $6$ half turns about edge axes (three). So \[ \tfrac{1}{24}\big(c^6 + 3c^4 + 12c^3 + 8c^2\big) \] colourings: $10$ for $c = 2$, $57$ for $c = 3$ (Chapter II.5, P5). With three faces red and three blue: $2$.
+\item[\lab{P2}] (Necklaces turned and flipped.) $G = D_n$ moving $n$ beads: $\frac{1}{2n}\big(\sum_{d \mid n} \varphi(d)\, c^{n/d} + n\,c^{\lceil n/2 \rceil}\big)$ for odd $n$, with the flips $c^{n/2}$ and $c^{n/2+1}$ (half each) for even $n$.
+\item[\lab{P3}] (Graphs.) $S_4$ moving the $6$ pairs of $4$ points: $11$ graphs up to relabelling; by number of edges, $1, 1, 2, 3, 2, 1, 1$ (T3 with $p_k = 1 + x^k$).
+\end{lines}
+
+\subsection*{Remarks}
+
+\begin{lines}
+\item[\lab{R1}] (What the method did.) A blur by moves, whose bags are counted without listing them: only the cycle type of each move matters (G2, which is itself a normal form, Chapter 1). Counting with symmetry is ``kept questions of the moves, averaged''.
+\item[\lab{R2}] (Old names.) $Z_G$: the cycle index; T2: Burnside's lemma for colourings; T3: P\'olya's enumeration theorem; P3: counting unlabelled graphs.
+\item[\lab{R3}] (Machine check, \texttt{checks/b1-p2-ch15-check.py}.) P1 for $c \le 4$ against listing; P2 for $3 \le n \le 7$, $c = 2, 3$; P3, with the edge counts from T3.
+\end{lines}
+
+\subsection*{Exercises}
+
+\begin{lines}
+\item[\lab{E1}] Count the colourings of the corners of a cube in $2$ colours.
+\item[\lab{E2}] Count graphs on $3$ points up to relabelling, by edges.
+\item[\lab{E3}] How many bracelets of $6$ beads with two red, two blue, two green?
+\end{lines}

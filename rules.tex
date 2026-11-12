@@ -60,6 +60,7 @@ Stated once here, used in every chapter.
 \item[\lab{Z8}] (Everything else must be checked.) A law that is not an equation (one that says ``or'', ``$\neq$'', ``there is'', or uses a question) may be lost by Build, Select or Blur. Each chapter must prove it again or record its loss.
 \item[\lab{Z9}] (Normal forms.) A \emph{normal form} for $\sim$ is a map $\nu : X \to X$ with $\nu(x) \sim x$, and $x \sim y \Rightarrow \nu(x) = \nu(y)$. Then $\nu(\nu(x)) = \nu(x)$, and each bag holds exactly one $x$ with $\nu(x) = x$.
 \item[\lab{Z10}] (A likeness is a blur seen through a picture.) If $\sim$ is a blur of $X$ and $p : X \to Y$ is a picture, then ``$y \mathrel{N} y'$ iff $y = p(x)$, $y' = p(x')$ for some $x \sim x'$'' is a likeness on $Y$, and it may fail to chain. Every likeness arises this way. So likeness is not a new primitive: it is made from blur and picture.
+\item[\lab{Z11}] (Amplify: a bound on every rung becomes sharp.) Let a move (W2) have a ladder of powers, with a count $S_m = \sum_i c_i \alpha_i^m$ on rung $m$: finitely many distinct $\alpha_i$, every $c_i \ne 0$. Blur sequences by growth: $a \preceq b$ when $\limsup |a_m|^{1/m} \le \limsup |b_m|^{1/m}$ (one-way, L8). Then ``the largest $|\alpha_i|$'' survives: if $|S_m| \le C (m+1)^d \rho^m$ for every $m$, with any $C$ and $d$, then every $|\alpha_i| \le \rho$; the constant $C$ dies. A loss that grows with the rung is not removed. (The bound makes $\sum S_m t^m$ converge for $|t| < 1/\rho$; that sum is $\sum c_i \alpha_i t/(1 - \alpha_i t)$, a fraction whose poles are exactly the $1/\alpha_i$, and such a series converges exactly out to its nearest pole.)
 \end{lines}
 
 \subsection*{Arrows}
@@ -114,6 +115,7 @@ E & Exercises & \\
 \item[\lab{F5}] (Closed.) A system is \emph{closed} for a chapter if running the chapter on it gives an Arrow that is both an inside and a picture.
 \item[\lab{F6}] (The table suggests; rows refute.) A statement read off a table is a conjecture. It becomes a theorem by proof from the tests, or dies when a row is built that breaks it.
 \item[\lab{F7}] (One way only.) Floor two reads floor one, never the reverse. A first-floor chapter cites only first-floor chapters; a class of the second floor only names what its rows already have. A Remark may point ahead, but no line may rely on what it points to.
+\item[\lab{F8}] (Loop.) A chapter may build a system $X$ and blur it by the action of an earlier system $S$. A \emph{loop} is a theorem of that chapter saying that $S$ comes back: a question on the bags whose answers match $S$, respecting the operations named. Verdicts: \emph{closed} ($S$ comes back exactly), \emph{changed} (larger or smaller), \emph{wild} (no rung of nearness keeps the bags apart; then keep the moves, do not forget them). The return is a theorem of the later chapter: by F7 no earlier line may rely on it.
 \end{lines}
 
 \subsection*{Remarks}

@@ -4,7 +4,7 @@
 \part*{Part II. The edge}
 \phantomsection\addcontentsline{toc}{part}{Part II. The edge}
 
-Where the method stops proving and starts sorting. Each chapter states one line that is not yet among the rules of Building 0, Chapter 0 (they enter there only when agreed), runs it on the map, and says honestly what is proved, what is checked by machine, and what is reported. Nothing here is a new theorem about the primes.
+Where the method stops proving and starts sorting. Two chapters state a line that is now a rule of Building 0, Chapter 0 (the loop, F8; Amplify, Z11); each chapter runs its line on the map, and says honestly what is proved, what is checked by machine, and what is reported. Nothing here is a new theorem about the primes.
 
 %% ==================================================================
 %%  Chapter 3  (loops)
@@ -19,7 +19,7 @@ Where the method stops proving and starts sorting. Each chapter states one line 
 \subsection*{The line of this chapter}
 
 \begin{lines}
-\item[\lab{L}] (Loop; draft rule F8.) A chapter $K$ builds a system $X$ and blurs it by the action of an earlier system $S$ (an orbit blur, Building 1, Chapter II.5). A \emph{loop} is a theorem of $K$ that $S$ comes back: a question on the bags whose answers match $S$, respecting the operations named. Verdicts: \emph{closed} ($S$ comes back exactly); \emph{changed} (larger or smaller); \emph{wild} (the bags are not kept apart by any rung of nearness: keep the moves, do not forget them). No chapter before $K$ may use the loop (F7).
+\item[\lab{L}] (Loop; rule F8 of Building 0, Chapter 0.) A chapter $K$ builds a system $X$ and blurs it by the action of an earlier system $S$ (an orbit blur, Building 1, Chapter II.5). A \emph{loop} is a theorem of $K$ that $S$ comes back: a question on the bags whose answers match $S$, respecting the operations named. Verdicts: \emph{closed} ($S$ comes back exactly); \emph{changed} (larger or smaller); \emph{wild} (the bags are not kept apart by any rung of nearness: keep the moves, do not forget them). No chapter before $K$ may use the loop (F7).
 \end{lines}
 
 \subsection*{Propositions: the loops on the map}
@@ -70,7 +70,7 @@ Where the method stops proving and starts sorting. Each chapter states one line 
 \subsection*{The line of this chapter}
 
 \begin{lines}
-\item[\lab{L}] (Amplify; draft rule Z12.) Given a move, its power ladder, and rung counts $S_m = \sum_i c_i \alpha_i^m$ with finitely many distinct $\alpha_i$ and every $c_i \ne 0$. Blur sequences by growth: $a \preceq b$ when $\limsup |a_m|^{1/m} \le \limsup |b_m|^{1/m}$ (one-way; Building 0, Chapter 17). \\
+\item[\lab{L}] (Amplify; rule Z11 of Building 0, Chapter 0, drafted as Z12.) Given a move, its power ladder, and rung counts $S_m = \sum_i c_i \alpha_i^m$ with finitely many distinct $\alpha_i$ and every $c_i \ne 0$. Blur sequences by growth: $a \preceq b$ when $\limsup |a_m|^{1/m} \le \limsup |b_m|^{1/m}$ (one-way; Building 0, Chapter 17). \\
 \emph{Survives:} ``the largest $|\alpha_i|$''. So if $|S_m| \le C (m + 1)^d \rho^m$ for every $m$, with any $C$ and $d$, then every $|\alpha_i| \le \rho$. \\
 \emph{Dies:} the constant $C$, and $(m + 1)^d$ ($C\rho^m$ and $\rho^m$ are glued).
 \item[\lab{T1}] (Proof.) The bound makes $\sum_m S_m t^m$ converge for $|t| < 1/\rho$ (Building 0, Chapter 20, comparison). That sum is $\sum_i c_i \alpha_i t / (1 - \alpha_i t)$, whose poles are exactly the $1/\alpha_i$ (distinct, no $c_i = 0$); a series that is a fraction of polynomials converges exactly out to its nearest pole (Building 0, Chapter 34, T1 and Chapter 33, P2). So no $1/\alpha_i$ is inside $|t| < 1/\rho$.
