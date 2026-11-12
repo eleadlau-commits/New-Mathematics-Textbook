@@ -16,4 +16,4 @@ Replaces the order parts of plans/WORKPLAN-2.md and plans/ALGEBRA-PATH.md (their
 | 8 | Map regions | topology (loops, holes), probability, differential equations, counting with symmetry, dynamics | map/MAP-PILOT.md | one map page first, chapters later |
 
 ## Progress
-- 12 Nov: Leg 1 done: ch26 null sets, ch27 integrable maps, ch28 L², ch29 waves on the circle (Fejér; Weierstrass import no longer needed), ch30 L²=ℓ². Leg 2 (ch31–34) next.
+- 12 Nov: Leg 1 done (ch26–30). Leg 2 done (ch31 complex derivative, ch32 loops/Cauchy, ch33 rigidity, ch34 poles and valuations). Leg 3 next: Building 1 (Moves), Part I Rearrangements, Words.
