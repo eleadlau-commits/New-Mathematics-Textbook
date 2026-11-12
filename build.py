@@ -10,7 +10,7 @@ Check scripts live in checks/, plans and designs in plans/.
 import re, sys, os, shutil, subprocess
 here = os.path.dirname(os.path.abspath(__file__))
 BUILDINGS = ['building0-blur', 'building1-moves', 'building2-loops']
-PARTS = ['rules', 'part1-numbers', 'part2-systems']
+PARTS = ['rules', 'part1-numbers', 'part2-systems', 'moves-part1']
 rd = lambda f: open(os.path.join(here, f + '.tex')).read()
 pre = rd('preamble')
 bad = 0
@@ -42,6 +42,11 @@ for f in PARTS:
             for i, l in enumerate(ch.split("\n"), 1):
                 if re.search(r'\bII\.\d', l) and not re.search(r'\\lab\{R\d', l):
                     cp.append("line %d cites Part II outside a Remark" % i)
+        # Building 0 never relies on Buildings 1, 2 outside Remarks
+        if f in ('part1-numbers', 'part2-systems'):
+            for i, l in enumerate(ch.split("\n"), 1):
+                if re.search(r'Building [12]', l) and not re.search(r'\\lab\{R\d', l):
+                    cp.append("line %d cites Building 1/2 outside a Remark" % i)
         if cp: probs.append(name + ": " + "; ".join(cp))
     if probs: bad += 1
     print("%-18s %d chapters  %s" % (f, len(chapters(code)) or 1, "; ".join(probs) if probs else "ok"))

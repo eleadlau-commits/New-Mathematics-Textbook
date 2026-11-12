@@ -1,0 +1,99 @@
+% Building 1, Part I. Moves on things.
+% One file for the whole part. Each chapter begins with a banner and \section*.
+% Building 1 reads Building 0 (cited "Building 0, Chapter n"); Building 0 never reads Building 1.
+
+\part*{Part I. Moves on things}
+\phantomsection\addcontentsline{toc}{part}{Part I. Moves on things}
+
+%% ==================================================================
+%%  Chapter 1  (rearrangements)
+%% ==================================================================
+\section*{Chapter 1. Rearrangements}
+\phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter 1. Rearrangements \quad a bag of $n$ things $\to$ its moves}{Chapter 1. Rearrangements}}
+\begin{center}
+{\normalsize a bag of $n$ things $\to$ its moves \quad$\cdot$\quad from: Building 0, Chapters 0, 1, 3 \quad$\cdot$\quad build, select, blur}\\[4pt]
+{\small Select the moves of $n$ things. Glue all swaps together and exactly two bags are left: the sign appears. Glue a move to its relabellings and the bags are the shapes of its cycles.}
+\end{center}
+
+The first chapter that keeps the \emph{how}. A move is an arrow from a bag to itself that is an inside and a picture (Chapter 0, W2). Building 0 forgot how one thing was carried to another; here the carrying is the thing.
+
+\subsection*{Given}
+
+\begin{lines}
+\item[\lab{G1}] (Building 0, Chapter 0.) Build M1--M7; blur L1--L9; arrows W1--W4; W2: inside and picture.
+\item[\lab{G2}] (Building 0, Chapter 3.) $\Z/2$ with $+$.
+\item[\lab{G3}] (Building 0, Chapter 1.) Whole numbers; counting a finite bag.
+\end{lines}
+
+\subsection*{Definitions}
+
+\begin{lines}
+\item[\lab{D1}] (Build, M7; Select, M4.) Fix $n \ge 1$ and $[n] := \{1, \dots, n\}$. $S_n$: the maps $\sigma : [n] \to [n]$ that are one-to-one (then also onto). Each is a \emph{move} of $[n]$. \ $\sigma \tau := \sigma \circ \tau$ (do $\tau$ first). \ $e$: the move that does nothing.
+\item[\lab{D2}] A \emph{swap} $(i\,j)$ exchanges $i$ and $j$ and keeps the rest. A \emph{cycle} $(i_1\, i_2 \dots i_k)$ sends each $i_r$ to $i_{r+1}$ and $i_k$ to $i_1$.
+\item[\lab{D3}] (Inversions.) $\operatorname{inv}(\sigma)$: the number of pairs $i < j$ with $\sigma(i) > \sigma(j)$.
+\item[\lab{D4}] (Relabelling.) For $\pi$ in $S_n$: $\sigma^\pi := \pi \sigma \pi^{-1}$, the move $\sigma$ with the things renamed by $\pi$.
+\end{lines}
+
+\subsection*{Propositions: the floor}
+
+\begin{lines}
+\item[\lab{P1}] (Laws, carried by W2.) $\circ$ is associative; $e$ does nothing on either side; every move has an undo $\sigma^{-1}$. Not commutative for $n \ge 3$: $(1\,2)(2\,3) = (1\,2\,3)$ while $(2\,3)(1\,2) = (1\,3\,2)$.
+\item[\lab{P2}] (Count.) $S_n$ has $n!$ members.
+\item[\lab{P3}] (Normal form: cycles.) Every move is a product of cycles on disjoint sets of things, in exactly one way up to the order of the cycles (follow each thing until it comes back).
+\item[\lab{P4}] (Swaps are enough.) Every move is a product of swaps, by P3 and \[ (i_1 \dots i_k) = (i_1\, i_2)(i_2\, i_3) \cdots (i_{k-1}\, i_k) \quad \text{(do the right-hand swap first).} \]
+\end{lines}
+
+\subsection*{Blur 1: the sign}
+
+On $S_n$, $n \ge 2$. \ $O$: $\circ$.
+
+\begin{lines}
+\item[\lab{B1}] (From below.) Gluings: $s \sim t$ for any two swaps $s, t$.
+\item[\lab{B2}] (From above.) Question: the parity of $\operatorname{inv}(\sigma)$, in $\Z/2$.
+\item[\lab{P5}] (Survives: parity respects $\circ$.) $\operatorname{inv}(\sigma\tau) \equiv \operatorname{inv}(\sigma) + \operatorname{inv}(\tau) \pmod 2$. \ (For each pair $\{i, j\}$, $\sigma\tau$ turns it over exactly when one of $\tau$ on $\{i, j\}$ and $\sigma$ on $\{\tau i, \tau j\}$ does; count the pairs mod 2.) A swap has an odd number of inversions: $(i\,j)$ with $i < j$ has $2(j - i) - 1$.
+\item[\lab{P6}] (Appears.) The two blurs agree. There are exactly two bags, $A_n$ (even) and its other bag (odd). \ (B1 puts every product of an even number of swaps with $e$ and every odd product with $(1\,2)$, by P4; B2 tells them apart, by P5.) Name: $\operatorname{sgn}(\sigma) := (-1)^{\operatorname{inv}(\sigma)}$.
+\item[\lab{P7}] (Dies: how many swaps.) $(1\,3) = (1\,2)(2\,3)(1\,2)$: one swap, or three. The number of swaps is not a question on moves; only its parity is.
+\item[\lab{P8}] (Survives into Building 0.) $\operatorname{sgn} : S_n \to \{1, -1\}$ respects $\circ$ and $\times$: an arrow onto Building 0's $\Z/2$ (G2), written multiplicatively. By W4, $S_n \to \Z/2$ is the blur B1 followed by a matching.
+\end{lines}
+
+\subsection*{Blur 2: relabelling}
+
+On $S_n$. \ $O$: nothing (L7: this blur respects neither $\circ$ nor its undo in general; say so).
+
+\begin{lines}
+\item[\lab{B3}] (From below.) Gluings: $\sigma \sim \sigma^\pi$ for every $\pi$.
+\item[\lab{B4}] (From above.) Question: the \emph{cycle type}, the list of cycle lengths of P3 in falling order (a partition of $n$).
+\item[\lab{P9}] (Appears.) The two blurs agree. \ ($\pi (i_1 \dots i_k) \pi^{-1} = (\pi i_1 \dots \pi i_k)$: relabelling renames the cycles and keeps their lengths; two moves of the same type are relabellings of each other.) Normal form: one move per partition of $n$; the bags number $p(n)$: $1, 2, 3, 5, 7, 11$ for $n = 1, \dots, 6$.
+\item[\lab{P10}] (Dies: $\circ$.) $(1\,2) \sim (2\,3)$, but $(1\,2)(1\,2) = e$ while $(2\,3)(1\,2) = (1\,3\,2)$.
+\item[\lab{P11}] (Survives: sign and order.) $\operatorname{sgn}(\sigma) = (-1)^{n - c}$ with $c$ the number of cycles (counting fixed things); the order of $\sigma$ (least $m \ge 1$ with $\sigma^m = e$) is the lcm of the cycle lengths. Both are read off the type.
+\item[\lab{P12}] (Bag sizes.) The bag of type $1^{m_1} 2^{m_2} \cdots$ has $n! \,/\, \prod_k k^{m_k}\, m_k!$ members. \ (Count the relabellings that give the same move.)
+\end{lines}
+
+\subsection*{Theorems}
+
+\begin{lines}
+\item[\lab{T1}] (Survey: every blur of $S_n$ that respects $\circ$.) A blur of $S_n$ respecting $\circ$ is fixed by its bag of $e$, which is a union of bags of Blur 2 closed under $\circ$. For $n \le 6$ the survey is: \\
+$n = 2$: two blurs. \ $n = 3$: three ($e$ only; $A_3$; everything). \ $n = 4$: four ($e$; the three double swaps with $e$; $A_4$; everything). \ $n = 5$ and $n = 6$: three ($e$; $A_n$; everything). \\
+Machine-checked (all unions of types closed under $\circ$). For $n \ge 5$ the classical theorem is that $A_n$ glues to nothing smaller: $A_n$ is \emph{simple}. That is a count, proved in Part II.
+\item[\lab{T2}] (The sign is the only arrow to $\Z/2$.) For $n \ge 2$, the arrows $S_n \to \{1, -1\}$ respecting $\circ$ are $\sigma \mapsto 1$ and $\operatorname{sgn}$. \ (Relabelling glues all swaps (P9), so an arrow takes one value on them; P4.)
+\item[\lab{T3}] (Every move system lives here. Cayley.) For any finite bag $G$ of moves of something, closed under $\circ$ and undo, $g \mapsto (h \mapsto g h)$ is an inside of $G$ into the moves of the bag $G$, respecting $\circ$. So every finite move system is found inside some $S_n$, $n = $ its size.
+\end{lines}
+
+\subsection*{Remarks}
+
+\begin{lines}
+\item[\lab{R1}] (What the blur did.) The sign is an Appears line: ``glue all swaps'' from below meets ``parity of inversions'' from above. That the bags are two and not one is the kept question P5, and it is the whole content of the classical theorem.
+\item[\lab{R2}] (Building 0 seen from here.) The blur of Building 0, Chapter 3 ($n \sim 0$ on $\Z$) is ``forget how far you moved'' for the moves $x \mapsto x + k$. Every blur in Building 0 is such a forgetting; this book keeps the moves.
+\item[\lab{R3}] (Old names.) $S_n$: the symmetric group. $A_n$: the alternating group. P3: disjoint cycle decomposition. P6: the sign is well defined. B3: conjugacy; its bags are conjugacy classes. P12: class sizes. T1: the normal subgroups of $S_n$. T3: Cayley's theorem.
+\item[\lab{R4}] (Machine check, \texttt{checks/b1-ch1-check.py}.) P1, P2, P4 on all of $S_n$, $n \le 6$; P5 for $n \le 5$; P6 (closure of the swap gluing); P7; P9 and P12 (types and bag sizes); P11; T1 (survey); T2.
+\end{lines}
+
+\subsection*{Exercises}
+
+\begin{lines}
+\item[\lab{E1}] Write $\sigma = (1\,4\,2)(3\,5)$ in $S_5$ as swaps, and find $\operatorname{sgn}\sigma$ and the order of $\sigma$ in two ways.
+\item[\lab{E2}] Count the moves of type $2\,2\,1$ in $S_5$ by P12, and by listing.
+\item[\lab{E3}] Show that in $S_n$ the even moves are exactly the products of 3-cycles ($n \ge 3$).
+\item[\lab{E4}] Which move of $S_4$ has the most inversions? How many does it have?
+\item[\lab{E5}] Why is ``$\sigma$ and $\tau$ commute'' not kept by Blur 2? Give a witness in $S_3$.
+\end{lines}
