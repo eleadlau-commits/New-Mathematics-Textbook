@@ -159,3 +159,74 @@ On a move system $G$. \ $O$: for each $g$, the move $x \mapsto g x$ (left only).
 \item[\lab{E3}] Which sizes of sub move systems occur in $S_4$? Compare with the divisors of $24$.
 \item[\lab{E4}] Show that a move system of size $4$ is $\mathsf{comm}$. (Each $g \ne e$ has order $2$ or $4$.)
 \end{lines}
+
+\newpage
+
+%% ==================================================================
+%%  Chapter II.3  (normal bags)
+%% ==================================================================
+\section*{Chapter II.3. Blurs that respect both sides}
+\phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter II.3. Blurs that respect both sides \quad a move system $\to$ its quotients}{Chapter II.3. Blurs that respect both sides}}
+\begin{center}
+{\normalsize a move system $\to$ its quotients \quad$\cdot$\quad from: Chapters 1, 2, II.2 \quad$\cdot$\quad blur}\\[4pt]
+{\small Ask the blur to respect moving on both sides. The bag of $e$ must now be kept by relabelling, and the bags form a move system of their own. Every arrow is such a blur followed by an inside.}
+\end{center}
+
+The same gluing as Chapter II.2, with one more operation in $O$. Building 0, Chapter 3 is the case $G = \Z$, where left and right are the same and every sub move system will do.
+
+\subsection*{Given}
+
+\begin{lines}
+\item[\lab{G1}] (Chapter II.2.) Left-respecting blurs and cosets; T1 (Lagrange).
+\item[\lab{G2}] (Chapter 1.) Relabelling $\sigma^\pi$; the bags of relabelling (types); T1 (survey for $S_n$, $n \le 6$).
+\item[\lab{G3}] (Chapter 2.) Presentations; P5 (exponent sums).
+\end{lines}
+
+\subsection*{The blur}
+
+On a move system $G$. \ $O$: $x \mapsto gx$ and $x \mapsto xg$ for each $g$.
+
+\begin{lines}
+\item[\lab{B1}] (From below.) For a bag $H$: glue $h \sim e$ for each $h$ in $H$.
+\item[\lab{B2}] (From above.) For a sub move system $N$ with $gNg^{-1} = N$ for every $g$ (\emph{kept by relabelling}): the question $x \mapsto xN$.
+\end{lines}
+
+\subsection*{Propositions}
+
+\begin{lines}
+\item[\lab{P1}] (Survey.) A blur respecting both sides is a left-respecting blur (Chapter II.2, P1) whose bag of $e$, $N$, is kept by relabelling: $n \sim e$ gives $g n g^{-1} \sim g g^{-1} = e$. Conversely each such $N$ gives one. Then $xN = Nx$: left and right bags agree.
+\item[\lab{P2}] (Appears.) B1 for $H$ equals B2 for the smallest $N$ kept by relabelling that holds $H$ (Chapter 2, T2).
+\item[\lab{P3}] (Survives: $\circ$ on bags.) $xN \cdot yN := xyN$ does not depend on the members chosen. The bags form a move system $G/N$, and $x \mapsto xN$ is a picture respecting $\circ$.
+\item[\lab{P4}] (Dies: ``kept by relabelling'' does not chain.) In $D_4$ (corners $1, 2, 3, 4$ round a square), let $s$ be the flip $(2\,4)$ and $V = \{e, s, (1\,3), (1\,3)(2\,4)\}$. Then $\{e, s\}$ is kept by relabelling in $V$ ($V$ is $\mathsf{comm}$), and $V$ is kept in $D_4$ (it has half the members). But $\{e, s\}$ is not kept in $D_4$: the quarter turn $r = (1\,2\,3\,4)$ gives $r s r^{-1} = (1\,3)$.
+\item[\lab{P5}] (Half is always kept.) If $N$ has half the members of $G$, it is kept by relabelling: the two left bags and the two right bags are both $N$ and the rest.
+\end{lines}
+
+\subsection*{Theorems}
+
+\begin{lines}
+\item[\lab{T1}] (Every arrow is a blur, then an inside. W4.) For an arrow $f : G \to G'$ respecting $\circ$, the blur ``$f(x) = f(y)$'' respects both sides; its bag of $e$ is $N = \{x : f(x) = e\}$; and $G/N \to G'$, $xN \mapsto f(x)$, is an inside. So $G/N$ matches the picture of $f$. \\
+Example: $\operatorname{sgn} : S_n \to \{1, -1\}$ gives $S_n / A_n$ matching $\Z/2$ (Chapter 1, P8).
+\item[\lab{T2}] (Blurs of a blur.) The two-sided blurs of $G/N$ match the two-sided blurs of $G$ that are blurrier than $N$'s, by $M/N \leftrightarrow M$; and $(G/N)/(M/N)$ matches $G/M$. Blurring twice is blurring once, with the coarser bag of $e$.
+\item[\lab{T3}] (A sub and a blur.) For a sub move system $K$ and $N$ kept by relabelling: $KN$ is a sub move system, $K \cap N$ is kept by relabelling in $K$, and $KN/N$ matches $K/(K \cap N)$. \ (T1 for $K \to G/N$.)
+\item[\lab{T4}] (Appears: the blur to $\mathsf{comm}$.) Glue $xy \sim yx$ for all $x, y$, respecting both sides. The bags form a $\mathsf{comm}$ move system $G^{\mathrm{ab}}$, and every arrow from $G$ to a $\mathsf{comm}$ move system passes through it, in exactly one way. From above: the questions are all arrows to $\mathsf{comm}$ systems. \\
+$S_n^{\mathrm{ab}}$ matches $\Z/2$, by $\operatorname{sgn}$ ($n \ge 2$). \ $F_2^{\mathrm{ab}}$ matches $\Z^2$, by the exponent sums (Chapter 2, P5). \ $D_4^{\mathrm{ab}}$ matches $\Z/2 \times \Z/2$.
+\item[\lab{T5}] (Simple: only two such blurs. A count.) $G$ is \emph{simple} if its only two-sided blurs are ``glue nothing'' and ``glue everything''. $\Z/p$ is simple (Chapter II.2, T1). $A_5$ is simple: its relabelling bags (inside $A_5$) have sizes $1, 15, 20, 12, 12$; a bag of $e$ kept by relabelling is a union of these holding the $1$, and its size divides $60$ (Lagrange); the only such unions have $1$ or $60$ members.
+\end{lines}
+
+\subsection*{Remarks}
+
+\begin{lines}
+\item[\lab{R1}] (L7 is the whole story.) The same gluing $h \sim e$, with left moves in $O$, gives cosets; with both sides, quotients. Nothing else changed.
+\item[\lab{R2}] (Simple pieces.) A ladder of blurs $G \to G/N_1 \to \dots \to \{e\}$ in which each rung's blur is simple lists the \emph{atoms} of $G$ (the atoms ladder of the project, rung 2: the list survives, the gluing does not). $A_5$ is the first atom that is not a clock.
+\item[\lab{R3}] (Old names.) Kept by relabelling: normal subgroup. $G/N$: quotient group. T1: the first isomorphism theorem. T2: the correspondence and third isomorphism theorems. T3: the second isomorphism theorem. T4: abelianisation, $G/[G, G]$. T5: simple groups; $A_5$ simple. R2: Jordan--H\"older.
+\item[\lab{R4}] (Machine check, \texttt{checks/b1-p2-ch3-check.py}.) P1 on all bags of $S_3$, $D_4$ (and kept-by-relabelling sub systems of $S_4$); P3; P4; P5 on $S_4$; T1 for $\operatorname{sgn}$ and $\det$ on $GL_2(\Z/3)$; T4 sizes for $S_3$, $S_4$, $D_4$; T5 (class sizes of $A_5$, all unions).
+\end{lines}
+
+\subsection*{Exercises}
+
+\begin{lines}
+\item[\lab{E1}] List the sub move systems of $S_3$ kept by relabelling.
+\item[\lab{E2}] Show that every sub move system of a $\mathsf{comm}$ system is kept by relabelling. Which line of Building 0, Chapter 3 is this?
+\item[\lab{E3}] Find $S_3^{\mathrm{ab}}$ by gluing $(1\,2)(2\,3) \sim (2\,3)(1\,2)$ and closing up.
+\item[\lab{E4}] Why can $A_5$ have no arrow onto $\Z/2$?
+\end{lines}
