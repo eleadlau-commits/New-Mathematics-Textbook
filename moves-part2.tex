@@ -1,0 +1,161 @@
+% Building 1, Part II. Move systems as rows.
+% One file for the whole part. Each chapter begins with a banner and \section*.
+
+\part*{Part II. Move systems as rows}
+\phantomsection\addcontentsline{toc}{part}{Part II. Move systems as rows}
+
+%% ==================================================================
+%%  Chapter II.1  (the table)
+%% ==================================================================
+\section*{Chapter II.1. The table of move systems}
+\phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter II.1. The table of move systems \quad move systems $\to$ classes}{Chapter II.1. The table of move systems}}
+\begin{center}
+{\normalsize move systems $\to$ classes \quad$\cdot$\quad from: Part I; Building 0, Chapters 1, 3, 8, 9, 14, II.1 \quad$\cdot$\quad table, blur, class}\\[4pt]
+{\small The rows are now move systems. Every row passes the three laws of moves; the table is about what else they pass.}
+\end{center}
+
+Building 0, Chapter II.1 again, with move systems for rows. A \emph{move system} is a bag $G$ with $\circ$, a do-nothing $e$ and undos, where $\circ$ is associative: exactly the laws Chapter 1, P1 found for the moves of a bag. By Chapter 1, T3 every finite one is a bag of moves.
+
+\subsection*{Given}
+
+\begin{lines}
+\item[\lab{G1}] (Rows.) $\Z$ with $+$ (Building 0, Ch.\ 1); $\Z/6$ (Ch.\ 3); the circle $\mathbb{T}$ (Ch.\ 8); $\Q^\times$, the non-zero rationals with $\times$ (Ch.\ 2); $(\Z/8)^\times = \{1, 3, 5, 7\}$ with $\times$ (Ch.\ 3); $S_3$ (Chapter 1); $D_4$, the moves of $S_4$ that carry a square's corners $1, 2, 3, 4$ (in order round the square) to corners of the square; $GL_2(\R)$, the straight maps of $\R^2$ with $\det \ne 0$ (Building 0, Ch.\ 14); $F_2$ (Chapter 2); $\Z^2$ (Chapter 2, T3).
+\item[\lab{G2}] (Facts.) The lines of those chapters, read as yes/no facts.
+\end{lines}
+
+\subsection*{Tests}
+
+\begin{lines}
+\item[\lab{D1}] $\mathsf{comm}$: $gh = hg$ for all $g, h$.
+\item[\lab{D2}] $\mathsf{fin}$: finitely many members.
+\item[\lab{D3}] $\mathsf{cyc}$: some $g$ has every member as a power $g^k$, $k$ in $\Z$.
+\item[\lab{D4}] $\mathsf{tf}$: no $g \ne e$ has $g^k = e$ for any $k \ge 1$.
+\item[\lab{D5}] $\mathsf{div}$: for every $g$ and every $n \ge 1$ there is $h$ with $h^n = g$.
+\end{lines}
+
+\subsection*{The table}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{l|ccccc}
+ & $\mathsf{comm}$ & $\mathsf{fin}$ & $\mathsf{cyc}$ & $\mathsf{tf}$ & $\mathsf{div}$ \\ \hline
+$\Z$ & $\checkmark$ & $\cdot$ & $\checkmark$ & $\checkmark$ & $\cdot$ \\
+$\Z/6$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\cdot$ & $\cdot$ \\
+$\mathbb{T}$ & $\checkmark$ & $\cdot$ & $\cdot$ & $\cdot$ & $\checkmark$ \\
+$\Q^\times$ & $\checkmark$ & $\cdot$ & $\cdot$ & $\cdot$ & $\cdot$ \\
+$(\Z/8)^\times$ & $\checkmark$ & $\checkmark$ & $\cdot$ & $\cdot$ & $\cdot$ \\
+$S_3$ & $\cdot$ & $\checkmark$ & $\cdot$ & $\cdot$ & $\cdot$ \\
+$D_4$ & $\cdot$ & $\checkmark$ & $\cdot$ & $\cdot$ & $\cdot$ \\
+$GL_2(\R)$ & $\cdot$ & $\cdot$ & $\cdot$ & $\cdot$ & $\cdot$ \\
+$F_2$ & $\cdot$ & $\cdot$ & $\cdot$ & $\checkmark$ & $\cdot$ \\
+$\Z^2$ & $\checkmark$ & $\cdot$ & $\cdot$ & $\checkmark$ & $\cdot$ \\
+\end{tabular}
+\end{center}
+Reasons for the less obvious entries: $\mathbb{T}$ is not $\mathsf{cyc}$ (if $a$ turns a rational amount its powers are finitely many; if not, $a/2$ is no power of $a$) and is $\mathsf{div}$ (Building 0, Chapter 8, T2). $\Q^\times$: $-1$ has $(-1)^2 = 1$; $2$ has no square root. $(\Z/8)^\times$: every member squares to $1$. $GL_2(\R)$: $-I$ squares to $I$; $\operatorname{diag}(-1, 1)$ has no square root ($\det$ of a square is $\ge 0$). $F_2$: $s$ has no square root (exponent sums, Chapter 2, P5); no power of a reduced word $\ne 1$ is $1$.
+
+\subsection*{Blur, and what appears}
+
+\begin{lines}
+\item[\lab{B1}] (Building 0, II.1, B1.) For a set $U$ of tests, glue two rows with the same answers on $U$.
+\item[\lab{P1}] (Not sharp.) With all five tests, $S_3$ and $D_4$ share a bag. A separating test is the size: $6$ against $8$. Every other pair of rows is told apart.
+\item[\lab{P2}] (Classes.) As $T$ runs over the sets of tests, $\operatorname{class}(T)$ takes $11$ values. Old names: $\operatorname{class}(\mathsf{comm})$, \emph{abelian}; $\operatorname{class}(\mathsf{cyc})$, \emph{cyclic} ($\Z$, $\Z/6$); $\operatorname{class}(\mathsf{tf})$, \emph{torsion-free} ($\Z$, $F_2$, $\Z^2$).
+\item[\lab{P3}] (Read off the table.) $\mathsf{cyc} \Rightarrow \mathsf{comm}$; \ $\mathsf{div} \Rightarrow \mathsf{comm}$. Never together: $\mathsf{fin}$ and $\mathsf{tf}$; $\mathsf{fin}$ and $\mathsf{div}$; $\mathsf{cyc}$ and $\mathsf{div}$; $\mathsf{tf}$ and $\mathsf{div}$.
+\end{lines}
+
+\subsection*{Theorems}
+
+For every move system with more than one member, not only the ten rows.
+\begin{lines}
+\item[\lab{T1}] $\mathsf{cyc} \Rightarrow \mathsf{comm}$. \ ($g^j g^k = g^{j+k} = g^k g^j$.)
+\item[\lab{T2}] $\mathsf{fin}$ and $\mathsf{tf}$ never together. \ (The powers of $g$ repeat, $g^i = g^j$ with $i < j$, so $g^{j-i} = e$.)
+\item[\lab{T3}] $\mathsf{fin}$ and $\mathsf{div}$ never together. \ (By T2's reason each $g$ has $g^m = e$ for some $1 \le m \le |G|$; so with $n = |G|!$ every $n$-th power is $e$, and $g \ne e$ has no $n$-th root.)
+\item[\lab{T4}] $\mathsf{cyc}$ and $\mathsf{div}$ never together. \ (Finite: T3. Infinite: it matches $\Z$, and $2h = 1$ has no answer there.)
+\item[\lab{T5}] (Matching rows.) $\Z/6$ matches $\Z/2 \times \Z/3$, and $(\Z/8)^\times$ matches $\Z/2 \times \Z/2$; $\Z/6$ and $(\Z/8)^\times$ differ already by size, and $\Z/4$ and $(\Z/8)^\times$ by $\mathsf{cyc}$.
+\end{lines}
+
+\subsection*{Remarks}
+
+\begin{lines}
+\item[\lab{R1}] (Accidents of a small table; Building 0, II.1, R1.) Two lines of P3 die when the right row is added. $\mathsf{div} \Rightarrow \mathsf{comm}$ dies on the rotations of space: every rotation has $n$-th roots (turn by a $1/n$ of the angle about the same axis), and two rotations about different axes need not commute. ``$\mathsf{tf}$ and $\mathsf{div}$ never together'' dies on $\Q$ with $+$. The other four survive every row: T1--T4.
+\item[\lab{R2}] (A conjecture from the table, F6.) Every abelian row with $\mathsf{fin}$ in the table matches a product of clocks $\Z/n_1 \times \dots \times \Z/n_k$. This is true for every finite abelian move system; it is proved in the chapter on modules, from a normal form of matrices.
+\item[\lab{R3}] (Old names.) Move system: group. $\mathsf{comm}$: abelian. $\mathsf{tf}$: torsion-free. $\mathsf{div}$: divisible. $D_4$: the dihedral group of order $8$. T2: finite groups are torsion groups.
+\item[\lab{R4}] (Machine check, \texttt{checks/b1-p2-ch1-check.py}.) Every finite entry by brute force; the $11$ classes (\texttt{b1-p2-ch1-classes.py}); P1; T5 (the two matchings checked).
+\end{lines}
+
+\subsection*{Exercises}
+
+\begin{lines}
+\item[\lab{E1}] List the members of $D_4$ as moves of the four corners, and show $D_4$ is not $\mathsf{comm}$.
+\item[\lab{E2}] Add the row $\Q$ with $+$. How many classes now?
+\item[\lab{E3}] Find a test that separates $S_3$ from $D_4$ without counting members.
+\item[\lab{E4}] Show $\Z^2$ is not $\mathsf{cyc}$.
+\end{lines}
+
+\newpage
+
+%% ==================================================================
+%%  Chapter II.2  (cosets)
+%% ==================================================================
+\section*{Chapter II.2. Blurs that respect one side}
+\phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter II.2. Blurs that respect one side \quad a move system $\to$ its cosets}{Chapter II.2. Blurs that respect one side}}
+\begin{center}
+{\normalsize a move system $\to$ its cosets \quad$\cdot$\quad from: Chapter II.1; Building 0, Chapters 3, II.2 \quad$\cdot$\quad blur, count}\\[4pt]
+{\small Ask a blur to respect moving on the left only. Its bags are copies of the bag of $e$, all of one size. Counting them gives Lagrange, and Fermat's little theorem falls out.}
+\end{center}
+
+Building 0, II.2 asked which blurs of a ring respect $+$ and $\times$. Here the question is asked of a move system with less: respect $g \circ$ on the left, and nothing on the right. Rule L7 (say what the blur respects) is the whole story of this chapter and the next.
+
+\subsection*{Given}
+
+\begin{lines}
+\item[\lab{G1}] (Chapter II.1.) Move systems; the rows.
+\item[\lab{G2}] (Building 0, Chapter 3.) $\Z/n$; $(\Z/n)^\times$, the bags with an inverse for $\times$; Chapter 3, T5 there.
+\end{lines}
+
+\subsection*{The blur}
+
+On a move system $G$. \ $O$: for each $g$, the move $x \mapsto g x$ (left only).
+
+\begin{lines}
+\item[\lab{B1}] (From below.) For a bag $H \subseteq G$: glue $h \sim e$ for each $h$ in $H$.
+\item[\lab{B2}] (From above.) For a sub move system $K$ (closed under $\circ$ and undo, holding $e$): the question $x \mapsto$ the bag $xK := \{x k : k \in K\}$.
+\end{lines}
+
+\subsection*{Propositions}
+
+\begin{lines}
+\item[\lab{P1}] (Survey: every such blur.) A blur of $G$ respecting left moves is fixed by its bag of $e$, which is a sub move system $K$; and $x \sim y \iff x^{-1} y \in K$. Conversely every sub move system gives one. So these blurs and the sub move systems match.
+\item[\lab{P2}] (Appears.) B1 for $H$ equals B2 for $K = $ the smallest sub move system holding $H$. Its bags are the $x K$: the \emph{left cosets}.
+\item[\lab{P3}] (Survives: moving a bag.) $x \mapsto g x$ carries the bag $yK$ onto the bag $gyK$, one-to-one. \ (Its undo is $x \mapsto g^{-1} x$.) So all bags have the same size as $K$.
+\item[\lab{P4}] (Dies: the right side.) In $S_3$ with $K = \{e, (1\,2)\}$: $e \sim (1\,2)$, but $e (1\,3) = (1\,3)$ and $(1\,2)(1\,3) = (1\,3\,2)$ are in different bags, since $(1\,3)^{-1}(1\,3\,2) = (2\,3) \notin K$.
+\item[\lab{P5}] (Normal form.) None in general: no rule picks one member of each $xK$. For $\Z$ and $K = n\Z$ the normal forms $0, \dots, n - 1$ of Building 0, Chapter 3 are such a rule.
+\end{lines}
+
+\subsection*{Theorems}
+
+\begin{lines}
+\item[\lab{T1}] (Counting bags: Lagrange. A count, not a Survives line.) If $G$ is finite, $|G| = |K| \cdot (\text{number of bags})$. \ (P3: the bags are disjoint and each has $|K|$ members.) So $|K|$ divides $|G|$.
+\item[\lab{T2}] (The order of a move divides the size.) For $g$ in a finite $G$, the least $m \ge 1$ with $g^m = e$ divides $|G|$. \ ($K = \{e, g, \dots, g^{m-1}\}$ has $m$ members: T1.)
+\item[\lab{T3}] ($g^{|G|} = e$.) From T2.
+\item[\lab{T4}] (Building 0, Chapter 3, T5, recovered.) For $a$ with $\gcd(a, n) = 1$: $a^{\varphi(n)} \equiv 1 \pmod n$, where $\varphi(n) = |(\Z/n)^\times|$. For $n = p$ prime: $a^{p-1} \equiv 1$. \ (T3 in $(\Z/n)^\times$.)
+\item[\lab{T5}] (Dies: ``every divisor is a size''.) $A_4$ has $12$ members and no sub move system with $6$. \ (Machine-checked; classical.) T1 is ``at most these sizes'', never ``these sizes occur''.
+\item[\lab{T6}] (Prime size.) If $|G| = p$ is prime, $G$ matches $\Z/p$. \ (Any $g \ne e$ has order dividing $p$, so $p$: its powers are all of $G$.)
+\end{lines}
+
+\subsection*{Remarks}
+
+\begin{lines}
+\item[\lab{R1}] (What the blur did.) The cosets are the bags of the one blur that respects left moves; their equal size is a Survives line (P3); Lagrange is a count of bags (T1). The method's own split: blur keeps (P3), counting gives existence and sizes.
+\item[\lab{R2}] (Respecting both sides.) If the blur also respects right moves, $K$ must be kept by relabelling, $gKg^{-1} = K$, and the bags themselves form a move system. That is Chapter II.3.
+\item[\lab{R3}] (Old names.) Left cosets; index $= $ number of bags; T1: Lagrange's theorem; T4: Euler's theorem, Fermat's little theorem; T5: the converse of Lagrange fails ($A_4$).
+\item[\lab{R4}] (Machine check, \texttt{checks/b1-p2-ch2-check.py}.) P1 (for every bag $K \ni e$ of $S_3$ and $D_4$: ``$x^{-1}y \in K$'' is a blur exactly when $K$ is a sub move system); P3; P4; T1--T3 on all sub move systems of $S_4$; T4 for $n \le 200$; T5.
+\end{lines}
+
+\subsection*{Exercises}
+
+\begin{lines}
+\item[\lab{E1}] List the left cosets of $K = \{e, (1\,2)\}$ in $S_3$, and then the right cosets $Kx$. Are they the same bags?
+\item[\lab{E2}] Find $3^{100} \bmod 7$ with T4.
+\item[\lab{E3}] Which sizes of sub move systems occur in $S_4$? Compare with the divisors of $24$.
+\item[\lab{E4}] Show that a move system of size $4$ is $\mathsf{comm}$. (Each $g \ne e$ has order $2$ or $4$.)
+\end{lines}
