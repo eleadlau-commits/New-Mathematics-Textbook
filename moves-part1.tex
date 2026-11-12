@@ -11,7 +11,7 @@
 \section*{Chapter 1. Rearrangements}
 \phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter 1. Rearrangements \quad a bag of $n$ things $\to$ its moves}{Chapter 1. Rearrangements}}
 \begin{center}
-{\normalsize a bag of $n$ things $\to$ its moves \quad$\cdot$\quad from: Building 0, Chapters 0, 1, 3 \quad$\cdot$\quad build, select, blur}\\[4pt]
+{\normalsize a bag of $n$ things $\to$ its moves \quad$\cdot$\quad from: Building 0, Chapters 0, 1, 3 \quad$\cdot$\quad blur, build, select}\\[4pt]
 {\small Select the moves of $n$ things. Glue all swaps together and exactly two bags are left: the sign appears. Glue a move to its relabellings and the bags are the shapes of its cycles.}
 \end{center}
 
@@ -51,9 +51,10 @@ On $S_n$, $n \ge 2$. \ $O$: $\circ$.
 \item[\lab{B1}] (From below.) Gluings: $s \sim t$ for any two swaps $s, t$.
 \item[\lab{B2}] (From above.) Question: the parity of $\operatorname{inv}(\sigma)$, in $\Z/2$.
 \item[\lab{P5}] (Survives: parity respects $\circ$.) $\operatorname{inv}(\sigma\tau) \equiv \operatorname{inv}(\sigma) + \operatorname{inv}(\tau) \pmod 2$. \ (For each pair $\{i, j\}$, $\sigma\tau$ turns it over exactly when one of $\tau$ on $\{i, j\}$ and $\sigma$ on $\{\tau i, \tau j\}$ does; count the pairs mod 2.) A swap has an odd number of inversions: $(i\,j)$ with $i < j$ has $2(j - i) - 1$.
-\item[\lab{P6}] (Appears.) The two blurs agree. There are exactly two bags, $A_n$ (even) and its other bag (odd). \ (B1 puts every product of an even number of swaps with $e$ and every odd product with $(1\,2)$, by P4; B2 tells them apart, by P5.) Name: $\operatorname{sgn}(\sigma) := (-1)^{\operatorname{inv}(\sigma)}$.
+\item[\lab{P6}] (Appears.) The two blurs agree. There are exactly two bags, $A_n$ (even) and its other bag (odd). \ (B1 puts every product of an even number of swaps with $e$ and every odd product with $(1\,2)$, by P4; B2 tells them apart, by P5, with no context needed: $e$ and $(1\,2)$ have $0$ and $1$ inversions.)
 \item[\lab{P7}] (Dies: how many swaps.) $(1\,3) = (1\,2)(2\,3)(1\,2)$: one swap, or three. The number of swaps is not a question on moves; only its parity is.
-\item[\lab{P8}] (Survives into Building 0.) $\operatorname{sgn} : S_n \to \{1, -1\}$ respects $\circ$ and $\times$: an arrow onto Building 0's $\Z/2$ (G2), written multiplicatively. By W4, $S_n \to \Z/2$ is the blur B1 followed by a matching.
+\item[\lab{N1}] (Notation, after the blur.) $\operatorname{sgn}(\sigma) := (-1)^{\operatorname{inv}(\sigma)}$, the bag of $\sigma$ read as $\pm 1$.
+\item[\lab{P8}] (Arrow.) $\operatorname{sgn} : S_n \to \{1, -1\}$ respects $\circ$ and $\times$: an arrow onto Building 0's $\Z/2$ (G2), written multiplicatively. By W4, $S_n \to \Z/2$ is the blur B1 followed by a matching.
 \end{lines}
 
 \subsection*{Blur 2: relabelling}
@@ -74,7 +75,7 @@ On $S_n$. \ $O$: nothing (L7: this blur respects neither $\circ$ nor its undo in
 \begin{lines}
 \item[\lab{T1}] (Survey: every blur of $S_n$ that respects $\circ$.) A blur of $S_n$ respecting $\circ$ is fixed by its bag of $e$, which is a union of bags of Blur 2 closed under $\circ$. For $n \le 6$ the survey is: \\
 $n = 2$: two blurs. \ $n = 3$: three ($e$ only; $A_3$; everything). \ $n = 4$: four ($e$; the three double swaps with $e$; $A_4$; everything). \ $n = 5$ and $n = 6$: three ($e$; $A_n$; everything). \\
-Machine-checked (all unions of types closed under $\circ$). For $n \ge 5$ the classical theorem is that $A_n$ glues to nothing smaller: $A_n$ is \emph{simple}. That is a count, proved in Part II.
+Machine-checked (all unions of types closed under $\circ$). For $n \ge 5$ the classical theorem is that $A_n$ glues to nothing smaller ($A_n$ is \emph{simple}). The book proves it for $A_5$ by a count (Chapter II.3, T5), and that is all it uses.
 \item[\lab{T2}] (The sign is the only arrow to $\Z/2$.) For $n \ge 2$, the arrows $S_n \to \{1, -1\}$ respecting $\circ$ are $\sigma \mapsto 1$ and $\operatorname{sgn}$. \ (Relabelling glues all swaps (P9), so an arrow takes one value on them; P4.)
 \item[\lab{T3}] (Every move system lives here. Cayley.) For any finite bag $G$ of moves of something, closed under $\circ$ and undo, $g \mapsto (h \mapsto g h)$ is an inside of $G$ into the moves of the bag $G$, respecting $\circ$. So every finite move system is found inside some $S_n$, $n = $ its size.
 \end{lines}
@@ -106,7 +107,7 @@ Machine-checked (all unions of types closed under $\circ$). For $n \ge 5$ the cl
 \section*{Chapter 2. Words}
 \phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter 2. Words \quad letters and their undos $\to$ the free move system}{Chapter 2. Words}}
 \begin{center}
-{\normalsize letters and their undos $\to$ the free move system \quad$\cdot$\quad from: Building 0, Chapters 0, 1, 3; Chapter 1 \quad$\cdot$\quad build, blur}\\[4pt]
+{\normalsize letters and their undos $\to$ the free move system \quad$\cdot$\quad from: Building 0, Chapters 0, 1, 3; Chapter 1 \quad$\cdot$\quad blur, build}\\[4pt]
 {\small Write words in letters and their undos, and glue a letter next to its undo to nothing. Each bag holds exactly one word with nothing left to cancel. Glue more, and every move system appears.}
 \end{center}
 
@@ -159,7 +160,6 @@ $\langle s, t \mid s t s^{-1} t^{-1} \rangle$ matches $\Z^2$: glue $st \sim ts$ 
 $\langle s, t \mid s^2, t^2, (st)^3 \rangle$ matches $S_3$ (Chapter 1), with $s = (1\,2)$, $t = (2\,3)$. \\
 $\langle s, t \mid s^2, t^2, (st)^n \rangle$ has $2n$ members: the moves of a regular $n$-gon. \\
 $\langle s, t \mid s^2, t^3, (st)^5 \rangle$ has $60$ members.
-\item[\lab{T4}] (Dies: deciding.) For some finite $L$ and $R$, no procedure decides whether a word lies in the bag of $1$ (classical, Novikov and Boone; reported). From below, a blur can be written down and still not be computable: Building 0 never met this, because its gluings always came with a normal form.
 \end{lines}
 
 \subsection*{Remarks}
@@ -167,8 +167,9 @@ $\langle s, t \mid s^2, t^3, (st)^5 \rangle$ has $60$ members.
 \begin{lines}
 \item[\lab{R1}] (Build, then blur, one level up.) Building 0, Chapter 1: pairs, glue $(a + 1, b + 1) \sim (a, b)$, normal form $a - b$. Here: words, glue $s s^{-1} \sim 1$, normal form the reduced word. The question that makes the blur from above (D3) is itself a move: in Building 1 even the questions are moves.
 \item[\lab{R2}] (Where it goes.) T1 makes every move system a blur of a free one. Part II asks which blurs of a move system respect joining (cosets, normal bags), and counts bags.
-\item[\lab{R3}] (Old names.) $F(L)$: the free group on $L$. D3 and P1: van der Waerden's proof of the normal form. P5: abelianisation to $\Z^L$ (exponent sums). T1: the universal property of free groups. T2: group presentations; the bag of $1$ is the normal closure of $R$. T3: cyclic, free abelian, symmetric, dihedral groups; the last is $A_5$. T4: the word problem.
+\item[\lab{R3}] (Old names.) $F(L)$: the free group on $L$. D3 and P1: van der Waerden's proof of the normal form. P5: abelianisation to $\Z^L$ (exponent sums). T1: the universal property of free groups. T2: group presentations; the bag of $1$ is the normal closure of $R$. T3: cyclic, free abelian, symmetric, dihedral groups; the last is $A_5$. R5: the word problem.
 \item[\lab{R4}] (Machine check, \texttt{checks/b1-ch2-check.py}.) P1 on all words of length $\le 8$ in two letters; P3 to length $8$; P5; T3 (orders by coset enumeration, and the arrow onto $S_3$).
+\item[\lab{R5}] (Reported, not used: deciding.) For some finite $L$ and $R$, no procedure decides whether a word lies in the bag of $1$ (classical, Novikov and Boone). From below, a blur can be written down and still not be computable: Building 0 never met this, because its gluings always came with a normal form.
 \end{lines}
 
 \subsection*{Exercises}
