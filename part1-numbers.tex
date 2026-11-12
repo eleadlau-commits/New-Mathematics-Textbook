@@ -62,6 +62,9 @@
   \node[sys] (Rs)  at (-0.8,-13.4) {residues};
   \node[sys] (Rg)  at (-0.8,-14.8) {rigid\\[-1pt]maps};
   \node[sys] (Po)  at (2.2,-14.8) {poles,\\[-1pt]orders};
+  \node[sys] (Pr)  at (-6.2,-7.4) {$\mathbb{P}^2$};
+  \node[sys] (Cu)  at (-6.2,-9.0) {a cubic};
+  \node[sys] (To)  at (-0.8,-16.2) {the torus,\\[-1pt]$\wp$};
   % arrows, labelled by chapter
   \draw[ar] (N)  -- node[ch]{1}  (Z);
   \draw[ar] (Z)  -- node[ch]{2}  (Q);
@@ -97,6 +100,9 @@
   \draw[ar] (Hl) -- node[ch]{32} (Rs);
   \draw[ar] (Rs) -- node[ch]{33} (Rg);
   \draw[ar] (Rg) -- node[ch]{34} (Po);
+  \draw[ar] (Rn) to[bend right=6] node[ch, pos=0.8]{35} (Pr);
+  \draw[ar] (Pr) -- node[ch]{36} (Cu);
+  \draw[ar] (Rg) -- node[ch]{37} (To);
 \end{tikzpicture}
 \end{center}
 
@@ -150,6 +156,9 @@ Every arrow puts the old numbers \emph{inside} the new ones, except Chapters 3, 
 32. holomorphic maps $\to$ closed $f\,dz$ & arrow & nothing new (Chapter 16's blur) & Cauchy; the residue as a normal form & loop integrals, for $\bar z$; ``no hole'' \\
 33. holomorphic maps $\to$ germs & blur & nothing (the germ blur is equality) & power series; Liouville; highest point only on the edge & rigidity, without ``one piece'' \\
 34. germs at $a$ $\to$ their order & blur, build & rungs $\operatorname{ord}(f - g) \ge k$ & $\operatorname{ord}_a$, the twin of $v_p$; poles; residues add; zeros counted by turns & ``has an order'' ($\exp(1/z)$) \\
+35. $k^3$ without $0$ $\to$ its lines & blur & the size, $v \sim \lambda v$ & $\mathbb{P}^2$: a point known by its lines; no parallels & the value $F(v)$ \\
+36. polynomials $\to$ functions on a cubic & build, blur & $y^2 \sim x^3 + ax + b$ & the third point on a line; weights, the twin of $\operatorname{ord}$ & weight $1$; smoothness, when $\Delta = 0$ \\
+37. $\mathbb{C} \to \mathbb{C}/\Lambda$ & blur, select & two periods & the torus; $\wp$, pinned by one double pole; the cubic & $\times$; a single simple pole \\
 \end{longtable}
 }
 
@@ -3516,7 +3525,7 @@ So $\mathcal{O}_a$ has no zero divisors, and $\operatorname{ord}_a(f) = $ the fi
 \begin{lines}
 \item[\lab{R1}] (The twins, as a table.) $\Z \;\cdot\; p \;\cdot\; v_p \;\cdot\; \Z/p^k \;\cdot\; \Z_p \;\cdot\; \Q_p$ \ match \ $H(U) \;\cdot\; z - a \;\cdot\; \operatorname{ord}_a \;\cdot\; \mathbb{C}[z]/(z - a)^k \;\cdot\; \mathcal{O}_a \;\cdot\; $ meromorphic germs. One difference: every residue field here is $\mathbb{C}$, while $\Z/p$ changes with $p$.
 \item[\lab{R2}] (All the orders.) On the fractions of polynomials, every way of measuring size with the laws of P1 is some $\operatorname{ord}_a$ or the order at infinity, $-\deg$ (classical; the twin of Ostrowski, Chapter 19, R4; reported).
-\item[\lab{R3}] (Where the road goes.) Blur $\mathbb{C}$ by a lattice $\Lambda = \Z\omega_1 + \Z\omega_2$, the twin of Chapter 8 with two directions: the bags form a torus. A map on it with one pole of order $2$ is Selected as $\exp$ was in Chapter 22 (the $\wp$ of Weierstrass). That chapter, and the group law of the cubic it draws, belong to Building 1.
+\item[\lab{R3}] (Where the road goes.) Blur $\mathbb{C}$ by a lattice $\Lambda = \Z\omega_1 + \Z\omega_2$, the twin of Chapter 8 with two directions: the bags form a torus. A map on it with one pole of order $2$ is Selected as $\exp$ was in Chapter 22 (the $\wp$ of Weierstrass): Chapter 37. The group law of the cubic it draws belongs to Building 1.
 \item[\lab{R4}] (Old names.) $\operatorname{ord}_a$: order of vanishing; a discrete valuation. P4: Laurent series, meromorphic functions. P6: essential singularity. T1: residue as Laurent coefficient. T2: Riemann's removable singularity theorem. T3: the residue theorem. T4: the argument principle.
 \item[\lab{R5}] (Machine check, \texttt{checks/ch34-check.py}.) P1 on random germs; P2; P6; T1 for $1/(z^2(z - 1))$ and $\cot$; T2 for $\sin(z)/z$; T3 for three rational maps on circles of several sizes; T4 counting zeros of random polynomials inside circles, against their roots.
 \end{lines}
@@ -3529,4 +3538,241 @@ So $\mathcal{O}_a$ has no zero divisors, and $\operatorname{ord}_a(f) = $ the fi
 \item[\lab{E3}] Show that $\cot z = \cos z / \sin z$ has residue $1$ at every $k\pi$.
 \item[\lab{E4}] Use T4 to count the zeros of $z^5 + 3z + 1$ inside $|z| = 1$ (compare $3z$ with the rest on the circle).
 \item[\lab{E5}] Why can no fraction $f/g$ of P4 equal $\exp(1/z)$ near $0$?
+\end{lines}
+
+\newpage
+
+%% ==================================================================
+%%  Chapter 35  (the projective plane)
+%% ==================================================================
+\section*{Chapter 35. The plane with no parallels}
+\phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter 35. The plane with no parallels \quad $k^3$ without $0$ $\to$ its lines}{Chapter 35. The plane with no parallels}}
+\begin{center}
+{\normalsize $k^3$ without $0$ $\to$ its lines \quad$\cdot$\quad from: Chapters 3, 6, 7, 8, 14 \quad$\cdot$\quad blur only}\\[4pt]
+{\small Forget the size of a list of three, keep its direction. The bags are a plane with a line added at the edge, and in it any two lines meet.}
+\end{center}
+
+Chapter 8 glued $r$ to $r + 1$. Here the gluing is by scaling, and only the zero list is left out. Nothing is built.
+
+\subsection*{Given}
+
+\begin{lines}
+\item[\lab{G1}] $k$: one of $\Q$, $\R$, $\mathbb{C}$, $\Z/p$ with $p$ prime (Chapters 2, 4, 7 T5, 3 T4). Each has $0$, $1$, $+$, $-$, $\times$, and every $c \ne 0$ has an inverse.
+\item[\lab{G2}] (Chapter 6.) Lists $k^3$, with $+$ and scaling; the dot $a \cdot v = a_1 v_1 + a_2 v_2 + a_3 v_3$.
+\item[\lab{G3}] (Chapter 14.) $\det$ of three lists of three; $\det = 0$ exactly when one list is a sum of multiples of the others. Its formula is a sum of products, so its laws, being equations, hold over every $k$ of G1 (Chapter 0, Z7).
+\item[\lab{G4}] (Chapter 7, run over $k$.) Polynomials in letters; a polynomial $F$ is \emph{homogeneous of degree $d$} when every term has degree $d$; then $F(\lambda v) = \lambda^d F(v)$.
+\end{lines}
+
+\subsection*{The blur}
+
+On $k^3 \setminus \{0\}$. \ $O$: the dot with a fixed $a$, read as ``is it $0$?''.
+
+\begin{lines}
+\item[\lab{B1}] (From below.) Gluing: $v \sim \lambda v$ for each $\lambda \ne 0$. \ Write $(x : y : z)$ for the bag of $(x, y, z)$, and $\mathbb{P}^2(k)$ for the bags.
+\item[\lab{B2}] (From above.) Questions: for each $a$ in $k^3 \setminus \{0\}$, ``is $a \cdot v = 0$?''. \ That is: which planes through $0$ hold $v$.
+\end{lines}
+
+\subsection*{Propositions}
+
+\begin{lines}
+\item[\lab{P1}] (Survives: ``$F(v) = 0$'' for homogeneous $F$.) $F(\lambda v) = \lambda^d F(v)$, and $\lambda^d \ne 0$. So B2 is kept by B1, and so is every homogeneous equation.
+\item[\lab{P2}] (Dies: the value.) $F(v)$ itself is not kept unless $d = 0$: $x$ at $(1, 0, 0)$ is $1$, at $(2, 0, 0)$ is $2$. Not kept either: $x + 1 = 0$, which is not homogeneous.
+\item[\lab{P3}] (Appears.) B1 and B2 agree: $v \sim w$ exactly when every plane through $0$ holding $v$ holds $w$. \ (If $w$ is not a multiple of $v$, the planes through $v$ are the $a$ with $a \cdot v = 0$; they are $2$ free directions, and the $a$ with $a \cdot v = a \cdot w = 0$ only $1$. So some $a$ separates them.) A point is known by the lines through it.
+\item[\lab{P4}] (Normal forms.) Each bag holds exactly one of \ $(x, y, 1)$; \ $(x, 1, 0)$; \ $(1, 0, 0)$. \ (Scale by the inverse of the last entry that is not $0$.) So $\mathbb{P}^2(k)$ is the plane $k^2$ (the $(x : y : 1)$), with one more line $z = 0$ at the edge, which is itself a line $k$ with one more point.
+\item[\lab{P5}] (Counting.) Over $\Z/p$: $p^2 + p + 1$ bags. \ (P4: $p^2 + p + 1$; or $(p^3 - 1)/(p - 1)$.)
+\item[\lab{P6}] (Lines.) A \emph{line} is the set of bags with $a \cdot v = 0$, for one $a \ne 0$; $a$ and $\lambda a$ give the same line. So the lines are the bags of the same blur run on the $a$: a second $\mathbb{P}^2(k)$. \ In P4's picture: $a_1 x + a_2 y + a_3 = 0$ is a line of $k^2$ with its one point on the edge, $(-a_2 : a_1 : 0)$, added; and $z = 0$ is the edge.
+\end{lines}
+
+\subsection*{Theorems}
+
+\begin{lines}
+\item[\lab{T1}] (Two points, one line.) Two different points lie on exactly one line. \ (The $a$ with $a \cdot v = a \cdot w = 0$: one free direction, by G3 and P3.)
+\item[\lab{T2}] (Two lines, one point: no parallels.) Two different lines meet in exactly one point. \ (T1 run on the $a$: P6.) \\
+Dies in $k^2$: $y = 0$ and $y = 1$ do not meet there. In $\mathbb{P}^2$ they meet at $(1 : 0 : 0)$, the point on the edge in their shared direction.
+\item[\lab{T3}] (Three on a line.) $(u)$, $(v)$, $(w)$ lie on one line $\iff$ $\det(u, v, w) = 0$. \ (G3: there is an $a \ne 0$ with $a \cdot u = a \cdot v = a \cdot w = 0$ exactly when the three lists do not fill $k^3$.)
+\item[\lab{T4}] (A line, parametrised.) If $P = (u)$ and $Q = (w)$ are different, the points of their line are the bags of $s\,u + t\,w$, $(s, t) \ne (0, 0)$, and $(s : t) \mapsto (s u + t w)$ matches the line one-to-one with $\mathbb{P}^1(k)$, the same blur run on $k^2$. \ So a homogeneous $F$ of degree $d$, put on the line, becomes $f(s, t) = F(s u + t w)$, homogeneous of degree $d$ in two letters.
+\item[\lab{T5}] (Moves.) A $3 \times 3$ matrix $A$ with $\det A \ne 0$ sends bags to bags and lines to lines, and keeps T3. $A$ and $\lambda A$ do the same. Any four points, no three on a line, can be sent to any other such four. \ (Send the first three to the corner lists, scale the columns to put the fourth at $(1 : 1 : 1)$; Chapter 14.)
+\end{lines}
+
+\subsection*{Remarks}
+
+\begin{lines}
+\item[\lab{R1}] (Pictures over $\R$ and $\mathbb{C}$.) $\mathbb{P}^1(\R)$: the slope $t$ of each line in $\R^2$, plus the upright one; as $t$ grows the line turns back to where it began, so $\mathbb{P}^1(\R)$ is the circle of Chapter 8, of half-turns. $\mathbb{P}^1(\mathbb{C})$ is $\mathbb{C}$ with one point $\infty$ added: the place where Chapter 34 measured the order at infinity.
+\item[\lab{R2}] (The edge is not special.) T5 moves the edge line $z = 0$ to any other line. Which line is ``at infinity'' is a choice of picture (P4), not a fact about the plane.
+\item[\lab{R3}] (Where the road goes.) Chapter 36 puts a cubic in this plane. A line meets it in $3$ points (T4: a cubic in two letters), and that is the beginning of a group law, drawn in Building 1.
+\item[\lab{R4}] (Old names.) $\mathbb{P}^2(k)$: the projective plane; $(x : y : z)$: homogeneous coordinates; P6: duality; T5: projective transformations, $\mathrm{PGL}_3(k)$; P5: the finite projective plane of order $p$ (for $p = 2$, the Fano plane, $7$ points and $7$ lines).
+\item[\lab{R5}] (Machine check, \texttt{checks/ch35-check.py}.) Over $\Z/p$ for $p = 2, 3, 5, 7$: P4 normal forms are one per bag and P5 counts; every line has $p + 1$ points, every point is on $p + 1$ lines; T1 and T2 for all pairs; T3 against direct listing; T5 for random matrices; P3 by brute force.
+\end{lines}
+
+\subsection*{Exercises}
+
+\begin{lines}
+\item[\lab{E1}] Draw the $7$ points and $7$ lines of $\mathbb{P}^2(\Z/2)$.
+\item[\lab{E2}] Where do $x - 2y + 3 = 0$ and $2x - 4y + 1 = 0$ meet in $\mathbb{P}^2(\Q)$?
+\item[\lab{E3}] Which points of $\mathbb{P}^2(\R)$ satisfy $x^2 + y^2 = z^2$ and $z = 0$? Which satisfy $x^2 - y^2 = z^2$ and $z = 0$?
+\item[\lab{E4}] Why is $\{(x : y : z) : x + y = 1\}$ not a set of bags?
+\end{lines}
+
+\newpage
+
+%% ==================================================================
+%%  Chapter 36  (plane cubics)
+%% ==================================================================
+\section*{Chapter 36. A cubic in the plane}
+\phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter 36. A cubic in the plane \quad polynomials $\to$ functions on a cubic}{Chapter 36. A cubic in the plane}}
+\begin{center}
+{\normalsize polynomials $\to$ functions on a cubic \quad$\cdot$\quad from: Chapters 7, 23, 34, 35 \quad$\cdot$\quad build, blur}\\[4pt]
+{\small A line meets a cubic in three points; two in $k$ force the third. Glue $y^2$ to the cubic and the polynomials become functions on the curve, each with a weight, and no function has weight $1$.}
+\end{center}
+
+Two lines of work. The first builds a point from two (T1). The second is Chapter 7 again: glue a polynomial to $0$, and read the bags.
+
+\subsection*{Given}
+
+\begin{lines}
+\item[\lab{G1}] (Chapter 35.) $\mathbb{P}^2(k)$; P1 (homogeneous equations are kept); T3, T4 (a line, parametrised, turns a homogeneous $F$ of degree $d$ into $f(s, t)$ of degree $d$).
+\item[\lab{G2}] (Chapter 7, run over $k$.) T2 (degrees add), T4 (a root splits off a factor), P9 (normal forms of the blur by $d$), T7 (the derivative, by $x^2 \sim 0$).
+\item[\lab{G3}] (Chapter 23.) Every polynomial over $\mathbb{C}$ of degree $\ge 1$ has a root.
+\item[\lab{G4}] (Chapter 34.) $\operatorname{ord}_a$: $\operatorname{ord}(fg) = \operatorname{ord} f + \operatorname{ord} g$.
+\end{lines}
+
+\subsection*{Definitions}
+
+\begin{lines}
+\item[\lab{D1}] In this chapter $2 \ne 0$ and $3 \ne 0$ in $k$ (so $p \ne 2, 3$). For $a, b$ in $k$: \[ F := y^2 z - x^3 - a\,x z^2 - b\,z^3, \qquad C := \{ (x : y : z) : F = 0 \}, \] a set of bags by G1. Its points with $z = 1$ are the $(x, y)$ with $y^2 = x^3 + ax + b$. Write $O := (0 : 1 : 0)$ and $g(x) := x^3 + ax + b$.
+\item[\lab{D2}] (Meeting number.) For a line through $(u)$, $(w)$ and $f(s, t) := F(su + tw)$: the meeting number at the point $(s_0 u + t_0 w)$ is how many times $t_0 s - s_0 t$ goes into $f$ (G2, T4, in two letters).
+\item[\lab{D3}] $\Delta := 4a^3 + 27b^2$.
+\end{lines}
+
+\subsection*{Propositions}
+
+\begin{lines}
+\item[\lab{P1}] (The edge.) $F(x, y, 0) = -x^3$. So the edge line $z = 0$ meets $C$ only at $O$, with meeting number $3$.
+\item[\lab{P2}] (At most three.) No line lies inside $C$, so every line meets $C$ in at most $3$ points, counted with meeting number. \ (Three kinds of line: $z = 0$ gives $-x^3$; $x = cz$ gives $y^2 z - (c^3 + ac + b) z^3$; $y = mx + cz$ gives $-x^3 + m^2 x^2 z + \dots$. None is $0$, and each is a cubic in two letters: G2, T4.)
+\item[\lab{P3}] (The mirror.) $(x : y : z) \mapsto (x : -y : z)$ keeps $C$. The line through $(x_1, y_1)$ and $(x_1, -y_1)$ is $x = x_1$, and its third point is $O$.
+\item[\lab{P4}] (Tangents.) A point of $C$ is \emph{smooth} when the three derivatives $\partial_x F$, $\partial_y F$, $\partial_z F$ (G2, T7, one letter at a time) are not all $0$ there. At a smooth point $P$ the line $\nabla F(P) \cdot v = 0$ is the one line meeting $C$ at $P$ at least twice. $O$ is smooth ($\partial_z F = 1$ there) and its tangent is the edge. At an affine $(x_1, y_1)$ with $y_1 \ne 0$ the tangent has slope $(3x_1^2 + a)/(2y_1)$.
+\end{lines}
+
+\subsection*{Theorems}
+
+\begin{lines}
+\item[\lab{T1}] (Build: the third point.) If a line meets $C$ at two points of $\mathbb{P}^2(k)$ (one point counted twice, for a tangent), then it meets $C$ at a third point of $\mathbb{P}^2(k)$, and the meeting numbers add to exactly $3$. \ ($f$ has two roots in $\mathbb{P}^1(k)$; split them off (G2, T4); a factor of degree $1$ over $k$ is left, and its root is in $k$.) \\
+For $(x_1, y_1)$, $(x_2, y_2)$ with $x_1 \ne x_2$: \ $m = \dfrac{y_2 - y_1}{x_2 - x_1}$, \ $x_3 = m^2 - x_1 - x_2$, \ $y_3 = y_1 + m(x_3 - x_1)$. \ (Put $y = y_1 + m(x - x_1)$ in $y^2 = g(x)$: a cubic in $x$ with $-x^3 + m^2 x^2 + \dots$, whose three roots add to $m^2$.) For a tangent, take $x_2 = x_1$ and $m$ from P4.
+\item[\lab{T2}] (Smooth exactly when $\Delta \ne 0$.) Every point of $C$, over $k$ and over every larger $k$ of G1, is smooth $\iff$ $g$ has no repeated root $\iff$ $\Delta \ne 0$. \ (At an affine point, $\partial_y F = 2y$ and $\partial_x F = -g'(x)$; both are $0$ only where $y = 0 = g(x) = g'(x)$. A repeated root of $g$ is a root of $g'$ too, and eliminating $x$ from $g = g' = 0$ leaves $\Delta = 0$.)
+\item[\lab{T3}] (Dies when $\Delta = 0$.) $y^2 = x^3$: at $(0, 0)$ every line meets $C$ at least twice; through it and any other point of $C$ the third point is $(0, 0)$ again. $y^2 = x^3 + x^2$: two tangents at $(0, 0)$. T1 still builds third points, but $(0,0)$ swallows them.
+\end{lines}
+
+\subsection*{The blur}
+
+On $k[x, y]$, polynomials in two letters. \ $O$: $+$, $\times$.
+
+\begin{lines}
+\item[\lab{B1}] (From below.) Gluing: $y^2 \sim g(x)$. \ Write $k[C]$ for the bags: the \emph{functions on $C$}.
+\item[\lab{B2}] (From above, for $k$ inside $\mathbb{C}$.) Questions: the value at each point $(x, y)$ of $C$ over $\mathbb{C}$.
+\end{lines}
+
+\begin{lines}
+\item[\lab{P5}] (Normal forms.) Each bag holds exactly one $p(x) + q(x)\,y$. \ (Trade $y^2$ for $g(x)$ until $y$ is to the power $0$ or $1$.)
+\item[\lab{P6}] (Appears, for $k$ inside $\mathbb{C}$.) B1 and B2 agree: two polynomials are glued exactly when they agree on $C$ over $\mathbb{C}$. \ (If $p + qy$ is $0$ on $C$: for every $x$ with $g(x) \ne 0$ there are two $y$, opposite, by G3; so $p(x) = 0$ and $q(x) = 0$ at infinitely many $x$, and $p = q = 0$ by G2, T4.)
+\item[\lab{P7}] (The mirror, and the size.) $y \mapsto -y$ respects the gluing; write $\bar f$. Then $N(f) := f \bar f = p^2 - q^2 g$ lies in $k[x]$.
+\item[\lab{P8}] (Weight.) $w(p + qy) := \max(2 \deg p,\; 2 \deg q + 3)$; $w(0) := -\infty$. \ The two candidates are even and odd, so they never tie, and $\deg N(f) = w(f)$.
+\item[\lab{P9}] (Survives: weights add.) $w(fg) = w(f) + w(g)$. \ ($\deg N(fg) = \deg N(f) + \deg N(g)$, since $N(fg) = N(f) N(g)$ and G2, T2.) The twin of $\operatorname{ord}$ (G4) with the sign turned: $w(f)$ is the order of the pole of $f$ at $O$.
+\item[\lab{P10}] (Dies: weight $1$.) The weights that occur are $0, 2, 3, 4, 5, 6, \dots$: \ $1, x, y, x^2, xy, x^3, \dots$. \ Weight $1$ never occurs: \emph{no function on $C$ has a single simple pole at $O$ and no other}. And $w(f) = 0$ only for the non-zero constants, so these are the only $f$ with an inverse in $k[C]$.
+\item[\lab{P11}] (Weight counts meetings, for lines.) $y - mx - c$ has weight $3$ and meets $C$ at $3$ affine points, counted (P2, P1: never at $O$). $x - c$ has weight $2$ and meets $C$ at $2$ affine points and once at $O$.
+\end{lines}
+
+\subsection*{Remarks}
+
+\begin{lines}
+\item[\lab{R1}] (What the method did.) T1 is a construction: two points build a third. The functions on $C$ are a blur of polynomials, and their weight is a size of the kind Chapters 18 and 34 met. P10 is the one ``Dies'' line the group law needs.
+\item[\lab{R2}] (Where the road goes.) Building 1 glues the points of $C$ by lines ($P + Q + R \sim 3O$ when $P, Q, R$ lie on one line) and reads off a move system. Associativity comes free from the blur; ``at most one point per bag'' is P10. Chapter 37 finds the same curve over $\mathbb{C}$ as a torus.
+\item[\lab{R3}] (Reported.) Over $\mathbb{C}$, every $f \ne 0$ in $k[C]$ has exactly $w(f)$ zeros on the affine part of $C$, counted by order (P11 is the case of lines). The ``order'' at a point of $C$ is Chapter 34's run on the curve; proof deferred.
+\item[\lab{R4}] (Old names.) $C$: an elliptic curve in Weierstrass form (when $\Delta \ne 0$); $O$: the point at infinity, a flex. D2: intersection multiplicity; P2: B\'ezout for a line and a cubic. T1: the chord-and-tangent construction. $\Delta$: the discriminant ($-16\Delta$ in other books). $k[C]$: the coordinate ring. $N$: the norm to $k[x]$. P10: $\ell(nO) = n$ for $n \ge 1$ (a case of Riemann--Roch). T3: cusp, node.
+\item[\lab{R5}] (Machine check, \texttt{checks/ch36-check.py}.) T1 formulas against the cubic on the line (symbolic) and on all pairs of points over $\Z/p$ for small $p$; P2 meeting counts; P4 tangents; T2 for all $(a, b)$ over $\Z/p$, $p = 5, 7, 11$; P5--P9 on random elements; P10 by listing weights up to $40$.
+\end{lines}
+
+\subsection*{Exercises}
+
+\begin{lines}
+\item[\lab{E1}] On $y^2 = x^3 - x + 1$ over $\Q$, find the third point on the line through $(0, 1)$ and $(1, 1)$, and the third point on the tangent at $(1, 1)$.
+\item[\lab{E2}] List the points of $y^2 = x^3 + 1$ over $\Z/5$ (do not forget $O$).
+\item[\lab{E3}] Is $y^2 = x^3 - 3x + 2$ smooth? Find its bad point.
+\item[\lab{E4}] Find $w$ of $x^2 + xy$ and of $(y - x)(y + x)$, and check P9.
+\item[\lab{E5}] Why can $x - c$ not have weight $3$?
+\end{lines}
+
+\newpage
+
+%% ==================================================================
+%%  Chapter 37  (the torus and the Weierstrass map)
+%% ==================================================================
+\section*{Chapter 37. The torus}
+\phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter 37. The torus \quad $\mathbb{C} \to \mathbb{C}/\Lambda$}{Chapter 37. The torus}}
+\begin{center}
+{\normalsize $\mathbb{C} \to \mathbb{C}/\Lambda$ \quad$\cdot$\quad from: Chapters 8, 17, 20, 32, 33, 34, 36 \quad$\cdot$\quad blur, select}\\[4pt]
+{\small Chapter 8 in two directions. Maps on the bags cannot have one simple pole, so the first one worth having has a double pole, and it is pinned by that pole alone. It draws the cubic of Chapter 36.}
+\end{center}
+
+The blur is Chapter 8's. The new work is on the maps that live on the bags: two ``at most one'' lines, one Dies line, and one Select.
+
+\subsection*{Given}
+
+\begin{lines}
+\item[\lab{G1}] (Chapter 8.) $\R/\Z$; $+$ survives, $\times$ dies.
+\item[\lab{G2}] (Chapters 32--34.) Holomorphic and meromorphic maps; Chapter 32, T2, T3 (no hole; deforming); Chapter 33, T7 (Liouville); Chapter 34, T1--T4 (residues, residues add, the argument principle).
+\item[\lab{G3}] (Chapters 17, 20.) Sizes of sums; a series of maps that comes near itself in $M$ on a set has a limit there, holomorphic if its terms are, differentiated term by term (Chapter 20, T3, T4; Chapter 33, T2).
+\item[\lab{G4}] (Chapter 36.) The cubic $y^2 = g(x)$, its point $O$, and T2 (smooth exactly when $\Delta \ne 0$).
+\end{lines}
+
+\subsection*{The blur}
+
+On $\mathbb{C}$. Fix $\omega_1, \omega_2$ in $\mathbb{C}$, not on one line through $0$, and $\Lambda := \{m \omega_1 + n \omega_2 : m, n \in \Z\}$. \ $O$: $+$.
+
+\begin{lines}
+\item[\lab{B1}] (From below.) Gluing: $z \sim z + \omega_1$, \ $z \sim z + \omega_2$. \ Write $\mathbb{C}/\Lambda$ for the bags.
+\item[\lab{B2}] (From above.) Write $z = s\,\omega_1 + t\,\omega_2$ with $s, t$ real. Questions: the bags of $s$ and of $t$ in $\R/\Z$ (G1).
+\end{lines}
+
+\subsection*{Propositions}
+
+\begin{lines}
+\item[\lab{P1}] (Appears; normal forms.) B1 and B2 agree. Each bag holds exactly one $z$ with $0 \le s, t < 1$: a parallelogram with its far edges left off. $\mathbb{C}/\Lambda$ matches $\R/\Z \times \R/\Z$, keeping $+$: a torus.
+\item[\lab{P2}] (Dies: $\times$.) As in Chapter 8: $0 \sim \omega_1$, but $\tfrac12 \cdot 0$ and $\tfrac12 \omega_1$ are not glued.
+\item[\lab{P3}] (Maps on the bags.) A map on $\mathbb{C}/\Lambda$ is a map $f$ on $\mathbb{C}$ with $f(z + \lambda) = f(z)$ for all $\lambda$ in $\Lambda$. Call $f$ \emph{elliptic} if it is meromorphic on $\mathbb{C}$ (Chapter 34, P4, at every point) and such a map.
+\end{lines}
+
+\subsection*{Theorems}
+
+\begin{lines}
+\item[\lab{T1}] (At most one: no pole means constant.) An elliptic map with no pole is constant. \ (It is bounded on the closed parallelogram (Chapter 13, T7), so on all of $\mathbb{C}$ by P3; Chapter 33, T7.)
+\item[\lab{T2}] (Residues on the torus add to $0$.) For elliptic $f$, the residues at the poles in one parallelogram add to $0$. \ (Integrate $f$ around the edge of a parallelogram moved so that no pole lies on it. Opposite edges cancel, by P3. By Chapter 34, T3, run with that edge in place of a circle, the integral is $2\pi i$ times the sum of residues inside.)
+\item[\lab{T3}] (Dies: one simple pole.) No elliptic map has exactly one pole per bag, of order $1$. \ (Its residue would be the only one, so $0$ by T2; then there is no pole, and T1.) \\
+The twin of Chapter 36, P10, where no function had weight $1$.
+\item[\lab{T4}] (Counting zeros, and where they sit.) For elliptic $f \ne$ constant, in one parallelogram: the zeros and the poles are equal in number, counted by order; and the sum of the zeros minus the sum of the poles lies in $\Lambda$. \ (T2 on $f'/f$, by Chapter 34, T4. For the sum: integrate $z\, f'/f$ on the edge; opposite edges no longer cancel but differ by $\omega$ times $\int f'/f$ along one edge, which is $2\pi i$ times a whole number of turns (Chapter 16, T6).)
+\item[\lab{T5}] (Select: the map with one double pole.) There is at most one elliptic $\wp$ whose only poles are at the points of $\Lambda$, with list $z^{-2} + 0 + c_1 z + c_2 z^2 + \cdots$ at $0$. \ (Two such differ by an elliptic map with at most a simple pole per bag: by T3 no pole; by T1 a constant; its value at $0$ is $0$.)
+\item[\lab{T6}] (Build: it exists.) \[ \wp(z) := \frac{1}{z^2} + \sum_{\lambda \in \Lambda,\ \lambda \ne 0} \Big( \frac{1}{(z - \lambda)^2} - \frac{1}{\lambda^2} \Big). \] (The term for $\lambda$ is at most a constant times $|z| / |\lambda|^3$ on a bounded set; there are about $n$ points of $\Lambda$ with $n \le |\lambda| < n + 1$, so the sum of the sizes is like $\sum n / n^3$, which is finite (Chapter 17); G3. Periodic: $\wp' = -2 \sum_{\lambda} (z - \lambda)^{-3}$ plainly is, so $\wp(z + \omega_i) - \wp(z)$ is a constant; $\wp$ is even (the sum is unchanged by $\lambda \mapsto -\lambda$); at $z = -\omega_i / 2$ the constant is $\wp(\omega_i/2) - \wp(-\omega_i/2) = 0$.) \\
+So the map is pinned by its pole (T5) and then found (T6), as $\exp$ was in Chapter 22.
+\item[\lab{T7}] (Appears: the cubic.) With $g_2 := 60 \sum' \lambda^{-4}$ and $g_3 := 140 \sum' \lambda^{-6}$, \[ \wp'(z)^2 = 4\,\wp(z)^3 - g_2\, \wp(z) - g_3 . \] (The lists at $0$: $\wp = z^{-2} + \tfrac{g_2}{20} z^2 + \tfrac{g_3}{28} z^4 + \cdots$. The difference of the two sides is elliptic, its only possible poles are at $\Lambda$, and its list at $0$ starts at $z^2$. T1: a constant; it is $0$ at $z = 0$. An identity, proved by ``at most one''.)
+\item[\lab{T8}] (The arrow to the cubic.) $z \mapsto (\wp(z) : \wp'(z) : 1)$, with $0 \mapsto (0 : 1 : 0)$, matches $\mathbb{C}/\Lambda$ one-to-one with the points over $\mathbb{C}$ of the cubic $y^2 = 4x^3 - g_2 x - g_3$, and that cubic is smooth. \ (Onto: for each $x$, $\wp - x$ has a double pole per bag, so two zeros (T4), at $z$ and $-z$ ($\wp$ is even), where $\wp'$ takes the two values $\pm y$. One-to-one: $z$ and $-z$ are glued only at the three half periods $\omega_1/2$, $\omega_2/2$, $(\omega_1 + \omega_2)/2$, where $\wp' = 0$ ($\wp'$ is odd and periodic). Smooth: at a half period $\wp - \wp(\omega/2)$ has a double zero, so the three values $e_i = \wp(\text{half period})$ differ, and they are the three roots of $4x^3 - g_2 x - g_3$: Chapter 36, T2.)
+\end{lines}
+
+\subsection*{Remarks}
+
+\begin{lines}
+\item[\lab{R1}] (What the method did.) Two blurs agree (P1). The rest is three lines used again and again: no pole means constant (T1); residues add to $0$ (T2); so no single simple pole (T3). T5 and T7 are ``at most one'' turned into an existence-free identity. The only Build is T6, a sum that comes near itself.
+\item[\lab{R2}] (Twins.) Chapter 36 found the same Dies line by weights: no polynomial function with one simple pole at $O$. Here it is found by residues. T8 says the two are about one object: the arrow sends the pole at $0$ to $O$, the double pole of $\wp$ to the weight $2$ of $x$, the triple pole of $\wp'$ to the weight $3$ of $y$.
+\item[\lab{R3}] (Where the road goes.) The torus has $+$ (P1). Building 1 shows that T8 carries it to the chord law of the cubic: $z_1 + z_2 + z_3 \in \Lambda$ exactly when the three images lie on one line (T4 on $a\wp + b\wp' + c$, which has one triple pole).
+\item[\lab{R4}] (Reported, not proved here.) Every smooth cubic over $\mathbb{C}$ is reached this way, by some $\Lambda$ (the uniformisation of elliptic curves; classical). The book uses it nowhere.
+\item[\lab{R5}] (Old names.) $\Lambda$: a lattice; elliptic map: elliptic function; T1: Liouville's theorem for elliptic functions; T2--T4: Liouville's second and third theorems, Abel's theorem for the torus; T5, T6: the Weierstrass $\wp$-function; $g_2$, $g_3$: Eisenstein series $60 G_4$, $140 G_6$; T7: the differential equation of $\wp$; T8: the Weierstrass parametrisation of an elliptic curve.
+\item[\lab{R6}] (Machine check, \texttt{checks/ch37-check.py}.) With $\omega_1 = 1$, $\omega_2 = 0.3 + 1.1i$ and the sum cut at $|m|, |n| \le 160$: T7 at random points (relative error $10^{-4}$); periodicity of $\wp'$; $\wp$ even; T8: the half-period values are the three roots, distinct; T2 for $\wp$ and T4 for $\wp - c$ by integrating round a moved parallelogram (zeros minus poles $= 0$; sum of zeros minus poles $= \omega_1$).
+\end{lines}
+
+\subsection*{Exercises}
+
+\begin{lines}
+\item[\lab{E1}] Show that an elliptic map with no zeros is constant.
+\item[\lab{E2}] Why is $\wp'$ odd? Where are its zeros in one parallelogram?
+\item[\lab{E3}] Using T4, show $\wp(z) = \wp(w)$ only when $z \sim w$ or $z \sim -w$.
+\item[\lab{E4}] Find the first three terms of the list of $\wp'$ at $0$ from those of $\wp$.
+\item[\lab{E5}] Why does T3 not contradict $\cot(\pi z)$, which has one simple pole at each whole number?
 \end{lines}
