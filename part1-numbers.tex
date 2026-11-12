@@ -58,6 +58,7 @@
   \node[sys] (Lt)  at (7.0,-12.0) {square-\\[-1pt]integrable};
   \node[sys] (Wv)  at (4.6,-12.0) {waves on\\[-1pt]the circle};
   \node[sys] (Lz)  at (4.6,-13.4) {$\ell^2(\Z)$};
+  \node[sys] (Ct)  at (-4.0,-12.0) {complex\\[-1pt]tangents};
   % arrows, labelled by chapter
   \draw[ar] (N)  -- node[ch]{1}  (Z);
   \draw[ar] (Z)  -- node[ch]{2}  (Q);
@@ -89,6 +90,7 @@
   \draw[ar] (Lo) -- node[ch]{28} (Lt);
   \draw[ar] (Lt) -- node[ch]{29} (Wv);
   \draw[ar] (Wv) -- node[ch]{30} (Lz);
+  \draw[ar] (Iv) -- node[ch]{31} (Ct);
 \end{tikzpicture}
 \end{center}
 
@@ -138,6 +140,7 @@ Every arrow puts the old numbers \emph{inside} the new ones, except Chapters 3, 
 28. $C[b,c]$ $\to$ $L^2$ & build, select, blur & difference fades in the mean square & $\langle\,,\rangle$, right angles, nearest points & $\times$ \\
 29. maps on $\mathbb{T}$ $\to$ lists on $\Z$ & survey, arrow, ladder & nothing new (questions $\widehat f(n)$) & every arrow $\mathbb{T} \to S$; the average of rungs comes back & $\times$ (becomes convolution); one rung overshoots \\
 30. $L^2(\mathbb{T})$ $\to$ $\ell^2(\Z)$ & arrow & nothing (an inside) & a matching keeping energy; $\sum 1/n^2 = \pi^2/6$ & the value at a point; ``continuous'' \\
+31. maps $\mathbb{C} \to \mathbb{C}$ $\to$ holomorphic & blur, select & flat at $a$ (Chapter 11 over $\mathbb{C}$) & tangent commutes with $i$; angles kept & angles, where $f' = 0$ \\
 \end{longtable}
 }
 
@@ -3215,4 +3218,88 @@ Inside: T1 with $f - g$. \ Picture: for $c$ in $\ell^2(\Z)$, the sums $\sum_{|n|
 \item[\lab{E2}] Which map has the list $c_1 = c_{-1} = \tfrac12$ and all others $0$?
 \item[\lab{E3}] Show that the list $c_n = 1/\sqrt{|n|}$ ($n \ne 0$) is not in $\ell^2(\Z)$.
 \item[\lab{E4}] Prove the polarisation formula from the four laws of the product.
+\end{lines}
+
+\newpage
+
+%% ==================================================================
+%%  Chapter 31  (the complex derivative)
+%% ==================================================================
+\section*{Chapter 31. The complex derivative}
+\phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter 31. The complex derivative \quad maps $\mathbb{C} \to \mathbb{C}$ $\to$ those whose tangent is a number}{Chapter 31. The complex derivative}}
+\begin{center}
+{\normalsize maps $\mathbb{C} \to \mathbb{C}$ $\to$ those whose tangent is a number \quad$\cdot$\quad from: Chapters 7, 9, 11, 13, 25 \quad$\cdot$\quad blur, select}\\[4pt]
+{\small Run Chapter 11 with $\mathbb{C}$ in place of $\R$. Seen as a map of the plane, the tangent is a straight map; Select those that commute with $i$. Then angles survive.}
+\end{center}
+
+The blur is Chapter 11's, word for word. The new thing is a Select, and it is a question about the normal form: does the straight map of the tangent commute with turning by a right angle?
+
+\subsection*{Given}
+
+\begin{lines}
+\item[\lab{G1}] (Chapter 7, T5; Chapter 23, G1.) $\mathbb{C}$, a field; $|z|$, with $|zw| = |z||w|$ and the triangle law.
+\item[\lab{G2}] (Chapter 11.) Flat, the tangent blur, straight bags, P9 (into the dual numbers), T1, T2 (sum, product, composing).
+\item[\lab{G3}] (Chapter 13; Chapter 25, G1.) For $F : \R^2 \to \R^2$, place by place: the straight bag at $a$ holds $F(a) + DF_a(x - a)$ with $DF_a$ a straight map of $\R^2$. Chapter 25, T3: inverting.
+\item[\lab{G4}] (Chapter 9.) Corners; gluing (i) of B1, $(u, v) \sim (zu, zv)$; the angle question $q$; P5.
+\item[\lab{G5}] (Chapter 10, T5.) $\exp$ on $\mathbb{C}$, $\exp(z + w) = \exp(z)\exp(w)$.
+\end{lines}
+
+\subsection*{Definitions}
+
+\begin{lines}
+\item[\lab{D1}] Fix $a$ in $\mathbb{C}$. $e : \mathbb{C} \to \mathbb{C}$ is \emph{flat at $a$} if $e(a) = 0$ and $e(z)/(z - a)$ comes near $0$ as $z$ comes near $a$ (rungs on $|z - a|$, as Chapter 13, D1).
+\item[\lab{D2}] A \emph{complex line at $a$}: $z \mapsto c + m(z - a)$ with $c, m$ in $\mathbb{C}$.
+\item[\lab{D3}] An \emph{open region} $U$: a set of complex numbers holding, with each of its points, all points at some rung near it.
+\end{lines}
+
+\subsection*{The blur}
+
+On maps $\mathbb{C} \to \mathbb{C}$. \ $O$: $+$, $\times$.
+
+\begin{lines}
+\item[\lab{B1}] (From below.) $f \sim g$ when $f - g$ is flat at $a$.
+\item[\lab{B2}] (From above.) Question: ``flat at $a$''.
+\end{lines}
+
+\subsection*{Propositions}
+
+\begin{lines}
+\item[\lab{P1}] (Appears; Chapter 11 again.) $\sim\ =\ \approx$. Each bag holds at most one complex line. The value survives; bending dies.
+\item[\lab{P2}] (Select, M4.) A bag is \emph{straight over $\mathbb{C}$} if it holds a complex line $f(a) + m(z - a)$. Then $f$ is \emph{complex-differentiable at $a$} and $f'(a) := m$. Straight bags go into $\mathbb{C}[\varepsilon]$ by $f(a) + f'(a)\varepsilon$, respecting $+$ and $\times$ (Chapter 11, P9 with $\mathbb{C}$ for $\R$).
+\item[\lab{P3}] (Survives: sum, product, composing.) Chapter 11, T1 and T2, with the same words.
+\item[\lab{P4}] (Two blurs on the same map.) Write $f = u + iv$ and read $f$ as $F = (u, v) : \R^2 \to \R^2$. Every complex line is a straight map of $\R^2$; so a bag straight over $\mathbb{C}$ is straight in the sense of Chapter 13. Not the reverse (P5).
+\item[\lab{P5}] (Dies: ``straight over $\mathbb{C}$'' is more than ``straight''.) $z \mapsto \bar z$ is a straight map of $\R^2$, $(x, y) \mapsto (x, -y)$, at every point; it is complex-differentiable at none: $(\overline{a + h} - \bar a)/h = \bar h / h$ is $1$ for real $h$ and $-1$ for $h$ on the line of $i$.
+\item[\lab{P6}] (Survives: $\exp$, polynomials, $1/z$.) $\exp' = \exp$ on $\mathbb{C}$: $\exp(a + h) - \exp(a) - \exp(a)h = \exp(a)(\exp(h) - 1 - h)$, and $|\exp(h) - 1 - h| \le |h|^2 \exp(|h|)$ from the sums of G5. Polynomials by P3. $1/z$ on $z \ne 0$ with derivative $-1/z^2$.
+\end{lines}
+
+\subsection*{Theorems}
+
+\begin{lines}
+\item[\lab{T1}] (The Select is a commuting question.) $f$ is complex-differentiable at $a$ \ $\iff$ \ $F$ is straight at $a$ and $DF_a$ commutes with turning by a right angle, $J(x, y) = (-y, x)$. \ In entries: \[ DF_a = \begin{pmatrix} p & -q \\ q & p \end{pmatrix}, \qquad \text{that is} \quad \partial_x u = \partial_y v, \ \ \partial_y u = -\partial_x v . \] Then $f'(a) = p + iq$. \ (A straight map $L$ of $\R^2$ commutes with $J$ exactly when it is ``multiply by one complex number'': $L(1) = m$ forces $L(i) = L(J 1) = J L(1) = im$.)
+\item[\lab{T2}] (Survives: angles, where $f' \ne 0$.) If $f'(a) = m \ne 0$, the tangent sends each corner $(u, v)$ at $a$ to $(mu, mv)$, which is glued to $(u, v)$ by Chapter 9, B1 (i). So the angle question $q$ is kept. \\
+Dies where $f'(a) = 0$: $z^2$ at $0$ sends the corner $(1, i)$ to $(1, -1)$; a right angle becomes a half turn. \\
+Dies for $\bar z$: $q(\bar u, \bar v) = \overline{q(u, v)}$; the angle is turned back (Chapter 9, P4).
+\item[\lab{T3}] (Survives the Select: inverting.) If $f$ is complex-differentiable near $a$ with $f'$ continuous and $f'(a) \ne 0$, then $f$ can be inverted near $a$ (Chapter 25, T3: $\det DF_a = p^2 + q^2 = |f'(a)|^2 > 0$), and the inverse is complex-differentiable with derivative $1/f'$. \ (The inverse of a map that commutes with $J$ commutes with $J$.) \\
+So near every $b \ne 0$ there is a map $\log$ with $\exp(\log z) = z$ and $\log' = 1/z$, and a square root.
+\item[\lab{D4}] (Select, M4.) $f$ is \emph{holomorphic} on an open region $U$ if it is complex-differentiable at every point of $U$ and $f'$ is continuous on $U$. Write $H(U)$.
+\item[\lab{T4}] ($H(U)$ is a floor.) Closed under $+$, $\times$, composing, and $1/f$ where $f \ne 0$ (P3). The arrow $f \mapsto f'$ respects $+$.
+\end{lines}
+
+\subsection*{Remarks}
+
+\begin{lines}
+\item[\lab{R1}] (What the method did.) T1 is not a formula to learn: the Cauchy--Riemann equations are the entries of ``commutes with $J$''. The Select asks one question of the normal form of Chapter 13.
+\item[\lab{R2}] (Why ``continuous'' is in D4.) Goursat showed it is automatic: complex-differentiable at every point of $U$ already gives $f'$ continuous. That is a long classical proof; this book does not use it.
+\item[\lab{R3}] (Old names.) Complex-differentiable: holomorphic at a point. T1: the Cauchy--Riemann equations. T2: holomorphic maps are conformal. T3: holomorphic inverse function theorem; branches of $\log$.
+\item[\lab{R4}] (Machine check, \texttt{checks/ch31-check.py}.) T1 on random polynomials, $\exp$ and $1/z$ (finite differences); P5; T2 on three maps and many corners; the $z^2$ witness; T3 for $\exp$ and $z^3$.
+\end{lines}
+
+\subsection*{Exercises}
+
+\begin{lines}
+\item[\lab{E1}] Where is $|z|^2$ complex-differentiable?
+\item[\lab{E2}] Write $u, v$ for $\exp$ and check T1 at every point.
+\item[\lab{E3}] Compute the derivative of $z^3$ in $\mathbb{C}[\varepsilon]$: expand $(a + \varepsilon)^3$.
+\item[\lab{E4}] At which points does $z^2 + 2z$ keep angles?
+\item[\lab{E5}] Show that $\exp$ cannot be inverted on all of $\mathbb{C} \setminus \{0\}$ by one map, though T3 inverts it near every point. (Chapter 16 counts the turns.)
 \end{lines}
