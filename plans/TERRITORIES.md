@@ -16,4 +16,4 @@ Replaces the order parts of plans/WORKPLAN-2.md and plans/ALGEBRA-PATH.md (their
 | 8 | Map regions | topology (loops, holes), probability, differential equations, counting with symmetry, dynamics | map/MAP-PILOT.md | one map page first, chapters later |
 
 ## Progress
-- 12 Nov: Leg 1, Chapter 26 Null sets: building.
+- 12 Nov: Ch26 Null sets done. Ch27 Integrable maps done. Ch28 L² next.

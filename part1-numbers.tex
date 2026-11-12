@@ -55,6 +55,7 @@
   \node[sys] (Hl)  at (1.9,-12.0) {holes};
   \node[sys] (Nu)  at (7.0,-9.0)  {maps up to\\[-1pt]null sets};
   \node[sys] (Lo)  at (7.0,-10.6) {integrable\\[-1pt]maps};
+  \node[sys] (Lt)  at (7.0,-12.0) {square-\\[-1pt]integrable};
   % arrows, labelled by chapter
   \draw[ar] (N)  -- node[ch]{1}  (Z);
   \draw[ar] (Z)  -- node[ch]{2}  (Q);
@@ -83,6 +84,7 @@
   \draw[ar] (Fm) -- node[ch]{16} (Hl);
   \draw[ar] (Lm) -- node[ch]{26} (Nu);
   \draw[ar] (Nu) -- node[ch]{27} (Lo);
+  \draw[ar] (Lo) -- node[ch]{28} (Lt);
 \end{tikzpicture}
 \end{center}
 
@@ -129,6 +131,7 @@ Every arrow puts the old numbers \emph{inside} the new ones, except Chapters 3, 
 25. maps $\R^n \to \R^n$ $\to$ inverses nearby & select & nothing new (tangent blur of 13) & the inverse, with tangent $(DF)^{-1}$ & ``can be inverted'', on a whole bag \\
 26. maps on a stretch $\to$ maps up to a null set & blur & differ only on a null set & none; nothing continuous is glued & the value at a point; ``continuous'' \\
 27. $C[b,c]$ $\to$ $L^1$ & build, select, blur & difference fades in the mean & integrable maps; length, last & $\times$; the value at a point; ``continuous'' \\
+28. $C[b,c]$ $\to$ $L^2$ & build, select, blur & difference fades in the mean square & $\langle\,,\rangle$, right angles, nearest points & $\times$ \\
 \end{longtable}
 }
 
@@ -2968,4 +2971,91 @@ The last entry is rescued in two ways (both classical, proofs deferred):
 \item[\lab{E3}] Prove $\max(f, g) = \tfrac12(f + g + |f - g|)$, and so P4 for $\max$.
 \item[\lab{E4}] What length does T6 give the middle-thirds set of Chapter 26, R2?
 \item[\lab{E5}] Compute $\int_0^1 \min(x^{-1/2}, n)$ and show it comes near $2$.
+\end{lines}
+
+\newpage
+
+%% ==================================================================
+%%  Chapter 28  (square-integrable maps)
+%% ==================================================================
+\section*{Chapter 28. Square-integrable maps}
+\phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter 28. Square-integrable maps \quad $C[b,c]$ $\to$ its closing-up in the mean square}{Chapter 28. Square-integrable maps}}
+\begin{center}
+{\normalsize $C[b,c]$ $\to$ its closing-up in the mean square \quad$\cdot$\quad from: Chapters 6, 13, 17, 27 \quad$\cdot$\quad build, select, blur}\\[4pt]
+{\small Chapter 6 with a stretch in place of $\{1, \dots, n\}$. Square the size, and cancellation, lost in Chapter 17, survives at right angles.}
+\end{center}
+
+Chapter 27 again, with $\int |f - g|^2$ in place of $\int |f - g|$. The new thing is not the closing-up but the product that comes with it: the twin of the dot product of Chapter 6.
+
+\subsection*{Given}
+
+\begin{lines}
+\item[\lab{G1}] (Chapter 6.) $x \cdot y$, $\operatorname{len}$ (D6), subspaces (D7). (Chapter 13, D1.) $|v| = \sqrt{\operatorname{len}(v)}$, and the debt noted there: the triangle law was not proved.
+\item[\lab{G2}] (Chapter 17, P6.3, R2.) Subtraction dies under the size blur: cancellation cannot be seen through sizes.
+\item[\lab{G3}] (Chapter 27.) The shape build, select, blur on $C[b,c]$; $L^1[b,c]$; T2, T3 (bags are maps up to Chapter 26); P6 (the map $\min(x^{-1/2}, n)$).
+\end{lines}
+
+\subsection*{Definitions}
+
+\begin{lines}
+\item[\lab{D1}] (The twin of $x \cdot y$.) On $C[b,c]$: \ $\langle f, g \rangle := \int_b^c f g$. \ $\|f\| := \sqrt{\langle f, f \rangle}$.
+\item[\lab{D2}] (Nearness in the mean square.) $f \mathrel{S_k} g$ \ when \ $\|f - g\| < 10^{-k}$.
+\item[\lab{D3}] (Build, M2; Select, M4.) Sequences in $C[b,c]$ that come near themselves in $S$.
+\item[\lab{D4}] (Right angles.) $f \perp g$ when $\langle f, g \rangle = 0$.
+\end{lines}
+
+\subsection*{The blur}
+
+On the sequences of D3. \ $O$: $+$, scaling, $\langle\,,\rangle$.
+
+\begin{lines}
+\item[\lab{B1}] (From below.) $(e_n) \sim 0$ for each selected sequence that comes near $0$ in $S$.
+\item[\lab{B2}] (From above.) Question: ``comes near $0$ in $S$''.
+\item[\lab{N1}] (Name.) The bags: $L^2[b,c]$, the \emph{square-integrable maps}.
+\end{lines}
+
+\subsection*{Propositions}
+
+\begin{lines}
+\item[\lab{P1}] (Appears.) The two blurs agree. (Separating context $-(g_n)$, as Chapter 27, P1.)
+\item[\lab{P2}] (The product's laws are carried.) $\langle\,,\rangle$ is symmetric, respects $+$ and scaling in each place, and $\langle f, f \rangle \ge 0$, with $0$ only for $f = 0$ on $C[b,c]$ (Chapter 27, P2). The same four laws hold for $x \cdot y$ on $\R^n$.
+\item[\lab{P3}] (Right angles: sizes add.) If $f \perp g$ then $\|f + g\|^2 = \|f\|^2 + \|g\|^2$. \ (Open the bracket.)
+\item[\lab{P4}] (Cancellation survives at right angles. The repair of Chapter 17, P6.3.) On $0 \le x \le 1$ the maps $u_j(x) = \sin(2\pi j x)$, $j = 1, 2, \dots$, are at right angles in pairs, each with $\|u_j\|^2 = \tfrac12$. So for every choice of signs, $\|\pm u_1 \pm u_2 \pm \dots \pm u_N\|^2 = N/2$. The sizes do not see the signs; the squares of sizes add exactly, whatever cancels.
+\item[\lab{P5}] (Survives: $+$, scaling, $\langle\,,\rangle$.) By T1 below: $\|f + g\| \le \|f\| + \|g\|$, and $|\langle f, g \rangle - \langle f', g' \rangle| \le \|f - f'\|\,\|g\| + \|f'\|\,\|g - g'\|$. So the product is a question on pairs of bags.
+\item[\lab{P6}] (Dies: $\times$.) $f(x) = x^{-1/3}$ on $0 < x \le 1$ (closed up from $\min(x^{-1/3}, n)$) has $\|f\|^2 = 3$, but $f \cdot f = x^{-2/3}$ has $\int (x^{-2/3})^2 = \int x^{-4/3}$ with no bound.
+\item[\lab{P7}] (Inside $L^1$; not the reverse.) $\int |f| \le \sqrt{c - b}\,\|f\|$ (T1 with $g = 1$). So a sequence that comes near itself in $S$ does so in $I$, and $L^2[b,c]$ sits inside $L^1[b,c]$. Reverse dies: $x^{-1/2}$ is integrable, its square $1/x$ is not (Chapter 27, P6).
+\end{lines}
+
+\subsection*{Theorems}
+
+\begin{lines}
+\item[\lab{T1}] (One inequality for both twins.) $\langle f, g \rangle^2 \le \langle f, f \rangle \langle g, g \rangle$, on $\R^n$ and on $C[b,c]$ alike. \\
+(Only the four laws of P2 are used: $\langle f - t g, f - t g \rangle \ge 0$ for every real $t$; a quadratic in $t$ that is never negative has at most one root, so $b^2 \le 4ac$ for it.) \\
+So the triangle law $\|f + g\| \le \|f\| + \|g\|$ holds, and the debt of Chapter 13, D1 is paid.
+\item[\lab{T2}] (Closed, F5.) Running the chapter on $L^2[b,c]$ adds nothing. (As Chapter 27, T1.)
+\item[\lab{T3}] (Nearest point. Exactly one.) Let $V$ be a part of $L^2[b,c]$ that holds $0$, sums, multiples and the limits in $S$ of its sequences. For every $f$ there is exactly one $v$ in $V$ nearest to $f$, and $f - v \perp V$. \\
+At most one, and the right angle: the middle-point law $\|p + q\|^2 + \|p - q\|^2 = 2\|p\|^2 + 2\|q\|^2$ (open the brackets). Two nearest points would have a nearer middle point. \\
+At least one: take $v_n$ in $V$ with $\|f - v_n\|$ coming near the least value; the middle-point law makes $(v_n)$ come near itself in $S$; $V$ holds its limit (T2). Existence comes from ``closed'', once.
+\item[\lab{T4}] (The blur of Chapter 6, road one, again.) For $V$ as in T3, ``$f \sim_V g \iff f - g \in V$'' is a blur respecting $+$ and scaling, and each bag holds exactly one member at right angles to $V$: the normal form is $f - v$, the twin of Chapter 6, P9.
+\item[\lab{T5}] (The test that picks out a product.) A size comes from a product $\langle\,,\rangle$ exactly when it passes the middle-point law (classical: Jordan and von Neumann; reported, not used). The size $\int |f|$ of Chapter 27 fails it: on $0 \le x \le 1$, with $p = 1$ on the first half and $q = 1$ on the second (or continuous maps near them), $\int|p + q| = \int |p - q| = 1$ and $\int|p| = \int|q| = \tfrac12$, so $1^2 + 1^2 \ne 2 (\tfrac12)^2 + 2 (\tfrac12)^2$.
+\end{lines}
+
+\subsection*{Remarks}
+
+\begin{lines}
+\item[\lab{R1}] (Why squares.) Chapter 17, R2 named cancellation as the edge of the method: sizes forget signs. Here sizes still forget signs, but at right angles their squares add exactly (P3, P4). The repair was a change of floor, not a sharper estimate. Chapter 29 uses it.
+\item[\lab{R2}] (Where existence came from.) T3, once, from ``closed''. T1 is a Survives line of the four laws of P2: one proof serves every row that has them.
+\item[\lab{R3}] (A second road to T1.) Suppose only $\langle f, g \rangle \le C\,\|f\|\,\|g\|$ were known, for one constant $C$. Apply it to $f(x_1) \cdots f(x_m)$ and $g(x_1) \cdots g(x_m)$ on the $m$-fold box: $\langle f, g \rangle^m \le C\,\|f\|^m\,\|g\|^m$. Take $m$-th roots and let $m$ grow: $C$ dies. This is the Amplify draft (Building 2).
+\item[\lab{R4}] (Old names.) $\langle\,,\rangle$: the $L^2$ inner product. T1: Cauchy--Schwarz. T2: $L^2$ is complete (a Hilbert space). T3: the projection theorem. P3: Pythagoras. The middle-point law: the parallelogram law. P4: orthogonality of the sine system.
+\item[\lab{R5}] (Machine check, \texttt{checks/ch28-check.py}.) P4 exactly for $j, k \le 6$, and for all sign choices with $N \le 8$; P6; P7; T1 on random polynomials and random lists; T5's witness.
+\end{lines}
+
+\subsection*{Exercises}
+
+\begin{lines}
+\item[\lab{E1}] On $0 \le x \le 1$, find the number $c$ nearest to $x^2$ in $S$. Check that $x^2 - c \perp 1$.
+\item[\lab{E2}] Show $\langle u_j, u_k \rangle = 0$ for $j \neq k$ in P4.
+\item[\lab{E3}] Where in T1 is ``$\langle f, f \rangle \ge 0$'' used? Give a product on $\R^2$ without it for which T1 fails.
+\item[\lab{E4}] Show that $x^{-1/3}$ is not in $C[0,1]$ but its bag is in $L^2[0,1]$: find $\|f_n - f_m\|$ for $f_n = \min(x^{-1/3}, n)$.
+\item[\lab{E5}] Check the middle-point law for $\operatorname{len}$ on $\R^2$ with $p = e_1$, $q = e_2$.
 \end{lines}
