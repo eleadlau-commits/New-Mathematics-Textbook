@@ -1,0 +1,192 @@
+% Building 1, Part III. Curves.
+% One file for the whole part. Each chapter begins with a banner and \section*.
+
+\part*{Part III. A cubic and its moves}
+\phantomsection\addcontentsline{toc}{part}{Part III. A cubic and its moves}
+
+Building 0, Chapters 35--37 drew a cubic in the plane, found the functions on it, and met the same curve over $\mathbb{C}$ as a torus. This part glues its points by lines and finds a $\mathsf{comm}$ move system, then reads it over $\mathbb{C}$ and over $\Z/p$.
+
+%% ==================================================================
+%%  Chapter III.1  (the group law as a blur)
+%% ==================================================================
+\section*{Chapter III.1. Points glued by lines}
+\phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter III.1. Points glued by lines \quad sums of points $\to$ points}{Chapter III.1. Points glued by lines}}
+\begin{center}
+{\normalsize sums of points $\to$ points \quad$\cdot$\quad from: Chapters 2, II.1, II.3; Building 0, Chapters 35, 36 \quad$\cdot$\quad build, blur}\\[4pt]
+{\small Add points as letters, and glue the three points of each line to three copies of $O$. The bags form a move system for free, and each bag of size $0$ holds exactly one point.}
+\end{center}
+
+The usual road defines a sum of two points by a drawing and then spends pages proving it is associative. Here the sum is a blur of a free move system, so associativity is never in doubt; the work moves to ``at most one point per bag''.
+
+\subsection*{Given}
+
+\begin{lines}
+\item[\lab{G1}] (Building 0, Chapter 36.) $k$ with $2, 3 \ne 0$; the cubic $C$: $y^2 = x^3 + ax + b$ with $\Delta \ne 0$, and $O$. P1 (the edge meets $C$ only at $O$, three times); P2 (a line meets $C$ in at most $3$, counted); P3 (the mirror); T1 (Build: two points of $C(k)$ on a line give a third, and the counts add to exactly $3$); P10 (no function has weight $1$); P11.
+\item[\lab{G2}] (Chapter 2, T1; Chapter II.1.) The free $\mathsf{comm}$ move system on a bag: finite sums $\sum n_P\,P$, $n_P$ in $\Z$.
+\item[\lab{G3}] (Chapter II.3.) The bags of a blur of a move system that respects both sides form a move system; for a $\mathsf{comm}$ one, respecting $+$ is enough.
+\end{lines}
+
+\subsection*{Definitions}
+
+\begin{lines}
+\item[\lab{D1}] (Build.) $\Z[C]$: the free $\mathsf{comm}$ move system on the points of $C(k)$ (G2). \\ $\deg \sum n_P P := \sum n_P$.
+\item[\lab{D2}] For a line $L$, $L \cdot C := $ its meeting points with their counts, as a member of $\Z[C]$: $P + Q + R$, or $2P + R$ for a tangent, or $3O$ for the edge.
+\end{lines}
+
+\subsection*{The blur}
+
+On $\Z[C]$. \ $O$: $+$.
+
+\begin{lines}
+\item[\lab{B1}] (From below.) Gluing: $L \cdot C \sim 3\,O$ for every line $L$ that meets $C$ at points of $C(k)$ (G1, T1: all three are then in $C(k)$). Respects $+$. \ Write $\operatorname{Pic}(C)$ for the bags.
+\item[\lab{B2}] (From above.) Questions: the degree; and, for each $D$ of degree $0$, ``is $D$ glued to $0$?'', read through functions: $D \sim 0$ exactly when $D$ is the list of zeros minus poles of a product of powers of lines (P2).
+\end{lines}
+
+\subsection*{Propositions}
+
+\begin{lines}
+\item[\lab{P1}] (Free: a move system.) $\operatorname{Pic}(C)$ is a $\mathsf{comm}$ move system (G3). Its law is associative because $+$ on $\Z[C]$ is. Nothing was drawn.
+\item[\lab{P2}] (What a gluing is.) The affine line $\ell = \alpha x + \beta y + \gamma$ is a function on $C$ (Building 0, Chapter 36) whose zeros, counted, are the affine points of $L \cdot C$, and whose only pole is at $O$, of order $w(\ell) = 3$ or $2$ (P11 there). So $L \cdot C - 3O$ is ``zeros minus poles'' of $\ell$, and $D \sim 0$ exactly when $D$ is zeros minus poles of $\prod \ell_i^{n_i}$.
+\item[\lab{P3}] (Survives: the degree.) Each gluing has degree $3 - 3 = 0$. So $\deg$ is kept, and $\operatorname{Pic}^0(C)$, the bags of degree $0$, is a sub move system.
+\item[\lab{P4}] (Two moves on points.) For $P$, $Q$ in $C(k)$ let $P * Q$ be the third point on their line (G1, T1). Then \[ P + Q + (P * Q) \sim 3O, \qquad R + \bar R \sim 2O, \] the second by the upright line through $R$ and its mirror $\bar R$ (G1, P3). So $P + Q \sim O + \overline{P * Q}$: two points are glued to one point plus $O$.
+\end{lines}
+
+\subsection*{Theorems}
+
+\begin{lines}
+\item[\lab{T1}] (At least one: normal form.) Every $D$ of degree $0$ is glued to $P - O$ for some $P$ in $C(k)$. \ (Write $D = \sum (P_i - O) - \sum (Q_j - O)$. $-(Q - O) \sim \bar Q - O$ by P4. Then $(P - O) + (Q - O) \sim \overline{P * Q} - O$ by P4, and repeat: each step is a Build of Building 0, Chapter 36, T1.)
+\item[\lab{T2}] (At most one.) $P - O \sim Q - O$ only when $P = Q$. \ (Put $R := \overline{P * \bar Q}$; then $P - Q \sim R - O$, so $R - O$ is zeros minus poles of some $f = \prod \ell_i^{n_i}$ (P2). If $R \ne O$, $f$ has no pole on the affine part, so $f$ lies in $k[C]$ (classical, proof deferred: a function on $C$ with no affine pole is a polynomial function); its only pole is a simple one at $O$, so $w(f) = 1$; Building 0, Chapter 36, P10 says no such $f$ exists. So $R = O$, that is $P = Q$.)
+\item[\lab{T3}] (Appears: the points are a move system.) $P \mapsto$ the bag of $P - O$ matches $C(k)$ one-to-one with $\operatorname{Pic}^0(C)$ (T1, T2). Carried back to the points, the law is \[ P \oplus Q = \overline{P * Q}, \qquad O \text{ does nothing}, \qquad \ominus P = \bar P , \] and $P \oplus Q \oplus R = O$ exactly when $P, Q, R$ lie on one line. Associativity of $\oplus$ is P1, carried.
+\item[\lab{T4}] (Formulas.) For $P = (x_1, y_1)$, $Q = (x_2, y_2)$ with $x_1 \ne x_2$: $P \oplus Q = (x_3, -y_3)$ with $x_3, y_3$ as in Building 0, Chapter 36, T1. \ $2P$: the same with the tangent's slope $(3x_1^2 + a)/(2y_1)$; $2P = O$ when $y_1 = 0$.
+\end{lines}
+
+\subsection*{Propositions on examples}
+
+\begin{lines}
+\item[\lab{P5}] (Over $\Q$, a clock.) $y^2 = x^3 + 1$: the points $O$, $(-1, 0)$, $(0, \pm 1)$, $(2, \pm 3)$, and $(2, 3)$ has order $6$: $C(\Q)$ holds a $\Z/6$.
+\item[\lab{P6}] (Over $\Q$, no clock.) $y^2 = x^3 - 2$, $P = (3, 5)$: $2P = (\tfrac{129}{100}, -\tfrac{383}{1000})$. The denominators grow with each doubling, and $P$ has no finite order.
+\item[\lab{P7}] (Dies when $\Delta = 0$.) On $y^2 = x^3$ T2 fails at the bad point, which every construction through it returns. Leave that point out and the rest is again a move system, matching $(k, +)$ by $(x, y) \mapsto x / y$ (machine-checked over $\Z/p$; classical).
+\end{lines}
+
+\subsection*{Remarks}
+
+\begin{lines}
+\item[\lab{R1}] (What the method did.) Associativity, the hard line of the usual road, is free (P1): the blur is of a free move system. Existence of a normal form is Euclid-like steps (T1), each a Build. The one ``at most one'' line, T2, is Building 0, Chapter 36, P10, plus one classical step, deferred. A second road to T2 over $\mathbb{C}$ is Chapter III.2.
+\item[\lab{R2}] (Kept questions.) The two questions of B2 are all: degree, and ``zeros minus poles of a function''. The same template as Chapter II.4: free thing, gluing, kept questions, normal form.
+\item[\lab{R3}] (Old names.) $\Z[C]$: divisors; B1: linear equivalence (lines generate it on a cubic); $\operatorname{Pic}^0(C)$: the degree-zero Picard group; T3: the group law on an elliptic curve; T2: ``no function with a single simple pole'', a case of Riemann--Roch; P4: the chord-and-tangent construction; P6: a point of infinite order; T3 with $k = \Q$ and finitely many generators: Mordell--Weil (classical, reported, not used).
+\item[\lab{R4}] (Machine check, \texttt{checks/b1-p3-check.py}.) Over $\Z/p$, $p = 5, 7, 11, 13$, every smooth $(a, b)$: $O$ does nothing, mirror undoes, $\oplus$ commutes, associativity on all triples (on $12$ points per curve when there are more); P5; P6.
+\end{lines}
+
+\subsection*{Exercises}
+
+\begin{lines}
+\item[\lab{E1}] On $y^2 = x^3 + 1$ over $\Q$, compute $2(2, 3)$ and $3(2, 3)$.
+\item[\lab{E2}] Show that $P \oplus P = O$ exactly when $P = O$ or $y(P) = 0$. How many such $P$ are there over $\mathbb{C}$?
+\item[\lab{E3}] Why does B1 include the edge line, and what does it glue?
+\item[\lab{E4}] Over $\Z/5$, list $C(\Z/5)$ for $y^2 = x^3 + 1$ and find which clock it is.
+\end{lines}
+
+\newpage
+
+%% ==================================================================
+%%  Chapter III.2  (the torus and the cubic)
+%% ==================================================================
+\section*{Chapter III.2. The torus carries the law}
+\phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter III.2. The torus carries the law \quad $\mathbb{C}/\Lambda$ $\to$ $C(\mathbb{C})$}{Chapter III.2. The torus carries the law}}
+\begin{center}
+{\normalsize $\mathbb{C}/\Lambda$ $\to$ $C(\mathbb{C})$ \quad$\cdot$\quad from: Chapter III.1; Building 0, Chapters 8, 37 \quad$\cdot$\quad arrow}\\[4pt]
+{\small Three points of the torus add to $0$ exactly when their images lie on one line. So the arrow of Building 0, Chapter 37 respects the moves, and $+$ on the torus is the chord law.}
+\end{center}
+
+\subsection*{Given}
+
+\begin{lines}
+\item[\lab{G1}] (Building 0, Chapter 37.) $\Lambda$, $\mathbb{C}/\Lambda$ with $+$; $\wp$; T4 (zeros and poles equal in number; their sums differ by a member of $\Lambda$); T8 (the arrow $\phi : z \mapsto (\wp(z) : \wp'(z) : 1)$ matches $\mathbb{C}/\Lambda$ with $C(\mathbb{C})$, $C$: $y^2 = 4x^3 - g_2 x - g_3$).
+\item[\lab{G2}] (Chapter III.1.) $\oplus$; T3: $P \oplus Q \oplus R = O$ exactly when $P, Q, R$ lie on one line. (The $4$ and the $g_i$ change nothing: scale $y$ by $2$.)
+\end{lines}
+
+\subsection*{Theorems}
+
+\begin{lines}
+\item[\lab{T1}] (Lines are sums in $\Lambda$.) $\phi(z_1), \phi(z_2), \phi(z_3)$ lie on one line, with counts, exactly when $z_1 + z_2 + z_3 \in \Lambda$. \ (A line $\alpha x + \beta y + \gamma = 0$ with $\beta \ne 0$ gives the elliptic map $\alpha \wp + \beta \wp' + \gamma$, with one triple pole per bag, at $0$. Its zeros are the $z$ whose images lie on the line (G1, T8): three of them, and their sum is in $\Lambda$ (G1, T4). For $\beta = 0$: $\wp - c$ has zeros $z$, $-z$, and the third meeting point is $O = \phi(0)$; again the sum is $0$. Conversely, the line through $\phi(z_1)$ and $\phi(z_2)$ meets $C$ a third time at some $\phi(z_3')$, and $z_3' \sim -z_1 - z_2$.)
+\item[\lab{T2}] (Survives: the arrow respects the moves.) $\phi(z_1 + z_2) = \phi(z_1) \oplus \phi(z_2)$. \ (T1 and G2: both sides are the point $R$ with $\phi(z_1) \oplus \phi(z_2) \oplus \ominus R = O$, and $\ominus \phi(z) = \phi(-z)$, the mirror, since $\wp$ is even and $\wp'$ odd.)
+\item[\lab{T3}] (A second road to Chapter III.1, T2, over $\mathbb{C}$.) For a cubic reached by T8, $P \mapsto P - O$ is one-to-one: the torus side has no gluing to undo. And associativity of $\oplus$ is the associativity of $+$ on $\mathbb{C}$, carried.
+\item[\lab{T4}] (Points of finite order.) The $P$ with $nP = O$ in $C(\mathbb{C})$ match $(\tfrac1n \Lambda)/\Lambda$, so there are $n^2$ of them and they form $\Z/n \times \Z/n$. For $n = 2$: $O$ and the three points with $y = 0$. For $n = 3$: the nine points where the tangent meets $C$ three times.
+\end{lines}
+
+\subsection*{Remarks}
+
+\begin{lines}
+\item[\lab{R1}] (What the method did.) One arrow. Its respecting $+$ is one line of Building 0, Chapter 37 (T4, the sum of zeros) read through Chapter III.1, T3.
+\item[\lab{R2}] (Reported.) Every smooth cubic over $\mathbb{C}$ is reached by some $\Lambda$ (classical, uniformisation). With it, T3 covers every cubic over a $k$ inside $\mathbb{C}$, and the deferred step of Chapter III.1, T2 is no longer needed there. Not used.
+\item[\lab{R3}] (Old names.) T1: Abel's theorem on the torus; T2: the addition theorem of $\wp$; T4: $E[n] \cong (\Z/n)^2$; the $n = 3$ points: flexes.
+\item[\lab{R4}] (Machine check, \texttt{checks/b1-p3-check.py}.) With $\omega_1 = 1$, $\omega_2 = 0.3 + 1.1i$: for random $z_1, z_2$ and $z_3 = -z_1 - z_2 + \omega_1 + \omega_2$ the three images have $\det$ below $10^{-6}$ (relative); moving $z_3$ by $0.13$ gives $\det$ above $3 \cdot 10^{-3}$.
+\end{lines}
+
+\subsection*{Exercises}
+
+\begin{lines}
+\item[\lab{E1}] Use T2 to write $\wp(2z)$ in terms of $\wp(z)$ and $\wp'(z)$.
+\item[\lab{E2}] Why are the points with $nP = O$ over $\R$ fewer than $n^2$?
+\item[\lab{E3}] Show from T1 that $\phi(z)$ is a point where the tangent meets $C$ three times exactly when $3z \in \Lambda$.
+\end{lines}
+
+\newpage
+
+%% ==================================================================
+%%  Chapter III.3  (points over Z/p)
+%% ==================================================================
+\section*{Chapter III.3. Counting points over a clock}
+\phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter III.3. Counting points over a clock \quad cubics over $\Z/p$ $\to$ their sizes}{Chapter III.3. Counting points over a clock}}
+\begin{center}
+{\normalsize cubics over $\Z/p$ $\to$ their sizes \quad$\cdot$\quad from: Chapters II.2, II.4, III.1; Building 0, Chapters 3, 17 \quad$\cdot$\quad count}\\[4pt]
+{\small Over $\Z/p$ the move system of Chapter III.1 is finite. Its size is $p + 1$ plus a sum of $p$ signs, and the signs nearly cancel.}
+\end{center}
+
+\subsection*{Given}
+
+\begin{lines}
+\item[\lab{G1}] (Chapter III.1.) $C(\Z/p)$ with $\oplus$, for $p \ne 2, 3$ and $\Delta \ne 0$ in $\Z/p$.
+\item[\lab{G2}] (Chapter II.2, T1, T2.) Lagrange; the order of a move divides the size.
+\item[\lab{G3}] (Chapter II.4, T2.) A finite $\mathsf{comm}$ move system is $\Z/e_1 \times \dots \times \Z/e_r$, $e_1 \mid \dots \mid e_r$, in one way.
+\item[\lab{G4}] (Building 0, Chapter 3, T4, T5.) $\Z/p$ is a field; $c^{p} = c$.
+\end{lines}
+
+\subsection*{Definitions}
+
+\begin{lines}
+\item[\lab{D1}] (The square sign.) For $c$ in $\Z/p$: $\chi(c) := 0$ if $c = 0$; $1$ if $c = y^2$ for some $y$; $-1$ otherwise. \ $N_p := |C(\Z/p)|$, $O$ included.
+\end{lines}
+
+\subsection*{Propositions}
+
+\begin{lines}
+\item[\lab{P1}] (How many square roots.) $y^2 = c$ has $1 + \chi(c)$ answers in $\Z/p$. \ ($y$ and $-y$ differ unless $y = 0$, as $2 \ne 0$; at most two by Building 0, Chapter 7, T4 over $\Z/p$.)
+\item[\lab{P2}] (The count.) \[ N_p \;=\; p + 1 + \sum_{x \in \Z/p} \chi\big(x^3 + ax + b\big). \] (P1 for each $x$, and $O$.)
+\item[\lab{P3}] (Euler's test.) $\chi(c) = c^{(p-1)/2}$ in $\Z/p$, read as $0$, $1$, $-1$. \ (The squares $c \neq 0$ are $(p - 1)/2$ in number (P1) and each has $c^{(p-1)/2} = y^{p-1} = 1$ (G4); $x^{(p-1)/2} - 1$ has no more roots than that.)
+\end{lines}
+
+\subsection*{Theorems}
+
+\begin{lines}
+\item[\lab{T1}] (Lagrange on the curve.) For every $P$ in $C(\Z/p)$, $N_p\,P = O$. \ (G2.)
+\item[\lab{T2}] (At most two clocks.) $C(\Z/p)$ matches $\Z/e_1 \times \Z/e_2$ with $e_1 \mid e_2$ (G3; at most two factors because the $P$ with $\ell P = O$, $\ell$ prime, number at most $\ell^2$: classical for $\Z/p$; over $\mathbb{C}$ it is Chapter III.2, T4). Also $e_1 \mid p - 1$ (classical, reported).
+\item[\lab{T3}] (The signs nearly cancel. Reported; its road is Building 2.) \[ |N_p - p - 1| \;\le\; 2\sqrt{p} . \] The sum in P2 has $p$ terms $\pm 1$ and $0$; if they were independent coin tosses its size would be about $\sqrt p$ (Building 0, Chapter 17's scale). T3 says the curve's signs never do worse than twice that. \\
+The road: the counts $N_{p^m}$ over the floors with $p^m$ members form a ladder; one rough bound $|N_{p^m} - p^m - 1| \le c\,p^{m/2}$, the same $c$ on every rung, is amplified along the ladder to the constant $2$ (Amplify, Building 2). Two inputs of that road are classical and reported: the shape $N_{p^m} = p^m + 1 - \alpha^m - \beta^m$ with $\alpha\beta = p$, and the rough bound.
+\end{lines}
+
+\subsection*{Remarks}
+
+\begin{lines}
+\item[\lab{R1}] (What the method did.) Counting, and two lines from Part II. The real content, T3, is a cancellation line: the edge the survey of the book keeps meeting (Building 0, Chapter 17, P6).
+\item[\lab{R2}] (Old names.) $\chi$: the Legendre symbol; P3: Euler's criterion; T3: Hasse's theorem (the Riemann hypothesis for elliptic curves over finite fields); $\alpha, \beta$: Frobenius eigenvalues; $p + 1 - N_p$: the trace of Frobenius.
+\item[\lab{R3}] (Machine check, \texttt{checks/b1-p3-check.py}.) For every prime $5 \le p < 60$ and every smooth $(a, b)$: P2 against direct listing; T1 (each point's order divides $N_p$); T2 ($e_1 e_2 = N_p$, $e_1 \mid e_2$, $e_1 \mid p - 1$); T3, with the worst case $|N_p - p - 1| / 2\sqrt p = 0.991$.
+\end{lines}
+
+\subsection*{Exercises}
+
+\begin{lines}
+\item[\lab{E1}] Count $C(\Z/7)$ for $y^2 = x^3 + 2$ by P2, and check T3.
+\item[\lab{E2}] Show that for $y^2 = x^3 + x$ and $p \equiv 3 \pmod 4$, $N_p = p + 1$. (Pair $x$ with $-x$, and use $\chi(-1) = -1$.)
+\item[\lab{E3}] Use T1 to find the order of $(0, 1)$ on $y^2 = x^3 + 1$ over $\Z/5$ without adding.
+\end{lines}

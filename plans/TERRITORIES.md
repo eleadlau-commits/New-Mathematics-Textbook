@@ -17,3 +17,5 @@ Replaces the order parts of plans/WORKPLAN-2.md and plans/ALGEBRA-PATH.md (their
 
 ## Progress
 - 12 Nov: Leg 1 done (ch26–30). Leg 2 done (ch31 complex derivative, ch32 loops/Cauchy, ch33 rigidity, ch34 poles and valuations). Leg 3 next: Building 1 (Moves), Part I Rearrangements, Words.
+- 13 Nov 00:20: Leg 3 done (Building 1 Parts I–II: rearrangements, words, table, cosets, normal subgroups, Smith form; Building 0 II.5 any ring).
+- 13 Nov 01:10: Leg 4 done. Building 0 ch35 plane with no parallels, ch36 a cubic in the plane, ch37 the torus; Building 1 Part III: III.1 points glued by lines (associativity free; T2 uses ch36 P10 + one deferred classical step), III.2 torus carries the law, III.3 counts over ℤ/p (Hasse reported, road = Amplify). Next: Leg 5 (rest of algebra), then Leg 6 logic.
