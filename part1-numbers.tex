@@ -2294,11 +2294,12 @@ $x \times x = 3$ has none: the squares in $\Z/7$ are $0, 1, 2, 4$, and $\pi_1$ r
 
 \begin{lines}
 \item[\lab{D5}] (Build, M2; Select, M4.) Sequences $f_0, f_1, \dots$ in $C[b,c]$ that come near themselves in $M$: for every $k$, eventually $f_n \mathrel{M_k} f_m$.
-\item[\lab{B1}] (From below, L5.) Gluings: $(e_n) \sim 0$ for every selected sequence that comes near $0$ in $M$. \ Respects: $+$. \ Call this blur $\sim$.
-\item[\lab{B2}] (From above, L6.) Question: ``comes near $0$ in $M$''. \ Respects: $+$. \ Call this blur $\approx$.
+\item[\lab{B1}] (From below, L5.) Gluings: $(e_n) \sim 0$ for every selected sequence that comes near $0$ in $M$. \ Respects: $+$, $\times$. \ Call this blur $\sim$.
+\item[\lab{B2}] (From above, L6.) Question: ``comes near $0$ in $M$''. \ Respects: $+$, $\times$. \ Call this blur $\approx$.
 \item[\lab{P11}] (Appears.) $\sim \;=\; \approx$. (As Chapter 19, P9: the separating context for $(f_n) \not\sim (g_n)$ is $-(g_n)$.)
 \item[\lab{P12}] (Normal forms.) None is offered: no rule picks one sequence from each bag. (Chapter 4 needed decimals for this; maps have no digits.)
-\item[\lab{T1}] (Closed, F5.) Every sequence in $C[b,c]$ that comes near itself in $M$ comes near some $f$ in $C[b,c]$. So the Arrow from $C[b,c]$ to the new bags (constant sequences) is an inside and a picture: the chapter adds nothing. $C[b,c]$ is already closed. \ (Point by point, G1 gives a limit $f$; letting $m$ grow at each point in $f_n \mathrel{M_{k+1}} f_m$ shows the sequence comes near $f$ in $M$; P6 puts $f$ in $C[b,c]$.)
+\item[\lab{N2}] (Notation.) The bags: the closing-up of $C[b,c]$ in $M$, with $+$, $\times$ carried over (P1, P3, Z6).
+\item[\lab{T1}] (Closed, F5; the Arrow.) Every sequence in $C[b,c]$ that comes near itself in $M$ comes near some $f$ in $C[b,c]$. So the Arrow from $C[b,c]$ to the new bags (constant sequences), respecting $+$ and $\times$, is an inside and a picture: the chapter adds nothing. $C[b,c]$ is already closed. C3 for $+$, $\times$: lifted on sequences place by place, survive (P1, P3), descend, agree here. \ (Point by point, G1 gives a limit $f$; letting $m$ grow at each point in $f_n \mathrel{M_{k+1}} f_m$ shows the sequence comes near $f$ in $M$; P6 puts $f$ in $C[b,c]$.)
 \end{lines}
 
 \subsection*{The derivative, repaired}
@@ -2374,8 +2375,7 @@ $x \times x = 3$ has none: the squares in $\Z/7$ are $0, 1, 2, 4$, and $\pi_1$ r
 \subsection*{Blur: one rung for each $k$}
 
 \begin{lines}
-\item[\lab{B1}] (From below, L5.) Gluings: $f \sim_k g$ whenever $f - g$ is flat to order $k$ at $a$. \ Respects: $+$, $\times$. \\
-Here the gluings are the bag test; this blur is made from above (B2).
+\item[\lab{B1}] (From below, L5.) Gluings: $e \sim_k 0$ for each $e$ flat to order $k$ at $a$. \ Respects: $+$, $\times$.
 \item[\lab{B2}] (From above, L6.) Question: $\operatorname{flat}_{a,k}$. \ Respects: $+$, $\times$.
 \end{lines}
 
@@ -2383,7 +2383,7 @@ Here the gluings are the bag test; this blur is made from above (B2).
 
 \begin{lines}
 \item[\lab{P1}] (Each rung is a true blur.) $\sim_k$ chains, and respects $+$ and $\times$. \ (For $\times$: $f g - f' g' = f (g - g') + g' (f - f')$, and $f$, $g'$ stay below some bound near $a$.)
-\item[\lab{P2}] (Appears.) B1 $=$ B2. (Separating context $h = -g$, as in Chapter 11, P5.)
+\item[\lab{P2}] (Bags; Appears.) $f \sim_k g \iff f - g$ is flat to order $k$ ($+$ spreads the gluings, Z2), and B1 $=$ B2: Z4 by P1; Z5 with the separating context $x \mapsto x - g$, as in Chapter 11, P5.
 \item[\lab{P3}] (The bottom rungs.) $\sim_0$ is the value blur: $f(a) = g(a)$ (on $C$). $\sim_1$ is the blur of Chapter 11.
 \item[\lab{P4}] (A ladder.) $f \sim_{k+1} g \Rightarrow f \sim_k g$: each rung is less blurry than the one below it. \\
 Dies at rung $k$: the next coefficient. $(x - a)^{k+1} \sim_k 0$, and the two differ at rung $k + 1$.
@@ -2458,11 +2458,11 @@ In other words: the left side, without the bars, is $f^{(k+1)}(t)\,(x - a)^{k+1}
 \section*{Chapter 22. The exponential, selected}
 \phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter 22. The exponential, selected \quad maps $\to$ the one that is its own derivative}{Chapter 22. The exponential, selected}}
 \begin{center}
-{\normalsize maps $\to$ the one that is its own derivative \quad$\cdot$\quad from: Chapters 10, 11, 20 \quad$\cdot$\quad select}\\[4pt]
+{\normalsize maps $\to$ the one that is its own derivative \quad$\cdot$\quad from: Chapters 10, 11, 20 \quad$\cdot$\quad select, arrow}\\[4pt]
 {\small Say what the exponential must do. Only one map does it, and its laws follow from ``only one'', with no series to multiply.}
 \end{center}
 
-This is a Select chapter, like Chapters 12 and 15. Chapter 10, T5 built $\exp$ from its series and left two exchanges of limits unpaid. Here the series is used once, for existence, and then forgotten.
+A select (Chapter 0, K3), like Chapters 12 and 15, then the arrow it gives. Chapter 10, T5 built $\exp$ from its series and left two exchanges of limits unpaid. Here the series is used once, for existence, and then forgotten.
 
 \subsection*{Given}
 
@@ -2476,22 +2476,22 @@ This is a Select chapter, like Chapters 12 and 15. Chapter 10, T5 built $\exp$ f
 
 \begin{lines}
 \item[\lab{D0}] For $f : \R \to \mathbb{C}$, $f = (u, v)$, put $f' := (u', v')$, place by place. Then G1 holds for such maps too: T1 and T7 in each place.
-\item[\lab{D1}] (Select, M7 and M4.) Fix $c$ in $\mathbb{C}$. A \emph{$c$-rule} is a map $f : \R \to \mathbb{C}$ with a derivative at every point such that
+\item[\lab{D1}] (Tests; Select, M7 and M4.) Fix $c$ in $\mathbb{C}$. A \emph{$c$-rule} is a map $f : \R \to \mathbb{C}$ with a derivative at every point such that
 \[
 f' = c\,f \qquad\text{and}\qquad f(0) = 1 .
 \]
 \end{lines}
 
-\subsection*{Theorems on the rule}
+\subsection*{At most one, at least one, read off}
 
 \begin{lines}
 \item[\lab{T1}] (At most one.) If $f$ and $g$ are $c$-rules, then $f = g$. \\
 (Put $h(x) := f(-x)$; then $h' = -c\,h$. So $(f h)' = c f h - c f h = 0$, and by G1 $f h$ is constant: $f(x) f(-x) = 1$. In the same way $(g h)' = 0$, so $g(x) f(-x) = 1$. Hence $g = f$.) \\
 On the way: $f(x) \neq 0$ for every $x$, and $f(-x) = 1/f(x)$.
-\item[\lab{T2}] (At least one.) $\sum_{n \ge 0} c^n x^n / n!$ is a $c$-rule. \ (Both of its places are power series with $R$ ``no bound''; differentiate term by term, G2.) Call the one $c$-rule $E_c$.
+\item[\lab{T2}] (At least one.) $\sum_{n \ge 0} c^n x^n / n!$ is a $c$-rule. \ (Both of its places are power series with $R$ ``no bound''; differentiate term by term, G2.) \\ \textbf{Notation.} Write $E_c$ for the one $c$-rule.
 \item[\lab{T3}] (The law, from ``only one''.) $E_c(s + t) = E_c(s)\,E_c(t)$. \\
 (Fix $s$. The map $x \mapsto E_c(s + x)/E_c(s)$ is a $c$-rule. By T1 it is $E_c$.)
-\item[\lab{T4}] (One map of a complex number.) $E_c(x) = E_{c x}(1)$. \ (For fixed $x$, $t \mapsto E_c(x t)$ is a $(c x)$-rule.) \ So put $\exp(z) := E_z(1)$. Then
+\item[\lab{T4}] (One map of a complex number.) $E_c(x) = E_{c x}(1)$. \ (For fixed $x$, $t \mapsto E_c(x t)$ is a $(c x)$-rule.) \ \textbf{Notation.} $\exp(z) := E_z(1)$. It agrees with the $\exp$ of Chapter 10, T5 (C3, agree): both are the series of T2 at $x = 1$. Then
 \[
 \exp(z + w) = \exp(z)\,\exp(w) \qquad\text{for all } z, w \text{ in } \mathbb{C}.
 \]
@@ -2537,11 +2537,11 @@ This is the law of Chapter 10, T5, with nothing owed: no two series were multipl
 \section*{Chapter 23. $\mathbb{C}$ is closed}
 \phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter 23. $\mathbb{C}$ is closed \quad polynomials over $\mathbb{C}$ $\to$ their roots}{Chapter 23. C is closed}}
 \begin{center}
-{\normalsize polynomials over $\mathbb{C}$ $\to$ their roots \quad$\cdot$\quad from: Chapters 7, 8, 10, 13 \quad$\cdot$\quad survives, dies}\\[4pt]
-{\small A lowest point exists because closed boxes survive. It cannot sit where $p \neq 0$, because ``can be lowered'' survives the blur that keeps the first two terms. So the lowest point is a root.}
+{\normalsize polynomials over $\mathbb{C}$ $\to$ their roots \quad$\cdot$\quad from: Chapters 7, 8, 10, 13 \quad$\cdot$\quad blur}\\[4pt]
+{\small A lowest point exists because closed boxes survive. It cannot sit where $p \neq 0$, because ``can be lowered'' is kept on the bag of the first two terms. So the lowest point is a root.}
 \end{center}
 
-No new object is made in this chapter. Two Survives lines meet, as in the mean value theorem (Chapter 11, T6), and the result is what Chapter 10, T11 stated.
+No new object is made in this chapter. The blur is Chapter 7's $x^2 \sim 0$, one rung higher and moved to $a$. Two lines meet, ``closed boxes survive'' and ``can be lowered is kept on a bag'', as in the mean value theorem (Chapter 11, T6), and the result is what Chapter 10, T11 stated.
 
 \subsection*{Given}
 
@@ -2563,23 +2563,23 @@ p(a + h) = c_0 + c_k\,h^k + (\text{higher powers of } h), \qquad c_0 = p(a),
 where $c_k$ is the first coefficient after $c_0$ that is not $0$. Call $c_0 + c_k h^k$ the \emph{first two terms of $p$ at $a$}.
 \end{lines}
 
-\subsection*{The blur}
+\subsection*{Blur}
 
-Operations $O$: $+$ and $\times$ of polynomials. Fix a point $a$ and a rung $k \ge 1$.
+On polynomials over $\mathbb{C}$. Fix a point $a$ and a rung $k \ge 1$.
 
 \begin{lines}
-\item[\lab{B1}] (From below.) Glue $p \sim q$ whenever $p(a + h) - q(a + h)$ has only powers of $h$ above $k$.
-\item[\lab{B2}] (From above.) Keep the questions ``what is the coefficient of $h^j$ in $p(a + h)$'', for $j = 0, \dots, k$.
+\item[\lab{B1}] (From below, L5.) Gluing: the single pair $(x - a)^{k+1} \sim 0$. \ Respects: $+$, $\times$.
+\item[\lab{B2}] (From above, L6.) Questions: ``the coefficient of $h^j$ in $p(a + h)$'', for $j = 0, \dots, k$. \ Respects: $+$, $\times$.
 \end{lines}
 
-Here the gluings are the bag test, so the two agree at once. This is the rung of Chapter 21 for polynomials, and it is exact: no limit is taken. Chapter 7, T7 is the rung $k = 1$.
+This is the rung of Chapter 21 for polynomials, and it is exact: no limit is taken. Chapter 7, T7 is the rung $k = 1$ at $a = 0$.
 
 \subsection*{Propositions}
 
 \begin{lines}
-\item[\lab{P1}] (Normal forms.) Each bag holds exactly one polynomial of degree $\le k$ in $h$. For the $k$ of D2 it is the first two terms of $p$ at $a$.
+\item[\lab{P1}] (Bags; normal forms; Appears.) $p \sim q$ $\iff$ $p - q = (x - a)^{k+1} r$ for a polynomial $r$ $\iff$ $p(a + h) - q(a + h)$ has only powers of $h$ above $k$ (P2). Each bag holds exactly one polynomial of degree $\le k$ in $h$; for the $k$ of D2 it is the first two terms of $p$ at $a$. B1 $=$ B2: Z4, since $(x - a)^{k+1} r$ has no power of $h$ up to $k$, in any context; Z5, if $p \not\sim q$, some coefficient $j \le k$ of $p - q$ is not $0$, and the context $x \mapsto x - q$ with that question separates.
 \item[\lab{P2}] (Re-centring is exact.) $p(a + h)$ is a polynomial in $h$ of the same degree as $p$, with the same leading coefficient. So if $p$ has degree $\ge 1$, the $k$ of D2 exists. \ (Substitute $a + h$ for $x$ in the normal form and multiply out: Chapter 7, T1.)
-\item[\lab{P3}] (Appears: $k$-th roots.) Every $u \neq 0$ in $\mathbb{C}$ has exactly $k$ members $z$ with $z^k = u$. \\
+\item[\lab{P3}] ($k$-th roots.) Every $u \neq 0$ in $\mathbb{C}$ has exactly $k$ members $z$ with $z^k = u$. \\
 (Write $u = r\,w(t)$ with $r = |u| > 0$, by G3. There is exactly one $s > 0$ with $s^k = r$: intervals survive $x \mapsto x^k$, and it rises. The circle part has exactly $k$ roots $w(y)$, $k \cdot y = t$ in $\mathbb{T}$.)
 \item[\lab{P4}] (Dies over $\R$.) P3 is false with $\R$ in place of $\mathbb{C}$: $-1$ has no square root there, since squares are not negative (from Chapter 2, G7). Witness for the whole chapter: over $\R$, $x^2 + 1$ has a lowest point at $0$ with value $1$, and no root.
 \item[\lab{P5}] (Far away is large.) Let $p = a_0 + a_1 x + \dots + a_n x^n$ with $n \ge 1$, $a_n \neq 0$, and put $R := \max\bigl(1,\; 2(|a_0| + \dots + |a_{n-1}|)/|a_n|\bigr)$. Then
@@ -2588,10 +2588,22 @@ Here the gluings are the bag test, so the two agree at once. This is the rung of
 \]
 \end{lines}
 
+\subsection*{Notation}
+
+\begin{lines}
+\item[\lab{N1}] The bag of $p$ at rung $k$ is written by its normal form, a polynomial of degree $\le k$ in $h$.
+\end{lines}
+
+\subsection*{Arrow}
+
+\begin{lines}
+\item[\lab{P6}] Bags at rung $k$ $\to$ $\mathbb{C}[h]/h^{k+1}$, read off the normal form: one-to-one, onto, respecting $+$ and $\times$ (multiply, then drop the powers above $k$). The same arrow as Chapter 21, P5, over $\mathbb{C}$ and with no limit.
+\end{lines}
+
 \subsection*{Theorems}
 
 \begin{lines}
-\item[\lab{T1}] (Survives: ``can be lowered''.) Let $p(a) \neq 0$. For the normal form $c_0 + c_k h^k$ the question ``is there $h$ with $|p(a + h)| < |p(a)|$'' has the answer yes, and the answer is kept by the blur at rung $k$. So $a$ is not a lowest point of $p$. \\
+\item[\lab{T1}] (Kept on the bag: ``can be lowered''.) Let $p(a) \neq 0$. For the normal form $c_0 + c_k h^k$ the question ``is there $h$ with $|p(a + h)| < |p(a)|$'' has the answer yes, and so has every polynomial in its bag at rung $k$ (Chapter 0, C7). So $a$ is not a lowest point of $p$. \\
 (Pick $h_0$ with $c_k h_0^k = -c_0$, by P3. On the normal form, $h = s\,h_0$ with $0 < s \le 1$ gives $c_0(1 - s^k)$. What was glued away is at most $K s^{k+1}$ in size, where $K$ is the sum of the $|c_j|\,|h_0|^j$ for $j > k$. So $|p(a + s h_0)| \le |c_0|(1 - s^k) + K s^{k+1} < |c_0|$ as soon as $s < |c_0|/K$.)
 \item[\lab{T2}] (A lowest point exists.) Every polynomial of degree $\ge 1$ has a lowest point. \\
 (By P5 there is a closed box outside which $|p(z)| > |p(0)|$. On the box, $|p|$ is continuous and takes a smallest value: G4. That value is $\le |p(0)|$, so it is the smallest on all of $\mathbb{C}$.)
@@ -2605,7 +2617,7 @@ Here the gluings are the bag test, so the two agree at once. This is the rung of
 \subsection*{Remarks}
 
 \begin{lines}
-\item[\lab{R1}] (Where existence came from.) Once: closed boxes survive, which rests on G3 of Chapter 5. The rest is ``this is kept'' and ``only one''. The blur did not produce the root; it showed where a lowest point cannot be.
+\item[\lab{R1}] (Where existence came from.) Once: closed boxes survive, which rests on G3 of Chapter 5. The rest is ``kept on a bag'' and ``only one''. The blur did not produce the root; it showed where a lowest point cannot be.
 \item[\lab{R2}] (Not a recipe.) T3 does not say where the root is. Repeating the step of T1 does walk downhill, and in the machine check it arrived every time, but that it always arrives is not proved here.
 \item[\lab{R3}] (Why $\mathbb{C}$ and not $\R$.) The only line that uses $\mathbb{C}$ is P3, and P4 is its witness. Chapter 7 made $\mathbb{C}$ by gluing $x^2 \sim -1$, one equation. T3 says that one gluing was enough for every equation.
 \item[\lab{R4}] (The same shape as Chapter 11, T6.) There: closed stretches survive, and ``rising'' survives where the slope is not $0$. Here: closed boxes survive, and ``can be lowered'' survives where the value is not $0$.
@@ -2635,7 +2647,7 @@ Here the gluings are the bag test, so the two agree at once. This is the rung of
 {\small Chapter 11 read ``rising'' off the tangent, and lost it where the slope is $0$. One rung up the question comes back, and is lost again in exactly one case.}
 \end{center}
 
-This chapter only blurs. It is Chapter 21 at rung $2$, run on $\R^n$. Its theorems are one table of Survives and Dies lines, the twin of Chapter 11, T5.
+This chapter only blurs. It is Chapter 21 at rung $2$, run on $\R^n$. Its theorems say on which bags one question is kept, the twin of Chapter 11, T5.
 
 \subsection*{Given}
 
@@ -2659,19 +2671,17 @@ Fix a point $a$ of $\R^n$.
 
 \subsection*{The blur}
 
-Operations $O$: $+$ and $\times$ of maps, place by place.
+On maps $\R^n \to \R$.
 
 \begin{lines}
-\item[\lab{B1}] (From below.) Glue $f \sim_2 g$ whenever $f - g$ is flat to order $2$ at $a$.
-\item[\lab{B2}] (From above.) Keep the questions ``what is the bag of $f \times h$'', one for each map $h$.
+\item[\lab{B1}] (From below, L5.) Gluings: $e \sim_2 0$ for each $e$ flat to order $2$ at $a$. \ Respects: $+$, $\times$, place by place.
+\item[\lab{B2}] (From above, L6.) Question: ``flat to order $2$ at $a$''. \ Respects: $+$, $\times$.
 \end{lines}
-
-As in Chapters 11, 13 and 21, the gluings here are the bag test; this blur is made from above (B2).
 
 \subsection*{Propositions}
 
 \begin{lines}
-\item[\lab{P1}] (A true blur, and a rung.) $\sim_2$ chains and respects $+$ and $\times$. If $f \sim_2 g$ then $f$ and $g$ share a bag in Chapter 13. For $n = 1$ this is $\sim_2$ of Chapter 21.
+\item[\lab{P1}] (Bags; Appears; a rung.) $f \sim_2 g \iff f - g$ is flat to order $2$ at $a$, and B1 $=$ B2: the separating context for $f \not\sim_2 g$ is $x \mapsto x - g$ (as Chapter 21, P2). $\sim_2$ chains and respects $+$ and $\times$. If $f \sim_2 g$ then $f$ and $g$ share a bag in Chapter 13. For $n = 1$ this is $\sim_2$ of Chapter 21.
 \item[\lab{P2}] (Normal forms: at most one.) A bag holds at most one polynomial of order $2$ at $a$. Call the bag \emph{straight at rung $2$} if it holds one. \ (If $c + L + Q$ is flat to order $2$ then $c = 0$, then $L = 0$ along each line, then $Q = 0$.)
 \item[\lab{P3}] (When: three orders of slopes are enough.) If $f$ has continuous slopes up to order $3$ near $a$, its bag is straight at rung $2$, with
 \[
@@ -2683,17 +2693,29 @@ c = f(a), \qquad L = df_a, \qquad q_{ij} = \tfrac12\,\partial_i \partial_j f(a) 
 \item[\lab{P5}] (Reading $Q$ for $n = 2$.) Put $D := q_{11} q_{22} - q_{12}^2$, the $\det$ of the rows of $Q$. Then $Q$ is positive $\iff q_{11} > 0$ and $D > 0$; \ negative $\iff q_{11} < 0$ and $D > 0$; \ of both signs $\iff D < 0$.
 \end{lines}
 
+\subsection*{Notation}
+
+\begin{lines}
+\item[\lab{N1}] A bag straight at rung $2$ is written by its normal form $c + L + Q$.
+\end{lines}
+
+\subsection*{Arrow}
+
+\begin{lines}
+\item[\lab{P6}] The straight bags at rung $2$ go to the triples $(c, L, Q)$ one-to-one and onto, respecting $+$; $\times$ goes to $(c, L, Q)(c', L', Q') = (cc',\ cL' + c'L,\ cQ' + c'Q + LL')$, with the part of degree $3$ and $4$ dropped. For $n = 1$ this is Chapter 21, P5 at $k = 2$.
+\end{lines}
+
 \subsection*{Theorems}
 
 Let the bag of $f$ at $a$ be straight at rung $2$, with normal form $c + L + Q$.
 
 \begin{lines}
 \item[\lab{T1}] ($L \neq 0$: rung $1$ already answers.) Then $a$ is neither a lowest nor a highest point nearby. \ (G3 along a line $t \mapsto a + t\,h$ with $L(h) \neq 0$.) \ So only the points with $df_a = 0$ are left.
-\item[\lab{T2}] (Survives: $Q$ positive.) If $L = 0$ and $Q$ is positive, the answer to ``is $a$ a strict lowest point nearby'' is yes for the normal form, and it is kept by $\sim_2$. \\
+\item[\lab{T2}] (Kept on the bag: $Q$ positive.) If $L = 0$ and $Q$ is positive, the answer to ``is $a$ a strict lowest point nearby'' is yes for the normal form, and for every map in its bag (Chapter 0, C7). \\
 (By P4 the normal form is at least $c + m\,s^2$. What is glued away is smaller than $m\,s^2$ near $a$, by D1.) \\
 If $Q$ is negative: a strict highest point nearby.
-\item[\lab{T3}] (Survives: $Q$ of both signs.) If $L = 0$ and $Q$ is of both signs, the answer ``neither'' is kept by $\sim_2$. \ (Go along $h$, and along $h'$.)
-\item[\lab{T4}] (Dies: every other case.) If $L = 0$ and $Q$ is neither positive, nor negative, nor of both signs, the question is not kept: the bag holds maps with different answers. \\
+\item[\lab{T3}] (Kept on the bag: $Q$ of both signs.) If $L = 0$ and $Q$ is of both signs, the answer ``neither'' holds for every map in the bag. \ (Go along $h$, and along $h'$.)
+\item[\lab{T4}] (Not kept: every other case.) If $L = 0$ and $Q$ is neither positive, nor negative, nor of both signs, the question is not kept: the bag holds maps with different answers. \\
 Witnesses for $n = 1$, all in the bag of $0$: $x^4$ (lowest), $-x^4$ (highest), $x^3$ (neither). \ For $n = 2$, in one bag: $x^2 + y^4$ (lowest) and $x^2 - y^4$ (neither). \\
 (In general, say $Q \ge 0$ with $Q(h_0) = 0$, $h_0 \neq 0$. Adding $|h|^4$ gives a strict lowest point; taking away the fourth power of $h \cdot h_0$ gives a map that goes below $c$ along $h_0$. Both are glued to the normal form.)
 \item[\lab{T5}] (Where to look.) A continuous $f$ on a closed box has a lowest point there (G1). If $f$ has a straight bag at each inside point, the lowest point is on the boundary of the box or at a point where $df = 0$. \ (T1.)
@@ -2733,7 +2755,7 @@ Witnesses for $n = 1$, all in the bag of $0$: $x^4$ (lowest), $-x^4$ (highest), 
 {\small A straight map can be inverted exactly when its determinant is not $0$. That answer does not survive the tangent blur on a whole bag. It does survive on the maps whose tangent changes continuously.}
 \end{center}
 
-No new blur is made here. The chapter reads the tangent blur of Chapter 13 once more, asks one question of its normal form, and finds that the question dies on the bag and survives after a Select. It is the first chapter where a Select is what rescues a Survives line.
+No new blur is made here. The chapter reads the tangent blur of Chapter 13 once more, asks one question of its normal form, and finds that the answer is not kept on the whole bag, and is kept once the maps are selected (D1). It is the first chapter where a select is what makes a question kept (Chapter 0, C7).
 
 \subsection*{Given}
 
@@ -2752,7 +2774,7 @@ No new blur is made here. The chapter reads the tangent blur of Chapter 13 once 
 \item[\lab{D3}] A \emph{contraction} of a closed box $B$ is a map $T : B \to B$ with $|T(x) - T(y)| \le q\,|x - y|$ for all $x, y$ in $B$ and one fixed $q < 1$.
 \end{lines}
 
-\subsection*{The blur, and the question}
+\subsection*{The question on the normal form}
 
 The blur is the tangent blur at $a$ of Chapter 13, with its normal forms $c + L(x - a)$. Nothing new is glued. The question is: ``can the map be inverted near $a$?''
 
@@ -2761,12 +2783,12 @@ The blur is the tangent blur at $a$ of Chapter 13, with its normal forms $c + L(
 \begin{lines}
 \item[\lab{P1}] (The normal form answers.) The map $x \mapsto c + L(x - a)$ can be inverted $\iff \det L \neq 0$, and then its inverse is $y \mapsto a + L^{-1}(y - c)$. \\
 (If $L$ has an inverse $M$ then $\det L \cdot \det M = 1$. If $\det L \neq 0$ the arrows $L e_1, \dots, L e_n$ are independent, so $L$ glues nothing and by rank and nullity reaches all of $\R^n$. G2.)
-\item[\lab{P2}] (Survives: tangents of inverses are inverse.) If $F$ and $G$ are inverse to each other, $F$ is straight at $a$ and $G$ is straight at $F(a)$, then $DG_{F(a)} \circ DF_a$ is the identity. So $\det DF_a \neq 0$. \ (G1: composing survives.) \\
+\item[\lab{P2}] (Tangents of inverses are inverse.) If $F$ and $G$ are inverse to each other, $F$ is straight at $a$ and $G$ is straight at $F(a)$, then $DG_{F(a)} \circ DF_a$ is the identity. So $\det DF_a \neq 0$. \ (G1: composing survives.) \\
 Read backwards: where $\det DF_a = 0$, no inverse of $F$ has a tangent at $F(a)$.
-\item[\lab{P3}] (Dies on the whole bag.) Let $f(x) := x + 2x^2 \sin(1/x)$ for $x \neq 0$, and $f(0) := 0$. Then $f$ has a slope at every point, $f'(0) = 1$, so $f$ shares the bag of $x \mapsto x$ at $0$; and $f$ is one-to-one on no interval around $0$. \\
+\item[\lab{P3}] (Not kept on the whole bag.) Let $f(x) := x + 2x^2 \sin(1/x)$ for $x \neq 0$, and $f(0) := 0$. Then $f$ has a slope at every point, $f'(0) = 1$, so $f$ shares the bag of $x \mapsto x$ at $0$; and $f$ is one-to-one on no interval around $0$. \\
 (For $x \neq 0$, $f'(x) = 1 + 4x \sin(1/x) - 2\cos(1/x)$, which is $-1$ at every $x = 1/(2\pi m)$ and $3$ at every $x = 1/((2m + 1)\pi)$. So $f$ falls in some places and rises in others, as near $0$ as you like; by Chapter 10, T1 it takes some value twice.) \\
 So the answer ``yes'' of the normal form is not kept by the tangent blur at one point.
-\item[\lab{P4}] (Dies where $\det = 0$.) At $0$, the maps $x^3$ and $x^2$ share the bag of $0$. $x^3$ is one-to-one, and its inverse has no slope at $0$, as P2 says. $x^2$ is not one-to-one near $0$. So there the tangent does not even answer ``one-to-one''.
+\item[\lab{P4}] (Not kept where $\det = 0$.) At $0$, the maps $x^3$ and $x^2$ share the bag of $0$. $x^3$ is one-to-one, and its inverse has no slope at $0$, as P2 says. $x^2$ is not one-to-one near $0$. So there the tangent does not even answer ``one-to-one''.
 \end{lines}
 
 \subsection*{Theorems}
@@ -2780,7 +2802,7 @@ g'(f(x)) = \frac{1}{f'(x)} .
 \item[\lab{T2}] (Contraction: exactly one fixed point.) A contraction $T$ of a closed box has exactly one $x$ with $T(x) = x$, and from any start $x_0$ the sequence $x_0, T(x_0), T(T(x_0)), \dots$ comes near it. \\
 (At most one: if $T(x) = x$ and $T(y) = y$ then $|x - y| \le q\,|x - y|$, so $x = y$. \ At least one: the steps shrink like $q^k$, so the sequence settles; its limit is in the box, G4, and $T$ respects nearness.)
 \item[\lab{T2.1}] (The same for maps.) Let $B$ be a part of $C[b,c]$ that holds the limit in $M$ of each of its sequences, and $T : B \to B$ with the largest gap between $T(f)$ and $T(g)$ at most $q$ times the largest gap between $f$ and $g$, $q < 1$. Then exactly one $f$ in $B$ has $T(f) = f$. \ (As T2, with Chapter 20, T1 in place of G3 of Chapter 5.)
-\item[\lab{T3}] (Survives on $C^1$: inverting.) If $F$ is $C^1$ near $a$ and $\det DF_a \neq 0$, then $F$ can be inverted near $a$, and $DG_{F(x)} = (DF_x)^{-1}$ for $x$ near $a$. \\
+\item[\lab{T3}] (Kept on the selected bags: inverting.) If $F$ is $C^1$ near $a$ and $\det DF_a \neq 0$, then $F$ can be inverted near $a$, and $DG_{F(x)} = (DF_x)^{-1}$ for $x$ near $a$. \\
 (Follow $F$ by the inverse of $DF_a$; now the tangent at $a$ is the identity. Put $\varphi(x) := x - F(x)$. Its tangent at $a$ is $0$ and changes continuously, so on a small closed box $B$ around $a$: $|\varphi(x) - \varphi(y)| \le \tfrac12 |x - y|$, by Chapter 11, T6 along the segment from $x$ to $y$. Then $|F(x) - F(y)| \ge \tfrac12 |x - y|$: one-to-one. For $y$ near $F(a)$, the map $x \mapsto \varphi(x) + y$ is a contraction of $B$, and its fixed point is the $x$ with $F(x) = y$: T2.)
 \item[\lab{T4}] (Level sets are graphs.) Let $F : \R^2 \to \R$ be $C^1$ near $(a, b)$, with $F(a, b) = 0$ and $\partial_y F(a, b) \neq 0$. Then near $(a, b)$ the points with $F = 0$ are the graph of exactly one $C^1$ map $y = g(x)$, and
 \[
@@ -2844,11 +2866,11 @@ This chapter only blurs. It has one hard line, T1, and that line is not imported
 
 \subsection*{The blur}
 
-On $F[b,c]$. \ $O$: $+$, $\times$, $h \circ$ (follow by any map $h : \R \to \R$), limit point by point of a sequence.
+On $F[b,c]$.
 
 \begin{lines}
-\item[\lab{B1}] (From below.) Glue $f \sim g$ when $f = g$ almost everywhere.
-\item[\lab{B2}] (From above.) Postponed. The questions that make this blur from above are integrals, and they are Chapter 27's. Until then the gluings are the bag test.
+\item[\lab{B1}] (From below, L5.) Gluings: $e \sim 0$ for each $e$ that is $0$ almost everywhere. \ Respects: $+$, $\times$, and $h \circ$ (follow by $h$) for each map $h : \R \to \R$. \ Limits (L10): point by point, almost everywhere.
+\item[\lab{B2}] (From above.) Postponed. The question that makes this blur from above is an integral, $\int |f - g| = 0$, and integrals of such maps are Chapter 27's. So this chapter makes no Appears claim; Chapter 27, T4 makes it.
 \end{lines}
 
 \subsection*{Propositions}
@@ -2859,15 +2881,21 @@ On $F[b,c]$. \ $O$: $+$, $\times$, $h \circ$ (follow by any map $h : \R \to \R$)
 \item[\lab{P2}] (A sequence of null sets.) If $N_0, N_1, N_2, \dots$ are null, the set of all their members is null. \ (Give $N_i$ a cover for rung $k + i + 1$; the lengths add to less than $10^{-k}/9$.) \\
 Honest note: this picks one cover for each $N_i$, a sequence of choices. For a set listed by a sequence (P3) the covers are written down and nothing is chosen.
 \item[\lab{P3}] ($\Q$ is null.) So is every set listed by a sequence: give its $i$-th member the open stretch of length $10^{-(k+i+1)}$ around it.
-\item[\lab{P4}] (A true blur.) $\sim$ chains (P2 for two sets), respects $+$ and $\times$, and $f \sim g$ gives $h \circ f \sim h \circ g$ for every $h$.
+\item[\lab{P4}] (Bags; a true blur.) $f \sim g$ $\iff$ $f = g$ almost everywhere (Z2: $+$ spreads the gluings). $\sim$ chains (P2 for two sets), respects $+$ and $\times$, and $f \sim g$ gives $h \circ f \sim h \circ g$ for every $h$.
 \item[\lab{P5}] (Dies.) Let $e$ be $1$ at $\tfrac12$ and $0$ elsewhere, on $0 \le x \le 1$. Then $e \sim 0$, and
   (i) the value at a point dies;
   (ii) the largest value dies ($1$ against $0$);
   (iii) composing in front dies: with $h$ the constant $\tfrac12$, $e \circ h = 1$ while $0 \circ h = 0$;
   (iv) ``continuous'' dies: $\chi \sim 0$ (P3), and $\chi$ is continuous at no point.
-\item[\lab{P6}] (Survives: limits.) If $f_n \sim g_n$ for every $n$, and $f_n$ comes near $f$ point by point almost everywhere, then so does $g_n$. \ (The bad points of all $n$ together: P2.)
+\item[\lab{P6}] (Limits are respected, L10.) If $f_n \sim g_n$ for every $n$, and $f_n$ comes near $f$ point by point almost everywhere, then so does $g_n$. \ (The bad points of all $n$ together: P2.)
 \item[\lab{P7}] (One-way.) ``$f \le g$ almost everywhere'' chains and respects $+$ (L8). Its two-way part is $\sim$.
 \item[\lab{P8}] (Why not a smaller blur.) ``Differ at finitely many points'' is also a true blur respecting $+$ and $\times$. It does not respect limits: let $f_n$ be $1$ at the first $n$ rationals of P0 in the stretch and $0$ elsewhere. Each $f_n$ is glued to $0$; their limit point by point is $\chi$, which is not. So P6 is what the word ``sequence'' in D2 buys.
+\end{lines}
+
+\subsection*{Notation}
+
+\begin{lines}
+\item[\lab{N1}] $F[b,c]/{\sim}$: \emph{maps up to null sets}, with $+$, $\times$, $h \circ$ carried over (P4, Z6).
 \end{lines}
 
 \subsection*{Theorems}
@@ -2877,7 +2905,7 @@ Honest note: this picks one cover for each $N_i$, a sequence of choices. For a s
 (a) Finitely many already hold it. Let $P(x, y)$ say ``finitely many of the given stretches hold all of $x \le t \le y$''. $P$ chains. Each point $a$ lies in one given stretch, so some $\operatorname{near}_k(a)$ does too, and there one stretch is enough. Chapter 5, T8. \\
 (b) Finitely many: start at $b$; take a stretch holding the current point; move to its right end; repeat. The right ends pass $c$ after finitely many steps, and the lengths used add to more than $c - b$.
 \item[\lab{T2}] (Nothing continuous is glued.) If $f, g$ are in $C[b,c]$ and $f \sim g$, then $f = g$. \ (If $f(a) \ne g(a)$, continuity gives a whole stretch around $a$ where they differ: T1 and P1.) \\
-So $C[b,c] \to$ bags is an inside, and the integral of Chapter 12 is untouched.
+So the Arrow $C[b,c] \to F[b,c]/{\sim}$, $f \mapsto \bag{f}$, respecting $+$ and $\times$, is an inside (C3 for $+$, $\times$: lifted place by place, survive by P4, descend, agree here), and the integral of Chapter 12 is untouched.
 \item[\lab{T3}] (No gap.) If $N$ is null, every open stretch holds a point outside $N$. \ (T1.)
 \item[\lab{T4}] (Over $\Q$ everything is glued.) Run this chapter on $\Q$ in place of $\R$: every set of rationals is null (P3), so all maps share one bag. \\
 Twin: $\Q$ can be cut and its stretches are null; $\R$ cannot be cut and its stretches are not. Length needs the closing-up of Chapter 4.
@@ -2938,9 +2966,8 @@ Chapter 4 run a third time. No measure is built first: the integral is the quest
 On the sequences of D2. \ $O$: $+$, scaling, $|\cdot|$ (place by place).
 
 \begin{lines}
-\item[\lab{B1}] (From below.) Gluings: $(e_n) \sim 0$ for each selected sequence that comes near $0$ in $I$.
-\item[\lab{B2}] (From above.) Question: ``comes near $0$ in $I$''.
-\item[\lab{N1}] (Name.) A bag is an \emph{integrable map}. All bags: $L^1[b,c]$. A continuous $f$ sits inside as the bag of $(f, f, f, \dots)$.
+\item[\lab{B1}] (From below, L5.) Gluings: $(e_n) \sim 0$ for each selected sequence that comes near $0$ in $I$. \ Respects: $+$, scaling, $|\cdot|$.
+\item[\lab{B2}] (From above, L6.) Question: ``comes near $0$ in $I$''. \ Respects: $+$, scaling, $|\cdot|$.
 \end{lines}
 
 \subsection*{Propositions}
@@ -2956,6 +2983,18 @@ On the sequences of D2. \ $O$: $+$, scaling, $|\cdot|$ (place by place).
 \item[\lab{P8}] (Dies: ``continuous''.) Let $s_n$ be $0$ up to $\tfrac12$, rise straight to $1$ at $\tfrac12 + \tfrac1n$, and stay $1$. It comes near itself in $I$. No constant sequence $(g, g, \dots)$ with $g$ continuous shares its bag: that would give $\int_0^{1/2} |g| = 0$ and $\int_{1/2 + \delta}^1 |g - 1| = 0$ for every $\delta > 0$, so $g$ jumps at $\tfrac12$.
 \end{lines}
 
+\subsection*{Notation}
+
+\begin{lines}
+\item[\lab{N1}] A bag is an \emph{integrable map}. All bags: $L^1[b,c]$, with $+$, scaling, $|\cdot|$ carried over (P4, Z6), and the questions $\int$ and $\int |\cdot|$ (P5).
+\end{lines}
+
+\subsection*{Arrow}
+
+\begin{lines}
+\item[\lab{P9}] $C[b,c] \to L^1[b,c]$, $f \mapsto$ the bag of $(f, f, f, \dots)$, respects $+$, scaling, $|\cdot|$, and $\int$. It is an inside (P2) and not a picture (P8). \ C3 for $+$, scaling, $|\cdot|$: lifted place by place on sequences (M6), survive (P4), descend (Z6), agree (this line). For $\int$: a question, kept (P5), and on a constant sequence it is the $\int$ of Chapter 12.
+\end{lines}
+
 \subsection*{Theorems}
 
 \begin{lines}
@@ -2963,7 +3002,11 @@ On the sequences of D2. \ $O$: $+$, scaling, $|\cdot|$ (place by place).
 \item[\lab{T2}] (Each bag holds a map. The one existence line.) In every bag there is a sequence $(f_n)$ and a map $f$ on the stretch such that $f_n$ comes near $f$ point by point almost everywhere. \\
 (a) (A size bounds a length.) If $g$ in $C[b,c]$ is $\ge 0$ and $t > 0$, the points where $g > t$ are held by open stretches with lengths adding to at most $\tfrac1t \int g$. \ (Those points form open stretches, each holding a rational, so they are listed by Chapter 26, P0; on finitely many of them $t \cdot \text{length} \le \int g$, by A1, A3, A4.) \\
 (b) Take members with $\int |f_{n+1} - f_n| < 4^{-n}$. By (a), the points where $|f_{n+1} - f_n| > 2^{-n}$ are held by stretches of total length $\le 2^{-n}$. Outside the stretches for all $n \ge m$, the sum of the steps settles, so $f_n(x)$ comes near a limit (G1, T6). The points left over for every $m$ have total $\le 2^{1-m}$ for each $m$: a null set.
-\item[\lab{T3}] (At most one, up to Chapter 26. Classical; the proof is longer and is deferred with the others.) Two sequences in the same bag give maps glued by Chapter 26; sequences in different bags give maps not glued. So $L^1[b,c]$ is a bag of maps up to null sets, not only of sequences.
+\item[\lab{T3}] (At most one, up to Chapter 26.) Two sequences in the same bag give, by T2, maps glued by Chapter 26; sequences in different bags give maps not glued. So $L^1[b,c]$ is a bag of maps up to null sets, not only of sequences. \\
+(a) (A falling sequence that fades almost everywhere fades in the mean.) If $\phi_n$ in $C[b,c]$ have $\phi_1 \ge \phi_2 \ge \dots \ge 0$ and $\phi_n(x)$ comes near $0$ outside a null set $N$, then $\int \phi_n$ comes near $0$. \ (Given $t > 0$, hold $N$ by open stretches of total length $< t$. Each other point $x$ has an $n$ with $\phi_n(x) < t$, and then a whole open stretch around $x$ with $\phi_n < t$ (continuity). These stretches and those for $N$ hold the closed stretch, so finitely many do (Chapter 26, T1(a)); as the $\phi_n$ fall, one $n$ serves them all. Then $\int \phi_n \le t\,(c - b) + t \max \phi_1$.) \\
+(b) (Glued at $0$ in the mean and almost everywhere.) If $e_n$ in $C[b,c]$ have $\int |e_n|$ coming near $0$ and $e_n(x)$ coming near $e(x)$ outside a null set, then $e = 0$ almost everywhere. \ (For $t > 0$, a point with $|e(x)| > 2t$ has $|e_n(x)| > t$ for all large $n$. For each $m$, the points with $|e_n(x)| > t$ for every $n \ge m$ lie, for every $n \ge m$, in stretches of total length $\le \int |e_n| / t$ (T2(a)), so they form a null set. Over all $m$ and all $t = 10^{-k}$: a null set, Chapter 26, P2.) \\
+(c) Same bag, then glued. If $(f_n)$ and $(g_n)$ share a bag and T2 gives $f$ along members $f_{n_j}$ and $g$ along $g_{m_j}$, then $e_j := f_{n_j} - g_{m_j}$ has $\int |e_j|$ coming near $0$ (P2 twice) and comes near $f - g$ almost everywhere; by (b), $f = g$ almost everywhere. \ (With one sequence twice, this also says T2's map does not depend on the members chosen.) \\
+(d) Glued, then same bag. Take $e_j$ as in (c), chosen with $\int |e_{j+1} - e_j| < 4^{-j}$, and suppose $f = g$ almost everywhere, so $e_j$ comes near $0$ almost everywhere. For $j \le m$ put $\phi_m := \max\bigl(|e_j| - \sum_{i=j}^{m-1} |e_{i+1} - e_i|,\ 0\bigr)$: continuous, falling in $m$, and $\phi_m \le |e_m|$, which comes near $0$ almost everywhere. By (a), $\int \phi_m$ comes near $0$. Since $|e_j| \le \phi_m + \sum_{i=j}^{m-1} |e_{i+1} - e_i|$, \ $\int |e_j| \le \int \phi_m + \sum_{i \ge j} 4^{-i}$, and letting $m$ grow, $\int |e_j| \le 2 \cdot 4^{-j}$. So $\int |f_{n_j} - g_{m_j}|$ comes near $0$, and the two sequences share a bag.
 \item[\lab{T4}] (Appears: Chapter 26's blur from above.) For maps $f, g$ given by bags (T2, T3): \ $f \sim g$ in the sense of Chapter 26 \ $\iff$ \ $\int |f - g| = 0$. \ This is the question that Chapter 26, B2 postponed.
 \item[\lab{T5}] (The integral through limits: one table.) Three nearnesses of Chapter 20 and this chapter, two questions:
 \begin{center}
@@ -2973,16 +3016,16 @@ continuous & survives (Ch.\ 20, P6) & dies (P8) & dies (Ch.\ 20, P5) \\
 $\int$ & survives (Ch.\ 20, P7) & survives (P5) & dies (Ch.\ 20, P9) \\
 \end{tabular}
 \end{center}
-The last entry is rescued in two ways (both classical, proofs deferred):
-\item[\lab{T5.1}] (Survives under a roof.) If $f_n$ comes near $f$ point by point almost everywhere and $|f_n| \le G$ for one integrable $G$, then $f$ is integrable and $\int f_n$ comes near $\int f$. \ Dies without the roof: the tents of Chapter 20, P9 ($\int = 1$, limit $0$).
-\item[\lab{T5.2}] (Survives when only rising.) If $f_n \le f_{n+1}$ and the $\int f_n$ have a bound, the limit is integrable and $\int f_n$ comes near its integral. \ Dies without the bound: $\min(1/x, n)$ on $0 < x \le 1$ has $\int = 1 + \log n$.
+The last entry is rescued in two ways. Both are classical, their proofs are deferred, and no later line uses them:
+\item[\lab{T5.1}] (Under a roof.) If $f_n$ comes near $f$ point by point almost everywhere and $|f_n| \le G$ for one integrable $G$, then $f$ is integrable and $\int f_n$ comes near $\int f$. \ Dies without the roof: the tents of Chapter 20, P9 ($\int = 1$, limit $0$).
+\item[\lab{T5.2}] (When only rising.) If $f_n \le f_{n+1}$ and the $\int f_n$ have a bound, the limit is integrable and $\int f_n$ comes near its integral. \ Dies without the bound: $\min(1/x, n)$ on $0 < x \le 1$ has $\int = 1 + \log n$.
 \item[\lab{T6}] (Length appears last.) For a set $A$ in the stretch whose $0/1$ map $\chi_A$ is integrable, its \emph{length} is $\int \chi_A$. A stretch gets $c' - b'$; a null set gets $0$. The map $\chi$ of Chapter 12, R3 is glued to $0$, so $\int \chi = 0$, with no rule of choice.
 \end{lines}
 
 \subsection*{Remarks}
 
 \begin{lines}
-\item[\lab{R1}] (Where existence came from.) Once: T2, from ``a size bounds a length'' and $\R$ closed. Everything else is a Survives or Dies line of the nearness $I$.
+\item[\lab{R1}] (Where existence came from.) Once: T2, from ``a size bounds a length'' and $\R$ closed. T3 is ``at most one'' in both directions; its one hard step, (a), is ``the line cannot be cut'' again (Chapter 26, T1). Everything else is a Survives or Dies line of the nearness $I$.
 \item[\lab{R2}] (Chapter 12, R3 answered.) The area rules there could not decide $\chi$. Here $\chi$ is decided by closing up, not by choosing.
 \item[\lab{R3}] (Sets with no length.) Some sets $A$ have $\chi_A$ in no bag. Showing one exists needs a rule of choice (not in Chapter 0).
 \item[\lab{R4}] (Next.) Probability is this chapter again with $\int 1 = 1$. Chapter 28 squares the size: $\int |f - g|^2$.
@@ -3033,12 +3076,12 @@ Chapter 27 again, with $\int |f - g|^2$ in place of $\int |f - g|$. The new thin
 
 \subsection*{The blur}
 
-On the sequences of D3. \ $O$: $+$, scaling, $\langle\,,\rangle$.
+On the sequences of D3.
 
 \begin{lines}
-\item[\lab{B1}] (From below.) $(e_n) \sim 0$ for each selected sequence that comes near $0$ in $S$.
-\item[\lab{B2}] (From above.) Question: ``comes near $0$ in $S$''.
-\item[\lab{N1}] (Name.) The bags: $L^2[b,c]$, the \emph{square-integrable maps}.
+\item[\lab{B1}] (From below, L5.) Gluings: $(e_n) \sim 0$ for each selected sequence that comes near $0$ in $S$. \ Respects: $+$, scaling.
+\item[\lab{B2}] (From above, L6.) Question: ``comes near $0$ in $S$''. \ Respects: $+$, scaling. \\
+The product $\langle\,,\rangle$ is a question of two things, not an operation; P5 shows it is kept.
 \end{lines}
 
 \subsection*{Propositions}
@@ -3048,9 +3091,21 @@ On the sequences of D3. \ $O$: $+$, scaling, $\langle\,,\rangle$.
 \item[\lab{P2}] (The product's laws are carried.) $\langle\,,\rangle$ is symmetric, respects $+$ and scaling in each place, and $\langle f, f \rangle \ge 0$, with $0$ only for $f = 0$ on $C[b,c]$ (Chapter 27, P2). The same four laws hold for $x \cdot y$ on $\R^n$.
 \item[\lab{P3}] (Right angles: sizes add.) If $f \perp g$ then $\|f + g\|^2 = \|f\|^2 + \|g\|^2$. \ (Open the bracket.)
 \item[\lab{P4}] (Cancellation survives at right angles. The repair of Chapter 17, P6.3.) On $0 \le x \le 1$ the maps $u_j(x) = \sin(2\pi j x)$, $j = 1, 2, \dots$, are at right angles in pairs, each with $\|u_j\|^2 = \tfrac12$. So for every choice of signs, $\|\pm u_1 \pm u_2 \pm \dots \pm u_N\|^2 = N/2$. The sizes do not see the signs; the squares of sizes add exactly, whatever cancels.
-\item[\lab{P5}] (Survives: $+$, scaling, $\langle\,,\rangle$.) By T1 below: $\|f + g\| \le \|f\| + \|g\|$, and $|\langle f, g \rangle - \langle f', g' \rangle| \le \|f - f'\|\,\|g\| + \|f'\|\,\|g - g'\|$. So the product is a question on pairs of bags.
+\item[\lab{P5}] (Survives: $+$, scaling; the question $\langle\,,\rangle$ is kept.) By T1 below: $\|f + g\| \le \|f\| + \|g\|$, and $|\langle f, g \rangle - \langle f', g' \rangle| \le \|f - f'\|\,\|g\| + \|f'\|\,\|g - g'\|$. So the product is a question on pairs of bags.
 \item[\lab{P6}] (Dies: $\times$.) $f(x) = x^{-1/3}$ on $0 < x \le 1$ (closed up from $\min(x^{-1/3}, n)$) has $\|f\|^2 = 3$, but $f \cdot f = x^{-2/3}$ has $\int (x^{-2/3})^2 = \int x^{-4/3}$ with no bound.
 \item[\lab{P7}] (Inside $L^1$; not the reverse.) $\int |f| \le \sqrt{c - b}\,\|f\|$ (T1 with $g = 1$). So a sequence that comes near itself in $S$ does so in $I$, and $L^2[b,c]$ sits inside $L^1[b,c]$. Reverse dies: $x^{-1/2}$ is integrable, its square $1/x$ is not (Chapter 27, P6).
+\end{lines}
+
+\subsection*{Notation}
+
+\begin{lines}
+\item[\lab{N1}] The bags: $L^2[b,c]$, the \emph{square-integrable maps}, with $+$, scaling (Z6) and the question $\langle\,,\rangle$.
+\end{lines}
+
+\subsection*{Arrow}
+
+\begin{lines}
+\item[\lab{P8}] $C[b,c] \to L^2[b,c]$ (constant sequences) is an inside respecting $+$, scaling and $\langle\,,\rangle$ (Chapter 27, P2 for the square). $L^2[b,c] \to L^1[b,c]$, a bag to the bag of the same sequence, respects $+$ and scaling (P7); it is not a picture (P7). That it is an inside is Chapter 27, T3 run with $S$; it is not used. C3 for $+$, scaling: lifted on sequences, survive (P5), descend, agree here.
 \end{lines}
 
 \subsection*{Theorems}
@@ -3064,7 +3119,7 @@ So the triangle law $\|f + g\| \le \|f\| + \|g\|$ holds, and the debt of Chapter
 At most one, and the right angle: the middle-point law $\|p + q\|^2 + \|p - q\|^2 = 2\|p\|^2 + 2\|q\|^2$ (open the brackets). Two nearest points would have a nearer middle point. \\
 At least one: take $v_n$ in $V$ with $\|f - v_n\|$ coming near the least value; the middle-point law makes $(v_n)$ come near itself in $S$; $V$ holds its limit (T2). Existence comes from ``closed'', once.
 \item[\lab{T4}] (The blur of Chapter 6, road one, again.) For $V$ as in T3, ``$f \sim_V g \iff f - g \in V$'' is a blur respecting $+$ and scaling, and each bag holds exactly one member at right angles to $V$: the normal form is $f - v$, the twin of Chapter 6, P9.
-\item[\lab{T5}] (The test that picks out a product.) A size comes from a product $\langle\,,\rangle$ exactly when it passes the middle-point law (classical: Jordan and von Neumann; reported, not used). The size $\int |f|$ of Chapter 27 fails it: on $0 \le x \le 1$, with $p = 1$ on the first half and $q = 1$ on the second (or continuous maps near them), $\int|p + q| = \int |p - q| = 1$ and $\int|p| = \int|q| = \tfrac12$, so $1^2 + 1^2 \ne 2 (\tfrac12)^2 + 2 (\tfrac12)^2$.
+\item[\lab{T5}] (The size of Chapter 27 has no product.) The size $\int |f|$ of Chapter 27 fails the middle-point law of T3, which every size from a product passes: on $0 \le x \le 1$, with $p = 1$ on the first half and $q = 1$ on the second (or continuous maps near them), $\int|p + q| = \int |p - q| = 1$ and $\int|p| = \int|q| = \tfrac12$, so $1^2 + 1^2 \ne 2 (\tfrac12)^2 + 2 (\tfrac12)^2$.
 \end{lines}
 
 \subsection*{Remarks}
@@ -3072,9 +3127,10 @@ At least one: take $v_n$ in $V$ with $\|f - v_n\|$ coming near the least value; 
 \begin{lines}
 \item[\lab{R1}] (Why squares.) Chapter 17, R2 named cancellation as the edge of the method: sizes forget signs. Here sizes still forget signs, but at right angles their squares add exactly (P3, P4). The repair was a change of floor, not a sharper estimate. Chapter 29 uses it.
 \item[\lab{R2}] (Where existence came from.) T3, once, from ``closed''. T1 is a Survives line of the four laws of P2: one proof serves every row that has them.
-\item[\lab{R3}] (A second road to T1.) Suppose only $\langle f, g \rangle \le C\,\|f\|\,\|g\|$ were known, for one constant $C$. Apply it to $f(x_1) \cdots f(x_m)$ and $g(x_1) \cdots g(x_m)$ on the $m$-fold box: $\langle f, g \rangle^m \le C\,\|f\|^m\,\|g\|^m$. Take $m$-th roots and let $m$ grow: $C$ dies. This is the Amplify draft (Building 2).
+\item[\lab{R3}] (A second road to T1.) Suppose only $\langle f, g \rangle \le C\,\|f\|\,\|g\|$ were known, for one constant $C$. Apply it to $f(x_1) \cdots f(x_m)$ and $g(x_1) \cdots g(x_m)$ on the $m$-fold box: $\langle f, g \rangle^m \le C\,\|f\|^m\,\|g\|^m$. Take $m$-th roots and let $m$ grow: $C$ dies. This is Amplify (Field notes: the edge, Note 2, line A).
 \item[\lab{R4}] (Old names.) $\langle\,,\rangle$: the $L^2$ inner product. T1: Cauchy--Schwarz. T2: $L^2$ is complete (a Hilbert space). T3: the projection theorem. P3: Pythagoras. The middle-point law: the parallelogram law. P4: orthogonality of the sine system.
 \item[\lab{R5}] (Machine check, \texttt{checks/ch28-check.py}.) P4 exactly for $j, k \le 6$, and for all sign choices with $N \le 8$; P6; P7; T1 on random polynomials and random lists; T5's witness.
+\item[\lab{R6}] (The converse, reported.) A size that passes the middle-point law comes from a product (classical: Jordan and von Neumann). No line uses it.
 \end{lines}
 
 \subsection*{Exercises}
@@ -3095,11 +3151,11 @@ At least one: take $v_n$ in $V$ with $\|f - v_n\|$ coming near the least value; 
 \section*{Chapter 29. Waves on the circle}
 \phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter 29. Waves on the circle \quad maps on the circle $\to$ lists indexed by $\Z$}{Chapter 29. Waves on the circle}}
 \begin{center}
-{\normalsize maps on the circle $\to$ lists indexed by $\Z$ \quad$\cdot$\quad from: Chapters 8, 10, 12, 20, 28 \quad$\cdot$\quad survey, arrow, ladder}\\[4pt]
+{\normalsize maps on the circle $\to$ lists indexed by $\Z$ \quad$\cdot$\quad from: Chapters 8, 10, 12, 20, 28 \quad$\cdot$\quad table, arrow}\\[4pt]
 {\small List every arrow from the circle to itself that respects $+$. Ask a map how much of each it holds. One rung of the answer can overshoot; the average of the rungs never does, and that is enough to come back.}
 \end{center}
 
-A survey chapter. It finds all the arrows of one kind (T1), uses them as questions, and climbs the ladder of answers. Nothing is imported: the one place the old route needed Weierstrass is replaced by a Survives line about averages (T5).
+A table, then an arrow. The table is one column long: all the arrows of one kind (T1). The arrow uses them as questions, and climbs the ladder of answers. No blur is claimed. Nothing is imported: the one place the old route needed Weierstrass is replaced by a line about averages (T5).
 
 \subsection*{Given}
 
@@ -3121,11 +3177,11 @@ A survey chapter. It finds all the arrows of one kind (T1), uses them as questio
 \item[\lab{D5}] (The ladder.) Rung $N$: \ $S_N f := \sum_{|n| \le N} \widehat{f}(n)\, e_n$. \ The average of the first $N + 1$ rungs: $\sigma_N f := \frac{1}{N+1}(S_0 f + \dots + S_N f)$.
 \end{lines}
 
-\subsection*{The survey}
+\subsection*{The table}
 
 \begin{lines}
 \item[\lab{T1}] (Every arrow from the circle to the circle.) The continuous maps $\chi : \mathbb{T} \to S$ that respect $+$ are exactly the $e_n$, one for each $n$ in $\Z$. \\
-(Near $0$, $\chi$ stays near $1$, so it lifts through $w$ by a continuous $\lambda$ with $\chi = w \circ \lambda$ and $\lambda(s + t) = \lambda(s) + \lambda(t)$ for small $s, t$; such a $\lambda$ is $t \mapsto c\,t$ (rationals first, then continuity). Then $\chi(1) = 1$ gives $c \in \Z$: G2.) Chapter 10, T10 is the cases $n = \pm 1$.
+(Near $0$, $\chi$ stays near $1$, where $w$ has a continuous inverse $\ell$ with $\ell(1) = 0$: near $t = 0$ the map $t \mapsto \operatorname{Im} w(t)$ has slope $2\pi \ne 0$, so it can be inverted (Chapter 25, T1), and a point of $S$ near $1$ is fixed by its second entry. Put $\lambda := \ell \circ \chi$ on a small stretch $|t| \le \delta$: continuous, $\chi = w \circ \lambda$, and $\lambda(s + t) = \lambda(s) + \lambda(t)$ when $s$, $t$, $s + t$ are in the stretch, since both sides are near $0$ and $w$ sends both to $\chi(s)\chi(t)$. Then $\lambda(m \delta / n) = (m/n)\lambda(\delta)$ for whole $|m| \le n$, and by continuity $\lambda(t) = c\,t$ on the stretch. So $\chi(t) = w(c\,t)$ near $0$, hence everywhere, as every $t$ is a sum of small steps. Then $\chi(1) = 1$ gives $c \in \Z$: G2.) Chapter 10, T10 is the cases $n = \pm 1$.
 \end{lines}
 
 \subsection*{Propositions}
@@ -3133,28 +3189,28 @@ A survey chapter. It finds all the arrows of one kind (T1), uses them as questio
 \begin{lines}
 \item[\lab{P1}] (The waves are at right angles.) $\langle e_m, e_n \rangle = 1$ if $m = n$ and $0$ otherwise. \ ($\int_0^1 w(k t) = 0$ for $k \ne 0$: an antiderivative is $w(kt)/(2\pi i k)$, which takes the same value at $0$ and $1$.)
 \item[\lab{P2}] (Rung $N$ is the nearest point.) $S_N f$ is the member of the span of $e_{-N}, \dots, e_N$ nearest to $f$ (Chapter 28, T3; here the span is finite, so nothing has to be closed). So $\sum_{|n| \le N} |\widehat{f}(n)|^2 \le \|f\|^2$ for every $N$: the sizes squared of the list settle.
-\item[\lab{P3}] (Survives: turning.) Let $f_a(t) := f(t - a)$. Then $\widehat{f_a}(n) = w(-n a)\, \widehat{f}(n)$. Turning the circle becomes multiplying place by place.
-\item[\lab{P4}] (Survives: the derivative.) If $f$ has a continuous derivative, $\widehat{f'}(n) = 2\pi i n\, \widehat{f}(n)$. \ (Parts, Chapter 12, T4; the end terms cancel because $f(1) = f(0)$.)
-\item[\lab{P5}] (Dies: $\times$.) $\widehat{f g}$ is not $\widehat f\, \widehat g$ place by place: $f = g = e_1$ gives $\widehat{fg}(2) = 1$ while $\widehat f(2)\, \widehat g(2) = 0$. What survives is the convolution $\sum_m \widehat f(m)\, \widehat g(n - m)$: the same loss as $\ast$ in Chapter 6.
+\item[\lab{P3}] (The arrow sends turning to multiplying.) Let $f_a(t) := f(t - a)$. Then $\widehat{f_a}(n) = w(-n a)\, \widehat{f}(n)$. Turning the circle becomes multiplying place by place.
+\item[\lab{P4}] (The arrow sends the derivative to multiplying by $2\pi i n$.) If $f$ has a continuous derivative, $\widehat{f'}(n) = 2\pi i n\, \widehat{f}(n)$. \ (Parts, Chapter 12, T4; the end terms cancel because $f(1) = f(0)$.)
+\item[\lab{P5}] (Dies through the arrow: $\times$.) $\widehat{f g}$ is not $\widehat f\, \widehat g$ place by place: $f = g = e_1$ gives $\widehat{fg}(2) = 1$ while $\widehat f(2)\, \widehat g(2) = 0$. What survives is the convolution $\sum_m \widehat f(m)\, \widehat g(n - m)$: the same loss as $\ast$ in Chapter 6.
 \item[\lab{P6}] (One rung can overshoot.) For the square wave ($1$ on $0 < t < \tfrac12$, $-1$ on $\tfrac12 < t < 1$), the largest value of $S_N f$ near the jump comes near $1.179$, not $1$, as $N$ grows. A single rung does not keep ``$|f| \le 1$''.
 \end{lines}
 
 \subsection*{Theorems}
 
 \begin{lines}
-\item[\lab{T2}] (The average is a positive blur.) $\sigma_N f(t) = \int_0^1 F_N(t - s)\, f(s)\, ds$ with \[ F_N(t) = \frac{1}{N+1}\,\Bigl|\sum_{k=0}^{N} w(k t)\Bigr|^2 \ \ge\ 0, \qquad \int_0^1 F_N = 1. \] One rung has the weight $D_N = \sum_{|n| \le N} e_n$, which takes negative values; the average does not.
-\item[\lab{T3}] (Survives the average: bounds.) If $m \le f \le M$ (real $f$), then $m \le \sigma_N f \le M$. \ (T2: a positive weight of total $1$.) Contrast P6.
+\item[\lab{T2}] (The average is a positive weight.) $\sigma_N f(t) = \int_0^1 F_N(t - s)\, f(s)\, ds$ with \[ F_N(t) = \frac{1}{N+1}\,\Bigl|\sum_{k=0}^{N} w(k t)\Bigr|^2 \ \ge\ 0, \qquad \int_0^1 F_N = 1. \] One rung has the weight $D_N = \sum_{|n| \le N} e_n$, which takes negative values; the average does not.
+\item[\lab{T3}] (The average keeps bounds.) If $m \le f \le M$ (real $f$), then $m \le \sigma_N f \le M$. \ (T2: a positive weight of total $1$.) Contrast P6.
 \item[\lab{T4}] (The weight piles up at $0$.) For $\delta \le |t| \le \tfrac12$: \ $F_N(t) \le \dfrac{1}{(N+1)\, \sin^2(\pi \delta)}$.
 \item[\lab{T5}] (The average comes back, for every continuous map.) If $f$ is in $C(\mathbb{T})$, $\sigma_N f$ comes near $f$ in $M$. \\
 (Split $f(t) - \sigma_N f(t) = \int F_N(t - s)(f(t) - f(s))\,ds$ into $|t - s| < \delta$, where $f$ barely moves (Chapter 5, T7: one rung serves the whole circle), and the rest, where T4 makes the weight small.) An estimate carried through a positive average; no existence is used.
-\item[\lab{T6}] (At most one.) If $f$ is in $C(\mathbb{T})$ and every $\widehat f(n) = 0$, then $f = 0$. \ (Every $\sigma_N f = 0$; T5.) So $f \mapsto \widehat f$ is an inside on $C(\mathbb{T})$: a continuous map is fixed by its list.
+\item[\lab{T6}] (At most one.) If $f$ is in $C(\mathbb{T})$ and every $\widehat f(n) = 0$, then $f = 0$. \ (Every $\sigma_N f = 0$; T5.) So the blur of the arrow $f \mapsto \widehat f$ (W4) glues nothing on $C(\mathbb{T})$: it is an inside, and a continuous map is fixed by its list.
 \item[\lab{T7}] (Smooth maps: one rung is enough.) If $f$ has two continuous derivatives, $|\widehat f(n)| \le \|f''\| / (4\pi^2 n^2)$ for $n \ne 0$ (P4 twice, and $|\langle g, e_n \rangle| \le \|g\|$). So $\sum |\widehat f(n)|$ settles, $S_N f$ comes near some continuous $g$ in $M$ (Chapter 20, T3), $g$ has the same list as $f$, and $g = f$ by T6.
 \end{lines}
 
 \subsection*{Remarks}
 
 \begin{lines}
-\item[\lab{R1}] (What the method did here.) Chapter 17 lost cancellation; Chapter 28 got it back at right angles (P1, P2). The return T5 is a Survives line of a positive blur: ``$\ge 0$ is kept by averaging rungs, not by one rung''. That is why the overshoot of P6 does not spoil it.
+\item[\lab{R1}] (What the method did here.) Chapter 17 lost cancellation; Chapter 28 got it back at right angles (P1, P2). The return T5 is a line about a positive weight: ``$\ge 0$ is kept by averaging rungs, not by one rung''. The weight is not a blur in the sense of L1; it is an average. That is why the overshoot of P6 does not spoil it.
 \item[\lab{R2}] (An import removed.) The plan for this chapter needed ``a continuous map with every $\widehat f(n) = 0$ is $0$'' from Weierstrass on the circle. T5 gives it. With the cosine substitution and the series of $\exp$, T5 also gives the polynomial form, so Chapter 20, R4 can now be earned (the proof is deferred with the others).
 \item[\lab{R3}] (The honest edge.) For merely continuous $f$ the rungs $S_N f(t)$ need not come near $f(t)$ at every point (classical, du Bois-Reymond; not proved here). Chapter 30 changes the floor so that the question has a clean answer.
 \item[\lab{R4}] (Old names.) $e_n$: the characters of $\mathbb{T}$. $\widehat f(n)$: Fourier coefficients. $S_N f$: partial sums of the Fourier series. P2: Bessel's inequality. $D_N$: Dirichlet kernel. $F_N$: Fejér kernel. T5: Fejér's theorem. P6: the Gibbs phenomenon. P5: the convolution theorem.
@@ -3204,9 +3260,9 @@ No new blur. One arrow, read on the right floor. The twin of Chapter 10, T8, whe
 
 \begin{lines}
 \item[\lab{P1}] (The arrow is defined on bags.) $\sum_n |\widehat f(n) - \widehat g(n)|^2 \le \|f - g\|^2$ (Chapter 29, P2 for $f - g$). So the arrow respects nearness in the mean square with the same rung, and D2 does not depend on the sequence chosen.
-\item[\lab{P2}] (Survives: $+$, scaling, turning, $\langle\,,\rangle$.) From Chapter 29, P3, and T1 below.
-\item[\lab{P3}] (Dies: the value at a point.) The map $1$ at $t = 0$ and $0$ elsewhere has the same list as $0$. A list cannot ask what a map does at one point (G3).
-\item[\lab{P4}] (Dies: ``continuous''.) The square wave of Chapter 29, P6 has a list in $\ell^2(\Z)$ ($|\widehat f(n)| = 2/(\pi |n|)$ for odd $n$, $0$ for even), and no continuous map has that list (Chapter 27, P8 on the circle).
+\item[\lab{P2}] (The arrow respects $+$, scaling, turning, $\langle\,,\rangle$.) From Chapter 29, P3, and T1 below.
+\item[\lab{P3}] (Dies through the arrow: the value at a point.) The map $1$ at $t = 0$ and $0$ elsewhere has the same list as $0$. A list cannot ask what a map does at one point (G3).
+\item[\lab{P4}] (Dies through the arrow: ``continuous''.) The square wave of Chapter 29, P6 has a list in $\ell^2(\Z)$ ($|\widehat f(n)| = 2/(\pi |n|)$ for odd $n$, $0$ for even), and no continuous map has that list (Chapter 27, P8 on the circle).
 \end{lines}
 
 \subsection*{Theorems}
@@ -3215,7 +3271,7 @@ No new blur. One arrow, read on the right floor. The twin of Chapter 10, T8, whe
 \item[\lab{T1}] (Energy is kept.) For every $f$ in $L^2(\mathbb{T})$: \ $\sum_n |\widehat f(n)|^2 = \|f\|^2$, and $S_N f$ comes near $f$ in the mean square. \\
 (For continuous $f$: $\sigma_N f$ comes near $f$ in $M$, hence in the mean square (Chapter 29, T5). $\sigma_N f$ lies in the span of $e_{-N}, \dots, e_N$, so the nearest point $S_N f$ is nearer still (Chapter 29, P2). Then Chapter 28, P3 with $f = S_N f + (f - S_N f)$ at right angles gives the sum. For a bag: P1 carries the line from continuous members to every bag.)
 \item[\lab{T2}] (The two homes are one.) The arrow $f \mapsto \widehat f$ is an inside and a picture from $L^2(\mathbb{T})$ onto $\ell^2(\Z)$, and it keeps the product: $\langle \widehat f, \widehat g \rangle = \langle f, g \rangle$. \\
-Inside: T1 with $f - g$. \ Picture: for $c$ in $\ell^2(\Z)$, the sums $\sum_{|n| \le N} c_n e_n$ come near themselves in the mean square (right angles, Chapter 29, P1), and their limit, which exists because $L^2(\mathbb{T})$ is closed (Chapter 28, T2), has the list $c$. Existence comes from ``closed'', once. The product: from energy, by $4\langle f, g \rangle = \sum_{k=0}^{3} i^k \|f + i^k g\|^2$.
+Inside: T1 with $f - g$; so the blur of the arrow (W4) glues nothing. \ Picture: for $c$ in $\ell^2(\Z)$, the sums $\sum_{|n| \le N} c_n e_n$ come near themselves in the mean square (right angles, Chapter 29, P1), and their limit, which exists because $L^2(\mathbb{T})$ is closed (Chapter 28, T2), has the list $c$. Existence comes from ``closed'', once. The product: from energy, by $4\langle f, g \rangle = \sum_{k=0}^{3} i^k \|f + i^k g\|^2$.
 \item[\lab{T3}] (A sum read off.) The sawtooth $f(t) = t - \tfrac12$ on $0 \le t < 1$ has $\widehat f(n) = \dfrac{i}{2\pi n}$ for $n \ne 0$ and $\widehat f(0) = 0$, and $\|f\|^2 = \tfrac1{12}$. T1 gives \[ \sum_{n \ge 1} \frac{1}{n^2} = \frac{\pi^2}{6}. \] Chapter 29, E5 gave only ``$\le$''; the matching turns it into ``$=$''.
 \end{lines}
 
