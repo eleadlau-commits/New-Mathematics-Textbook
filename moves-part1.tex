@@ -97,3 +97,86 @@ Machine-checked (all unions of types closed under $\circ$). For $n \ge 5$ the cl
 \item[\lab{E4}] Which move of $S_4$ has the most inversions? How many does it have?
 \item[\lab{E5}] Why is ``$\sigma$ and $\tau$ commute'' not kept by Blur 2? Give a witness in $S_3$.
 \end{lines}
+
+\newpage
+
+%% ==================================================================
+%%  Chapter 2  (words)
+%% ==================================================================
+\section*{Chapter 2. Words}
+\phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter 2. Words \quad letters and their undos $\to$ the free move system}{Chapter 2. Words}}
+\begin{center}
+{\normalsize letters and their undos $\to$ the free move system \quad$\cdot$\quad from: Building 0, Chapters 0, 1, 3; Chapter 1 \quad$\cdot$\quad build, blur}\\[4pt]
+{\small Write words in letters and their undos, and glue a letter next to its undo to nothing. Each bag holds exactly one word with nothing left to cancel. Glue more, and every move system appears.}
+\end{center}
+
+Chapter 1 started from moves already given. This chapter builds moves from nothing but names, then blurs. It is the build-then-blur shape of Building 0, Chapter 1, one level up.
+
+\subsection*{Given}
+
+\begin{lines}
+\item[\lab{G1}] (Building 0, Chapter 0, M3.) Words in a list of names; maps out of words by recursion.
+\item[\lab{G2}] (Chapter 1.) Moves of a bag; $\circ$; P1.
+\item[\lab{G3}] (Building 0, Chapters 1, 3.) $\Z$ and $\Z/n$ with $+$.
+\end{lines}
+
+\subsection*{Definitions}
+
+\begin{lines}
+\item[\lab{D1}] (Build, M3.) Fix a bag $L$ of \emph{letters}. For each letter $s$ take a second name $s^{-1}$. $W(L)$: the finite strings in the names $s, s^{-1}$, with the empty string $1$. Joining strings, $u \cdot v$, is the operation.
+\item[\lab{D2}] A word is \emph{reduced} if no $s$ stands next to $s^{-1}$ (in either order).
+\item[\lab{D3}] (Each letter is a move of the reduced words.) For a reduced word $r$: \ $s \ast r := $ $r$ with its first name removed if that name is $s^{-1}$, and $s r$ otherwise; \ $s^{-1} \ast r$ in the same way. Each of these is a move (its undo is the other), so a word $u = x_1 \cdots x_m$ acts by $u \ast r := x_1 \ast (\cdots (x_m \ast r))$.
+\end{lines}
+
+\subsection*{The blur}
+
+On $W(L)$. \ $O$: joining.
+
+\begin{lines}
+\item[\lab{B1}] (From below.) Gluings: $s\, s^{-1} \sim 1$ and $s^{-1} s \sim 1$, for each letter $s$.
+\item[\lab{B2}] (From above.) Question: the move $r \mapsto u \ast r$ of the reduced words (D3).
+\end{lines}
+
+\subsection*{Propositions}
+
+\begin{lines}
+\item[\lab{P1}] (Appears.) The two blurs agree. \ (B1 keeps the question: $s \ast (s^{-1} \ast r) = r$. Every word is glued by B1 to a reduced one, by cancelling. Two reduced words $r \ne r'$ act differently: $r \ast 1 = r$.)
+\item[\lab{P2}] (Normal form.) Each bag holds exactly one reduced word. \ (P1.) The bags, with joining, form a move system $F(L)$: the \emph{free move system} on $L$. Undo: $(x_1 \cdots x_m)^{-1} = x_m^{-1} \cdots x_1^{-1}$.
+\item[\lab{P3}] (Count.) With two letters, the reduced words of length $k \ge 1$ number $4 \cdot 3^{k-1}$: four choices for the first name, then three (anything but the undo of the one before).
+\item[\lab{P4}] (Dies: length.) $s\, s^{-1} s \sim s$, of lengths $3$ and $1$.
+\item[\lab{P5}] (Survives: length mod $2$, and each letter's exponent sum.) Cancelling removes two names, one $s$ and one $s^{-1}$. So $\ell(u) \bmod 2$ and $\varepsilon_s(u) := $ (number of $s$) $-$ (number of $s^{-1}$) survive: arrows $F(L) \to \Z/2$ and $F(L) \to \Z$, respecting joining and $+$.
+\item[\lab{P6}] (One letter.) $F(\{s\}) \to \Z$, $u \mapsto \varepsilon_s(u)$, is a matching. Building 0, Chapter 1 builds $\Z$ from pairs; here it is the free move system on one letter.
+\end{lines}
+
+\subsection*{Theorems}
+
+\begin{lines}
+\item[\lab{T1}] (Every move system is a picture of a free one.) Let $G$ be a move system and choose $g_s$ in $G$ for each letter $s$. There is exactly one arrow $F(L) \to G$ respecting joining with $s \mapsto g_s$. \ (Recursion on words, G1; it respects B1 because $g_s g_s^{-1} = e$.) If the $g_s$ generate $G$, the arrow is a picture, and by W4 \[ G \ \text{matches} \ F(L) \ \text{blurred by the bag of words sent to } e . \]
+\item[\lab{T2}] (Presentations: glue more.) For a list $R$ of words, glue $r \sim 1$ for each $r$ in $R$, respecting joining. Write the bags $\langle L \mid R \rangle$. Then the bag of $1$ is the smallest bag that holds $R$, joins, undos, and relabellings $u r u^{-1}$ (as Chapter 1, T1: a zero bag must be kept by relabelling).
+\item[\lab{T3}] (Old floors, as presentations.) \\
+$\langle s \mid s^n \rangle$ matches $\Z/n$ (Building 0, Chapter 3). \\
+$\langle s, t \mid s t s^{-1} t^{-1} \rangle$ matches $\Z^2$: glue $st \sim ts$ and the normal form is $s^a t^b$ (the whole-number points of $\R^2$, Building 0, Chapter 6). \\
+$\langle s, t \mid s^2, t^2, (st)^3 \rangle$ matches $S_3$ (Chapter 1), with $s = (1\,2)$, $t = (2\,3)$. \\
+$\langle s, t \mid s^2, t^2, (st)^n \rangle$ has $2n$ members: the moves of a regular $n$-gon. \\
+$\langle s, t \mid s^2, t^3, (st)^5 \rangle$ has $60$ members.
+\item[\lab{T4}] (Dies: deciding.) For some finite $L$ and $R$, no procedure decides whether a word lies in the bag of $1$ (classical, Novikov and Boone; reported). From below, a blur can be written down and still not be computable: Building 0 never met this, because its gluings always came with a normal form.
+\end{lines}
+
+\subsection*{Remarks}
+
+\begin{lines}
+\item[\lab{R1}] (Build, then blur, one level up.) Building 0, Chapter 1: pairs, glue $(a + 1, b + 1) \sim (a, b)$, normal form $a - b$. Here: words, glue $s s^{-1} \sim 1$, normal form the reduced word. The question that makes the blur from above (D3) is itself a move: in Building 1 even the questions are moves.
+\item[\lab{R2}] (Where it goes.) T1 makes every move system a blur of a free one. Part II asks which blurs of a move system respect joining (cosets, normal bags), and counts bags.
+\item[\lab{R3}] (Old names.) $F(L)$: the free group on $L$. D3 and P1: van der Waerden's proof of the normal form. P5: abelianisation to $\Z^L$ (exponent sums). T1: the universal property of free groups. T2: group presentations; the bag of $1$ is the normal closure of $R$. T3: cyclic, free abelian, symmetric, dihedral groups; the last is $A_5$. T4: the word problem.
+\item[\lab{R4}] (Machine check, \texttt{checks/b1-ch2-check.py}.) P1 on all words of length $\le 8$ in two letters; P3 to length $8$; P5; T3 (orders by coset enumeration, and the arrow onto $S_3$).
+\end{lines}
+
+\subsection*{Exercises}
+
+\begin{lines}
+\item[\lab{E1}] Reduce $s\, t\, t^{-1} s^{-1} s\, t^{-1}\, t\, s$.
+\item[\lab{E2}] Show that in $F(\{s, t\})$, $st \ne ts$, using the exponent sums or P2.
+\item[\lab{E3}] In $\langle s, t \mid s^2, t^2, (st)^3 \rangle$, show $sts = tst$.
+\item[\lab{E4}] How many reduced words of length at most $3$ are there in two letters?
+\item[\lab{E5}] Why is ``length is even'' kept by B1 but ``length is $\le 5$'' not?
+\end{lines}
