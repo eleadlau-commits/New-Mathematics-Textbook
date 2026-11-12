@@ -44,6 +44,7 @@ A \emph{map} $A \to X$ is a sub-bag of $A \times X$ in which each $a$ in $A$ sta
 \item[\lab{L7}] (A blur must say what it respects.) Every Blur line names its $O$. The same gluing with a different $O$ is a different blur.
 \item[\lab{L8}] (One-way blur.) A \emph{one-way blur} of $X$ is a relation $\preceq$ with $x \preceq x$ and $x \preceq y,\ y \preceq z \Rightarrow x \preceq z$. It respects $f$ as in L2. Its \emph{two-way part}, ``$x \preceq y$ and $y \preceq x$'', is a blur, and $\preceq$ is an order on the bags of that blur. A blur is a one-way blur that also runs backwards.
 \item[\lab{L9}] (Likeness.) A \emph{likeness} on $X$ is a relation $N$ with $x \mathrel{N} x$ and $x \mathrel{N} y \Rightarrow y \mathrel{N} x$. It need not chain. A blur is a likeness that chains.
+\item[\lab{L10}] (Limits.) $O$ holds only operations with finitely many inputs (S2). A blur may also be asked to \emph{respect limits} for a stated nearness (Chapter 5): if $x_n \sim y_n$ for every $n$, $x_n$ comes near $x$ and $y_n$ comes near $y$, then $x \sim y$. The Blur line then has a slot \emph{Limits:} naming the nearness. A limit is never put in $O$, and a question is never put in $O$.
 \end{lines}
 
 \subsection*{Theorems about blurs}
@@ -60,7 +61,6 @@ Stated once here, used in every chapter.
 \item[\lab{Z8}] (Everything else must be checked.) A law that is not an equation (one that says ``or'', ``$\neq$'', ``there is'', or uses a question) may be lost by Build, Select or Blur. Each chapter must prove it again or record its loss.
 \item[\lab{Z9}] (Normal forms.) A \emph{normal form} for $\sim$ is a map $\nu : X \to X$ with $\nu(x) \sim x$, and $x \sim y \Rightarrow \nu(x) = \nu(y)$. Then $\nu(\nu(x)) = \nu(x)$, and each bag holds exactly one $x$ with $\nu(x) = x$.
 \item[\lab{Z10}] (A likeness is a blur seen through a picture.) If $\sim$ is a blur of $X$ and $p : X \to Y$ is a picture, then ``$y \mathrel{N} y'$ iff $y = p(x)$, $y' = p(x')$ for some $x \sim x'$'' is a likeness on $Y$, and it may fail to chain. Every likeness arises this way. So likeness is not a new primitive: it is made from blur and picture.
-\item[\lab{Z11}] (Amplify: a bound on every rung becomes sharp.) Let a move (W2) have a ladder of powers, with a count $S_m = \sum_i c_i \alpha_i^m$ on rung $m$: finitely many distinct $\alpha_i$, every $c_i \ne 0$. Blur sequences by growth: $a \preceq b$ when $\limsup |a_m|^{1/m} \le \limsup |b_m|^{1/m}$ (one-way, L8). Then ``the largest $|\alpha_i|$'' survives: if $|S_m| \le C (m+1)^d \rho^m$ for every $m$, with any $C$ and $d$, then every $|\alpha_i| \le \rho$; the constant $C$ dies. A loss that grows with the rung is not removed. (The bound makes $\sum S_m t^m$ converge for $|t| < 1/\rho$; that sum is $\sum c_i \alpha_i t/(1 - \alpha_i t)$, a fraction whose poles are exactly the $1/\alpha_i$, and such a series converges exactly out to its nearest pole.)
 \end{lines}
 
 \subsection*{Arrows}
@@ -72,9 +72,23 @@ Stated once here, used in every chapter.
 \item[\lab{W4}] (Every arrow is a blur, then an inside.) For an arrow $f$, ``$x \sim y \iff f(x) = f(y)$'' is a blur of $X$ respecting what $f$ respects, and $f$ is the picture $X \to X/{\sim}$ followed by an inside $X/{\sim} \to Y$.
 \end{lines}
 
-\subsection*{The lines of a chapter}
+\subsection*{Kinds of chapter}
 
-A chapter makes one new floor. Its lines, in order, and what each one claims:
+Every chapter is one of seven kinds, or a few of them in a stated order. The second line under a chapter title names the kinds, in order, with these words and no others. A chapter claims a blur only if it has a Blur line. In every kind, a name comes only after the line that makes or pins its object (a Notation line), old names go to the Remarks, and every sign reused from an earlier floor passes C3 in an Arrow line.
+\begin{lines}
+\item[\lab{K1}] (\emph{blur}.) Makes one new floor $X/{\sim}$. Slots: the table below.
+\item[\lab{K2}] (\emph{build}.) Makes a new bag by M1--M7 and blurs nothing. The Blur line reads ``none''; Survives and Dies become \emph{carried} and \emph{not carried} (C5).
+\item[\lab{K3}] (\emph{select}.) Pins one object by what it must do. Slots: \emph{Tests} (the conditions, a Select M4); \emph{At most one}; \emph{At least one} (a Build, or ``closed'', said once); \emph{Read off} (laws proved from ``only one''). A select may ask a question of a normal form of an earlier blur and find it kept on some bags (C7).
+\item[\lab{K4}] (\emph{arrow}.) Reads one arrow between floors already made. Slots: the arrow; what it respects and what dies through it (W1); its own blur (W4); inside or picture (W2).
+\item[\lab{K5}] (\emph{count}.) Existence from a count, said openly: what is counted, the count, and why the count forces the object. Its lines are Theorems, not Survives lines.
+\item[\lab{K6}] (\emph{table}.) Rows, tests, entries (F2--F4); a survey of all arrows or all blurs of one sort is a table. What is read off is a conjecture until proved (F6).
+\item[\lab{K7}] (\emph{rerun}.) Runs an earlier chapter with a new Given. Slots: \emph{free} (equations, carried by Z7) and \emph{checked again} (every other law, Z8), each line citing the line it reruns.
+\end{lines}
+
+\subsection*{The lines of a blur chapter}
+
+A blur chapter (K1) makes one new floor. Its lines, in order, and what each one claims:
+
 \begin{center}
 \renewcommand{\arraystretch}{1.35}
 \begin{tabular}{@{}l l >{\raggedright\arraybackslash}p{8.6cm}@{}}
@@ -87,7 +101,7 @@ P & Bags & a test for $x \sim y$ that can be computed \\
 P & Normal forms & a $\nu$ as in Z9 \\
 P & Survives & $\sim$ respects an operation (L2) or keeps a question (L3) \\
 P & Dies & $\sim$ does not keep a question: one witness $x \sim y$, $q(x) \neq q(y)$ \\
-P & Appears & B1 $=$ B2, proved by Z4 and Z5 \\
+P & Appears & B1 $=$ B2, proved by Z4 and Z5, naming the separating context \\
 N & Notation & names for $X/{\sim}$ and its members. Only after the blur \\
 P & Arrow & an arrow old $\to$ new, inside or picture, and what it respects \\
 T & Theorems & statements inside the new floor, in the ordinary form \\
@@ -103,6 +117,9 @@ E & Exercises & \\
 \item[\lab{C4}] (Dies is for traps.) Every Dies line follows from the Blur line. Write only those a reader might wrongly use.
 \item[\lab{C5}] (Build-only chapters.) If the Blur line is ``none'', Survives and Dies are replaced by \emph{carried} and \emph{not carried}: which laws of the Given still hold on the built floor (Z7, Z8).
 \item[\lab{C6}] (The first choice is open.) Which gluings or questions to start from is the author's choice. Everything after that choice is forced, and is proved.
+\item[\lab{C7}] (Reserved words.) \emph{Survives} names a blur and an operation it respects (L2) or a question it keeps (L3), and nothing else. A question that takes one answer on every member of some bags, but not of all, is \emph{kept on those bags}; such a line is a Theorem. \emph{Glued} means ``in one bag of a blur'' and never ``near'' (Chapter 5, P5, T1: a blur that holds a rung of nearness has one bag). A theorem with a hypothesis is a Theorem, not a Survives line.
+\item[\lab{C8}] (Imported.) A step that a later line uses and that the books do not prove is written as a Given line of the form \emph{(Imported: source.) statement. Used by: lines.} Each building lists its Imported lines in a ledger on its first page. A classical fact that no line uses stays in the Remarks, marked ``reported''.
+\item[\lab{C9}] (Made from above.) When the only gluings one could list are the pairs that the question already glues, the Blur line says ``B1: none (made from above)'', and the chapter makes no Appears claim. Listing $e \sim 0$ for each $e$ in the bag of $0$, and letting the respected operations spread it (Z2), is a from-below line; listing every glued pair is not.
 \end{lines}
 
 \subsection*{The second floor}
@@ -126,6 +143,7 @@ E & Exercises & \\
 \item[\lab{R3}] (Why L7.) On $\R^n$ the choice of $O$ alone separates four different roads (Chapter 6).
 \item[\lab{R4}] (Why Z8 matters.) ``No zero divisors'' is not an equation. It is lost by Blur in $\Z/6$ (Chapter 3) and by Build in $\R^2$ (Chapter 6).
 \item[\lab{R5}] (Old names.) Blur respecting $O$: congruence. One-way blur: compatible preorder. Likeness: tolerance relation. From below: generated congruence. From above: syntactic congruence. Z7: the laws preserved by products, subalgebras and quotients. W4: the first isomorphism theorem. F4: a concept, in the sense of formal concept analysis.
+\item[\lab{R6}] (What is not a rule.) A rule here may rely on nothing after Chapter 0 (F7 read backwards). So Amplify, a theorem about power sums whose proof uses series and poles (Chapters 17, 20, 33, 34), is not a rule: it lives in the field notes on the edge (Building 2's notes, N4, formerly Z11). The one-way growth blur it uses is Chapter 17's. F8 stays: it is a reading convention and relies on no chapter.
 \end{lines}
 
 \subsection*{Exercises}
