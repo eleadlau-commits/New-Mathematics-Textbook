@@ -1,4 +1,4 @@
-% Building 0, Part II. The second floor: systems (map, II.1-II.4)
+% Building 0, Part II. The second floor: systems (map, II.1-II.5)
 % One file for the whole part. Each chapter begins with a banner and \section*.
 % Add a new chapter at the end of this file; never renumber.
 
@@ -620,4 +620,76 @@ In P7, $h$ respects nearness with one rung, but its inverse does not: near $t = 
 \item[\lab{E4}] Add the row $\N$ of R1 to the table. Which classes of N1--N4 does it join?
 \item[\lab{E5}] Show that $h$ of P7 respects nearness with one rung for all points. (Hint: its slope is at most $\tfrac14$; Chapter I.11, T6.)
 \item[\lab{E6}] Find the fixed point of $x \mapsto 2x + 1$ in $\Z_2$, and its last six digits.
+\end{lines}
+
+\newpage
+
+%% ==================================================================
+%%  II.5  (Chapters I.2, I.7, I.14 over any ring)
+%% ==================================================================
+\section*{Chapter II.5. Fractions, polynomials and determinants over any ring}
+\phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter II.5. Fractions, polynomials and determinants over any ring \quad Chapters I.2, I.7, I.14 $\to$ any ring}{Chapter II.5. Fractions, polynomials and determinants over any ring}}
+\begin{center}
+{\normalsize Chapters I.2, I.7, I.14 $\to$ any commutative ring \quad$\cdot$\quad from: Chapters I.2, I.7, I.14, II.1, II.2 \quad$\cdot$\quad rerun}\\[4pt]
+{\small Run three chapters of Part I with any ring in place of $\Z$ or $\R$, and see which lines survive the change of Given. Equations always do; ``there is'' and ``$\ne$'' must be checked.}
+\end{center}
+
+A rerun chapter, in the style of II.2: the Given of three Part I chapters is replaced by a row variable $K$, and each line is sorted into survives, dies, or changes. Rule Z8 is the guide: a law that is an equation is carried; any other law must be proved again.
+
+\subsection*{Given}
+
+\begin{lines}
+\item[\lab{G1}] $K$: a commutative ring (Chapter II.1, N2). Where stated, an integral domain (N3) or a field (N4).
+\item[\lab{G2}] Chapter I.2 (pairs, $(a, b) \sim (ac, bc)$); Chapter I.7 (words in $x$; T2 degrees add; T3 division with remainder; T4 roots); Chapter I.14 (alternating maps; T1 the determinant; T4 $\det(LM) = \det L \det M$).
+\end{lines}
+
+\subsection*{Fractions (Chapter I.2 again)}
+
+\begin{lines}
+\item[\lab{P1}] (Survives when $K$ passes $\mathsf{nzd}$.) On pairs $(a, b)$ with $b \ne 0$, ``$ad = bc$'' chains, and $+$, $\times$ of Chapter I.2, D3, D4 survive. The bags form a field, $\operatorname{Frac}(K)$, with $K$ inside. \ $\operatorname{Frac}(\Z) = \Q$; $\operatorname{Frac}(K[x]) = K(x)$, the fractions of polynomials.
+\item[\lab{P2}] (Dies without $\mathsf{nzd}$.) In $\Z/6$: $(2, 1) \sim (0, 3)$ and $(0, 3) \sim (0, 1)$, but not $(2, 1) \sim (0, 1)$. ``$ad = bc$'' does not chain, so Chapter I.2, P1 (``bags'') fails at its first line.
+\item[\lab{P3}] (Closed, F5.) $\operatorname{Frac}$ of a field is the field again: Chapter II.1, T5 with $\mathsf{inv}$.
+\end{lines}
+
+\subsection*{Polynomials (Chapter I.7 again)}
+
+\begin{lines}
+\item[\lab{P4}] (Survives, all $K$.) Chapter I.7, B1 and P1 with $K$ for $\R$: $K[x]$, normal forms $\sum a_i x^i$, a commutative ring. The value arrows $p \mapsto p(t)$ respect $+$, $\times$.
+\item[\lab{P5}] (Degrees add: needs $\mathsf{nzd}$.) If $K$ passes $\mathsf{nzd}$, Chapter I.7, T2 holds, and $K[x]$ passes $\mathsf{nzd}$. Dies in $\Z/4$: $(2x + 1)(2x + 1) = 1$, degrees $1 + 1 \ne 0$; and $2x + 1$ has an inverse.
+\item[\lab{P6}] (Division with remainder: by monic $d$, all $K$; by any $d \ne 0$, when $K$ is a field.) Chapter I.7, T3 holds for $d$ with leading coefficient a unit. Dies in $\Z[x]$ for $d = 2x$: $x = q \cdot 2x + r$ has no answer with $r$ constant.
+\item[\lab{P7}] (Roots: at most $\deg p$, needs $\mathsf{nzd}$.) Chapter I.7, T4: $p(t) = 0 \iff (x - t) \mid p$ holds for all $K$ (divide by the monic $x - t$). The count ``at most $\deg p$ roots'' needs $\mathsf{nzd}$: in $\Z/8$, $x^2 - 1$ has the four roots $1, 3, 5, 7$.
+\item[\lab{P8}] (All blurs of $K[x]$, $K$ a field.) Chapter I.7, P9.1 survives: every blur respecting $+$, $\times$ is $\sim_d$ for exactly one $d$ that is $0$ or monic. \ (P6: the ideal is the multiples of its monic member of least degree.)
+\end{lines}
+
+\subsection*{Determinants (Chapter I.14 again)}
+
+\begin{lines}
+\item[\lab{P9}] (Survives, all $K$: one alternating rule.) On lists of $n$ columns in $K^n$ there is exactly one map that respects $+$ and scaling in each column, is $0$ when two columns are equal, and gives $1$ on $e_1, \dots, e_n$: \ $\det A = \sum_{\sigma \in S_n} \operatorname{sgn}(\sigma) \prod_i a_{\sigma(i), i}$ where $\sigma$ runs over the one-to-one maps of $\{1, \dots, n\}$ and $\operatorname{sgn}(\sigma) = (-1)^{m}$, $m$ the number of pairs $i < j$ that $\sigma$ turns over.
+\item[\lab{P10}] (Equations are carried. Z7.) $\det(AB) = \det A \det B$, and $A \operatorname{adj}(A) = \det(A)\, I$ with $\operatorname{adj}$ the matrix of signed minors, hold over every $K$. \ (Each is an equation between polynomials in the entries with whole-number coefficients. It holds over $\R$ (Chapter I.14, T4), so the two polynomials are the same (Chapter I.7, P5: a polynomial is known by its values), and an arrow from the polynomials in the entries to any $K$ carries the equation.)
+\item[\lab{P11}] (Changes: ``$\det \ne 0$'' becomes ``$\det$ is a unit''.) $A$ has an inverse over $K$ \ $\iff$ \ $\det A$ has an inverse in $K$. \ (P10 in both directions.) Over $\Z$, $\det \begin{pmatrix} 2 & 0 \\ 0 & 1 \end{pmatrix} = 2 \ne 0$, and the matrix has no inverse with whole-number entries.
+\item[\lab{P12}] (Cayley--Hamilton, an equation.) For $\chi_A(x) := \det(xI - A)$ in $K[x]$: $\chi_A(A) = 0$, over every $K$. \ (An equation in the entries; true over $\mathbb{C}$ for matrices with $n$ different eigenvalues, which come near every matrix (classical); carried by P10's argument. The proof is deferred with the others.)
+\end{lines}
+
+\subsection*{Theorems}
+
+\begin{lines}
+\item[\lab{T1}] (The sorting rule, read off.) Every line of the three chapters that is an equation survived for all $K$ (P4, P9, P10, P12). Every line that says ``there is'' or ``$\ne$'' needed a column of the table: $\mathsf{nzd}$ (P1, P5, P7), a unit leading coefficient or $\mathsf{inv}$ (P6, P8), or changed its form (P11).
+\item[\lab{T2}] (Twins as one line.) $\Z$ and $K[x]$ ($K$ a field) pass the same lines used by Chapter I.3: division with remainder (Chapter I.7, T3 against the halving of $\Z$). So every line of Chapter I.3 and Chapter II.2, T6 that rests only on division with remainder holds for both. Their blurs are ``multiples of one $d$''.
+\end{lines}
+
+\subsection*{Remarks}
+
+\begin{lines}
+\item[\lab{R1}] (Why this chapter is here.) Building 1 needs $K[x]$ for any field, fractions of any domain, and $\det$ over any ring. It reads them here (rule F7 between buildings: Building 1 reads Building 0).
+\item[\lab{R2}] (Old names.) $\operatorname{Frac}(K)$: field of fractions. P5: a polynomial ring over a domain is a domain. P6: the division algorithm. P10: the multiplicativity of $\det$; the adjugate formula. P11: $GL_n(K)$ is the matrices with unit determinant. P12: the Cayley--Hamilton theorem. T2: Euclidean domains.
+\item[\lab{R3}] (Machine check, \texttt{checks/p2-ch5-check.py}.) P2; P5; P6; P7 (all roots of $x^2 - 1$ in $\Z/n$, $n \le 30$); P10 and P12 symbolically for $n \le 3$ and on random matrices over $\Z/n$; P11 by brute force over $\Z/4$ ($2 \times 2$).
+\end{lines}
+
+\subsection*{Exercises}
+
+\begin{lines}
+\item[\lab{E1}] In $\Z/9$, find the inverse of $3x + 1$ in $(\Z/9)[x]$.
+\item[\lab{E2}] Divide $x^3 + 2x + 1$ by $x^2 + 1$ in $(\Z/3)[x]$.
+\item[\lab{E3}] Which $2 \times 2$ matrices over $\Z$ have an inverse over $\Z$? Give the rule by P11.
+\item[\lab{E4}] Check P12 for $A = \begin{pmatrix} a & b \\ c & d \end{pmatrix}$ by hand.
 \end{lines}
