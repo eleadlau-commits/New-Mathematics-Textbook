@@ -1,0 +1,136 @@
+% Chapter 0. The rules. Shared by every building.
+
+\section*{Chapter 0. The rules}
+\phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter 0. The rules}{Chapter 0. The rules}}
+\begin{center}
+{\small What may be built, what a blur is, and what each line of a chapter claims.}
+\end{center}
+
+This chapter is the only place where the method itself is stated. Every later chapter uses these rules and adds none.
+
+\subsection*{Background}
+
+\begin{lines}
+\item[\lab{S1}] A \emph{bag} is a set. We use sets, membership, subsets and maps in the ordinary way, and ordinary logic.
+\item[\lab{S2}] A \emph{floor} is a bag $X$ together with a list $O$ of \emph{operations} (maps $X \times \dots \times X \to X$) and a list $Q$ of \emph{questions} (maps from $X$, or from $X \times X$, to some bag of answers; a yes/no question is a question).
+\item[\lab{S3}] A \emph{law} is a statement about a floor. A law is an \emph{equation} if it has the form ``$s = t$ for all values of the letters'', where $s$ and $t$ are built from the letters and the operations only.
+\end{lines}
+
+\subsection*{Build}
+
+Six ways to make a new bag from bags already made. Nothing else may be built.
+\begin{lines}
+\item[\lab{M1}] (Pairs and lists.) From $X$ and $Y$: the bag $X \times Y$ of pairs. From $X$ and $n$ in $\N$: the bag $X^n$ of lists of length $n$.
+\item[\lab{M2}] (Sequences.) From $X$: the bag of all maps $\N \to X$.
+\item[\lab{M3}] (Words.) From a list of names, each with a number of inputs: the smallest bag that holds $f(w_1, \dots, w_k)$ whenever $f$ takes $k$ inputs and it holds $w_1, \dots, w_k$. Two words are equal only if written the same. A map from the words to a floor is fixed by saying what it does to each name (definition by recursion).
+\item[\lab{M4}] (Select.) From $X$ and a condition: the bag of those $x$ in $X$ that meet the condition.
+\item[\lab{M5}] (Bags of bags.) From $X$ and a blur $\sim$ of $X$ (L1): the bag $X/{\sim}$ whose members are the bags of $\sim$.
+\item[\lab{M7}] (Sub-bags.) From $X$: the bag of all sub-bags of $X$. \\
+A \emph{map} $A \to X$ is a sub-bag of $A \times X$ in which each $a$ in $A$ stands on the left of exactly one pair. So the bag of all maps $A \to X$ is built by M1, M7, M4; M2 is the case $A = \N$. A blur of $X$ is a sub-bag of $X \times X$, so the bag of all blurs of $X$ is built the same way. M7 is the one line whose result is far larger than what went in; a chapter that uses it must say so.
+\end{lines}
+\begin{lines}
+\item[\lab{M6}] (Lifting.) An operation of $X$ may be lifted to a built bag \emph{place by place}; any other operation on a built bag must be given by a formula in a Definition line. A selected bag keeps an operation only if it is closed under it, and the chapter must say so.
+\end{lines}
+
+\subsection*{Blur}
+
+\begin{lines}
+\item[\lab{L1}] (Blur.) A \emph{blur} of $X$ is a relation $\sim$ on $X$ with $x \sim x$; \ $x \sim y \Rightarrow y \sim x$; \ $x \sim y,\ y \sim z \Rightarrow x \sim z$. The \emph{bag} of $x$ is $\bag{x} := \{y : y \sim x\}$.
+\item[\lab{L2}] (Respects.) $\sim$ \emph{respects} an operation $f$ if $x_1 \sim y_1, \dots, x_k \sim y_k \Rightarrow f(x_1, \dots, x_k) \sim f(y_1, \dots, y_k)$.
+\item[\lab{L3}] (Keeps.) $\sim$ \emph{keeps} a question $q$ if $x \sim y \Rightarrow q(x) = q(y)$. For a question of two things: $x \sim x',\ y \sim y' \Rightarrow q(x,y) = q(x',y')$.
+\item[\lab{L4}] (Blurrier.) $\sim$ is \emph{blurrier} than $\sim'$ if $x \sim' y \Rightarrow x \sim y$.
+\item[\lab{L5}] (From below.) Given a list $G$ of \emph{gluings} (pairs to be glued) and a list $O$ of operations: the blur \emph{forced by $G$ respecting $O$} is the least blurry blur that glues every pair in $G$ and respects every operation in $O$.
+\item[\lab{L6}] (From above.) Given a list $Q$ of questions and a list $O$ of operations: the blur \emph{kept by $Q$ respecting $O$} is the blurriest blur that keeps every question in $Q$ and respects every operation in $O$.
+\item[\lab{L7}] (A blur must say what it respects.) Every Blur line names its $O$. The same gluing with a different $O$ is a different blur.
+\item[\lab{L8}] (One-way blur.) A \emph{one-way blur} of $X$ is a relation $\preceq$ with $x \preceq x$ and $x \preceq y,\ y \preceq z \Rightarrow x \preceq z$. It respects $f$ as in L2. Its \emph{two-way part}, ``$x \preceq y$ and $y \preceq x$'', is a blur, and $\preceq$ is an order on the bags of that blur. A blur is a one-way blur that also runs backwards.
+\item[\lab{L9}] (Likeness.) A \emph{likeness} on $X$ is a relation $N$ with $x \mathrel{N} x$ and $x \mathrel{N} y \Rightarrow y \mathrel{N} x$. It need not chain. A blur is a likeness that chains.
+\end{lines}
+
+\subsection*{Theorems about blurs}
+
+Stated once here, used in every chapter.
+\begin{lines}
+\item[\lab{Z1}] (Two ends.) Equality is the least blurry blur of $X$. ``Everything in one bag'' is the blurriest. Both respect every operation.
+\item[\lab{Z2}] (From below exists.) The blur of L5 exists. It is reached by a process: start from $G$; add $x \sim x$; add $y \sim x$ for each $x \sim y$; add $f(\dots x \dots) \sim f(\dots y \dots)$ for each $x \sim y$ and each $f$ in $O$; add $x \sim z$ for each chain $x \sim y \sim z$; repeat until nothing new appears.
+\item[\lab{Z3}] (From above exists.) The blur of L6 exists. For questions of one thing, it glues $x$ and $y$ exactly when $q(c(x)) = q(c(y))$ for every $q$ in $Q$ and every \emph{context} $c$: a map $X \to X$ made from the operations in $O$ and fixed members of $X$ (for example $c(x) = x + z$).
+\item[\lab{Z4}] (Sandwich.) If every gluing in $G$ is kept by every question in $Q$ in every context, then the blur from below is no blurrier than the blur from above.
+\item[\lab{Z5}] (Recipe for Appears.) In Z4 the two blurs are \emph{equal} as soon as: for every $x \not\sim y$ (from below) there is a context $c$ and a $q$ in $Q$ with $q(c(x)) \neq q(c(y))$.
+\item[\lab{Z6}] (Descent.) If $\sim$ respects $f$, then $f(\bag{x_1}, \dots, \bag{x_k}) := \bag{f(x_1, \dots, x_k)}$ is an operation on $X/{\sim}$. If $\sim$ keeps $q$, then $q(\bag{x}) := q(x)$ is a question on $X/{\sim}$.
+\item[\lab{Z7}] (Equations are free.) An equation that holds on $X$ also holds: on $X^n$ and on sequences with operations lifted place by place; on any selected bag closed under the operations; and on $X/{\sim}$ for any blur respecting the operations.
+\item[\lab{Z8}] (Everything else must be checked.) A law that is not an equation (one that says ``or'', ``$\neq$'', ``there is'', or uses a question) may be lost by Build, Select or Blur. Each chapter must prove it again or record its loss.
+\item[\lab{Z9}] (Normal forms.) A \emph{normal form} for $\sim$ is a map $\nu : X \to X$ with $\nu(x) \sim x$, and $x \sim y \Rightarrow \nu(x) = \nu(y)$. Then $\nu(\nu(x)) = \nu(x)$, and each bag holds exactly one $x$ with $\nu(x) = x$.
+\item[\lab{Z10}] (A likeness is a blur seen through a picture.) If $\sim$ is a blur of $X$ and $p : X \to Y$ is a picture, then ``$y \mathrel{N} y'$ iff $y = p(x)$, $y' = p(x')$ for some $x \sim x'$'' is a likeness on $Y$, and it may fail to chain. Every likeness arises this way. So likeness is not a new primitive: it is made from blur and picture.
+\end{lines}
+
+\subsection*{Arrows}
+
+\begin{lines}
+\item[\lab{W1}] An \emph{arrow} is a map $f : X \to Y$ between floors, with a list of the operations and questions it respects: $f(x + y) = f(x) + f(y)$, and so on.
+\item[\lab{W2}] An arrow is an \emph{inside} if it is one-to-one, and a \emph{picture} if it reaches every member of $Y$.
+\item[\lab{W3}] (Every blur is a picture.) $x \mapsto \bag{x}$ is a picture $X \to X/{\sim}$ respecting whatever $\sim$ respects.
+\item[\lab{W4}] (Every arrow is a blur, then an inside.) For an arrow $f$, ``$x \sim y \iff f(x) = f(y)$'' is a blur of $X$ respecting what $f$ respects, and $f$ is the picture $X \to X/{\sim}$ followed by an inside $X/{\sim} \to Y$.
+\end{lines}
+
+\subsection*{The lines of a chapter}
+
+A chapter makes one new floor. Its lines, in order, and what each one claims:
+\begin{center}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabular}{@{}l l >{\raggedright\arraybackslash}p{8.6cm}@{}}
+\textbf{Label} & \textbf{Line} & \textbf{Claim} \\ \hline
+A or G & Axioms / Given & laws assumed (Chapter 1 only), or earned earlier and cited \\
+D & Definitions & Build (M1--M5, M7), lifted operations (M6), questions. Adds no truth \\
+B1 & Blur, from below & the gluings $G$ and the respected $O$ (L5) \\
+B2 & Blur, from above & the questions $Q$ and the same $O$ (L6) \\
+P & Bags & a test for $x \sim y$ that can be computed \\
+P & Normal forms & a $\nu$ as in Z9 \\
+P & Survives & $\sim$ respects an operation (L2) or keeps a question (L3) \\
+P & Dies & $\sim$ does not keep a question: one witness $x \sim y$, $q(x) \neq q(y)$ \\
+P & Appears & B1 $=$ B2, proved by Z4 and Z5 \\
+N & Notation & names for $X/{\sim}$ and its members. Only after the blur \\
+P & Arrow & an arrow old $\to$ new, inside or picture, and what it respects \\
+T & Theorems & statements inside the new floor, in the ordinary form \\
+R & Remarks & other blurs, other roads, links to other chapters \\
+E & Exercises & \\
+\end{tabular}
+\end{center}
+
+\begin{lines}
+\item[\lab{C1}] (Earned Given.) Apart from the axioms of Chapter 1, every Given line cites the line of an earlier chapter that proves it.
+\item[\lab{C2}] (Survives names only what is defined.) A Survives or Dies line may name only operations and questions defined on the floor being blurred.
+\item[\lab{C3}] (One sign, four steps.) A sign such as $+$ may be reused on the new floor only after: \emph{lift} (D), \emph{survive} (P), \emph{descend} (Z6), and \emph{agree} (the Arrow respects it).
+\item[\lab{C4}] (Dies is for traps.) Every Dies line follows from the Blur line. Write only those a reader might wrongly use.
+\item[\lab{C5}] (Build-only chapters.) If the Blur line is ``none'', Survives and Dies are replaced by \emph{carried} and \emph{not carried}: which laws of the Given still hold on the built floor (Z7, Z8).
+\item[\lab{C6}] (The first choice is open.) Which gluings or questions to start from is the author's choice. Everything after that choice is forced, and is proved.
+\end{lines}
+
+\subsection*{The second floor}
+
+\begin{lines}
+\item[\lab{F1}] A chapter's Notation gives a \emph{system}; its Arrow gives an arrow between systems; its Theorems give yes/no facts about the system.
+\item[\lab{F2}] A \emph{test} is a law that can be asked of every system. A \emph{table} has systems as rows, tests as columns, and the facts as entries.
+\item[\lab{F3}] (Blur on a table.) For a set $U$ of tests: $K \sim_U L$ iff $K$ and $L$ answer every test in $U$ alike.
+\item[\lab{F4}] (Class.) For a set $T$ of tests: $\operatorname{class}(T)$ is the set of rows passing every test in $T$. A blur asks what tests cannot tell apart; a class asks what tests pick out.
+\item[\lab{F5}] (Closed.) A system is \emph{closed} for a chapter if running the chapter on it gives an Arrow that is both an inside and a picture.
+\item[\lab{F6}] (The table suggests; rows refute.) A statement read off a table is a conjecture. It becomes a theorem by proof from the tests, or dies when a row is built that breaks it.
+\item[\lab{F7}] (One way only.) Floor two reads floor one, never the reverse. A first-floor chapter cites only first-floor chapters; a class of the second floor only names what its rows already have. A Remark may point ahead, but no line may rely on what it points to.
+\end{lines}
+
+\subsection*{Remarks}
+
+\begin{lines}
+\item[\lab{R1}] (What is assumed.) S1, M1--M5 and M7 are a small part of ordinary set theory. The book does not replace that foundation; it organises what is built on it.
+\item[\lab{R2}] (Why two blurs.) From below is how a blur is \emph{made}: it tells you what is glued. From above is why it is \emph{right}: it tells you what the gluing is for. Appears is the claim that the two agree.
+\item[\lab{R3}] (Why L7.) On $\R^n$ the choice of $O$ alone separates four different roads (Chapter 6).
+\item[\lab{R4}] (Why Z8 matters.) ``No zero divisors'' is not an equation. It is lost by Blur in $\Z/6$ (Chapter 3) and by Build in $\R^2$ (Chapter 6).
+\item[\lab{R5}] (Old names.) Blur respecting $O$: congruence. One-way blur: compatible preorder. Likeness: tolerance relation. From below: generated congruence. From above: syntactic congruence. Z7: the laws preserved by products, subalgebras and quotients. W4: the first isomorphism theorem. F4: a concept, in the sense of formal concept analysis.
+\end{lines}
+
+\subsection*{Exercises}
+
+\begin{lines}
+\item[\lab{E1}] On $\N$ with the operation $x \mapsto x + 1$, find the blur forced by the single gluing $5 \sim 2$. How many bags are there?
+\item[\lab{E2}] Prove Z4.
+\item[\lab{E3}] Show that ``$x + y = y + x$'' is an equation and ``$x \neq 0 \Rightarrow$ there is $y$ with $x \times y = 1$'' is not. Find where the second is lost in this book.
+\item[\lab{E4}] Give two different normal forms for the blur of Chapter 2.
+\end{lines}

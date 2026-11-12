@@ -1,0 +1,623 @@
+% Building 0, Part II. The second floor: systems (map, II.1-II.4)
+% One file for the whole part. Each chapter begins with a banner and \section*.
+% Add a new chapter at the end of this file; never renumber.
+
+%% ==================================================================
+%%  II.  (p2-ch0-map)
+%% ==================================================================
+\part*{Part II. The second floor: systems}
+\phantomsection\addcontentsline{toc}{part}{Part II. The second floor: systems}
+\section*{The map of the second floor}
+\phantomsection\addcontentsline{toc}{section}{\texorpdfstring{The map of the second floor}{The map of the second floor}}
+\begin{center}
+{\small Each dot is a class of systems. Each arrow adds one test.}
+\end{center}
+
+% ---------------------------------------------------------------
+% The classes of Chapter II.1. Each arrow adds one test.
+% ---------------------------------------------------------------
+\begin{center}
+\begin{tikzpicture}[
+    x=1cm, y=1cm,
+    cls/.style={font=\small, inner sep=2pt, align=center},
+    tst/.style={font=\scriptsize, fill=white, inner sep=1pt},
+    ar/.style={-{Stealth[length=4pt]}, thin}]
+  \node[cls] (S) at (0, 0)     {commutative semiring\\[-1pt]{\scriptsize $\N,\ \Z,\ \Z/6,\ \Z/7,\ \Q,\ \R,\ \R^2$}};
+  \node[cls] (R) at (0,-1.6)   {commutative ring\\[-1pt]{\scriptsize $\Z,\ \Z/6,\ \Z/7,\ \Q,\ \R,\ \R^2$}};
+  \node[cls] (D) at (0,-3.2)   {integral domain\\[-1pt]{\scriptsize $\Z,\ \Z/7,\ \Q,\ \R$}};
+  \node[cls] (F) at (0,-4.8)   {field\\[-1pt]{\scriptsize $\Z/7,\ \Q,\ \R$}};
+  \node[cls] (FF) at (-3.2,-6.4) {finite field\\[-1pt]{\scriptsize $\Z/7$}};
+  \node[cls] (OF) at (3.2,-6.4)  {ordered field\\[-1pt]{\scriptsize $\Q,\ \R$}};
+  \node[cls] (CF) at (3.2,-8.0)  {complete ordered field\\[-1pt]{\scriptsize $\R$}};
+  \draw[ar] (S) -- node[tst]{$+\,\mathsf{neg}$} (R);
+  \draw[ar] (R) -- node[tst]{$+\,\mathsf{nzd}$} (D);
+  \draw[ar] (D) -- node[tst]{$+\,\mathsf{inv}$} (F);
+  \draw[ar] (F) -- node[tst]{$+\,\mathsf{fin}$} (FF);
+  \draw[ar] (F) -- node[tst]{$+\,\mathsf{ord}$} (OF);
+  \draw[ar] (OF) -- node[tst]{$+\,\mathsf{lim}$} (CF);
+\end{tikzpicture}
+\end{center}
+
+
+The tests are defined in Chapter 1 of this part: $\mathsf{neg}$ (negatives), $\mathsf{nzd}$ (no zero divisors), $\mathsf{inv}$ (inverses), $\mathsf{fin}$ (finite), $\mathsf{ord}$ (ordered), $\mathsf{lim}$ (limits).
+
+\textbf{How the two floors fit.} On the first floor the dots are systems and each arrow is a chapter. A first-floor chapter moves a system from one class here to another:
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{@{}l l >{\raggedright\arraybackslash}p{8.2cm}@{}}
+\textbf{Chapter of Part I} & \textbf{takes} & \textbf{from class \ $\to$ \ to class} \\ \hline
+I.1 & $\N \to \Z$ & semiring \ $\to$ \ integral domain \\
+I.2 & $\Z \to \Q$ & integral domain \ $\to$ \ ordered field \\
+I.3 & $\Z \to \Z/n$ & integral domain \ $\to$ \ ring, or finite field if $n$ is prime \\
+I.4 & $\Q \to \R$ & ordered field \ $\to$ \ complete ordered field \\
+I.6 & $\R \to \R^2$ & complete ordered field \ $\to$ \ ring \\
+I.7 & $\R \to \R[x]$ & complete ordered field \ $\to$ \ integral domain \\
+I.7, road 2 & $\R[x] \to \mathbb{C}$ & integral domain \ $\to$ \ field \\
+I.10 & $\R \to C$ & complete ordered field \ $\to$ \ ring \\
+\end{tabular}
+\end{center}
+
+\textbf{The chapters of Part II.}
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+{\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{4.4cm} >{\raggedright\arraybackslash}p{4.4cm} >{\raggedright\arraybackslash}p{5.6cm}@{}}
+\textbf{Chapter} & \textbf{Things} & \textbf{What appears} \\ \hline
+II.1 The table & systems and tests & ring, field, complete \\
+II.2 Congruences over any ring & one variable row $K$ & ideals; a blur is known by its zero bag \\
+II.3 Vector spaces & a second table; one variable row $V$ & subspaces; dimension as a normal form \\
+II.4 Metric spaces & a third table; one variable row $X$ & complete, compact; what $\cong_{\mathrm{pt}}$ and $\cong_{\mathrm{u}}$ keep \\
+II.5 Modules \emph{(planned)} & one ring acting & ideals and subspaces as one \\
+II.6 Arrows \emph{(planned)} & maps between systems & every arrow is a blur, then an inside \\
+II.7 One class at a time \emph{(planned)} & one class & theorems true in every row at once \\
+II.8 Machines \emph{(planned)} & maps between classes & closing up; the nearest row in a class \\
+\end{tabular}
+}
+\end{center}
+
+\textbf{A second table.} Chapter II.3 changes the operations: $+$ and scaling by reals in place of $+$ and $\times$. Its tests are $\mathsf{add}$, $\mathsf{scale}$ and $\mathsf{findim}$.
+
+\begin{center}
+\begin{tikzpicture}[
+    x=1cm, y=1cm,
+    cls/.style={font=\small, inner sep=2pt, align=center},
+    tst/.style={font=\scriptsize, fill=white, inner sep=1pt},
+    ar/.style={-{Stealth[length=4pt]}, thin}]
+  \node[cls] (A) at (0, 0)   {systems with $+$ ($\mathsf{add}$)\\[-1pt]{\scriptsize $\R,\ \R^n,\ \mathbb{C},\ T_a,\ \R[x],\ C,\ \Z,\ \mathbb{T}$}};
+  \node[cls] (V) at (0,-1.6) {vector space\\[-1pt]{\scriptsize $\R,\ \R^n,\ \mathbb{C},\ T_a,\ \R[x],\ C$}};
+  \node[cls] (W) at (0,-3.2) {finite-dimensional vector space\\[-1pt]{\scriptsize $\R,\ \R^n,\ \mathbb{C},\ T_a$}};
+  \draw[ar] (A) -- node[tst]{$+\,\mathsf{scale}$} (V);
+  \draw[ar] (V) -- node[tst]{$+\,\mathsf{findim}$} (W);
+\end{tikzpicture}
+\end{center}
+
+\textbf{A third table.} Chapter II.4 drops the operations and keeps a distance. Its rows are $\Q$, $\R$, $\R^2$, the two stretches $0 \le x \le 1$ and $0 < x < 1$, the circle $\mathbb{T}$, $C[b,c]$, $\Z$ with the $p$-adic distance $d_p$, $\Z_p$, and $\mathsf{three}$ (three points).
+
+\begin{center}
+\begin{tikzpicture}[
+    x=1cm, y=1cm,
+    cls/.style={font=\small, inner sep=2pt, align=center},
+    tst/.style={font=\scriptsize, fill=white, inner sep=1pt},
+    ar/.style={-{Stealth[length=4pt]}, thin}]
+  \node[cls] (M) at (0, 0)      {metric space\\[-1pt]{\scriptsize all ten rows}};
+  \node[cls] (C) at (-3.4,-1.8) {complete\\[-1pt]{\scriptsize $\R,\ \R^2,\ 0 \le x \le 1,\ \mathbb{T},\ C[b,c],\ \Z_p,\ \mathsf{three}$}};
+  \node[cls] (K) at (-3.4,-3.6) {compact\\[-1pt]{\scriptsize $0 \le x \le 1,\ \mathbb{T},\ \Z_p,\ \mathsf{three}$}};
+  \node[cls] (U) at (3.6,-1.8)  {ultrametric\\[-1pt]{\scriptsize $(\Z, d_p),\ \Z_p,\ \mathsf{three}$}};
+  \draw[ar] (M) -- node[tst]{$+\,\mathsf{complete}$} (C);
+  \draw[ar] (C) -- node[tst]{$+\,\mathsf{compact}$} (K);
+  \draw[ar] (M) -- node[tst]{$+\,\mathsf{chains}$} (U);
+\end{tikzpicture}
+\end{center}
+Every compact row is complete (Chapter II.4, T1), so compact sits below complete. $\Z_p$ and $\mathsf{three}$ are in all four classes.
+
+\textbf{Axioms.} None. The Given of Part II is Part I.
+
+\newpage
+
+%% ==================================================================
+%%  II.  (p2-ch1-table)
+%% ==================================================================
+\section*{Chapter II.1. The table}
+\phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter II.1. The table \quad systems $\to$ classes}{Chapter II.1. The table}}
+\begin{center}
+{\normalsize systems $\to$ classes \quad$\cdot$\quad from: all of Part I \quad$\cdot$\quad table, blur, class}\\[4pt]
+{\small The things are now the number systems themselves. Forget which system; keep which laws it passes.}
+\end{center}
+
+\subsection*{Given}
+
+From Part I, nothing else. (Here ``Chapter I.4'' means Chapter 4 of Part I.)
+\begin{lines}
+\item[\lab{G1}] (Things.) The systems of Part I: $\N$, $\Z$, $\Q$, $\R$, $\Z/n$ for $n \ge 2$, and $\R^n$ with $+$ and $\ast$. As samples we take $\Z/6$, $\Z/7$ and $\R^2$.
+\item[\lab{G2}] (Arrows.) The Arrow lines: $\N \to \Z$, $\Z \to \Q$, $\Q \to \R$ and $\R \to \R^n$ (one-to-one), and $\Z \to \Z/n$ (reaching every bag).
+\item[\lab{G3}] (Facts.) The Theorems, Propositions and Exercises of Chapters I.1--I.6, read as yes/no facts about each system.
+\end{lines}
+In Part I a Given was a list of laws about numbers. Here it is a list of systems, arrows and facts. No new axiom is used.
+
+\subsection*{Definitions}
+
+A \emph{test} is a law that can be asked of a system $K$ with $0$, $1$, $+$, $\times$.
+\begin{lines}
+\item[\lab{D1}] $\mathsf{semi}$: $+$ and $\times$ are associative and commutative, $0$ and $1$ are neutral, $\times$ distributes over $+$.
+\item[\lab{D2}] $\mathsf{neg}$: for every $x$ there is $y$ with $x + y = 0$.
+\item[\lab{D3}] $\mathsf{nzd}$: $x \times y = 0 \Rightarrow x = 0$ or $y = 0$.
+\item[\lab{D4}] $\mathsf{inv}$: for every $x \neq 0$ there is $y$ with $x \times y = 1$.
+\item[\lab{D5}] $\mathsf{ord}$: $K$ has a total order with $x \le y \Rightarrow x + z \le y + z$, and $0 \le x,\, 0 \le y \Rightarrow 0 \le x \times y$.
+\item[\lab{D6}] $\mathsf{least}$: $\mathsf{ord}$, and every non-empty set of elements $x > 0$ has a least element.
+\item[\lab{D7}] $\mathsf{lim}$: $\mathsf{ord}$, and every sequence that settles has a limit (Chapter I.4, D3 and N3, with $\varepsilon$ in $K$).
+\item[\lab{D8}] $\mathsf{dense}$: $\mathsf{ord}$, and if $x < y$ there is $z$ with $x < z < y$.
+\item[\lab{D9}] $\mathsf{fin}$: $K$ has finitely many elements.
+\item[\lab{D10}] (F3.) For a set $U$ of tests: $K \sim_U L \iff K$ and $L$ give the same answer to every test in $U$.
+\item[\lab{D11}] (F4.) For a set $T$ of tests: $\operatorname{class}(T) :=$ the set of systems that pass every test in $T$.
+\end{lines}
+A test that needs an order counts as failed where there is none.
+
+\subsection*{The table}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{l|ccccccccc}
+ & $\mathsf{semi}$ & $\mathsf{neg}$ & $\mathsf{nzd}$ & $\mathsf{inv}$ & $\mathsf{ord}$ & $\mathsf{least}$ & $\mathsf{lim}$ & $\mathsf{dense}$ & $\mathsf{fin}$ \\ \hline
+$\N$   & $\checkmark$ & $\cdot$ & $\checkmark$ & $\cdot$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\cdot$ & $\cdot$ \\
+$\Z$   & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\cdot$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\cdot$ & $\cdot$ \\
+$\Z/6$ & $\checkmark$ & $\checkmark$ & $\cdot$ & $\cdot$ & $\cdot$ & $\circ$ & $\circ$ & $\circ$ & $\checkmark$ \\
+$\Z/7$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\cdot$ & $\circ$ & $\circ$ & $\circ$ & $\checkmark$ \\
+$\Q$   & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\cdot$ & $\cdot$ & $\checkmark$ & $\cdot$ \\
+$\R$   & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\cdot$ & $\checkmark$ & $\checkmark$ & $\cdot$ \\
+$\R^2$ & $\checkmark$ & $\checkmark$ & $\cdot$ & $\cdot$ & $\cdot$ & $\circ$ & $\circ$ & $\circ$ & $\cdot$ \\
+\end{tabular}
+\end{center}
+$\checkmark$ passes, $\cdot$ fails, $\circ$ cannot be asked (counts as fails). Every entry is a line of Part I or an exercise there.
+
+\subsection*{Blur}
+
+\begin{lines}
+\item[\lab{B1}] Choose a set $U$ of tests. The blur is $\sim_U$ (D10): forget which system, keep its answers on $U$.
+\item[] Example: $U = \{\mathsf{neg}, \mathsf{inv}\}$ gives three bags: $\{\N\}$, $\ \{\Z, \Z/6, \R^2\}$, $\ \{\Z/7, \Q, \R\}$.
+\end{lines}
+
+\subsection*{Propositions}
+
+All of these are read off the table, and were checked by machine.
+\begin{lines}
+\item[\lab{P1}] (Sharp.) With all nine tests, no two of the seven systems share a bag.
+\item[\lab{P2}] (Classes.) As $T$ runs over all sets of tests, $\operatorname{class}(T)$ takes exactly $16$ values.
+\item[\lab{P3}] (Arrows as moves.) Each chapter changes one row into another:
+\begin{center}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{lll}
+Chapter & gains & loses \\ \hline
+I.1. $\N \to \Z$ & $\mathsf{neg}$ & nothing \\
+I.2. $\Z \to \Q$ & $\mathsf{inv}$, $\mathsf{dense}$ & $\mathsf{least}$, $\mathsf{lim}$ \\
+I.3. $\Z \to \Z/n$ & $\mathsf{fin}$; $\ \mathsf{inv}$ if $n$ is prime & $\mathsf{ord}$, $\mathsf{least}$, $\mathsf{lim}$; $\ \mathsf{nzd}$ unless $n$ is prime \\
+I.4. $\Q \to \R$ & $\mathsf{lim}$ & nothing \\
+I.6. $\R \to \R^2$ & nothing & $\mathsf{nzd}$, $\mathsf{inv}$, $\mathsf{ord}$, $\mathsf{lim}$, $\mathsf{dense}$ \\
+\end{tabular}
+\end{center}
+\item[\lab{P4}] (In the table.) $\mathsf{inv} \Rightarrow \mathsf{nzd}$; \ $\mathsf{least} \Rightarrow \mathsf{lim}$; \ $\mathsf{dense} \Rightarrow \mathsf{inv}$; \ $\mathsf{inv} \Rightarrow \mathsf{neg}$; \ $\mathsf{fin} \Rightarrow \mathsf{neg}$; \ $\mathsf{ord} \Rightarrow \mathsf{nzd}$.
+\item[\lab{P5}] (Never together in the table.) $\mathsf{ord}$ and $\mathsf{fin}$; \ $\mathsf{least}$ and $\mathsf{dense}$; \ $\mathsf{inv}$ and $\mathsf{least}$.
+\end{lines}
+
+\subsection*{Appears}
+
+The classes of P2 are what appears. Eight of them have old names.
+\begin{lines}
+\item[\lab{N1}] $\operatorname{class}(\mathsf{semi})$: all seven. \emph{Commutative semiring.}
+\item[\lab{N2}] $\operatorname{class}(\mathsf{semi}, \mathsf{neg})$: $\Z, \Z/6, \Z/7, \Q, \R, \R^2$. \emph{Commutative ring.}
+\item[\lab{N3}] $\operatorname{class}(\mathsf{semi}, \mathsf{neg}, \mathsf{nzd})$: $\Z, \Z/7, \Q, \R$. \emph{Integral domain.}
+\item[\lab{N4}] $\operatorname{class}(\mathsf{semi}, \mathsf{neg}, \mathsf{inv})$: $\Z/7, \Q, \R$. \emph{Field.}
+\item[\lab{N5}] $\operatorname{class}(\mathsf{semi}, \mathsf{neg}, \mathsf{ord})$: $\Z, \Q, \R$. \emph{Ordered ring.}
+\item[\lab{N6}] $\operatorname{class}(\mathsf{semi}, \mathsf{neg}, \mathsf{inv}, \mathsf{ord})$: $\Q, \R$. \emph{Ordered field.}
+\item[\lab{N7}] $\operatorname{class}(\mathsf{semi}, \mathsf{neg}, \mathsf{inv}, \mathsf{ord}, \mathsf{lim})$: $\R$. \emph{Complete ordered field.}
+\item[\lab{N8}] $\operatorname{class}(\mathsf{semi}, \mathsf{neg}, \mathsf{inv}, \mathsf{fin})$: $\Z/7$. \emph{Finite field.}
+\end{lines}
+None of these words was defined. Each is the name of a set of rows.
+
+The classes and the steps between them are drawn in the map of the second floor, at the start of Part II.
+
+\subsection*{Theorems}
+
+These hold for every system, not only the seven rows. They are stated without proof, like the rest.
+\begin{lines}
+\item[\lab{T1}] $\mathsf{semi}$ and $\mathsf{inv}$ give $\mathsf{nzd}$.
+\item[\lab{T2}] $\mathsf{least}$ gives $\mathsf{lim}$.
+\item[\lab{T3}] $\mathsf{least}$ and $\mathsf{dense}$ never hold together.
+\item[\lab{T4}] $\mathsf{semi}$, $\mathsf{neg}$, $\mathsf{ord}$ and $\mathsf{fin}$ never hold together, if $0 \neq 1$.
+\item[\lab{T5}] (Closing up is ticking a box; F5.) Let $K$ be a system on which the chapter's Definitions and Blur can be carried out with $K$ in place of its Given, and whose Arrow, from $K$ to the new bags, is one-to-one. Call $K$ \emph{closed} for the chapter if that Arrow also reaches every bag. Then:
+\begin{gather*}
+K \text{ closed for Ch.\,I.1} \iff \mathsf{neg}, \\
+K \text{ closed for Ch.\,I.2} \iff \mathsf{inv}, \\
+K \text{ closed for Ch.\,I.4} \iff \mathsf{lim}.
+\end{gather*}
+\item[\lab{T6}] (Once is enough.) The output of Chapter I.1, I.2 or I.4 is closed for that chapter.
+\item[\lab{T7}] (Completeness.) So ``complete'' is not a property of $\R$ alone. It is one column of the table, and T5 says the column can be read without mentioning sequences of a particular system: $K$ is complete iff Chapter I.4 has nothing to add to $K$.
+\end{lines}
+
+\subsection*{Remarks}
+
+\begin{lines}
+\item[\lab{R1}] (The table suggests; new rows refute; F6.) P4 and P5 are facts about seven rows. T1--T4 are the ones that survive every new row. The others are accidents of a small table, and each dies when the right row is added:
+\begin{center}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{ll}
+read off the table & a row that breaks it \\ \hline
+$\mathsf{dense} \Rightarrow \mathsf{inv}$ & the decimal fractions (Chapter I.2, R3) \\
+$\mathsf{inv} \Rightarrow \mathsf{neg}$ & the rationals $x \ge 0$ \\
+$\mathsf{fin} \Rightarrow \mathsf{neg}$ & $\{0,1\}$ with $1 + 1 = 1$ \\
+$\mathsf{ord}$ and $\mathsf{fin}$ never together & $\{0,1\}$ with $1 + 1 = 1$ \\
+\end{tabular}
+\end{center}
+This is the method's way of finding theorems: read an implication off the table, then either prove it or build the row that kills it.
+\item[\lab{R2}] (Blur or class.) $\sim_U$ asks what a set of tests \emph{cannot tell apart}. $\operatorname{class}(T)$ asks what a set of tests \emph{picks out}. Part I used the first. The old names (ring, field) are answers to the second.
+\item[\lab{R3}] (Gains and losses.) By P3, Chapters I.1 and I.4 only gain: they are pure closings-up. Chapters I.2 and I.3 trade. Chapter I.6 only loses: building room costs laws. Chapter I.2 loses $\mathsf{lim}$ and Chapter I.4 wins it back.
+\item[\lab{R4}] (A small table.) Seven rows cannot show every distinction. A test on which all rows agree is invisible here; so is any class with no row in it.
+\end{lines}
+
+\subsection*{Exercises}
+
+\begin{lines}
+\item[\lab{E1}] Find the line of Part I behind each entry of the row of $\Q$.
+\item[\lab{E2}] List all $16$ classes of P2. Which have no old name? Propose names.
+\item[\lab{E3}] Check that $\{0,1\}$ with $1 + 1 = 1$ and the usual $\times$ passes $\mathsf{semi}$, $\mathsf{ord}$ and $\mathsf{fin}$, and add its row to the table. How many classes are there now?
+\item[\lab{E4}] $\mathsf{ord} \Rightarrow \mathsf{nzd}$ is in P4 but not among T1--T4. Prove it, or find a row that breaks it.
+\item[\lab{E5}] Add the row of the decimal fractions. Which chapters is it closed for?
+\end{lines}
+
+\newpage
+
+%% ==================================================================
+%%  II.  (p2-ch2-any-ring)
+%% ==================================================================
+\section*{Chapter II.2. Congruences over any ring}
+\phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter II.2. Congruences over any ring \quad $K \to K/I$}{Chapter II.2. Congruences over any ring}}
+\begin{center}
+{\normalsize $K \to K/I$ \quad$\cdot$\quad from: Chapter II.1, rerunning Chapter I.3 \quad$\cdot$\quad blur}\\[4pt]
+{\small Chapter I.3 again, with a class as the Given. See which lines survive.}
+\end{center}
+
+\subsection*{Given}
+
+\begin{lines}
+\item[\lab{G1}] $K$, any system in $\operatorname{class}(\mathsf{semi}, \mathsf{neg})$: a commutative ring (Chapter II.1, N2).
+\end{lines}
+Nothing else is known about $K$. Rows to keep in mind: $\Z$, $\Z/6$, $\Z/7$, $\Q$, $\R$, $\R^2$. The floor is $K$ with $O = \{+, \times\}$.
+
+\subsection*{Definitions}
+
+\begin{lines}
+\item[\lab{D1}] $-y$ is the $y'$ with $y + y' = 0$ (it is the only one: T1), and $x - y := x + (-y)$.
+\item[\lab{D2}] A set $I \subseteq K$ is \emph{closed for $+$} if it holds $0$, holds $x + y$ whenever it holds $x$ and $y$, and holds $-x$ whenever it holds $x$.
+\item[\lab{D3}] $I$ is an \emph{ideal} if it is closed for $+$ and holds $k \times x$ whenever it holds $x$, for every $k$ in $K$.
+\item[\lab{D4}] For $I$ closed for $+$: \ $x \sim_I y \iff x - y \in I$.
+\item[\lab{D5}] For a blur $\sim$ of $K$: its \emph{zero bag} is $\bag{0}$.
+\end{lines}
+
+\subsection*{Blur}
+
+\begin{lines}
+\item[\lab{B1}] (From below, L5.) Gluings: $g \sim 0$ for every $g$ in a chosen set $G \subseteq K$. \ Respects: $+$, $\times$. \ Call this blur $\sim$. \\
+In Chapter I.3, $G = \{n\}$.
+\item[\lab{B2}] (From above, L6.) Question: ``is $x$ in $I$?'', for a chosen ideal $I$. \ Respects: $+$, $\times$. \ Call this blur $\approx$.
+\end{lines}
+
+\subsection*{Propositions}
+
+\begin{lines}
+\item[\lab{P1}] (The zero bag.) If a blur of $K$ respects $+$, its zero bag is closed for $+$. If it also respects $\times$, its zero bag is an ideal.
+\item[\lab{P2}] (A blur is known by its zero bag.) If $\sim$ respects $+$, then $x \sim y \iff x - y \in \bag{0}$.
+\item[\lab{P3}] (All of them.) $I \mapsto {\sim_I}$ matches the ideals of $K$ one-to-one with the blurs of $K$ respecting $+$ and $\times$. A bigger ideal gives a blurrier blur.
+\item[\lab{P4}] (Bags, from below.) The blur B1 is $\sim_I$, where $I$ is the smallest ideal holding $G$: the set of all sums $k_1 g_1 + \dots + k_m g_m$ with $g_i$ in $G$ and $k_i$ in $K$.
+\item[\lab{P5}] (Appears.) For every ideal $I$, the blur B2 is $\sim_I$. So every blur of $K$ respecting $+$ and $\times$ is the home of a question, ``is $x$ in $I$?''. \ (By Z4 and Z5; the separating context is $z = -x$.)
+\item[\lab{P6}] (Survives.) $+$, $-$ and $\times$ survive $\sim_I$.
+\item[\lab{P7}] (Normal forms: lost.) Chapter I.3, P2 used G8 of $\Z$. For a general $K$ there is no rule that picks a member of each bag.
+\end{lines}
+
+\subsection*{Notation}
+
+\begin{lines}
+\item[\lab{N1}] Let $K/I := K/{\sim_I}$ (M5), with $+$, $-$, $\times$ carried over by P6 (Z6).
+\end{lines}
+
+\subsection*{Arrow}
+
+\begin{lines}
+\item[\lab{P8}] The map $K \to K/I$, $x \mapsto \bag{x}$, is a picture and respects $0$, $1$, $+$, $\times$.
+\item[\lab{P9}] (Every arrow.) If $f : K \to L$ respects $+$ and $\times$, then $I := \{x : f(x) = 0\}$ is an ideal, and $f$ is the picture $K \to K/I$ followed by an inside $K/I \to L$ (W4).
+\end{lines}
+
+\subsection*{Theorems}
+
+\begin{lines}
+\item[\lab{T1}] (Negatives are unique.) In $K$, if $y + y' = 0$ and $y + y'' = 0$ then $y' = y''$. Also $0 \times x = 0$ for every $x$.
+\item[\lab{T2}] (Still a ring.) $K/I$ is in $\operatorname{class}(\mathsf{semi}, \mathsf{neg})$. (All equations: Z7.)
+\item[\lab{T3}] (When $\mathsf{nzd}$ holds below.) $K/I$ passes $\mathsf{nzd}$ and has $\bag{0} \neq \bag{1}$ exactly when $I \neq K$ and: $x \times y \in I \Rightarrow x \in I$ or $y \in I$.
+\item[\lab{T4}] (When $\mathsf{inv}$ holds below.) $K/I$ passes $\mathsf{inv}$ and has $\bag{0} \neq \bag{1}$ exactly when $I \neq K$ and no ideal lies strictly between $I$ and $K$.
+\item[\lab{T5}] (Fields cannot be blurred.) If $0 \neq 1$ in $K$: $K$ passes $\mathsf{inv}$ exactly when its only ideals are $\{0\}$ and $K$. So a field has only the two blurs of Z1.
+\item[\lab{T6}] (Chapter I.3 recovered.) For $K = \Z$: every ideal is the set of multiples of exactly one $n \ge 0$. This is where G8 is used, and it is all that is special about $\Z$.
+\item[\lab{T7}] (Chapter I.6 recovered.) P1--P3 hold for $\R^n$ with $+$ and scaling in place of $+$ and $\times$: the zero bags are the subspaces. This is I.6, P8.
+\end{lines}
+
+\subsection*{Remarks}
+
+\begin{lines}
+\item[\lab{R1}] (What survived the change of Given.) Running Chapter I.3 with ``any ring'' in place of $\Z$: the Blur lines, Bags, Survives, Appears and the Arrow survive. Normal forms die (P7). ``$\le$ dies'' has nothing to kill. The theorems on primes turn into T3 and T4, which no longer mention numbers. Reading a proof to see which Given lines it uses is itself a blur: forget the row, keep what the proof needed.
+\item[\lab{R2}] (Why $\mathsf{neg}$ earns its column.) P2 fails without negatives. On $\N$, ``$x = y$, or both are $\ge 2$'' is a blur respecting $+$ and $\times$. Its zero bag is $\{0\}$, the same as that of equality. Two blurs, one zero bag.
+\item[\lab{R3}] (Twins again.) $\Z/6$ has four ideals, and so has $\R^2$ with $\ast$: nothing, each of the two places, everything. For $\Z/6$ the pictures are $\Z/6$, $\Z/2$, $\Z/3$ and one point. Compare I.6, R2.
+\item[\lab{R4}] (Machine check.) For $\Z/6$, $\Z/7$, $\Z/12$ a search over all blurs respecting $+$ and $\times$ finds $4$, $2$, $6$ of them, each with a different zero bag, matching the count of ideals. R2 was checked for all $x, y, z < 30$.
+\item[\lab{R5}] (Old names.) T3: prime ideal. T4: maximal ideal. T5: a field is a simple ring. P9: the first isomorphism theorem. $K/I$: quotient ring.
+\end{lines}
+
+\subsection*{Exercises}
+
+\begin{lines}
+\item[\lab{E1}] Prove P2. (One line in each direction; use that $\sim$ respects $+$.)
+\item[\lab{E2}] List the ideals of $\Z/12$ and draw which is inside which. Compare with the divisors of $12$.
+\item[\lab{E3}] For each of the four ideals of $\Z/6$, decide T3 and T4.
+\item[\lab{E4}] Prove T5. Then explain why Chapter I.2 could not have been followed by a chapter ``congruences on $\Q$''.
+\item[\lab{E5}] In R2, find a third blur of $\N$ respecting $+$ and $\times$ with zero bag $\{0\}$.
+\end{lines}
+
+\newpage
+
+%% ==================================================================
+%%  II.  (p2-ch3-vector-spaces)
+%% ==================================================================
+\section*{Chapter II.3. Vector spaces}
+\phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter II.3. Vector spaces \quad a second table $\to$ one variable row $V$}{Chapter II.3. Vector spaces}}
+\begin{center}
+{\normalsize a second table $\to$ one variable row $V$ \quad$\cdot$\quad from: Chapters I.6, I.7, I.10, with II.1 and II.2 \quad$\cdot$\quad table, class, blur}\\[4pt]
+{\small Many systems of Part I can be added and stretched. Name what they share, then blur any one of them.}
+\end{center}
+
+\subsection*{Given}
+
+Part I, and Chapters II.1 and II.2. In this chapter a system has $+$ and, for each real $r$, an operation $x \mapsto r\,x$ called \emph{scaling by $r$}.
+
+\subsection*{A second table}
+
+\begin{lines}
+\item[\lab{D1}] $\mathsf{add}$: $+$ is associative and commutative, has a neutral $0$, and every $x$ has a $y$ with $x + y = 0$.
+\item[\lab{D2}] $\mathsf{scale}$: the system has a scaling, and for all reals $r, s$: \ $1\,x = x$, \ $(rs)\,x = r\,(s\,x)$, \ $r\,(x + y) = r\,x + r\,y$, \ $(r + s)\,x = r\,x + s\,x$.
+\item[\lab{D3}] $\mathsf{findim}$: there is a finite list $x_1, \dots, x_k$ such that every member is $r_1 x_1 + \dots + r_k x_k$ for some reals $r_i$.
+\end{lines}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{llccc}
+\textbf{Row} & \textbf{from} & $\mathsf{add}$ & $\mathsf{scale}$ & $\mathsf{findim}$ \\ \hline
+$\R$ & I.4 & yes & yes & yes \\
+$\R^n$ & I.6 & yes & yes & yes \\
+$\mathbb{C}$ & I.7, road 2 & yes & yes & yes \\
+$T_a$, tangent classes & I.11 & yes & yes & yes \\
+$\R[x]$ & I.7 & yes & yes & no \\
+$C$, continuous maps & I.10 & yes & yes & no \\
+$\Z$ & I.1 & yes & no & no \\
+$\mathbb{T}$, angles & I.8 & yes & no & no \\
+\end{tabular}
+\end{center}
+
+\begin{lines}
+\item[\lab{P1}] ($\Z$ and $\mathbb{T}$ fail $\mathsf{scale}$.) $\Z$ has no $\tfrac12 \times 1$. In $\mathbb{T}$, scaling died (Chapter I.8, P4.1), and no scaling can be added: $2 \cdot \bag{\tfrac12} = 0$ with $\bag{\tfrac12} \neq 0$, while $\mathsf{scale}$ gives $x = \tfrac12\,(2\,x)$.
+\item[\lab{P2}] ($\R[x]$ and $C$ fail $\mathsf{findim}$.) $1, x, x^2, \dots$ are all needed: a finite list of polynomials has a largest degree (Chapter I.7, T2).
+\item[\lab{N1}] $\operatorname{class}(\mathsf{add}, \mathsf{scale})$: $\R, \R^n, \mathbb{C}, T_a, \R[x], C$. \emph{Vector space} (over $\R$).
+\item[\lab{N2}] $\operatorname{class}(\mathsf{add}, \mathsf{scale}, \mathsf{findim})$: $\R, \R^n, \mathbb{C}, T_a$. \emph{Finite-dimensional vector space.}
+\end{lines}
+
+\subsection*{One variable row}
+
+Given $V$, any system in $\operatorname{class}(\mathsf{add}, \mathsf{scale})$.
+
+\subsection*{Definitions}
+
+\begin{lines}
+\item[\lab{D4}] A set $W \subseteq V$ is a \emph{subspace} if it holds $0$, and holds $x + y$ and $r\,x$ whenever it holds $x$ and $y$, for every real $r$.
+\item[\lab{D5}] For a subspace $W$: \ $x \sim_W y \iff x - y \in W$.
+\item[\lab{D6}] The \emph{span} of a set $G$: all sums $r_1 g_1 + \dots + r_m g_m$ with $g_i$ in $G$.
+\item[\lab{D7}] A list $x_1, \dots, x_k$ is \emph{independent} if $r_1 x_1 + \dots + r_k x_k = 0$ only when every $r_i = 0$. A \emph{basis} is an independent list whose span is $V$.
+\end{lines}
+
+\subsection*{Blur}
+
+\begin{lines}
+\item[\lab{B1}] (From below, L5.) Gluings: $g \sim 0$ for every $g$ in a chosen set $G \subseteq V$. \ Respects: $+$ and every scaling. \ Call this blur $\sim$.
+\item[\lab{B2}] (From above, L6.) Question: ``is $x$ in $W$?'', for a chosen subspace $W$. \ Respects: $+$ and every scaling. \ Call this blur $\approx$.
+\end{lines}
+
+\subsection*{Propositions}
+
+\begin{lines}
+\item[\lab{P3}] (The zero bag.) If a blur of $V$ respects $+$ and every scaling, its zero bag is a subspace, and $x \sim y \iff x - y \in \bag{0}$. (As Chapter II.2, P1, P2.)
+\item[\lab{P4}] (All of them.) $W \mapsto {\sim_W}$ matches the subspaces of $V$ one-to-one with the blurs of $V$ respecting $+$ and every scaling.
+\item[\lab{P5}] (From below.) The blur B1 is $\sim_W$ with $W$ the span of $G$.
+\item[\lab{P6}] (Appears.) For every subspace $W$, the blur B2 is $\sim_W$. \ (By Z4 and Z5; the separating context is $z = -x$.)
+\item[\lab{P7}] (Survives.) $+$, $-$ and every scaling survive $\sim_W$. (By the choice of $O$.)
+\item[\lab{P8}] (Normal forms: by choice.) Chapter II.2, P7 found no normal forms for a general ring. Here there are some, but they must be chosen: if $U$ is a subspace with $U \cap W = \{0\}$ and $U + W = V$, then each bag of $\sim_W$ meets $U$ in exactly one member. Different choices of $U$ give different normal forms.
+\end{lines}
+
+\subsection*{Notation}
+
+\begin{lines}
+\item[\lab{N3}] $V/W := V/{\sim_W}$ (M5), with $+$ and scaling carried over (Z6). It is again in $\operatorname{class}(\mathsf{add}, \mathsf{scale})$ (Z7: all of D1, D2 are equations, except ``there is a $y$'', which descends from $V$).
+\end{lines}
+
+\subsection*{A blur of the rows}
+
+\begin{lines}
+\item[\lab{B3}] (On the second floor, F3.) Blur the rows of $\operatorname{class}(\mathsf{add}, \mathsf{scale}, \mathsf{findim})$: glue $V$ and $V'$ when some map $V \to V'$ is one-to-one, reaches every member, and respects $+$ and every scaling.
+\item[\lab{T1}] (Bases exist and agree.) Every row of $\operatorname{class}(\mathsf{add}, \mathsf{scale}, \mathsf{findim})$ has a basis, and all its bases have the same length. Call it $\dim V$.
+\item[\lab{T2}] (Dimension is the normal form.) $V$ and $V'$ are glued by B3 exactly when $\dim V = \dim V'$. Each bag holds exactly one $\R^n$, namely $n = \dim V$. \ (Chapter I.6, T1 and T5, now for every row.)
+\item[\lab{P9}] (In the table.) $\dim \R = 1$, $\dim \R^n = n$, $\dim \mathbb{C} = 2$, $\dim T_a = 2$. So $\mathbb{C}$, $T_a$ and $\R^2$ are glued by B3: as rows of this table they are one. As rows of Chapter II.1 they are not (only $\mathbb{C}$ passes $\mathsf{inv}$). The blur depends on the tests (L7, one floor up).
+\end{lines}
+
+\subsection*{Theorems}
+
+\begin{lines}
+\item[\lab{T3}] (Dimension of a picture.) If $V$ passes $\mathsf{findim}$ and $W$ is a subspace, then $\dim (V/W) = \dim V - \dim W$.
+\item[\lab{T4}] (Subspaces of a finite row.) Every subspace of a finite-dimensional $V$ is finite-dimensional, with $\dim W \le \dim V$, and equality only for $W = V$.
+\item[\lab{T5}] (Change of scalars.) Replace $\R$ by any row $K$ of $\operatorname{class}(\mathsf{semi}, \mathsf{neg}, \mathsf{inv})$ of Chapter II.1, the fields. D1--D7, B1--B3, P3--P8 and T1--T4 hold word for word. For $K = \Z/p$, a row of dimension $n$ has exactly $p^n$ members.
+\item[\lab{T6}] (The scalars are part of the Given.) $\mathbb{C}$ over $\R$ has dimension $2$; $\mathbb{C}$ over $\mathbb{C}$ (T5 with $K = \mathbb{C}$) has dimension $1$. A row of this table is a system \emph{together with} its scalars.
+\end{lines}
+
+\subsection*{Remarks}
+
+\begin{lines}
+\item[\lab{R1}] (Why this is not a Part I chapter.) A vector space cannot be built once, the way $\Z$ was. It is a class: a name for what the rows of N1 share. Part I supplied the rows; this chapter only names them and blurs them.
+\item[\lab{R2}] (Twins.) Chapter II.2: rings, ideals, quotient rings, no normal forms. This chapter: vector spaces, subspaces, quotient spaces, normal forms by choice. The lines are the same; only the operations in $O$ differ. Chapter II.2, T7 already saw this for $\R^n$.
+\item[\lab{R3}] (Why the class is needed.) If every row were some $\R^n$, T2 would make the name unnecessary. $\R[x]$ and $C$ fail $\mathsf{findim}$, and they are where most of analysis lives. They are the reason for N1.
+\item[\lab{R4}] (Infinite bases.) $\R[x]$ has a basis without end: $1, x, x^2, \dots$ (with sums of finitely many terms). Whether $C$ has a basis cannot be settled with M1--M7: it needs a rule of choice, which is not in Chapter 0.
+\item[\lab{R5}] (What comes next.) Maps between rows that respect $+$ and scaling are the linear maps. Their kernels are zero bags (P3), and ``every arrow is a blur, then an inside'' with T3 gives rank plus nullity. That is the chapter on Arrows, II.6.
+\item[\lab{R6}] (Machine check.) For $(\Z/2)^2$, $(\Z/3)^2$, $(\Z/2)^3$, a search over all partitions finds $5$, $6$, $16$ blurs respecting $+$ and every scaling, each with a different zero bag, and each zero bag a subspace: the count of subspaces (\texttt{p2-ch3-check.py}).
+\item[\lab{R7}] (Old names.) P4: subspaces are the congruences of a vector space. P8: complements. T1: the dimension theorem. T2: classification of finite-dimensional spaces. B3: isomorphism.
+\end{lines}
+
+\subsection*{Exercises}
+
+\begin{lines}
+\item[\lab{E1}] Check $\mathsf{scale}$ for $C$. Which part of Chapter I.10 shows $C$ is closed under scaling?
+\item[\lab{E2}] In $\R^2$, let $W$ be the line through $0$ and $(1,1)$. Give two different complements $U$ and the normal form of the bag of $(3, 5)$ for each.
+\item[\lab{E3}] Show that the polynomials $p$ with $p(2) = 0$ form a subspace $W$ of $\R[x]$. What is $\R[x]/W$? (Hint: Chapter I.7, road 1.)
+\item[\lab{E4}] List the five subspaces of $(\Z/2)^2$ and draw which is inside which.
+\item[\lab{E5}] Prove P1's claim that $\mathbb{T}$ admits no scaling.
+\item[\lab{E6}] Find a basis of $T_a$ and the map that glues it to $\R^2$ by B3.
+\end{lines}
+
+\newpage
+
+%% ==================================================================
+%%  II.  (p2-ch4-metric-spaces)
+%% ==================================================================
+\section*{Chapter II.4. Metric spaces}
+\phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter II.4. Metric spaces \quad systems with a distance $\to$ classes}{Chapter II.4. Metric spaces}}
+\begin{center}
+{\normalsize systems with a distance $\to$ classes \quad$\cdot$\quad from: Chapters I.4, I.5, I.8, I.10, I.18, I.19, I.20 \quad$\cdot$\quad table, class, blur}\\[4pt]
+{\small Part I met a distance five times. Put the five side by side, read the classes off the table, and ask which tests survive when two rows are glued by an arrow.}
+\end{center}
+
+\subsection*{Given}
+
+Part I, and Chapter II.1. In this chapter a system is a bag $X$ with a map $d : X \times X \to \R$, its \emph{distance}. There are no operations.
+
+\subsection*{The rows}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+{\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{5.6cm} >{\raggedright\arraybackslash}p{6.4cm} l@{}}
+\textbf{Row} & \textbf{distance} & \textbf{from} \\ \hline
+$\Q$, \ $\R$ & $|x - y|$ & I.2, I.4 \\
+$\R^2$ & $|x - y|$ of I.13, D1 & I.6, I.13 \\
+the stretch $0 \le x \le 1$; \ the open stretch $0 < x < 1$ & $|x - y|$ & I.10, D8 \\
+the circle $\mathbb{T}$ & $d$ of I.8, T5 & I.8 \\
+$C[b,c]$ & largest gap: $\max |f(x) - g(x)|$ on the stretch & I.20 \\
+$(\Z, d_p)$: \ $\Z$ with the $p$-adic distance & $d_p(x, y) := p^{-v_p(x - y)}$, and $0$ when $x = y$ & I.18, D4 \\
+$\Z_p$ & $p^{-m}$ when $x - y = p^m u$, $u$ with an inverse & I.19, T3 \\
+$\mathsf{three}$: three points & $1$ between any two & --- \\
+\end{tabular}
+}
+\end{center}
+
+\subsection*{Tests}
+
+Each row has its nearness: $x \mathrel{N_k} y$ iff $d(x, y) < 10^{-k}$, with $\operatorname{near}_k(x)$, ``comes near'' and ``comes near itself'' as in Chapter I.5, N2 and N5.
+\begin{lines}
+\item[\lab{D1}] $\mathsf{dist}$: \ $d(x, y) \ge 0$; \ $d(x, y) = 0$ only for $x = y$; \ $d(x, y) = d(y, x)$; \ $d(x, z) \le d(x, y) + d(y, z)$.
+\item[\lab{D2}] $\mathsf{complete}$: every sequence that comes near itself comes near some member.
+\item[\lab{D3}] $\mathsf{bounded}$: there is a real $B$ with $d(x, y) \le B$ for all $x, y$.
+\item[\lab{D4}] $\mathsf{compact}$: every sequence has a part $a_{i_0}, a_{i_1}, \dots$ ($i_0 < i_1 < \dots$) that comes near some member.
+\item[\lab{D5}] $\mathsf{onepiece}$: the row cannot be cut: every blur $\sim$ of $X$ such that each $x$ has a rung $k$ with $\operatorname{near}_k(x) \subseteq \bag{x}$ has one bag (as in Chapter I.5, T1).
+\item[\lab{D6}] $\mathsf{chains}$: \ $d(x, z) \le \max\bigl(d(x, y),\ d(y, z)\bigr)$. Then every $N_k$ is a blur.
+\end{lines}
+
+\subsection*{The table}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+{\small
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{l|cccccc}
+ & $\mathsf{dist}$ & $\mathsf{complete}$ & $\mathsf{bounded}$ & $\mathsf{compact}$ & $\mathsf{onepiece}$ & $\mathsf{chains}$ \\ \hline
+$\Q$ & $\checkmark$ & $\cdot$ & $\cdot$ & $\cdot$ & $\cdot$ & $\cdot$ \\
+$\R$ & $\checkmark$ & $\checkmark$ & $\cdot$ & $\cdot$ & $\checkmark$ & $\cdot$ \\
+$\R^2$ & $\checkmark$ & $\checkmark$ & $\cdot$ & $\cdot$ & $\checkmark$ & $\cdot$ \\
+$0 \le x \le 1$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\cdot$ \\
+$0 < x < 1$ & $\checkmark$ & $\cdot$ & $\checkmark$ & $\cdot$ & $\checkmark$ & $\cdot$ \\
+$\mathbb{T}$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\cdot$ \\
+$C[b,c]$ & $\checkmark$ & $\checkmark$ & $\cdot$ & $\cdot$ & $\checkmark$ & $\cdot$ \\
+$(\Z, d_p)$ & $\checkmark$ & $\cdot$ & $\checkmark$ & $\cdot$ & $\cdot$ & $\checkmark$ \\
+$\Z_p$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\cdot$ & $\checkmark$ \\
+$\mathsf{three}$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\cdot$ & $\checkmark$ \\
+\end{tabular}
+}
+\end{center}
+
+Where each entry comes from:
+\begin{lines}
+\item[\lab{P1}] ($\mathsf{complete}$.) $\Q$ fails: the decimals of $\sqrt2$ (I.4, E3). $\R$: I.4, T6; $\R^2$ place by place. $0 \le x \le 1$ passes, $0 < x < 1$ fails ($1/n$). $\mathbb{T}$ passes (a picture of $\R$, I.8). $C[b,c]$: I.20, T1. $(\Z, d_p)$ fails: the sums $1 - p + p^2 - \dots \pm p^i$ come near themselves, and in $\Z_p$ they come near the inverse of $1 + p$ (as in I.19, T2: $(1 + p)$ times the $i$-th sum is $1 \pm p^{i+1}$), which is not in $\Z$. (The sums of I.19, T2 will not do for $p = 2$: there $1/(1 - p) = -1$ is in $\Z$.) $\Z_p$: I.19, T10. $\mathsf{three}$: a sequence that comes near itself is eventually constant.
+\item[\lab{P2}] ($\mathsf{bounded}$, $\mathsf{compact}$.) $\R$, $\R^2$, $C[b,c]$ hold the constants $0, 1, 2, \dots$, which no part of brings near anything. $0 \le x \le 1$ is compact (from I.4, T8, halving); $\mathbb{T}$ is its picture. $\Z_p$: halving becomes ``choose a digit that occurs infinitely often'', $p$ choices at each rung. $\mathsf{three}$: some point occurs infinitely often. $0 < x < 1$ and $(\Z, d_p)$ fail by the sequences of P1.
+\item[\lab{P3}] ($\mathsf{onepiece}$.) $\R$: I.5, T1; the same proof serves $\R^2$, both stretches, $\mathbb{T}$ and $C[b,c]$ (join any two members by the straight path $f + t(g - f)$, $0 \le t \le 1$). $\Q$ is cut at $\sqrt2$ (I.5, E6). The three rows that chain are cut by T2 below.
+\item[\lab{P4}] ($\mathsf{chains}$.) $(\Z, d_p)$ and $\Z_p$: I.19, P2. $\mathsf{three}$: $1 \le \max(1, 1)$. The other rows fail with $0$, $\tfrac12$, $1$ (on $\mathbb{T}$: $0$, $\tfrac14$, $\tfrac12$; on $C[b,c]$: the constants).
+\end{lines}
+
+\subsection*{Appears}
+
+\begin{lines}
+\item[\lab{N1}] $\operatorname{class}(\mathsf{dist})$: every row. \emph{Metric space.}
+\item[\lab{N2}] $\operatorname{class}(\mathsf{dist}, \mathsf{complete})$: $\R$, $\R^2$, $0 \le x \le 1$, $\mathbb{T}$, $C[b,c]$, $\Z_p$, $\mathsf{three}$. \emph{Complete metric space.}
+\item[\lab{N3}] $\operatorname{class}(\mathsf{dist}, \mathsf{compact})$: $0 \le x \le 1$, $\mathbb{T}$, $\Z_p$, $\mathsf{three}$. \emph{Compact metric space.}
+\item[\lab{N4}] $\operatorname{class}(\mathsf{dist}, \mathsf{chains})$: $(\Z, d_p)$, $\Z_p$, $\mathsf{three}$. \emph{Ultrametric space.} The rows where a ladder of true blurs is enough (I.19), against the rows where likeness is needed (I.5).
+\end{lines}
+
+\subsection*{Theorems}
+
+These hold for every row, not only the ten.
+\begin{lines}
+\item[\lab{T1}] $\mathsf{compact}$ gives $\mathsf{complete}$ and $\mathsf{bounded}$.
+\item[\lab{T2}] (Chaining cuts.) A row with at least two points that passes $\mathsf{chains}$ fails $\mathsf{onepiece}$. \ (Take $x \neq y$ and $r := d(x, y)$. ``$d(u, v) < r$'' is a blur, by $\mathsf{chains}$; each of its bags holds $\operatorname{near}_k$ of each of its points once $10^{-k} \le r$; and $x$, $y$ lie in different bags.)
+\end{lines}
+
+\subsection*{One variable row $X$}
+
+Fix a row $X$ that passes $\mathsf{dist}$.
+\begin{lines}
+\item[\lab{P5}] (Its nearness.) The rungs $N_k$ are a nearness (I.5, D4): nested, two steps for one by the triangle law, and the bottom is equality. ``Respects nearness'' for a map between two rows is I.5, N4, with the rungs of each row on its side.
+\item[\lab{D7}] (Run Chapter I.4 on $X$.) Build sequences in $X$ (M2); select those that come near themselves (M4); glue $a \sim b$ when $d(a_i, b_i)$ comes near $0$. \ Respects: nothing ($X$ has no operations). Here the gluing is the bag test. Call the bags $\widehat X$, with $d(\bag{a}, \bag{b}) :=$ the limit of $d(a_i, b_i)$.
+\item[\lab{T3}] (The closing-up is closed, F5.) $\widehat X$ passes $\mathsf{dist}$ and $\mathsf{complete}$. The arrow $X \to \widehat X$, $x \mapsto \bag{(x, x, \dots)}$, is one-to-one and keeps $d$. Running D7 on $\widehat X$ gives nothing new. $X$ passes $\mathsf{complete}$ iff the arrow also reaches every bag.
+\item[\lab{T4}] (Three closings-up from Part I.) $\widehat{\Q} = \R$ (I.4). $\widehat{(\Z, d_p)} = \Z_p$ (I.19). For the polynomials, read as maps on a stretch with the largest gap: $\widehat{\ } = C[b,c]$ (I.20, R4; classical, Weierstrass, long, not proved here).
+\item[\lab{T5}] (Contraction; Chapter 25, T2 is the case of a closed box.) If $X$ passes $\mathsf{complete}$, and $f : X \to X$ has $d(f(x), f(y)) \le q\, d(x, y)$ for a fixed $q < 1$, then exactly one $x$ has $f(x) = x$, and from any start, $x_0$, $f(x_0)$, $f(f(x_0))$, \dots comes near it. \\
+Examples: $\cos$ on $0 \le x \le 1$ ($q = \sin 1$); \ $x \mapsto p x + 1$ on $\Z_p$ ($q = 1/p$), whose fixed point is $1/(1 - p)$ of I.19, T2.
+\end{lines}
+
+\subsection*{Blur: glue two rows by an arrow}
+
+\begin{lines}
+\item[\lab{D8}] $X \cong_{\mathrm{pt}} Y$: there is a map $h : X \to Y$, one-to-one and onto, such that $h$ and its inverse respect nearness \emph{at each point}.
+\item[\lab{D9}] $X \cong_{\mathrm{u}} Y$: the same, with $h$ and its inverse respecting nearness \emph{with one rung for all points}.
+\item[\lab{P6}] Both are blurs on rows (identity; inverse; composing, I.5, T4). $\cong_{\mathrm{u}}$ is less blurry than $\cong_{\mathrm{pt}}$.
+\item[\lab{P7}] (Under $\cong_{\mathrm{pt}}$: $\mathsf{compact}$ and $\mathsf{onepiece}$ survive; $\mathsf{complete}$ dies.) \\
+Witness: $h(x) = 1/(1 + \exp(-x))$ from $\R$ onto $0 < x < 1$, with inverse $t \mapsto L\bigl(t/(1 - t)\bigr)$ (I.10, T3, T5; I.11, T4; I.12, T5). Both respect nearness at each point. $\R$ passes $\mathsf{complete}$; $0 < x < 1$ fails it. The same witness kills $\mathsf{bounded}$.
+\item[\lab{P8}] (Under $\cong_{\mathrm{u}}$: $\mathsf{complete}$ survives too.) A map that respects nearness with one rung for all points sends a sequence that comes near itself to one that comes near itself. Apply this to $h$ and to its inverse. \\
+In P7, $h$ respects nearness with one rung, but its inverse does not: near $t = 0$, the inputs $t$ and $t/2$ come near each other while their outputs stay $L(2)$ apart.
+\item[\lab{P9}] (Under $\cong_{\mathrm{u}}$: $\mathsf{bounded}$ and $\mathsf{chains}$ still die.) $\R$ with $|x - y|$ and $\R$ with $\min(|x - y|, 1)$ are glued by the identity; one is bounded, one is not. $\mathsf{three}$ and the three points with distances $1, 1, \tfrac32$ are glued by the identity (at rung $1$ both nearnesses are equality); one chains, one does not.
+\item[\lab{P10}] (What the three blurs see.) $\mathsf{compact}$ and $\mathsf{onepiece}$ are questions about nearness at points. $\mathsf{complete}$ is a question about nearness with one rung for all points. $\mathsf{bounded}$ and $\mathsf{chains}$ are questions about the numbers $d(x, y)$ themselves, and those numbers die as they did in I.5, P15.
+\end{lines}
+
+\subsection*{Remarks}
+
+\begin{lines}
+\item[\lab{R1}] (The table suggests; a new row refutes; F6.) In the table, every row that is $\mathsf{complete}$ and $\mathsf{bounded}$ is $\mathsf{compact}$. That is an accident of ten rows. The row $\N$ with distance $1$ between any two different members is complete (a sequence that comes near itself is eventually constant) and bounded, and $0, 1, 2, \dots$ has no part that comes near anything.
+\item[\lab{R2}] (Why this chapter is Part II.) The tests ask about every sequence of a row, so they are laws about rows, as in II.1. The rows were built in Part I; this chapter only puts them side by side (F7).
+\item[\lab{R3}] (No normal form.) No rule picks one row from each bag of $\cong_{\mathrm{pt}}$ or $\cong_{\mathrm{u}}$.
+\item[\lab{R4}] (Old names.) $\mathsf{dist}$: metric. $\mathsf{onepiece}$: connected. $\mathsf{chains}$: ultrametric. $\widehat X$: the completion. T5: Banach's fixed point theorem. $\cong_{\mathrm{pt}}$: homeomorphic; $\cong_{\mathrm{u}}$: uniformly homeomorphic. P10: topological against uniform properties.
+\item[\lab{R5}] (Machine check.) Only a little of this chapter can be checked by machine: the finite rows (P4, P9), the $p$-adic triangle law with $\max$ for $p = 2, 3, 5$, the sequence of P1 for $p = 2, 3$, both examples of T5, and the witness of P7 and P8 numerically (\texttt{p2-ch4-check.py}). Everything else rests on the cited lines.
+\end{lines}
+
+\subsection*{Exercises}
+
+\begin{lines}
+\item[\lab{E1}] Check $\mathsf{dist}$ for the largest gap on $C[b,c]$.
+\item[\lab{E2}] Show that $\mathsf{three}$ fails $\mathsf{onepiece}$ by writing down a blur with two bags.
+\item[\lab{E3}] Prove T1: if a sequence comes near itself and a part of it comes near $x$, the whole sequence comes near $x$.
+\item[\lab{E4}] Add the row $\N$ of R1 to the table. Which classes of N1--N4 does it join?
+\item[\lab{E5}] Show that $h$ of P7 respects nearness with one rung for all points. (Hint: its slope is at most $\tfrac14$; Chapter I.11, T6.)
+\item[\lab{E6}] Find the fixed point of $x \mapsto 2x + 1$ in $\Z_2$, and its last six digits.
+\end{lines}
