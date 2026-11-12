@@ -310,3 +310,143 @@ On $m \times n$ matrices over $R$. \ $O$: none beyond the moves themselves.
 \item[\lab{E3}] Over $\mathbb{Q}[x]$, find the Smith form of $\begin{pmatrix} x & 1 \\ 0 & x \end{pmatrix}$.
 \item[\lab{E4}] Show $\Z/4 \not\cong \Z/2 \times \Z/2$ by P5, and by $\mathsf{cyc}$.
 \end{lines}
+
+\newpage
+
+%% ==================================================================
+%%  Chapter II.5  (actions)
+%% ==================================================================
+\section*{Chapter II.5. A move system moving a bag}
+\phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter II.5. A move system moving a bag \quad points of $X$ $\to$ their orbits}{Chapter II.5. A move system moving a bag}}
+\begin{center}
+{\normalsize points of $X$ $\to$ their orbits \quad$\cdot$\quad from: Chapters 1, II.2, II.3; Building 0, Chapter 0 (W4) \quad$\cdot$\quad blur, count}\\[4pt]
+{\small Let $G$ move the points of a bag and glue each point to where it can be moved. The arrow $g \mapsto g \cdot x$ has its own blur, the cosets of the moves that fix $x$; so the size of a bag is a quotient, and counting fixed points counts the bags.}
+\end{center}
+
+Chapter II.2 let $G$ move itself. Here it moves anything. Every count in this chapter is the arrow's own blur (W4) read with Lagrange.
+
+\subsection*{Given}
+
+\begin{lines}
+\item[\lab{G1}] (Chapter II.2.) Left cosets; T1 (Lagrange), T2.
+\item[\lab{G2}] (Chapter II.3.) Relabelling $x \mapsto g x g^{-1}$; ``kept by relabelling''; T1 (an arrow is a blur, then an inside).
+\item[\lab{G3}] (Chapter 1.) The moves $S_X$ of a finite bag; T3 (Cayley).
+\end{lines}
+
+\subsection*{Definitions}
+
+\begin{lines}
+\item[\lab{D1}] A \emph{move system $G$ moving a bag $X$}: an arrow $G \to S_X$ respecting $\circ$. Write $g \cdot x$. So $e \cdot x = x$ and $g \cdot (h \cdot x) = (gh) \cdot x$.
+\item[\lab{D2}] $G_x := \{ g : g \cdot x = x \}$, the moves that fix $x$. \ $X^g := \{ x : g \cdot x = x \}$, the points $g$ fixes.
+\end{lines}
+
+\subsection*{The blur}
+
+On $X$. \ $O$: $x \mapsto g \cdot x$ for each $g$.
+
+\begin{lines}
+\item[\lab{B1}] (From below.) Gluing: $x \sim g \cdot x$ for every $g$ and $x$. The bags are the \emph{orbits}; write $G \cdot x$ and $X / G$.
+\item[\lab{B2}] (From above.) Questions: every yes-or-no question $q$ on $X$ with $q(g \cdot x) = q(x)$ for all $g$.
+\end{lines}
+
+\subsection*{Propositions}
+
+\begin{lines}
+\item[\lab{P1}] (Appears.) B1 and B2 agree. \ (The question ``is it in $G \cdot x$?'' is kept, and separates $x$ from every point outside its orbit.)
+\item[\lab{P2}] (A sub move system.) $G_x$ is closed under $\circ$ and undo. Along an orbit, $G_{g \cdot x} = g\, G_x\, g^{-1}$: the moves fixing two glued points are relabellings of each other.
+\item[\lab{P3}] (Dies: ``orbits have one size''.) $S_3$ moving the subsets of $\{1, 2, 3\}$: orbit sizes $1, 3, 3, 1$.
+\end{lines}
+
+\subsection*{Theorems}
+
+\begin{lines}
+\item[\lab{T1}] (The arrow's own blur: orbit and fixers. W4.) The arrow $g \mapsto g \cdot x$ from $G$ onto $G \cdot x$ glues $g$ and $h$ exactly when $h^{-1} g$ is in $G_x$, that is when $g G_x = h G_x$. So the left cosets of $G_x$ match the orbit one-to-one, and for finite $G$ \[ |G \cdot x| \cdot |G_x| = |G| . \] (G1, T1.) Orbit sizes divide $|G|$.
+\item[\lab{T2}] (Counting the bags.) For finite $G$ and $X$: \[ |X / G| \;=\; \frac{1}{|G|} \sum_{g \in G} |X^g| . \] (Count the pairs $(g, x)$ with $g \cdot x = x$ by $g$, and by $x$: $\sum_x |G_x| = \sum_x |G| / |G \cdot x| = |G|$ for each orbit, by T1.)
+\item[\lab{T3}] (Relabelling as moving.) $G$ moves itself by $g \cdot x := g x g^{-1}$. The orbits are the classes (for $S_n$: the cycle types, Chapter 1), $G_x$ is the set of moves that commute with $x$, and the fixed points of every $g$ are the \emph{centre} $Z(G)$. So \[ |G| \;=\; |Z(G)| + \sum |G| / |G_x| , \] one term for each class of size above $1$, each term dividing $|G|$.
+\item[\lab{T4}] (Moving cosets.) $G$ moves its own left cosets $G/K$ by $g \cdot xK := gxK$, giving an arrow $G \to S_{G/K}$ whose blur's bag of $e$ is kept by relabelling and lies inside $K$. If $|G / K|$ is the smallest prime $p$ dividing $|G|$, then $K$ is kept by relabelling. \ (The picture of $G$ in $S_p$ has size dividing $|G|$ and $p!$, so dividing $p$ (G1, T1; no smaller prime divides $|G|$); the bag of $e$ inside $K$ then has index $p$, so it is $K$.)
+\end{lines}
+
+\subsection*{Propositions on examples}
+
+\begin{lines}
+\item[\lab{P4}] (Necklaces.) $n$ beads on a ring, $c$ colours, glued by turning: $\frac{1}{n} \sum_{d \mid n} \varphi(d)\, c^{n/d}$ bags. \ (T2: a turn by $j$ steps fixes $c^{\gcd(j, n)}$ colourings.) For $n = 6$, $c = 2$: $14$.
+\item[\lab{P5}] (A cube.) The $24$ turns of a cube moving the colourings of its $6$ faces in $3$ colours: $57$ bags.
+\item[\lab{P6}] (Class sizes.) $S_4$: $24 = 1 + 3 + 6 + 6 + 8$. $A_5$: $60 = 1 + 12 + 12 + 15 + 20$ (Chapter II.3, T5 used it).
+\end{lines}
+
+\subsection*{Remarks}
+
+\begin{lines}
+\item[\lab{R1}] (What the method did.) One blur (B1), one W4 line (T1), one count (T2). Chapter II.2 is the case $X = G$, $g \cdot x = gx$, where every orbit is all of $G$.
+\item[\lab{R2}] (Old names.) D1: a group action; orbits; $G_x$: stabiliser; T1: the orbit--stabiliser theorem; T2: Burnside's lemma (Cauchy--Frobenius); T3: the class equation, centralisers; T4: the permutation representation on cosets.
+\item[\lab{R3}] (Machine check, \texttt{checks/b1-p2-ch5-6-check.py}.) T1 and T2 for $S_4$ moving pairs; P4 against brute force for $n \le 8$, $c = 2, 3$; P5; T3 for $S_4$, $D_4$, $A_4$, $D_6$, $A_5$; T4 for $S_3$, $S_4$, $D_5$, $D_6$ over all subgroups of index $p$ generated by two members.
+\end{lines}
+
+\subsection*{Exercises}
+
+\begin{lines}
+\item[\lab{E1}] How many ways are there to colour the corners of a square in $3$ colours, up to its $8$ moves?
+\item[\lab{E2}] Find $G_x$ for $S_4$ moving $\{1, 2, 3, 4\}$, and check T1.
+\item[\lab{E3}] Find the class sizes of $S_3$ and of $D_4$, and check T3 for each.
+\item[\lab{E4}] Use T4 to show that in a move system of size $2m$, $m$ odd, a sub move system of size $m$ is kept by relabelling.
+\end{lines}
+
+\newpage
+
+%% ==================================================================
+%%  Chapter II.6  (counting bags mod p; Cauchy; Sylow)
+%% ==================================================================
+\section*{Chapter II.6. One prime at a time}
+\phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter II.6. One prime at a time \quad orbits $\to$ their sizes mod $p$}{Chapter II.6. One prime at a time}}
+\begin{center}
+{\normalsize orbits $\to$ their sizes mod $p$ \quad$\cdot$\quad from: Chapters II.2, II.3, II.5; Building 0, Chapter 3 \quad$\cdot$\quad count}\\[4pt]
+{\small Let a move system of size $p^n$ move a bag. Every orbit has size $1$ or a multiple of $p$, so the fixed points count the bag mod $p$. From that one line: centres, Cauchy, and all three Sylow lines.}
+\end{center}
+
+These are Theorems, not Survives lines: each says something exists, and the existence comes from a count, not from a blur. Each is true in every finite row of the table at once.
+
+\subsection*{Given}
+
+\begin{lines}
+\item[\lab{G1}] (Chapter II.5.) T1 (orbit sizes divide $|G|$), T3 (moving by relabelling; the centre), T4 (moving cosets).
+\item[\lab{G2}] (Chapter II.2.) T1 (Lagrange), T6 (prime size means a clock).
+\item[\lab{G3}] (Building 0, Chapter 3.) Arithmetic mod $p$.
+\end{lines}
+
+\subsection*{Theorems}
+
+\begin{lines}
+\item[\lab{T1}] (Counting bags mod $p$.) If $|G| = p^n$ and $G$ moves a finite $X$, then \[ |X^G| \;\equiv\; |X| \pmod p , \] where $X^G$ is the set of points every $g$ fixes. \ (Each orbit has size dividing $p^n$ (G1): $1$, or a multiple of $p$. The orbits of size $1$ are $X^G$.)
+\item[\lab{T2}] (A $p$-system has a centre.) If $|G| = p^n$, $n \ge 1$, then $Z(G) \ne \{e\}$. \ (T1 with $G$ moving itself by relabelling: $|Z(G)| \equiv |G| \equiv 0$, and $e$ is in $Z(G)$.)
+\item[\lab{T3}] (Size $p^2$.) A move system of size $p^2$ is $\mathsf{comm}$: $\Z/p^2$ or $\Z/p \times \Z/p$. \ (If $G / Z(G)$ were a clock $\Z/p$, generated by $gZ$, every member would be $g^i z$, and these commute; so $Z(G) = G$ by T2. Then Chapter II.4, T2.)
+\item[\lab{T4}] (Cauchy.) If $p$ divides $|G|$, some $g$ has order $p$. \ (Let $X$ be the lists $(g_1, \dots, g_p)$ with $g_1 g_2 \cdots g_p = e$: $|X| = |G|^{p-1} \equiv 0$. The clock $\Z/p$ moves $X$ by turning a list, which keeps the product $e$ (it relabels it). Fixed points: $(g, \dots, g)$ with $g^p = e$. By T1 their number is $\equiv 0$; $(e, \dots, e)$ is one, so there are at least $p - 1$ others.)
+\item[\lab{T5}] (Sylow I: at least one.) If $|G| = p^a m$ with $p \nmid m$, $G$ has a sub move system of size $p^a$. \ ($G$ moves the subsets of size $p^a$ by $S \mapsto gS$. Their number $\binom{p^a m}{p^a}$ is not divisible by $p$ (count factors of $p$ in top and bottom term by term), so some orbit has size not divisible by $p$. For $S$ in it, $|G_S| = |G| / |G \cdot S|$ is divisible by $p^a$; and $G_S$ moves $S$ without fixed points by $g \cdot s = gs$, each orbit of size $|G_S|$, so $|G_S| \le |S| = p^a$.)
+\item[\lab{T6}] (Sylow II: all alike.) Every sub move system $H$ of size a power of $p$ lies in some relabelling $gPg^{-1}$ of a given $P$ of size $p^a$. In particular all such $P$ are relabellings of each other. \ ($H$ moves the cosets $G/P$, $m$ of them, $m \not\equiv 0$. By T1 some $gP$ is fixed: $HgP = gP$, so $g^{-1} H g \subseteq P$.)
+\item[\lab{T7}] (Sylow III: how many.) The number $n_p$ of sub move systems of size $p^a$ divides $m$ and is $\equiv 1 \pmod p$. \ ($G$ moves them by relabelling, one orbit (T6), so $n_p = |G| / |G_P|$, and $P \subseteq G_P$ gives $n_p \mid m$. $P$ moves them by relabelling; a fixed $Q$ has $P$ and $Q$ both inside $G_Q$, where $Q$ is kept by relabelling, so by T6 in $G_Q$, $P = Q$. T1: $n_p \equiv 1$.)
+\end{lines}
+
+\subsection*{Propositions}
+
+\begin{lines}
+\item[\lab{P1}] (Size $15$ is a clock.) $n_3 \mid 5$ and $n_3 \equiv 1 \pmod 3$ give $n_3 = 1$; likewise $n_5 = 1$. Both are kept by relabelling, meet only in $e$, and their members commute; so $G$ matches $\Z/3 \times \Z/5 = \Z/15$ (Building 0, Chapter 3, T6).
+\item[\lab{P2}] (Dies: ``every divisor is a size'', again.) $A_4$, size $12$: Sylow gives sub move systems of sizes $4$ and $3$ ($n_3 = 4$), but Chapter II.2, T5 stands: none of size $6$. Sylow reaches the prime powers only.
+\item[\lab{P3}] (Counts.) $S_4$: $n_2 = 3$, $n_3 = 4$. $A_5$: $n_2 = 5$, $n_3 = 10$, $n_5 = 6$. $S_5$: $n_2 = 15$, $n_3 = 10$, $n_5 = 6$.
+\end{lines}
+
+\subsection*{Remarks}
+
+\begin{lines}
+\item[\lab{R1}] (What the method did.) One line, T1, used five times with five different bags: the members (T2), lists with product $e$ (T4), subsets (T5), cosets (T6), and the $P$'s themselves (T7). The blur of Chapter II.5 supplies the bags; the prime supplies the count.
+\item[\lab{R2}] (One prime at a time.) The table of Chapter II.1 could not separate $S_3$ from $D_4$ by tests. Sylow counts are not tests (they are not laws), but they are kept by matching; they are the first numbers that sort non-$\mathsf{comm}$ rows.
+\item[\lab{R3}] (Old names.) $|G| = p^n$: a $p$-group; T1: the fixed-point congruence; T2: $p$-groups have non-trivial centre; T4: Cauchy's theorem (McKay's proof); T5--T7: the Sylow theorems (T5 by Wielandt's count); $G_P$: the normaliser.
+\item[\lab{R4}] (Machine check, \texttt{checks/b1-p2-ch5-6-check.py}.) T1 for $D_4$ moving colourings; T2 for $D_4$ and a non-$\mathsf{comm}$ system of size $27$; T4--T7 for $S_4$, $A_4$, $A_5$, $S_5$, $D_6$, $D_{10}$ (every element of prime-power order lies in a conjugate of $P$); the binomial count of T5 for $p = 2, 3, 5$; P1.
+\end{lines}
+
+\subsection*{Exercises}
+
+\begin{lines}
+\item[\lab{E1}] Show that every move system of size $35$ is a clock.
+\item[\lab{E2}] Find $n_2$ and $n_3$ for $D_6$ (the $12$ moves of a hexagon).
+\item[\lab{E3}] Show that a move system of size $p^n$ moving a bag of size not divisible by $p$ fixes some point.
+\item[\lab{E4}] Why can T5's count not be done with subsets of size $p^{a+1}$?
+\end{lines}
