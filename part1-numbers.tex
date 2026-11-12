@@ -10,7 +10,7 @@
 \section*{The map of the first floor}
 \phantomsection\addcontentsline{toc}{section}{\texorpdfstring{The map of the first floor}{The map of the first floor}}
 \begin{center}
-{\small Each arrow is one chapter. Each chapter builds, selects, or blurs.}
+{\small Each arrow is one chapter. Each chapter is one of the kinds of Chapter 0 (K1--K7), or a few in order: blur, build, select, arrow, count, table, rerun.}
 \end{center}
 
 % ---------------------------------------------------------------
@@ -126,7 +126,7 @@ Every arrow puts the old numbers \emph{inside} the new ones, except Chapters 3, 
 2. $\Z \to \Q$ & build, select, blur & $(a,b) \sim (ac,\,bc)$ & inverses for $\times$ & place-by-place sum \\
 3. $\Z \to \Z/n$ & blur & $n \sim 0$ & finite arithmetic & the order $\le$ \\
 4. $\Q \to \R$ & build, select, blur & fading $\sim 0$ & limits, $\sqrt{2}$ & every single term \\
-5. cells of $\R \to$ likenesses & blur, picture & which cell & nearness; $\varepsilon$--$\delta$ & chaining \\
+5. cells of $\R \to$ likenesses & blur & which cell & nearness; $\varepsilon$--$\delta$ & chaining \\
 6. $\R \to \R^n$ & build & nothing & room, dimension & (not carried: $\le$) \\
 7. $\R \to \R[x]$ & build, blur & the laws & a free letter; $\mathbb{C}$ & how it was written \\
 8. $\R \to \R/\Z$ & blur & $1 \sim 0$ & angles & $\times$ and $\le$ \\
@@ -139,26 +139,26 @@ Every arrow puts the old numbers \emph{inside} the new ones, except Chapters 3, 
 15. $k$-forms $\to$ $(k{+}1)$-forms & select & nothing chosen (blur of $d$, W4) & $d$, with $d \circ d = 0$ & constants \\
 16. closed forms $\to$ holes & build, blur & every $df$ & $H^1$: the holes & values at a point \\
 17. sequences $\to$ sizes & build, select, blur & constant factors & the scale $1, L(n), n, 2^n, \dots$ & subtraction \\
-18. $\Z$ under $\times \to$ division & one-way blur, blur & $-1 \sim 1$ & primes; $\mid$ kept by the $v_p$ & the sign, $+$, $\le$ \\
-19. $\Z \to \Z_p$ & ladder, build, select, blur & what comes near $0$ & digits to the left, one per bag & size, sign, $\le$ \\
+18. $\Z$ under $\times \to$ division & blur & $-1 \sim 1$ & primes; $\mid$ kept by the $v_p$ & the sign, $+$, $\le$ \\
+19. $\Z \to \Z_p$ & blur, build, select, blur & what comes near $0$ & digits to the left, one per bag & size, sign, $\le$ \\
 20. maps $\to$ limits of maps & build, select, blur & what comes near $0$ in $M$ & nothing new: $C[b,c]$ closed & continuity, $\int$ point by point \\
-21. germs $\to$ jets & ladder, select & flat to order $k$ & Taylor polynomial; $\R[x]/x^{k+1}$ & the next coefficient; the germ \\
-22. maps $\to$ the one with $f' = f$ & select & nothing chosen (blur of $E_c$, W4) & $\exp$, with its law from ``only one'' & the construction \\
-23. polynomials over $\mathbb{C}$ $\to$ roots & survives, dies & all but the first two terms at a point & nothing new: $\mathbb{C}$ is closed & $k$-th roots over $\R$ \\
+21. germs $\to$ jets & blur, select & flat to order $k$ & Taylor polynomial; $\R[x]/x^{k+1}$ & the next coefficient; the germ \\
+22. maps $\to$ the one with $f' = f$ & select, arrow & nothing chosen (blur of $E_c$, W4) & $\exp$, with its law from ``only one'' & the construction \\
+23. polynomials over $\mathbb{C}$ $\to$ roots & blur & $(x - a)^{k+1} \sim 0$ & nothing new: $\mathbb{C}$ is closed & $k$-th roots over $\R$ \\
 24. maps on $\R^n$ $\to$ highest and lowest points & blur & flat to order $2$ at a point & value, covector, quadratic part & the answer, when $Q$ is $0$ in some direction \\
 25. maps $\R^n \to \R^n$ $\to$ inverses nearby & select & nothing new (tangent blur of 13) & the inverse, with tangent $(DF)^{-1}$ & ``can be inverted'', on a whole bag \\
 26. maps on a stretch $\to$ maps up to a null set & blur & differ only on a null set & none; nothing continuous is glued & the value at a point; ``continuous'' \\
 27. $C[b,c]$ $\to$ $L^1$ & build, select, blur & difference fades in the mean & integrable maps; length, last & $\times$; the value at a point; ``continuous'' \\
 28. $C[b,c]$ $\to$ $L^2$ & build, select, blur & difference fades in the mean square & $\langle\,,\rangle$, right angles, nearest points & $\times$ \\
-29. maps on $\mathbb{T}$ $\to$ lists on $\Z$ & survey, arrow, ladder & nothing new (questions $\widehat f(n)$) & every arrow $\mathbb{T} \to S$; the average of rungs comes back & $\times$ (becomes convolution); one rung overshoots \\
+29. maps on $\mathbb{T}$ $\to$ lists on $\Z$ & table, arrow & nothing new (questions $\widehat f(n)$) & every arrow $\mathbb{T} \to S$; the average of rungs comes back & $\times$ (becomes convolution); one rung overshoots \\
 30. $L^2(\mathbb{T})$ $\to$ $\ell^2(\Z)$ & arrow & nothing (an inside) & a matching keeping energy; $\sum 1/n^2 = \pi^2/6$ & the value at a point; ``continuous'' \\
-31. maps $\mathbb{C} \to \mathbb{C}$ $\to$ holomorphic & blur, select & flat at $a$ (Chapter 11 over $\mathbb{C}$) & tangent commutes with $i$; angles kept & angles, where $f' = 0$ \\
-32. holomorphic maps $\to$ closed $f\,dz$ & arrow & nothing new (Chapter 16's blur) & Cauchy; the residue as a normal form & loop integrals, for $\bar z$; ``no hole'' \\
-33. holomorphic maps $\to$ germs & blur & nothing (the germ blur is equality) & power series; Liouville; highest point only on the edge & rigidity, without ``one piece'' \\
-34. germs at $a$ $\to$ their order & blur, build & rungs $\operatorname{ord}(f - g) \ge k$ & $\operatorname{ord}_a$, the twin of $v_p$; poles; residues add; zeros counted by turns & ``has an order'' ($\exp(1/z)$) \\
-35. $k^3$ without $0$ $\to$ its lines & blur & the size, $v \sim \lambda v$ & $\mathbb{P}^2$: a point known by its lines; no parallels & the value $F(v)$ \\
-36. polynomials $\to$ functions on a cubic & build, blur & $y^2 \sim x^3 + ax + b$ & the third point on a line; weights, the twin of $\operatorname{ord}$ & weight $1$; smoothness, when $\Delta = 0$ \\
-37. $\mathbb{C} \to \mathbb{C}/\Lambda$ & blur, select & two periods & the torus; $\wp$, pinned by one double pole; the cubic & $\times$; a single simple pole \\
+31. maps $\mathbb{C} \to \mathbb{C}$ $\to$ $\mathbb{C}$-straight & blur, select & flat at $a$ (Chapter 11 over $\mathbb{C}$) & tangent commutes with $i$; angles kept & angles, where $f' = 0$ \\
+32. $\mathbb{C}$-straight maps $\to$ closed $f\,dz$ & arrow & nothing new (Chapter 16's blur) & Stokes for one slope; Cauchy; one number round a hole & loop integrals, for $\bar z$; ``no hole'' \\
+33. $\mathbb{C}$-straight maps $\to$ germs & blur & $e \sim 0$ when $e = 0$ near $a$ & power series; Liouville; highest point only on the edge & rigidity, without ``one piece'' \\
+34. germs at $a$ $\to$ their order & blur, build & $(z - a)^k \sim 0$ & $\operatorname{ord}_a$, the twin of $v_p$; poles; residues add; zeros counted by turns & ``has an order'' ($\exp(1/z)$) \\
+35. $k^3$ without $0$ $\to$ its lines & blur & the size, $v \sim \lambda v$ & $\mathbb{P}^2$: a point known by its planes; no parallels & the value $F(v)$ \\
+36. polynomials $\to$ functions on a cubic & blur & $y^2 \sim x^3 + ax + b$ & the third point on a line; weights, the twin of $\operatorname{ord}$ & weight $1$; smoothness, when $\Delta = 0$ \\
+37. $\mathbb{C} \to \mathbb{C}/\Lambda$ & blur, select, build & two periods & the torus; $\wp$, pinned by one double pole; the cubic & $\times$; a single simple pole \\
 \end{longtable}
 }
 
@@ -166,7 +166,9 @@ Every arrow puts the old numbers \emph{inside} the new ones, except Chapters 3, 
 
 \textbf{How to read a chapter.} Chapter 0 gives the rules: what may be built, what a blur is, and what each line of a chapter claims.
 
-\textbf{The fork.} Up to $\R$ the path is forced: each chapter closes up something missing. Chapter 5 adds no numbers: it finds nearness on $\R$, and every later chapter on limits cites it. After $\R$ the map branches: Chapter 6 builds lists, Chapter 7 builds words, Chapter 8 only blurs. Chapter 9 starts from $\R^2$ and uses the product of Chapter 7; it reaches angles a second way. Chapter 10 builds all maps and shows the two ways meet; Chapter 11 blurs them down to their tangents, and Chapter 12 finds area as the one rule with four properties. Chapters 13 to 16 carry this to several variables and forms, and end by measuring holes. Chapter 17 sorts sequences by size. Chapters 18 and 19 return to $\Z$: divisibility is a one-way blur, and the ladder mod $p^k$ is a nearness whose rungs chain, closing $\Z$ up to $\Z_p$. Chapter 20 puts two nearnesses on maps and finds what survives a limit; Chapter 21 is the ladder of Chapter 11 at every order, the twin of Chapter 19. Chapter 22 selects $\exp$ by what it must do, and so pays what Chapter 10 owed. Chapter 23 goes back to Chapter 7 and shows that gluing $x^2 \sim -1$ was enough: every polynomial has a root in $\mathbb{C}$. Chapter 24 takes the ladder of Chapter 21 to rung $2$ on $\R^n$ and reads highest and lowest points off it. Chapter 25 asks the tangent of Chapter 13 whether a map can be inverted nearby.
+\textbf{The fork.} Up to $\R$ the path is forced: each chapter closes up something missing. Chapter 5 adds no numbers: it finds nearness on $\R$, and every later chapter on limits cites it. After $\R$ the map branches: Chapter 6 builds lists, Chapter 7 builds words, Chapter 8 only blurs. Chapter 9 starts from $\R^2$ and uses the product of Chapter 7; it reaches angles a second way. Chapter 10 builds all maps and shows the two ways meet; Chapter 11 blurs them down to their tangents, and Chapter 12 finds area as the one rule with four properties. Chapters 13 to 16 carry this to several variables and forms, and end by measuring holes. Chapter 17 sorts sequences by size. Chapters 18 and 19 return to $\Z$: divisibility is a one-way blur, and the ladder mod $p^k$ is a nearness whose rungs chain, closing $\Z$ up to $\Z_p$. Chapter 20 puts two nearnesses on maps and finds what survives a limit; Chapter 21 is the ladder of Chapter 11 at every order, the twin of Chapter 19. Chapter 22 selects $\exp$ by what it must do, and so pays what Chapter 10 owed. Chapter 23 goes back to Chapter 7 and shows that gluing $x^2 \sim -1$ was enough: every polynomial has a root in $\mathbb{C}$. Chapter 24 takes the ladder of Chapter 21 to rung $2$ on $\R^n$ and reads highest and lowest points off it. Chapter 25 asks the tangent of Chapter 13 whether a map can be inverted nearby. Chapters 26 to 30 close up the continuous maps in the mean and read them by waves; Chapters 31 to 34 run the tangent over $\mathbb{C}$; Chapters 35 to 37 put a cubic in the plane and find it again as a torus.
+
+\textbf{Five stretches.} The numbers are only for citing; by subject the first floor falls into five stretches. \emph{Numbers}: Chapters 1--9, 17--19. \emph{Maps}: 10--16, 20--25. \emph{In the mean}: 26--30. \emph{Over $\mathbb{C}$}: 31--34. \emph{Curves}: 35--37.
 
 \textbf{Part II.} Its Chapter 1 goes one level up: its things are the systems $\N$, $\Z$, $\Z/n$, $\Q$, $\R$, $\R^n$ themselves, and its tests are the laws they pass. There the words \emph{ring}, \emph{field} and \emph{complete} appear, and Part II opens with its own map, of the second floor.
 
@@ -590,7 +592,7 @@ So $\sim$ is exactly the blur at which the question ``is $a + c$ positive in the
 \section*{Chapter 5. Nearness}
 \phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter 5. Nearness \quad cells of $\R \to$ likenesses}{Chapter 5. Nearness}}
 \begin{center}
-{\normalsize cells of $\R \to$ likenesses \quad$\cdot$\quad from: Chapter 4 \quad$\cdot$\quad blur, picture}\\[4pt]
+{\normalsize cells of $\R \to$ likenesses \quad$\cdot$\quad from: Chapter 4 \quad$\cdot$\quad blur}\\[4pt]
 {\small Cut the line into cells. Ask the cells to respect $+$. They cannot: what is left is nearness, a sameness that does not chain.}
 \end{center}
 
@@ -973,7 +975,7 @@ No limit is taken. The product rule $(pq)' = p'q + pq'$ is the multiplication of
 \section*{Chapter 8. The circle}
 \phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter 8. The circle \quad $\R \to \R/\Z$}{Chapter 8. The circle}}
 \begin{center}
-{\normalsize $\R \to \R/\Z$ \quad$\cdot$\quad from: Chapter 4 \quad$\cdot$\quad blur only}\\[4pt]
+{\normalsize $\R \to \R/\Z$ \quad$\cdot$\quad from: Chapter 4 \quad$\cdot$\quad blur}\\[4pt]
 {\small Forget how many whole turns were made. What is left is an angle.}
 \end{center}
 
@@ -1992,7 +1994,7 @@ for every real $0 < s < 1$, with $n^s := \exp(s\, L(n))$.
 \section*{Chapter 18. Divisibility and primes}
 \phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter 18. Divisibility and primes \quad $\Z$ under $\times \to$ sizes by division}{Chapter 18. Divisibility and primes}}
 \begin{center}
-{\normalsize $\Z$ under $\times \to$ sizes by division \quad$\cdot$\quad from: Chapters 1 and 3 \quad$\cdot$\quad one-way blur, blur}\\[4pt]
+{\normalsize $\Z$ under $\times \to$ sizes by division \quad$\cdot$\quad from: Chapters 1 and 3 \quad$\cdot$\quad blur}\\[4pt]
 {\small Order the integers by ``goes into''. The order runs both ways only between $a$ and $-a$: forget the sign, and what is left is ordered by primes.}
 \end{center}
 
@@ -2117,7 +2119,7 @@ So, by G3, the bags of this chapter list every blur of $\Z$ respecting $+$, and 
 \section*{Chapter 19. Mod $p^k$ and the $p$-adic numbers}
 \phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter 19. Mod $p^k$ and the $p$-adic numbers \quad $\Z \to \Z_p$}{Chapter 19. Mod p to the k and the p-adic numbers}}
 \begin{center}
-{\normalsize $\Z \to \Z_p$ \quad$\cdot$\quad from: Chapters 3, 4, 5 and 18 \quad$\cdot$\quad blur ladder, build, select, blur}\\[4pt]
+{\normalsize $\Z \to \Z_p$ \quad$\cdot$\quad from: Chapters 3, 4, 5 and 18 \quad$\cdot$\quad blur, build, select, blur}\\[4pt]
 {\small The twin of Chapters 4 and 5, with one change: here the rungs chain. Close up $\Z$ under them and every new number has exactly one way to be written, with infinitely many digits to the left.}
 \end{center}
 
@@ -2349,7 +2351,7 @@ $x \times x = 3$ has none: the squares in $\Z/7$ are $0, 1, 2, 4$, and $\pi_1$ r
 \section*{Chapter 21. Taylor}
 \phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter 21. Taylor \quad germs $\to$ jets of every order}{Chapter 21. Taylor}}
 \begin{center}
-{\normalsize germs $\to$ jets of every order \quad$\cdot$\quad from: Chapters 7, 10, 11, 12, 20 \quad$\cdot$\quad blur ladder, select}\\[4pt]
+{\normalsize germs $\to$ jets of every order \quad$\cdot$\quad from: Chapters 7, 10, 11, 12, 20 \quad$\cdot$\quad blur, select}\\[4pt]
 {\small Run Chapter 11 at every order. Each rung is a true blur, and the rungs make the same ladder as $\Z/p^k$, with $x - a$ in place of $p$. But the ladder never reaches the germ.}
 \end{center}
 
@@ -2581,7 +2583,7 @@ This is the rung of Chapter 21 for polynomials, and it is exact: no limit is tak
 \item[\lab{P2}] (Re-centring is exact.) $p(a + h)$ is a polynomial in $h$ of the same degree as $p$, with the same leading coefficient. So if $p$ has degree $\ge 1$, the $k$ of D2 exists. \ (Substitute $a + h$ for $x$ in the normal form and multiply out: Chapter 7, T1.)
 \item[\lab{P3}] ($k$-th roots.) Every $u \neq 0$ in $\mathbb{C}$ has exactly $k$ members $z$ with $z^k = u$. \\
 (Write $u = r\,w(t)$ with $r = |u| > 0$, by G3. There is exactly one $s > 0$ with $s^k = r$: intervals survive $x \mapsto x^k$, and it rises. The circle part has exactly $k$ roots $w(y)$, $k \cdot y = t$ in $\mathbb{T}$.)
-\item[\lab{P4}] (Dies over $\R$.) P3 is false with $\R$ in place of $\mathbb{C}$: $-1$ has no square root there, since squares are not negative (from Chapter 2, G7). Witness for the whole chapter: over $\R$, $x^2 + 1$ has a lowest point at $0$ with value $1$, and no root.
+\item[\lab{P4}] (Fails over $\R$.) P3 is false with $\R$ in place of $\mathbb{C}$: $-1$ has no square root there, since squares are not negative (from Chapter 2, G7). Witness for the whole chapter: over $\R$, $x^2 + 1$ has a lowest point at $0$ with value $1$, and no root.
 \item[\lab{P5}] (Far away is large.) Let $p = a_0 + a_1 x + \dots + a_n x^n$ with $n \ge 1$, $a_n \neq 0$, and put $R := \max\bigl(1,\; 2(|a_0| + \dots + |a_{n-1}|)/|a_n|\bigr)$. Then
 \[
 |p(z)| \;\ge\; \tfrac12\,|a_n|\,|z|^n \qquad\text{whenever } |z| \ge R .
@@ -3827,7 +3829,7 @@ Two lines of work. The first finds a third point from two (T1); nothing is built
 \item[\lab{T1}] (The third point.) If a line meets $C$ at two points of $\mathbb{P}^2(k)$ (one point counted twice, for a tangent), then it meets $C$ at a third point of $\mathbb{P}^2(k)$, and the meeting numbers add to exactly $3$. \ ($f$ has two roots in $\mathbb{P}^1(k)$; split them off (G2, T4); a factor of degree $1$ over $k$ is left, and its root is in $k$.) \\
 For $(x_1, y_1)$, $(x_2, y_2)$ with $x_1 \ne x_2$: \ $m = \dfrac{y_2 - y_1}{x_2 - x_1}$, \ $x_3 = m^2 - x_1 - x_2$, \ $y_3 = y_1 + m(x_3 - x_1)$. \ (Put $y = y_1 + m(x - x_1)$ in $y^2 = g(x)$: a cubic in $x$ with $-x^3 + m^2 x^2 + \dots$, whose three roots add to $m^2$.) For a tangent, take $x_2 = x_1$ and $m$ from P4.
 \item[\lab{T2}] (Smooth exactly when $\Delta \ne 0$.) Every point of $C$, over $k$ and over every larger $k$ of G1, is smooth $\iff$ $g$ has no repeated root $\iff$ $\Delta \ne 0$. \ (At an affine point, $\partial_y F = 2y$ and $\partial_x F = -g'(x)$; both are $0$ only where $y = 0 = g(x) = g'(x)$. A repeated root of $g$ is a root of $g'$ too, and eliminating $x$ from $g = g' = 0$ leaves $\Delta = 0$.)
-\item[\lab{T3}] (Dies when $\Delta = 0$.) $y^2 = x^3$: at $(0, 0)$ every line meets $C$ at least twice; through it and any other point of $C$ the third point is $(0, 0)$ again. $y^2 = x^3 + x^2$: two tangents at $(0, 0)$. T1 still builds third points, but $(0,0)$ swallows them.
+\item[\lab{T3}] (What fails when $\Delta = 0$.) $y^2 = x^3$: at $(0, 0)$ every line meets $C$ at least twice; through it and any other point of $C$ the third point is $(0, 0)$ again. $y^2 = x^3 + x^2$: two tangents at $(0, 0)$. T1 still builds third points, but $(0,0)$ swallows them.
 \end{lines}
 
 \subsection*{The blur}
@@ -3845,7 +3847,7 @@ On $k[x, y]$, polynomials in two letters. \ $O$: $+$, $\times$.
 \item[\lab{P7}] (The mirror, and the size.) $y \mapsto -y$ respects the gluing; write $\bar f$ for the image of the bag $f$. Then $N(f) := f \bar f = p^2 - q^2 g$ lies in $k[x]$.
 \item[\lab{P8}] (Weight.) $w(p + qy) := \max(2 \deg p,\; 2 \deg q + 3)$; $w(0) := -\infty$. \ The two candidates are even and odd, so they never tie, and $\deg N(f) = w(f)$.
 \item[\lab{P9}] (Weights add.) $w(fg) = w(f) + w(g)$. \ ($\deg N(fg) = \deg N(f) + \deg N(g)$, since $N(fg) = N(f) N(g)$ and G2, T2.) The twin of $\operatorname{ord}$ (G4) with the sign turned: $w(f)$ is the order of the pole of $f$ at $O$.
-\item[\lab{P10}] (Dies: weight $1$.) The weights that occur are $0, 2, 3, 4, 5, 6, \dots$: \ $1, x, y, x^2, xy, x^3, \dots$. \ Weight $1$ never occurs: \emph{no function on $C$ has a single simple pole at $O$ and no other}. And $w(f) = 0$ only for the non-zero constants, so these are the only $f$ with an inverse in $k[C]$.
+\item[\lab{P10}] (Weight $1$ never occurs.) The weights that occur are $0, 2, 3, 4, 5, 6, \dots$: \ $1, x, y, x^2, xy, x^3, \dots$. \ Weight $1$ never occurs: \emph{no function on $C$ has a single simple pole at $O$ and no other}. And $w(f) = 0$ only for the non-zero constants, so these are the only $f$ with an inverse in $k[C]$.
 \item[\lab{P11}] (Weight counts meetings, for lines.) $y - mx - c$ has weight $3$ and meets $C$ at $3$ affine points, counted (P2, P1: never at $O$). $x - c$ has weight $2$ and meets $C$ at $2$ affine points and once at $O$.
 \end{lines}
 
@@ -3864,7 +3866,7 @@ On $k[x, y]$, polynomials in two letters. \ $O$: $+$, $\times$.
 \subsection*{Remarks}
 
 \begin{lines}
-\item[\lab{R1}] (What the method did.) T1 is a root split off: two points give a third. The functions on $C$ are a blur of polynomials, and their weight is a size of the kind Chapters 18 and 34 met. P10 is the one ``Dies'' line the group law needs.
+\item[\lab{R1}] (What the method did.) T1 is a root split off: two points give a third. The functions on $C$ are a blur of polynomials, and their weight is a size of the kind Chapters 18 and 34 met. P10 is the one ``never occurs'' line the law of adding points needs.
 \item[\lab{R2}] (Where the road goes.) Building 1 glues the points of $C$ by lines ($P + Q + R \sim 3O$ when $P, Q, R$ lie on one line) and reads off a move system. Associativity comes free from the blur; ``at most one point per bag'' is P10. Chapter 37 finds the same curve over $\mathbb{C}$ as a torus.
 \item[\lab{R3}] (Reported.) Over $\mathbb{C}$, every $f \ne 0$ in $k[C]$ has exactly $w(f)$ zeros on the affine part of $C$, counted by order (P11 is the case of lines). The ``order'' at a point of $C$ is Chapter 34's run on the curve; proof deferred.
 \item[\lab{R4}] (Old names.) $C$: an elliptic curve in Weierstrass form (when $\Delta \ne 0$); $O$: the point at infinity, a flex. D2: intersection multiplicity; P2: B\'ezout for a line and a cubic. T1: the chord-and-tangent construction. $\Delta$: the discriminant ($-16\Delta$ in other books). $k[C]$: the coordinate ring. $N$: the norm to $k[x]$. P10: $\ell(nO) = n$ for $n \ge 1$ (a case of Riemann--Roch). T3: cusp, node.
@@ -3928,7 +3930,7 @@ On $\mathbb{C}$. Fix $\omega_1, \omega_2$ in $\mathbb{C}$, not on one line throu
 \begin{lines}
 \item[\lab{T1}] (At most one: no pole means constant.) A torus map with no pole is constant. \ (It is bounded on the closed parallelogram (Chapter 13, T7), so on all of $\mathbb{C}$ by P3; Chapter 33, T5.)
 \item[\lab{T2}] (The numbers $\operatorname{res}$ on the torus add to $0$.) For a torus map $f$, the numbers $\operatorname{res}_a f$ at the poles in one parallelogram add to $0$. \\ (Move the parallelogram $Q$ so that no pole lies on its edge; a disc $D$ holding $Q$ holds finitely many poles, since each stands alone (Chapter 34, N1) and closed boxes survive. Opposite edges of $Q$ cancel, by P3, so $\int_{\partial Q} f\,dz = 0$. Now compute it as in Chapter 34, T3, with $\partial Q$ for the circle: take away the negative parts at the poles in $D$; the rest is in $H(D)$ (Chapter 34, T2) and gives $0$ (Chapter 32, T2); terms $(z - a)^{-n}$, $n \ge 2$, give $0$; the terms $c_{-1}/(z - a)$ give $2\pi i\,c_{-1}$ for $a$ inside $Q$ and $0$ outside (P4). So $0 = 2\pi i \sum_{\text{inside}} \operatorname{res}_a f$.)
-\item[\lab{T3}] (Dies: one simple pole.) No torus map has exactly one pole per bag, of order $1$. \ (Its $\operatorname{res}$ would be the only one, so $0$ by T2; then there is no pole, and T1.) \\
+\item[\lab{T3}] (No single simple pole.) No torus map has exactly one pole per bag, of order $1$. \ (Its $\operatorname{res}$ would be the only one, so $0$ by T2; then there is no pole, and T1.) \\
 The twin of Chapter 36, P10, where no function had weight $1$.
 \item[\lab{T4}] (Counting zeros, and where they sit.) For a torus map $f \ne$ constant, in one parallelogram: the zeros and the poles are equal in number, counted by order; and the sum of the zeros minus the sum of the poles lies in $\Lambda$. \ (T2 for the torus map $f'/f$, whose $\operatorname{res}$ at each point is the order there, by Chapter 34, T4. For the sum: integrate $z\, f'/f$ on the edge; opposite edges no longer cancel but differ by $\omega$ times $\int f'/f$ along one edge, which is $2\pi i$ times a whole number of turns (Chapter 16, T6).)
 \item[\lab{T5}] (Select, at most one: the map with one double pole.) Tests: a torus map whose only poles are at the points of $\Lambda$, with list $z^{-2} + 0 + c_1 z + c_2 z^2 + \cdots$ at $0$. There is at most one. \ (Two such differ by a torus map with at most a simple pole per bag: by T3 no pole; by T1 a constant; its value at $0$ is $0$.)
@@ -3943,7 +3945,7 @@ So the map is pinned by its pole (T5) and then found (T6), as $\exp$ was in Chap
 
 \begin{lines}
 \item[\lab{R1}] (What the method did.) Two blurs agree (P1). The rest is three lines used again and again: no pole means constant (T1); the numbers $\operatorname{res}$ add to $0$ (T2); so no single simple pole (T3). T5 and T7 are ``at most one'' turned into an existence-free identity. The only Build is T6, a sum that comes near itself.
-\item[\lab{R2}] (Twins.) Chapter 36 found the same Dies line by weights: no polynomial function with one simple pole at $O$. Here it is found by residues. T8 says the two are about one object: the arrow sends the pole at $0$ to $O$, the double pole of $\wp$ to the weight $2$ of $x$, the triple pole of $\wp'$ to the weight $3$ of $y$.
+\item[\lab{R2}] (Twins.) Chapter 36 found the same line by weights: no polynomial function with one simple pole at $O$. Here it is found by the numbers $\operatorname{res}$. T8 says the two are about one object: the arrow sends the pole at $0$ to $O$, the double pole of $\wp$ to the weight $2$ of $x$, the triple pole of $\wp'$ to the weight $3$ of $y$.
 \item[\lab{R3}] (Where the road goes.) The torus has $+$ (P1). Building 1 shows that T8 carries it to the chord law of the cubic: $z_1 + z_2 + z_3 \in \Lambda$ exactly when the three images lie on one line (T4 on $a\wp + b\wp' + c$, which has one triple pole).
 \item[\lab{R4}] (Reported, not proved here.) Every smooth cubic over $\mathbb{C}$ is reached this way, by some $\Lambda$ (the uniformisation of elliptic curves; classical). The book uses it nowhere.
 \item[\lab{R5}] (Old names.) $\Lambda$: a lattice; torus map: elliptic function; P4: winding number of a parallelogram; T1: Liouville's theorem for elliptic functions; T2--T4: Liouville's second and third theorems, Abel's theorem for the torus; T5, T6: the Weierstrass $\wp$-function; $g_2$, $g_3$: Eisenstein series $60 G_4$, $140 G_6$; T7: the differential equation of $\wp$; T8: the Weierstrass parametrisation of an elliptic curve.

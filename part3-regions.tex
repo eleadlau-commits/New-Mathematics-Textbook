@@ -76,7 +76,7 @@ Motion that repeats & M: repeating one move forever & the ladder of iterates; si
 \section*{Chapter III.1. Loops up to deformation}
 \phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter III.1. Loops up to deformation \quad loops in a space $\to$ their bags}{Chapter III.1. Loops up to deformation}}
 \begin{center}
-{\normalsize loops in a space $\to$ their bags \quad$\cdot$\quad from: Chapters 5, 8, 13, 16, 23, 32 \quad$\cdot$\quad blur, build}\\[4pt]
+{\normalsize loops in a space $\to$ their bags \quad$\cdot$\quad from: Chapters 5, 8, 13, 16, 23, 32 \quad$\cdot$\quad blur}\\[4pt]
 {\small Glue two loops when one can be bent into the other. On the circle the bags are the whole numbers, counted by turns; in the disc there is one bag. From that one difference: every map of the disc into itself fixes a point.}
 \end{center}
 
@@ -100,25 +100,31 @@ The first chapter of the region of shapes and holes. Chapter 16 counted holes by
 
 \subsection*{The blur}
 
-On the loops at $x_0$. \ $O$: joining, running backwards.
+On the loops at $x_0$.
 
 \begin{lines}
-\item[\lab{B1}] (From below.) $\gamma \sim \delta$ when some deformation bends $\gamma$ into $\delta$. Write $\pi(X)$ for the bags.
-\item[\lab{B2}] (From above, for the circle $X = S$.) Question: the number of turns (T1 below).
+\item[\lab{B1}] (From below, L5.) Gluings: $H(\cdot, 0) \sim H(\cdot, 1)$ for each deformation $H$. \ Respects: joining, running backwards.
+\item[\lab{B2}] (From above, L6, for the circle $X = S$.) Question: the number of turns (T2 below). \ Respects: joining.
 \end{lines}
 
 \subsection*{Propositions}
 
 \begin{lines}
 \item[\lab{P1}] (Survives: joining and running backwards.) Deform each half separately. On the bags, joining is associative, the constant loop does nothing, and $\gamma \cdot \bar\gamma$ is glued to the constant loop (pull back along $\gamma$). These are equations on bags; the speeds inside a loop die.
-\item[\lab{P2}] (Dies: everything in a disc.) In a disc, or any $X$ holding each straight segment between its points, $H(t, s) := (1 - s)\gamma(t) + s\,x_0$ bends every loop to the constant: one bag.
+\item[\lab{P2}] (In a disc, one bag.) In a disc, or any $X$ holding each straight segment between its points, $H(t, s) := (1 - s)\gamma(t) + s\,x_0$ bends every loop to the constant: one bag.
 \item[\lab{P3}] (A space bent onto a smaller one.) $\R^2 \setminus \{0\}$ is bent onto the circle by $H(z, s) := (1 - s)z + s\,z / |z|$: its loops and the circle's loops have the same bags.
+\end{lines}
+
+\subsection*{Notation}
+
+\begin{lines}
+\item[\lab{N1}] $\pi(X)$: the bags, with joining carried over (P1, Z6).
 \end{lines}
 
 \subsection*{Theorems}
 
 \begin{lines}
-\item[\lab{T1}] (Build: lifting.) Every path $\gamma$ in the circle $S = \R/\Z$ and every $r$ over $\gamma(0)$ give exactly one continuous $\tilde\gamma : [0, 1] \to \R$ with $\tilde\gamma(0) = r$ over $\gamma$. Deformations lift the same way. \ (By G2 there is one rung $k$ such that $\gamma$ moves less than $\tfrac14$ on each piece of length $10^{-k}$; on such a piece the bag of $\R$ over each point that lies near the last point is unique; lift piece by piece. At most one: two lifts differ by a whole number at each $t$, continuously, so by a constant (Chapter 5, T1).)
+\item[\lab{T1}] (Lifting.) Every path $\gamma$ in the circle $S = \R/\Z$ and every $r$ over $\gamma(0)$ give exactly one continuous $\tilde\gamma : [0, 1] \to \R$ with $\tilde\gamma(0) = r$ over $\gamma$. Deformations lift the same way. \ (By G2 there is one rung $k$ such that $\gamma$ moves less than $\tfrac14$ on each piece of length $10^{-k}$; on such a piece the bag of $\R$ over each point that lies near the last point is unique; lift piece by piece. At most one: two lifts differ by a whole number at each $t$, continuously, so by a constant (Chapter 5, T1).)
 \item[\lab{T2}] (Appears on the circle.) Define the \emph{turns} of a loop as $\tilde\gamma(1) - \tilde\gamma(0)$, a whole number. Then $\gamma \sim \delta$ $\iff$ same turns; every whole number occurs ($t \mapsto nt$); joining adds turns. So $\pi(S)$, with joining, matches $\Z$ with $+$. \ ($\Rightarrow$: lift the deformation; the end point moves continuously among whole numbers. $\Leftarrow$: lifts with equal ends are bent into each other in $\R$ by straight segments, P2, and pushed down.) It agrees with Chapter 16, T6 wherever both apply.
 \item[\lab{T3}] (No folding the disc onto its edge.) There is no continuous map from the closed disc $D$ onto its edge circle $S$ that fixes every point of $S$. \ (If $r$ were one, the edge loop, with $1$ turn, would be bent through $D$ to the constant (P2) and the bending pushed by $r$ into $S$: $1 = 0$ turns by T2.)
 \item[\lab{T4}] (At least one: a fixed point.) Every continuous $f : D \to D$ has a point with $f(x) = x$. \ (If not, send $x$ along the ray from $f(x)$ through $x$ to the edge: a continuous map $D \to S$ fixing $S$, which T3 forbids.) Existence by a ``Dies'' line: the folding would make two bags into one.
@@ -150,8 +156,8 @@ On the loops at $x_0$. \ $O$: joining, running backwards.
 \section*{Chapter III.2. Mass one}
 \phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter III.2. Mass one \quad integrable maps on a stretch of length $1$ $\to$ chance}{Chapter III.2. Mass one}}
 \begin{center}
-{\normalsize integrable maps on a stretch of length $1$ $\to$ chance \quad$\cdot$\quad from: Chapters 4, 21, 26, 27, 28, 29 \quad$\cdot$\quad select, blur}\\[4pt]
-{\small Chance needs nothing new: the stretch $[0, 1]$ with its length already holds infinitely many fair coins, its binary digits. Averages of many coins are glued to $\tfrac12$ in the mean square, and outside a null set they come near $\tfrac12$ one by one.}
+{\normalsize integrable maps on a stretch of length $1$ $\to$ chance \quad$\cdot$\quad from: Chapters 4, 21, 26, 27, 28, 29 \quad$\cdot$\quad select}\\[4pt]
+{\small Chance needs nothing new: the stretch $[0, 1]$ with its length already holds infinitely many fair coins, its binary digits. Averages of many coins come near $\tfrac12$ in the mean square, and outside a null set they come near $\tfrac12$ one by one.}
 \end{center}
 
 The first chapter of the region of chance. Nothing is built: ``probability'' is the integral of Chapter 27 on a stretch of length $1$, read with new words.
@@ -178,13 +184,13 @@ The first chapter of the region of chance. Nothing is built: ``probability'' is 
 \item[\lab{P1}] (The digits are fair independent coins.) $P(d_1 = e_1, \dots, d_n = e_n) = 2^{-n}$: the set is one stretch of length $2^{-n}$. So $E d_k = \tfrac12$, $V d_k = \tfrac14$, and the digits are independent.
 \item[\lab{P2}] (Means of independent ones multiply; spreads add.) For independent $X$, $Y$ in $L^2$: $E(XY) = EX \cdot EY$, so $X - EX$ and $Y - EY$ are at right angles, and $V(X + Y) = VX + VY$ (G2). For the digits: $V S_n = n/4$, and $V(S_n/n) = 1/(4n)$.
 \item[\lab{P3}] (Chebyshev.) $P(|X - EX| \ge a) \le VX / a^2$. \ (G1 on $(X - EX)^2$.)
-\item[\lab{P4}] (Dies: ``every outcome averages $\tfrac12$''.) $\omega = 0$ has all digits $0$; $\omega = \tfrac13 = 0.0101\ldots$ averages $\tfrac12$ but $\omega = \tfrac17 = 0.001001\ldots$ averages $\tfrac13$.
+\item[\lab{P4}] (Fails: ``every outcome averages $\tfrac12$''.) $\omega = 0$ has all digits $0$; $\omega = \tfrac13 = 0.0101\ldots$ averages $\tfrac12$ but $\omega = \tfrac17 = 0.001001\ldots$ averages $\tfrac13$.
 \end{lines}
 
 \subsection*{Theorems}
 
 \begin{lines}
-\item[\lab{T1}] (Averages are glued to $\tfrac12$ in the mean square.) $\int (S_n/n - \tfrac12)^2 = 1/(4n)$, which comes near $0$: in the nearness of Chapter 28, $S_n/n$ comes near the constant $\tfrac12$. And $P(|S_n/n - \tfrac12| \ge a) \le 1/(4na^2)$ (P2, P3).
+\item[\lab{T1}] (Averages come near $\tfrac12$ in the mean square.) $\int (S_n/n - \tfrac12)^2 = 1/(4n)$, which comes near $0$: in the nearness of Chapter 28, $S_n/n$ comes near the constant $\tfrac12$. And $P(|S_n/n - \tfrac12| \ge a) \le 1/(4na^2)$ (P2, P3).
 \item[\lab{T2}] (Outside a null set, one by one.) The set of $\omega$ whose digit averages $S_n(\omega)/n$ do not come near $\tfrac12$ is null. \ ($\int (S_n - n/2)^4 = n/16 + 3n(n-1)/16 \le 3n^2/16$, by expanding and P1: only terms with each digit to an even power survive. So the set where $|S_n/n - \tfrac12| \ge n^{-1/8}$ has length at most $\tfrac{3}{16} n^{-3/2}$ (G1), and these lengths have a finite sum. The set of $\omega$ lying in infinitely many of them is inside the union from any $N$ on, of total length as small as one likes: null.)
 \item[\lab{T3}] (The bell, through waves.) The wave average $E \exp\big(i t\,(S_n - n/2)/\sqrt{n/4}\big) = \cos(t/\sqrt n)^n$ comes near $e^{-t^2/2}$ for each $t$ (P1, independence; Chapter 21 for $\log\cos u = -u^2/2 + \dots$). Read through Chapter 29: the counts of $S_n$, rescaled, come near the bell $e^{-x^2/2}/\sqrt{2\pi}$ (the passage from waves to chances is classical; reported).
 \end{lines}
@@ -214,7 +220,7 @@ The first chapter of the region of chance. Nothing is built: ``probability'' is 
 \section*{Chapter III.3. Flows}
 \phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter III.3. Flows \quad equations $x' = F(x)$ $\to$ their one answer}{Chapter III.3. Flows}}
 \begin{center}
-{\normalsize equations $x' = F(x)$ $\to$ their one answer \quad$\cdot$\quad from: Chapters 11, 12, 20, 21, 22, II.4 \quad$\cdot$\quad select, ladder}\\[4pt]
+{\normalsize equations $x' = F(x)$ $\to$ their one answer \quad$\cdot$\quad from: Chapters 11, 12, 20, 21, 22, II.4 \quad$\cdot$\quad select}\\[4pt]
 {\small Ask for the map whose slope at each moment is $F$ of where it is. Written with an integral, the answer is the one fixed point of a contraction; the ladder of guesses closes. The times then act on the space by moves.}
 \end{center}
 
@@ -241,7 +247,7 @@ The first chapter of the region of equations of change. Chapter 22 selected $\ex
 \begin{lines}
 \item[\lab{T1}] (Select: exactly one answer, near $0$.) For $h < 1/K$, $P$ is a contraction on $C([0, h], \R^n)$: $\max |Px - Py| \le hK \max |x - y|$ (G3, D1). By G1 and G2 there is exactly one answer on $[0, h]$, and the guesses $x_0, Px_0, P^2x_0, \dots$ come near it.
 \item[\lab{T2}] (All times.) $h$ does not depend on $x_0$, so restart at $x(h)$, and at $-h$ backwards: exactly one answer on all of $\R$. Write $\phi_t(x_0) := x(t)$.
-\item[\lab{T3}] (Survives: the times act by moves.) $\phi_0$ does nothing and $\phi_{s+t} = \phi_s \circ \phi_t$ (both sides answer the same equation through the same point: T2, at most one). So each $\phi_t$ is one-to-one and onto, with inverse $\phi_{-t}$, and $(\R, +)$ acts on $\R^n$.
+\item[\lab{T3}] (The times act by moves.) $\phi_0$ does nothing and $\phi_{s+t} = \phi_s \circ \phi_t$ (both sides answer the same equation through the same point: T2, at most one). So each $\phi_t$ is one-to-one and onto, with inverse $\phi_{-t}$, and $(\R, +)$ acts on $\R^n$.
 \item[\lab{T4}] (Linear $F$.) For $F(x) = Ax$, the guesses are the partial sums of $\sum_k (tA)^k x_0 / k!$, and $\phi_t = \exp(tA)$. For $n = 1$, $A = 1$: Chapter 22's $\exp$, with its Taylor polynomials (Chapter 21) as the rungs of the ladder.
 \item[\lab{T5}] (On a line, no return.) For $n = 1$ an answer is either constant (at a zero of $F$) or always rising or always falling: it can never come back to a point. \ (If $x(t_1) = x(t_2)$ with $t_1 < t_2$, then by T3 the answer repeats with period $t_2 - t_1$; a rising or falling stretch cannot return; if $x'(t) = 0$ somewhere, $F(x(t)) = 0$ and the answer is the constant, by T2.)
 \end{lines}
@@ -249,8 +255,8 @@ The first chapter of the region of equations of change. Chapter 22 selected $\ex
 \subsection*{Propositions}
 
 \begin{lines}
-\item[\lab{P1}] (Dies without D1: ``at most one''.) $x' = 2\sqrt{|x|}$, $x(0) = 0$: both $x = 0$ and $x = t^2$ (for $t \ge 0$) are answers. $\sqrt{|x|}$ stretches without bound near $0$.
-\item[\lab{P2}] (Dies without D1 for all $x$: ``all times''.) $x' = x^2$, $x(0) = 1$: the answer $1/(1 - t)$ leaves every bound before $t = 1$. D1 holds on each bounded set, so T1 still gives an answer near $0$.
+\item[\lab{P1}] (Fails without D1: ``at most one''.) $x' = 2\sqrt{|x|}$, $x(0) = 0$: both $x = 0$ and $x = t^2$ (for $t \ge 0$) are answers. $\sqrt{|x|}$ stretches without bound near $0$.
+\item[\lab{P2}] (Fails without D1 for all $x$: ``all times''.) $x' = x^2$, $x(0) = 1$: the answer $1/(1 - t)$ leaves every bound before $t = 1$. D1 holds on each bounded set, so T1 still gives an answer near $0$.
 \item[\lab{P3}] (The orbit blur.) Glue $x \sim \phi_t(x)$: the bags are the \emph{orbits}. Points with $F = 0$ are bags of one point; for $n = 1$ the other bags are the stretches between zeros of $F$ (T5). For the pendulum $x'' = -\sin x$ (written in $\R^2$) the energy $\tfrac12 y^2 - \cos x$ is kept, and almost every bag lies on one curve of constant energy.
 \end{lines}
 
@@ -279,7 +285,7 @@ The first chapter of the region of equations of change. Chapter 22 selected $\ex
 \section*{Chapter III.4. Doubling on the circle}
 \phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter III.4. Doubling on the circle \quad one move, repeated $\to$ its orbits}{Chapter III.4. Doubling on the circle}}
 \begin{center}
-{\normalsize one move, repeated $\to$ its orbits \quad$\cdot$\quad from: Chapters 4, 5, 8, 26, III.2 \quad$\cdot$\quad ladder, blur, count}\\[4pt]
+{\normalsize one move, repeated $\to$ its orbits \quad$\cdot$\quad from: Chapters 4, 5, 8, 26, III.2 \quad$\cdot$\quad arrow, count}\\[4pt]
 {\small Double an angle again and again. Read through binary digits, doubling forgets the first digit. So the repeating points are counted exactly, some orbit comes near everything, nearness loses one rung at each step, and yet averages over time are as fair as coins.}
 \end{center}
 
@@ -302,10 +308,10 @@ The first chapter of the region of motion that repeats. Chapter 8, T7 found the 
 \subsection*{Propositions}
 
 \begin{lines}
-\item[\lab{P1}] (Survives: $+$; dies: one-to-one.) $T(x + y) = Tx + Ty$ (Chapter 8, P3.3); $T(0) = T(\tfrac12) = 0$: each point has two points before it.
+\item[\lab{P1}] ($T$ respects $+$; it is not one-to-one.) $T(x + y) = Tx + Ty$ (Chapter 8, P3.3); $T(0) = T(\tfrac12) = 0$: each point has two points before it.
 \item[\lab{P2}] (Through the digits, $T$ forgets the first one.) If $x = 0.d_1 d_2 d_3 \ldots$ then $Tx = 0.d_2 d_3 \ldots$. So the questions on $x$ are lists of digits, and $T$ is ``shift left''.
-\item[\lab{P3}] (Dies: nearness.) Two points $2^{-k}$ apart are, at some step $\le k$, at least $\tfrac14$ apart: $T$ moves rung $k + 1$ of nearness to rung $k$, so after enough steps no rung is kept. Knowing $x$ to $k$ digits tells the orbit for $k$ steps only.
-\item[\lab{P4}] (Survives: length.) The points sent by $T$ into a stretch of length $\ell$ form two stretches of length $\ell/2$: $T$ keeps length, and so keeps null sets (Chapter 26).
+\item[\lab{P3}] ($T$ does not keep nearness.) Two points $2^{-k}$ apart are, at some step $\le k$, at least $\tfrac14$ apart: $T$ moves rung $k + 1$ of nearness to rung $k$, so after enough steps no rung is kept. Knowing $x$ to $k$ digits tells the orbit for $k$ steps only.
+\item[\lab{P4}] ($T$ keeps length.) The points sent by $T$ into a stretch of length $\ell$ form two stretches of length $\ell/2$: $T$ keeps length, and so keeps null sets (Chapter 26).
 \end{lines}
 
 \subsection*{Theorems}
@@ -319,7 +325,7 @@ The first chapter of the region of motion that repeats. Chapter 8, T7 found the 
 \subsection*{Remarks}
 
 \begin{lines}
-\item[\lab{R1}] (What the method did.) P2 is the whole chapter: a picture of $T$ as a shift on lists of digits. T1 is a count, T2 a construction, T3 Chapter III.2 read through P2. The orbit blur of $T$ glues points to a dense bag (T2): wild, in the sense of the loop rule of Building 2, Chapter 3. Keep the moves.
+\item[\lab{R1}] (What the method did.) P2 is the whole chapter: a picture of $T$ as a shift on lists of digits. T1 is a count, T2 a construction, T3 Chapter III.2 read through P2. The orbit blur of $T$ glues points to a dense bag (T2): wild, in the sense of the loop rule (Chapter 0, F8; Field notes: the edge, Note 1). Keep the moves.
 \item[\lab{R2}] (A twin.) T1's count of least periods is the count of monic irreducible polynomials of degree $n$ over $\Z/2$ times $n$, and of necklaces that no turn fixes (Building 1, Chapters II.5 and II.12): each is a word of length $n$ moved round by a shift.
 \item[\lab{R3}] (Old names.) $T$: the doubling map; P2: conjugacy to the one-sided shift; P3: sensitive dependence on initial conditions (chaos); T1: periodic points, Möbius inversion; T2: a dense orbit (topological transitivity); P4: an invariant measure; T3: Birkhoff's ergodic theorem for this map.
 \item[\lab{R4}] (Machine check, \texttt{checks/p3-regions-check.py}.) T1 for $n \le 12$ in exact fractions; T2 (every word of length $8$ appears in $x^*$'s digits); P3 for $k \le 19$; T3 on $200000$ random digits.
