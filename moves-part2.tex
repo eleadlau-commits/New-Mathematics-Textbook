@@ -450,3 +450,90 @@ These are Theorems, not Survives lines: each says something exists, and the exis
 \item[\lab{E3}] Show that a move system of size $p^n$ moving a bag of size not divisible by $p$ fixes some point.
 \item[\lab{E4}] Why can T5's count not be done with subsets of size $p^{a+1}$?
 \end{lines}
+
+\newpage
+
+%% ==================================================================
+%%  Chapter II.7  (divisibility in any ring)
+%% ==================================================================
+\section*{Chapter II.7. Units moving a ring}
+\phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter II.7. Units moving a ring \quad a domain $\to$ its divisibility}{Chapter II.7. Units moving a ring}}
+\begin{center}
+{\normalsize a domain $\to$ its divisibility \quad$\cdot$\quad from: Chapters II.4, II.5; Building 0, Chapters 18, II.2, II.5 \quad$\cdot$\quad blur, rerun}\\[4pt]
+{\small Building 0, Chapter 18 glued $-1$ to $1$. In any ring the units are a move system moving the ring; glue each member to its multiples by units and rerun Chapter 18. Unique factorisation dies, and comes back exactly when division has a remainder.}
+\end{center}
+
+A rerun, in the style of Building 0, Chapter II.5: which lines of Chapter 18 survive in other rings, and what each needs.
+
+\subsection*{Given}
+
+\begin{lines}
+\item[\lab{G1}] (Building 0, Chapter 18.) $\mid$ as a one-way blur; B1 ($-1 \sim 1$), P8 (Appears), P9; T1--T3 (every bag above a prime; the picture to $\Z/p$ keeps ``no zero divisors''; unique factorisation); T8 (crossing two blurs).
+\item[\lab{G2}] (Building 0, Chapters II.2, II.5.) Ideals and the blurs $R/I$; $\operatorname{Frac}$; $K[x]$; P5 ($\mathsf{nzd}$ carried to $K[x]$); P6 (division with remainder).
+\item[\lab{G3}] (Chapter II.5.) A move system moving a bag; orbits.
+\item[\lab{G4}] (Chapter II.4.) P7: $(2 \;\; x)$ over $\Z[x]$.
+\end{lines}
+
+\subsection*{Definitions}
+
+\begin{lines}
+\item[\lab{D1}] $R$: a commutative ring passing $\mathsf{nzd}$ (a \emph{domain}). $R^\times$: its members with an inverse, a $\mathsf{comm}$ move system under $\times$, moving $R$ by $u \cdot a := ua$.
+\item[\lab{D2}] $a \mid b$: $b = ac$ for some $c$. \ $p$ is \emph{irreducible}: not $0$, not a unit, and every $d \mid p$ is a unit or $up$. \ $p$ is \emph{prime}: not $0$, not a unit, and $p \mid ab$ gives $p \mid a$ or $p \mid b$.
+\item[\lab{D3}] $R$ is \emph{Euclidean} if there is a size $\sigma : R \setminus \{0\} \to \N$ with division with remainder: for $a$ and $b \ne 0$, $a = qb + r$ with $r = 0$ or $\sigma(r) < \sigma(b)$.
+\end{lines}
+
+\subsection*{The blur}
+
+On $R$. \ $O$: $\times$.
+
+\begin{lines}
+\item[\lab{B1}] (From below.) The orbits of $R^\times$ (G3): $a \sim ua$. For $\Z$, Chapter 18's $-1 \sim 1$.
+\item[\lab{B2}] (From above.) Questions: ``$d \mid a$?'', one for each $d$.
+\end{lines}
+
+\subsection*{Propositions}
+
+\begin{lines}
+\item[\lab{P1}] (Survives: Chapter 18, P8 and P9.) B1 and B2 agree, and $a \sim b$ $\iff$ $a \mid b$ and $b \mid a$. \ ($a = bc$, $b = ad$ give $a(1 - dc) = 0$; for $a \ne 0$, $\mathsf{nzd}$ gives $dc = 1$.) $\mid$ is an order on the bags.
+\item[\lab{P2}] (Survives: prime implies irreducible.) If $p$ is prime and $p = ab$, then $p \mid a$ say, $a = pc$, $p = pcb$, so $cb = 1$ ($\mathsf{nzd}$) and $b$ is a unit.
+\item[\lab{P3}] (Dies: Chapter 18, T2 and T3, in $\Z[\sqrt{-5}]$.) Size $\sigma(a + b\sqrt{-5}) := a^2 + 5b^2$ respects $\times$. No member has size $2$ or $3$, so $2$, $3$, $1 \pm \sqrt{-5}$ (sizes $4, 9, 6, 6$) are irreducible, and no two are glued (the only units are $\pm 1$). Yet \[ 2 \cdot 3 \;=\; (1 + \sqrt{-5})(1 - \sqrt{-5}) . \] So $2$ is irreducible and not prime, and factorisation is not unique.
+\end{lines}
+
+\subsection*{Theorems}
+
+\begin{lines}
+\item[\lab{T1}] (Euclidean: every ideal is the multiples of one member.) In a Euclidean $R$, every ideal $I \ne 0$ is $(d) := dR$ for a $d$ of smallest size in $I$. \ (For $a$ in $I$, the remainder of $a$ by $d$ is in $I$ and smaller, so $0$; Building 0, Chapter 1, G8.) So every blur of $R$ respecting $+$ and $\times$ is ``same remainder by $d$''.
+\item[\lab{T2}] (When every ideal is $(d)$: Chapter 18, T1--T3 come back.) If every ideal of $R$ is some $(d)$, then \\
+(a) $\gcd(a, b)$ exists: $(a) + (b) = (d)$, and $d = sa + tb$; \\
+(b) irreducible implies prime: if $p \nmid a$, $\gcd(p, a)$ is a unit, $1 = sp + ta$, so $b = spb + tab$ and $p \mid b$ when $p \mid ab$; \\
+(c) every non-zero non-unit is a product of irreducibles, in one way up to order and units: ``is'', because a chain $(a_1) \subsetneq (a_2) \subsetneq \cdots$ stops (its union is an ideal $(d)$, and $d$ lies in some $(a_n)$); ``only'', by (b), as in Chapter 18.
+\item[\lab{T3}] (Euclidean, by an estimate: $\Z[i]$.) $\Z[i] = \{a + bi\}$ inside $\mathbb{C}$, with $\sigma(z) = |z|^2$, is Euclidean. \ (For $a, b \ne 0$, $a/b$ is in $\Q(i)$; round each coordinate to the nearest whole number to get $q$; then $|a/b - q|^2 \le \tfrac14 + \tfrac14$, so $\sigma(a - qb) \le \tfrac12 \sigma(b)$.) The only estimate in the chapter.
+\item[\lab{T4}] (Two squares.) A prime $p \equiv 1 \pmod 4$ is $a^2 + b^2$. \ ($x = (\tfrac{p-1}{2})!$ has $x^2 \equiv -1$: pair each $j$ with $-j$ in $(p-1)! \equiv -1$, the last by pairing each member of $(\Z/p)^\times$ with its inverse. So $p \mid (x + i)(x - i)$ but divides neither; $p$ is not prime in $\Z[i]$, so not irreducible (T2(b), T3): $p = \alpha\beta$ with $\sigma(\alpha) = \sigma(\beta) = p$.) Dies for $p \equiv 3 \pmod 4$: squares are $0$ or $1 \bmod 4$.
+\item[\lab{T5}] (Survives: the picture $\Z[x] \to (\Z/p)[x]$ keeps ``no zero divisors''. Gauss.) If $p$ goes into every coefficient of $fg$, then it goes into every coefficient of $f$ or of $g$. \ ($(\Z/p)[x]$ passes $\mathsf{nzd}$, G2: the twin of Chapter 18, T2.) Hence: the gcd of the coefficients is kept by $\times$; a polynomial over $\Z$ that factors over $\Q$ factors over $\Z$ with the same degrees; and $\Z[x]$ has unique factorisation (T2(c) for $\Z$ and for $\Q[x]$, glued by this line).
+\item[\lab{T6}] (Eisenstein, through the same picture.) If $f = x^n + a_{n-1}x^{n-1} + \dots + a_0$ over $\Z$ has $p \mid a_i$ for all $i$ and $p^2 \nmid a_0$, then $f$ does not factor over $\Q$. \ (By T5 a factoring is $gh$ over $\Z$; mod $p$, $gh = x^n$, so $g$ and $h$ are $x^r$ and $x^s$ mod $p$ (T2(c) in $(\Z/p)[x]$); then $p$ goes into $g(0)$ and $h(0)$, and $p^2 \mid a_0$.) Examples: $x^5 - 4x + 2$; $x^{p-1} + \dots + x + 1$, after $x \mapsto x + 1$.
+\item[\lab{T7}] (Crossing two blurs. Chapter 18, T8.) If every ideal is some $(d)$ and $\gcd(a, b) = 1$, then $R/(ab)$ matches $R/(a) \times R/(b)$, respecting $+$ and $\times$. \ ($1 = sa + tb$; the pair $(x, y)$ comes from $x\,tb + y\,sa$.)
+\end{lines}
+
+\subsection*{Propositions on the classes}
+
+\begin{lines}
+\item[\lab{P4}] (Dies: ``every ideal is some $(d)$'' in $\Z[x]$.) The ideal of $2$ and $x$ is not one $(d)$ (G4). Yet $\Z[x]$ has unique factorisation (T5). So: Euclidean $\Rightarrow$ every ideal is $(d)$ $\Rightarrow$ unique factorisation, and the second arrow does not reverse.
+\item[\lab{P5}] (Reported.) The first arrow does not reverse either: in $\Z[\tfrac{1 + \sqrt{-19}}{2}]$ every ideal is some $(d)$, but there is no size with division with remainder (classical).
+\end{lines}
+
+\subsection*{Remarks}
+
+\begin{lines}
+\item[\lab{R1}] (What the method did.) The blur is an orbit blur. Lines that are equations or ``$\mathsf{nzd}$'' survived; ``unique factorisation'' needed a construction (division) or a picture that keeps $\mathsf{nzd}$ (T5). The one estimate is T3.
+\item[\lab{R2}] (Old names.) B1: associates; D3: Euclidean domain; T1, T2: principal ideal domains; T2(c): unique factorisation domain; T3: Gaussian integers; T4: Fermat's two-squares theorem (via Wilson); T5: Gauss's lemma; T6: Eisenstein's criterion; T7: the Chinese remainder theorem.
+\item[\lab{R3}] (Machine check, \texttt{checks/b1-p2-ch7-check.py}.) P3 (sizes in $\Z[\sqrt{-5}]$); T3 on $2000$ random divisions; T4 and Wilson for $p < 2000$; T5 on $200$ random products (content); T6 on three examples; T7.
+\end{lines}
+
+\subsection*{Exercises}
+
+\begin{lines}
+\item[\lab{E1}] Write $13$, $29$ and $41$ as sums of two squares by T4's route.
+\item[\lab{E2}] Show that $3$ is prime in $\Z[i]$.
+\item[\lab{E3}] Factor $x^4 - 1$ into irreducibles over $\Z$, over $\Z[i]$, and over $\Z/5$.
+\item[\lab{E4}] Why does T6 fail for $x^2 + 4$ with $p = 2$?
+\end{lines}
