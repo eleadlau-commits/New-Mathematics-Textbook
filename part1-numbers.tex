@@ -57,6 +57,7 @@
   \node[sys] (Lo)  at (7.0,-10.6) {integrable\\[-1pt]maps};
   \node[sys] (Lt)  at (7.0,-12.0) {square-\\[-1pt]integrable};
   \node[sys] (Wv)  at (4.6,-12.0) {waves on\\[-1pt]the circle};
+  \node[sys] (Lz)  at (4.6,-13.4) {$\ell^2(\Z)$};
   % arrows, labelled by chapter
   \draw[ar] (N)  -- node[ch]{1}  (Z);
   \draw[ar] (Z)  -- node[ch]{2}  (Q);
@@ -87,6 +88,7 @@
   \draw[ar] (Nu) -- node[ch]{27} (Lo);
   \draw[ar] (Lo) -- node[ch]{28} (Lt);
   \draw[ar] (Lt) -- node[ch]{29} (Wv);
+  \draw[ar] (Wv) -- node[ch]{30} (Lz);
 \end{tikzpicture}
 \end{center}
 
@@ -135,6 +137,7 @@ Every arrow puts the old numbers \emph{inside} the new ones, except Chapters 3, 
 27. $C[b,c]$ $\to$ $L^1$ & build, select, blur & difference fades in the mean & integrable maps; length, last & $\times$; the value at a point; ``continuous'' \\
 28. $C[b,c]$ $\to$ $L^2$ & build, select, blur & difference fades in the mean square & $\langle\,,\rangle$, right angles, nearest points & $\times$ \\
 29. maps on $\mathbb{T}$ $\to$ lists on $\Z$ & survey, arrow, ladder & nothing new (questions $\widehat f(n)$) & every arrow $\mathbb{T} \to S$; the average of rungs comes back & $\times$ (becomes convolution); one rung overshoots \\
+30. $L^2(\mathbb{T})$ $\to$ $\ell^2(\Z)$ & arrow & nothing (an inside) & a matching keeping energy; $\sum 1/n^2 = \pi^2/6$ & the value at a point; ``continuous'' \\
 \end{longtable}
 }
 
@@ -3145,4 +3148,71 @@ A survey chapter. It finds all the arrows of one kind (T1), uses them as questio
 \item[\lab{E3}] Show $F_1(t) = 1 + \cos(2\pi t)$, and check $\int_0^1 F_1 = 1$.
 \item[\lab{E4}] For $f(t) = t - \tfrac12$ on $0 \le t < 1$, repeated, find $\widehat f(n)$ and say why T7 does not apply.
 \item[\lab{E5}] Use P2 on the map of E4 to bound $\sum_{n \ge 1} 1/n^2$ from above by $\pi^2/6$.
+\end{lines}
+
+\newpage
+
+%% ==================================================================
+%%  Chapter 30  (Fourier, second part)
+%% ==================================================================
+\section*{Chapter 30. The two homes of a wave}
+\phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter 30. The two homes of a wave \quad $L^2(\mathbb{T})$ $\to$ $\ell^2(\Z)$}{Chapter 30. The two homes of a wave}}
+\begin{center}
+{\normalsize $L^2(\mathbb{T})$ $\to$ $\ell^2(\Z)$ \quad$\cdot$\quad from: Chapters 26, 28, 29 \quad$\cdot$\quad arrow}\\[4pt]
+{\small Close up the circle in the mean square, and the arrow of Chapter 29 becomes a matching: every square-summable list is the list of exactly one map, and energy is kept. Continuity was the wrong Select; square-integrable is the right one.}
+\end{center}
+
+No new blur. One arrow, read on the right floor. The twin of Chapter 10, T8, where the wrapping matched the circle with $S$.
+
+\subsection*{Given}
+
+\begin{lines}
+\item[\lab{G1}] (Chapter 28.) The closing-up in the mean square; T2 (closed); T3 (nearest point). Run here on $\mathbb{T}$ with complex values and the product of Chapter 29, D2: the bags are $L^2(\mathbb{T})$.
+\item[\lab{G2}] (Chapter 29.) $e_n$, $\widehat f$, $S_N f$, $\sigma_N f$; P1 (right angles), P2 (rung $N$ is nearest), T5 (the average comes back in $M$).
+\item[\lab{G3}] (Chapter 26.) The value at a point dies under ``equal almost everywhere''.
+\end{lines}
+
+\subsection*{Definitions}
+
+\begin{lines}
+\item[\lab{D1}] (Build, M2; Select, M4.) $\ell^2(\Z)$: lists $(c_n)_{n \in \Z}$ of complex numbers whose sums $\sum_{|n| \le N} |c_n|^2$ settle. Product $\langle c, d \rangle := \sum c_n \overline{d_n}$, place by place, the twin of Chapter 6, D6 with $\Z$ for $\{1, \dots, n\}$.
+\item[\lab{D2}] (The arrow on bags.) For a bag of $L^2(\mathbb{T})$ given by $(f_k)$, put $\widehat f(n) := $ the limit of $\widehat{f_k}(n)$.
+\end{lines}
+
+\subsection*{Propositions}
+
+\begin{lines}
+\item[\lab{P1}] (The arrow is defined on bags.) $\sum_n |\widehat f(n) - \widehat g(n)|^2 \le \|f - g\|^2$ (Chapter 29, P2 for $f - g$). So the arrow respects nearness in the mean square with the same rung, and D2 does not depend on the sequence chosen.
+\item[\lab{P2}] (Survives: $+$, scaling, turning, $\langle\,,\rangle$.) From Chapter 29, P3, and T1 below.
+\item[\lab{P3}] (Dies: the value at a point.) The map $1$ at $t = 0$ and $0$ elsewhere has the same list as $0$. A list cannot ask what a map does at one point (G3).
+\item[\lab{P4}] (Dies: ``continuous''.) The square wave of Chapter 29, P6 has a list in $\ell^2(\Z)$ ($|\widehat f(n)| = 2/(\pi |n|)$ for odd $n$, $0$ for even), and no continuous map has that list (Chapter 27, P8 on the circle).
+\end{lines}
+
+\subsection*{Theorems}
+
+\begin{lines}
+\item[\lab{T1}] (Energy is kept.) For every $f$ in $L^2(\mathbb{T})$: \ $\sum_n |\widehat f(n)|^2 = \|f\|^2$, and $S_N f$ comes near $f$ in the mean square. \\
+(For continuous $f$: $\sigma_N f$ comes near $f$ in $M$, hence in the mean square (Chapter 29, T5). $\sigma_N f$ lies in the span of $e_{-N}, \dots, e_N$, so the nearest point $S_N f$ is nearer still (Chapter 29, P2). Then Chapter 28, P3 with $f = S_N f + (f - S_N f)$ at right angles gives the sum. For a bag: P1 carries the line from continuous members to every bag.)
+\item[\lab{T2}] (The two homes are one.) The arrow $f \mapsto \widehat f$ is an inside and a picture from $L^2(\mathbb{T})$ onto $\ell^2(\Z)$, and it keeps the product: $\langle \widehat f, \widehat g \rangle = \langle f, g \rangle$. \\
+Inside: T1 with $f - g$. \ Picture: for $c$ in $\ell^2(\Z)$, the sums $\sum_{|n| \le N} c_n e_n$ come near themselves in the mean square (right angles, Chapter 29, P1), and their limit, which exists because $L^2(\mathbb{T})$ is closed (Chapter 28, T2), has the list $c$. Existence comes from ``closed'', once. The product: from energy, by $4\langle f, g \rangle = \sum_{k=0}^{3} i^k \|f + i^k g\|^2$.
+\item[\lab{T3}] (A sum read off.) The sawtooth $f(t) = t - \tfrac12$ on $0 \le t < 1$ has $\widehat f(n) = \dfrac{i}{2\pi n}$ for $n \ne 0$ and $\widehat f(0) = 0$, and $\|f\|^2 = \tfrac1{12}$. T1 gives \[ \sum_{n \ge 1} \frac{1}{n^2} = \frac{\pi^2}{6}. \] Chapter 29, E5 gave only ``$\le$''; the matching turns it into ``$=$''.
+\end{lines}
+
+\subsection*{Remarks}
+
+\begin{lines}
+\item[\lab{R1}] (The right Select.) Chapter 29, R3: for continuous maps the ladder can fail at a point. Here the question is asked in the mean, where the floor is closed, and the ladder always comes back (T1). The trouble was the floor, not the ladder.
+\item[\lab{R2}] (Leg 1 in one line.) Chapter 17 lost cancellation; Chapter 28 found the floor where it survives (right angles); Chapters 29--30 list that floor by the arrows of the circle. Every existence in the leg came from ``closed''; everything else was a Survives line or an estimate carried through a positive average.
+\item[\lab{R3}] (A pointer.) The waves $e_n$ are exactly the maps that turning sends to multiples of themselves (Chapter 29, P3). That is a normal form for the moves of the circle: Building 1 meets this chapter again under the name ``similarity''.
+\item[\lab{R4}] (Old names.) $\ell^2(\Z)$: square-summable sequences. T1: Parseval's identity; convergence of Fourier series in $L^2$. T2: the Riesz--Fischer theorem with Plancherel; $L^2(\mathbb{T}) \cong \ell^2(\Z)$ as Hilbert spaces. T3: the Basel problem (Euler). The formula for $4\langle f, g \rangle$: polarisation.
+\item[\lab{R5}] (Machine check, \texttt{checks/ch30-check.py}.) T1 on four maps (two continuous, the square wave, the sawtooth); the mean-square gap of $S_N f$ falling; T2 for a list $c_n = 1/(1 + n^2)$ and for $c_n = 1/n$; T3; polarisation.
+\end{lines}
+
+\subsection*{Exercises}
+
+\begin{lines}
+\item[\lab{E1}] Use T1 on the square wave to find $\sum_{n \text{ odd}, n \ge 1} 1/n^2$.
+\item[\lab{E2}] Which map has the list $c_1 = c_{-1} = \tfrac12$ and all others $0$?
+\item[\lab{E3}] Show that the list $c_n = 1/\sqrt{|n|}$ ($n \ne 0$) is not in $\ell^2(\Z)$.
+\item[\lab{E4}] Prove the polarisation formula from the four laws of the product.
 \end{lines}
