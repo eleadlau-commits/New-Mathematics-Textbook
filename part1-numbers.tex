@@ -61,6 +61,7 @@
   \node[sys] (Ct)  at (-4.0,-12.0) {complex\\[-1pt]tangents};
   \node[sys] (Rs)  at (-0.8,-13.4) {residues};
   \node[sys] (Rg)  at (-0.8,-14.8) {rigid\\[-1pt]maps};
+  \node[sys] (Po)  at (2.2,-14.8) {poles,\\[-1pt]orders};
   % arrows, labelled by chapter
   \draw[ar] (N)  -- node[ch]{1}  (Z);
   \draw[ar] (Z)  -- node[ch]{2}  (Q);
@@ -95,6 +96,7 @@
   \draw[ar] (Iv) -- node[ch]{31} (Ct);
   \draw[ar] (Hl) -- node[ch]{32} (Rs);
   \draw[ar] (Rs) -- node[ch]{33} (Rg);
+  \draw[ar] (Rg) -- node[ch]{34} (Po);
 \end{tikzpicture}
 \end{center}
 
@@ -147,6 +149,7 @@ Every arrow puts the old numbers \emph{inside} the new ones, except Chapters 3, 
 31. maps $\mathbb{C} \to \mathbb{C}$ $\to$ holomorphic & blur, select & flat at $a$ (Chapter 11 over $\mathbb{C}$) & tangent commutes with $i$; angles kept & angles, where $f' = 0$ \\
 32. holomorphic maps $\to$ closed $f\,dz$ & arrow & nothing new (Chapter 16's blur) & Cauchy; the residue as a normal form & loop integrals, for $\bar z$; ``no hole'' \\
 33. holomorphic maps $\to$ germs & blur & nothing (the germ blur is equality) & power series; Liouville; highest point only on the edge & rigidity, without ``one piece'' \\
+34. germs at $a$ $\to$ their order & blur, build & rungs $\operatorname{ord}(f - g) \ge k$ & $\operatorname{ord}_a$, the twin of $v_p$; poles; residues add; zeros counted by turns & ``has an order'' ($\exp(1/z)$) \\
 \end{longtable}
 }
 
@@ -3454,4 +3457,76 @@ This is Chapter 23, T1 again (``can be lowered''), turned upside down.
 \item[\lab{E3}] Show that $\exp$ is not bounded on $\mathbb{C}$ without computing: use T7.
 \item[\lab{E4}] On $|z| \le 1$, where does $|z^2 + 1|$ take its largest value?
 \item[\lab{E5}] Why does T4 not contradict Chapter 21, P8?
+\end{lines}
+
+\newpage
+
+%% ==================================================================
+%%  Chapter 34  (poles and valuations)
+%% ==================================================================
+\section*{Chapter 34. Poles and valuations}
+\phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter 34. Poles and valuations \quad germs at $a$ $\to$ their order}{Chapter 34. Poles and valuations}}
+\begin{center}
+{\normalsize germs at $a$ $\to$ their order \quad$\cdot$\quad from: Chapters 2, 18, 19, 32, 33 \quad$\cdot$\quad blur, build}\\[4pt]
+{\small Ask at which rung a germ stops being glued to $0$. The answer behaves like the number of times $p$ goes into an integer. Allow fractions, and the residue is one coefficient of the list.}
+\end{center}
+
+Chapters 18 and 19 again, with $z - a$ in the place of $p$. The ladder is the one of Chapter 33, whose bottom is the germ; the fractions are Chapter 2 run once more.
+
+\subsection*{Given}
+
+\begin{lines}
+\item[\lab{G1}] (Chapter 33.) T1: a holomorphic germ is its list $\sum c_n (z - a)^n$; T3: the germ blur is ``the same list''; T5: zeros stand alone.
+\item[\lab{G2}] (Chapter 18, D4, T5; Chapter 19, D1, T3, R3.) $v_p$; the rungs $\equiv_k$; inverses in $\Z_p$; fractions give $\Q_p$.
+\item[\lab{G3}] (Chapter 32.) P1 ($\int z^n dz$), T4 (the residue), T5; (Chapter 16, T6) turns are whole.
+\item[\lab{G4}] (Chapter 2.) Pairs, blurred by $(a, b) \sim (ac, bc)$: fractions of a floor with no zero divisors.
+\end{lines}
+
+\subsection*{Definitions}
+
+\begin{lines}
+\item[\lab{D1}] $\mathcal{O}_a$: the germs at $a$ of holomorphic maps, with $+$ and $\times$.
+\item[\lab{D2}] (The order.) For $f \ne 0$ in $\mathcal{O}_a$: $\operatorname{ord}_a(f)$ is the first $n$ with $c_n \ne 0$. $\operatorname{ord}_a(0) := \infty$.
+\item[\lab{D3}] (Rungs.) $f \equiv_k g$: \ $\operatorname{ord}_a(f - g) \ge k$. \ Its bags are the lists cut after $k$ terms: $\mathbb{C}[z]/(z - a)^k$.
+\end{lines}
+
+\subsection*{Propositions}
+
+\begin{lines}
+\item[\lab{P1}] (The twin of $v_p$.) $\operatorname{ord}_a(fg) = \operatorname{ord}_a f + \operatorname{ord}_a g$; \ $\operatorname{ord}_a(f + g) \ge \min(\operatorname{ord}_a f, \operatorname{ord}_a g)$, with equality when the two orders differ. \ (Lists: the first terms multiply; Chapter 7.) \\
+So $\mathcal{O}_a$ has no zero divisors, and $\operatorname{ord}_a(f) = $ the first rung at which $f$ is not glued to $0$: a depth, as $v_p$ is (Chapter 19, D1).
+\item[\lab{P2}] (Units.) $f$ has an inverse in $\mathcal{O}_a$ $\iff$ $\operatorname{ord}_a f = 0$, that is $f(a) \ne 0$. The twin of Chapter 19, T3. Every $f \ne 0$ is $(z - a)^k u$ with $u$ a unit and $k = \operatorname{ord}_a f$, in one way only.
+\item[\lab{P3}] (A ladder with a bottom.) The rungs $\equiv_k$ are true blurs respecting $+$ and $\times$; each rung's floor is a picture of the next; the bottom is $\mathcal{O}_a$ itself (Chapter 33, T3). Over $\R$ the same ladder had a bottom that was not the germ (Chapter 21, P8); here it is like $\Z_p$, whose ladder loses nothing.
+\item[\lab{P4}] (Build: fractions. Chapter 2 on $\mathcal{O}_a$.) The pairs $f/g$, $g \ne 0$, glued by $(f, g) \sim (fh, gh)$: the \emph{meromorphic germs}. Put $\operatorname{ord}_a(f/g) := \operatorname{ord}_a f - \operatorname{ord}_a g$; it is well defined and P1 still holds. Each one is a list starting at a negative place: $\sum_{n \ge -m} c_n (z - a)^n$. The twin of $\Q_p$ (Chapter 19, R3).
+\item[\lab{P5}] (Names.) If $\operatorname{ord}_a f = -m < 0$, $f$ has a \emph{pole of order $m$} at $a$. The part $\sum_{n < 0} c_n (z - a)^n$ is the \emph{principal part}.
+\item[\lab{P6}] (Dies: ``has an order''.) $\exp(1/z)$ is holomorphic on $\mathbb{C} \setminus \{0\}$, and its list at $0$, $\sum_{n \ge 0} z^{-n}/n!$, has no first term. It is in no bag of P4.
+\end{lines}
+
+\subsection*{Theorems}
+
+\begin{lines}
+\item[\lab{T1}] (The residue is a coefficient.) For $f$ with a pole at $a$ (or holomorphic near $a$ except at $a$, with order), $\operatorname{res}_a f = c_{-1}$. \ (Integrate the list term by term on a small circle: Chapter 32, P1 kills every term but $c_{-1}(z - a)^{-1}$.) The normal-form coordinate of Chapter 32, T4 is read straight off the list.
+\item[\lab{T2}] (Removable: bounded means no pole.) If $f$ is holomorphic near $a$ except at $a$, and bounded there, then $f$ is the germ of a holomorphic map at $a$. \ ($c_{-n} = \frac{1}{2\pi i}\int_{\gamma_{a,r}} f\,(z - a)^{n-1}dz$ is at most a bound times $r^n$, which comes near $0$.) Example: $\sin(z)/z$ at $0$.
+\item[\lab{T3}] (Several holes: residues add.) If $f$ is holomorphic on a disc $D$ except at finitely many points $a_1, \dots, a_s$, each a pole, and $\gamma$ is a circle in $D$ missing them, then \[ \int_\gamma f\,dz = 2\pi i \sum_{a_j \text{ inside } \gamma} \operatorname{res}_{a_j} f . \] (Take away each principal part; what is left is bounded near each $a_j$, so holomorphic on $D$ by T2, and its integral is $0$ (Chapter 32, T2). Each principal part gives its residue by T1, if $a_j$ is inside $\gamma$, and $0$ otherwise.)
+\item[\lab{T4}] (The order appears as a residue; counting by turns.) $\operatorname{res}_a (f'/f) = \operatorname{ord}_a f$. So for $f$ as in T3 with no zero or pole on $\gamma$, \[ \frac{1}{2\pi i}\int_\gamma \frac{f'}{f}\,dz \;=\; \sum_{\text{inside}} \operatorname{ord} f \;=\; (\text{zeros}) - (\text{poles}), \text{ each counted by its order,} \] and it is the number of turns of the loop $f \circ \gamma$ around $0$ (Chapter 16, T6). \ ($f = (z - a)^k u$ gives $f'/f = k/(z - a) + u'/u$, and $u'/u$ is holomorphic at $a$.)
+\end{lines}
+
+\subsection*{Remarks}
+
+\begin{lines}
+\item[\lab{R1}] (The twins, as a table.) $\Z \;\cdot\; p \;\cdot\; v_p \;\cdot\; \Z/p^k \;\cdot\; \Z_p \;\cdot\; \Q_p$ \ match \ $H(U) \;\cdot\; z - a \;\cdot\; \operatorname{ord}_a \;\cdot\; \mathbb{C}[z]/(z - a)^k \;\cdot\; \mathcal{O}_a \;\cdot\; $ meromorphic germs. One difference: every residue field here is $\mathbb{C}$, while $\Z/p$ changes with $p$.
+\item[\lab{R2}] (All the orders.) On the fractions of polynomials, every way of measuring size with the laws of P1 is some $\operatorname{ord}_a$ or the order at infinity, $-\deg$ (classical; the twin of Ostrowski, Chapter 19, R4; reported).
+\item[\lab{R3}] (Where the road goes.) Blur $\mathbb{C}$ by a lattice $\Lambda = \Z\omega_1 + \Z\omega_2$, the twin of Chapter 8 with two directions: the bags form a torus. A map on it with one pole of order $2$ is Selected as $\exp$ was in Chapter 22 (the $\wp$ of Weierstrass). That chapter, and the group law of the cubic it draws, belong to Building 1.
+\item[\lab{R4}] (Old names.) $\operatorname{ord}_a$: order of vanishing; a discrete valuation. P4: Laurent series, meromorphic functions. P6: essential singularity. T1: residue as Laurent coefficient. T2: Riemann's removable singularity theorem. T3: the residue theorem. T4: the argument principle.
+\item[\lab{R5}] (Machine check, \texttt{checks/ch34-check.py}.) P1 on random germs; P2; P6; T1 for $1/(z^2(z - 1))$ and $\cot$; T2 for $\sin(z)/z$; T3 for three rational maps on circles of several sizes; T4 counting zeros of random polynomials inside circles, against their roots.
+\end{lines}
+
+\subsection*{Exercises}
+
+\begin{lines}
+\item[\lab{E1}] Find $\operatorname{ord}_0$ of $\sin(z)^3$, of $1 - \cos z$, and of $z / \sin(z)^2$.
+\item[\lab{E2}] Find the residue of $1/(z^2(z - 1))$ at $0$ and at $1$; check that they add to the integral over $|z| = 2$, which is $0$.
+\item[\lab{E3}] Show that $\cot z = \cos z / \sin z$ has residue $1$ at every $k\pi$.
+\item[\lab{E4}] Use T4 to count the zeros of $z^5 + 3z + 1$ inside $|z| = 1$ (compare $3z$ with the rest on the circle).
+\item[\lab{E5}] Why can no fraction $f/g$ of P4 equal $\exp(1/z)$ near $0$?
 \end{lines}
