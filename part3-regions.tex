@@ -1,0 +1,69 @@
+% Building 0, Part III. Regions ahead: one map page, chapters later.
+% One file for the whole part. Each chapter begins with a banner and \section*.
+
+\part*{Part III. Regions ahead}
+\phantomsection\addcontentsline{toc}{part}{Part III. Regions ahead}
+
+\section*{The map of the regions ahead}
+\phantomsection\addcontentsline{toc}{section}{\texorpdfstring{The map of the regions ahead}{The map of the regions ahead}}
+\begin{center}
+{\small Five regions the books touch but have not entered. For each: what dies, the cheapest build that repairs it, what appears, and the first chapter.}
+\end{center}
+
+Every region below was reached by the same loop: take a floor already built, find a line that dies on it, choose the cheapest build that repairs it, and read what appears. The letters say which kind of line died: \textbf{E} an equation has no answer; \textbf{L} a ladder does not close; \textbf{M} a move cannot be undone or two moves do not commute; \textbf{C} a count or a size cannot be read off; \textbf{G} local answers do not glue into one.
+
+\begin{center}
+\begin{tikzpicture}[
+    x=1cm, y=1cm,
+    reg/.style={font=\small, inner sep=3pt, align=center, draw, rounded corners=2pt},
+    hub/.style={font=\small, inner sep=4pt, align=center, draw, thick, rounded corners=2pt},
+    tst/.style={font=\scriptsize, fill=white, inner sep=1pt},
+    ar/.style={-{Stealth[length=4pt]}, thin}]
+  \node[hub] (B) at (0, 0) {the books\\[-1pt]{\scriptsize Parts I, II}};
+  \node[reg] (T) at (-4.2, 2.2) {shapes and holes};
+  \node[reg] (P) at (4.2, 2.2)  {chance};
+  \node[reg] (D) at (-4.2,-2.2) {equations of change};
+  \node[reg] (S) at (4.2,-2.2)  {counting with symmetry};
+  \node[reg] (R) at (0, 3.4)    {motion that repeats};
+  \node[reg, dashed] (X) at (0,-3.4) {the open edges\\[-1pt]{\scriptsize all of kind C}};
+  \draw[ar] (B) -- node[tst]{G, M} (T);
+  \draw[ar] (B) -- node[tst]{C} (P);
+  \draw[ar] (B) -- node[tst]{E, L} (D);
+  \draw[ar] (B) -- node[tst]{C} (S);
+  \draw[ar] (B) -- node[tst]{M} (R);
+  \draw[ar, dashed] (B) -- node[tst]{C} (X);
+\end{tikzpicture}
+\end{center}
+
+{\small
+\renewcommand{\arraystretch}{1.25}
+\setlength{\tabcolsep}{4pt}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{2.2cm}
+                     >{\raggedright\arraybackslash}p{3.0cm}
+                     >{\raggedright\arraybackslash}p{2.8cm}
+                     >{\raggedright\arraybackslash}p{2.6cm}
+                     >{\raggedright\arraybackslash}p{3.2cm}@{}}
+\textbf{Region} & \textbf{Dies} & \textbf{Build} & \textbf{Appears} & \textbf{Already touched; first chapter} \\ \hline
+\endhead
+Shapes and holes & G, M: a loop that cannot be shrunk; C: how many holes & loops, glued when one deforms into the other; chains, glued by edges & the loops of a space as a move system; holes counted in every dimension & Chapters 16 (holes, turns), 32 (deforming loops), II.4 (one piece, compact). First: \emph{loops up to deformation}, with the loops of the circle as $\Z$. \\
+Chance & C: an average over many cases; ``total $1$'' & select integrable maps with total $1$ on a floor up to null sets & the law of large numbers; the bell curve by waves & Chapters 26--30 (null sets, $L^1$, $L^2$, waves). First: \emph{mass one}, with Chebyshev's line and the law of large numbers in $L^2$. \\
+Equations of change & E: $x' = F(x)$ has no formula; L: the ladder of guesses must close & maps, and a ladder of guesses $x_{k+1} = x_0 + \int F(x_k)$ & flows; at most one answer through each point & Chapters 22 ($\exp$ selected), 25 (inverses nearby), II.4, T5 (contraction). First: \emph{flows}, by the contraction line. \\
+Counting with symmetry & C: counting the same thing twice & blur by a move system; count fixed points & the count of bags; the cycle count of colourings & Chapter 17 (sizes), and the count of bags where moves are kept (in the next book). First: \emph{colourings up to symmetry}. \\
+Motion that repeats & M: repeating one move forever & the ladder of iterates; sizes kept by the move & periodic points; dense orbits; long-run averages & Chapter 8, T7 (irrational turns are dense). First: \emph{doubling on the circle}, $x \mapsto 2x$ on $\R/\Z$, read by binary digits. \\
+\end{longtable}
+}
+
+\subsection*{Lines read off the map}
+
+\begin{lines}
+\item[\lab{M1}] (Each region already has a door.) Every first chapter starts from a line proved in Parts I and II: Chapter 16, T6 for holes; Chapter 27 for chance; Chapter II.4, T5 for flows; Chapter 8, T7 for repeating motion.
+\item[\lab{M2}] (Reached badly.) Statistics, numerical analysis, optimisation and estimates for equations in several variables need inequalities chosen by hand; no dying line suggests them. The map says so rather than pretending.
+\item[\lab{M3}] (The open edges.) Every place where the loop found no repair is a line of kind C: the primes (the Riemann hypothesis), the capacity of the $7$-cycle as a channel, sizes of exponential sums (Lindel\"of), and which finite lattices are lattices of blurs. Cancellation and counting, not missing constructions.
+\end{lines}
+
+\subsection*{Remarks}
+
+\begin{lines}
+\item[\lab{R1}] (Source.) The pilot survey \texttt{map/MAP-PILOT.md} in the project folder ($57$ rows, two runs, 12 Nov). Every row of its first run landed in a known field: the loop rebuilds the map; it does not leave it.
+\item[\lab{R2}] (Old names.) Shapes and holes: algebraic topology (the fundamental group, homology). Chance: probability. Equations of change: ordinary differential equations (Picard--Lindel\"of). Counting with symmetry: Burnside and P\'olya. Motion that repeats: dynamical systems, ergodic theory.
+\end{lines}
