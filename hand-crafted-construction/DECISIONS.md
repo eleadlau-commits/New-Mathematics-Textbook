@@ -34,3 +34,7 @@ Ideas E reached while reading Chapter 0. Starting points, open to change.
 ## 13 Nov 2026, 18:42
 
 9. Carry, in E's notation: for any tool t (an operation o or a question q), t carries if (xᵢ ∼ yᵢ) implies t(xᵢ,) ∼ t(yᵢ,); for a question, ∼ on the answers is =. E: "so for any q or o, f as above would carry." Carry is a question asked of each tool, for a fixed blur. Old L2 and L3 are its two cases.
+
+## 13 Nov 2026, 18:54
+
+10. What a blur is. E: "so each blur is only a sorting, but operations and questions might help you choose the sorting that you would like to pay attention to." O and Q belong to the floor beforehand; some are required to survive to pick the sorting, the rest are tested by Carry afterwards (Survives / Dies).
