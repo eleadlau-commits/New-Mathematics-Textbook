@@ -10,7 +10,7 @@
 \section*{The map of the first floor}
 \phantomsection\addcontentsline{toc}{section}{\texorpdfstring{The map of the first floor}{The map of the first floor}}
 \begin{center}
-{\small Each arrow is one chapter. Each chapter builds, selects, or blurs.}
+{\small Each arrow is one chapter. Each chapter is one of the kinds of Chapter 0 (K1--K7), or a few in order: blur, build, select, arrow, count, table, rerun.}
 \end{center}
 
 % ---------------------------------------------------------------
@@ -126,7 +126,7 @@ Every arrow puts the old numbers \emph{inside} the new ones, except Chapters 3, 
 2. $\Z \to \Q$ & build, select, blur & $(a,b) \sim (ac,\,bc)$ & inverses for $\times$ & place-by-place sum \\
 3. $\Z \to \Z/n$ & blur & $n \sim 0$ & finite arithmetic & the order $\le$ \\
 4. $\Q \to \R$ & build, select, blur & fading $\sim 0$ & limits, $\sqrt{2}$ & every single term \\
-5. cells of $\R \to$ likenesses & blur, picture & which cell & nearness; $\varepsilon$--$\delta$ & chaining \\
+5. cells of $\R \to$ likenesses & blur & which cell & nearness; $\varepsilon$--$\delta$ & chaining \\
 6. $\R \to \R^n$ & build & nothing & room, dimension & (not carried: $\le$) \\
 7. $\R \to \R[x]$ & build, blur & the laws & a free letter; $\mathbb{C}$ & how it was written \\
 8. $\R \to \R/\Z$ & blur & $1 \sim 0$ & angles & $\times$ and $\le$ \\
@@ -139,26 +139,26 @@ Every arrow puts the old numbers \emph{inside} the new ones, except Chapters 3, 
 15. $k$-forms $\to$ $(k{+}1)$-forms & select & nothing chosen (blur of $d$, W4) & $d$, with $d \circ d = 0$ & constants \\
 16. closed forms $\to$ holes & build, blur & every $df$ & $H^1$: the holes & values at a point \\
 17. sequences $\to$ sizes & build, select, blur & constant factors & the scale $1, L(n), n, 2^n, \dots$ & subtraction \\
-18. $\Z$ under $\times \to$ division & one-way blur, blur & $-1 \sim 1$ & primes; $\mid$ kept by the $v_p$ & the sign, $+$, $\le$ \\
-19. $\Z \to \Z_p$ & ladder, build, select, blur & what comes near $0$ & digits to the left, one per bag & size, sign, $\le$ \\
+18. $\Z$ under $\times \to$ division & blur & $-1 \sim 1$ & primes; $\mid$ kept by the $v_p$ & the sign, $+$, $\le$ \\
+19. $\Z \to \Z_p$ & blur, build, select, blur & what comes near $0$ & digits to the left, one per bag & size, sign, $\le$ \\
 20. maps $\to$ limits of maps & build, select, blur & what comes near $0$ in $M$ & nothing new: $C[b,c]$ closed & continuity, $\int$ point by point \\
-21. germs $\to$ jets & ladder, select & flat to order $k$ & Taylor polynomial; $\R[x]/x^{k+1}$ & the next coefficient; the germ \\
-22. maps $\to$ the one with $f' = f$ & select & nothing chosen (blur of $E_c$, W4) & $\exp$, with its law from ``only one'' & the construction \\
-23. polynomials over $\mathbb{C}$ $\to$ roots & survives, dies & all but the first two terms at a point & nothing new: $\mathbb{C}$ is closed & $k$-th roots over $\R$ \\
+21. germs $\to$ jets & blur, select & flat to order $k$ & Taylor polynomial; $\R[x]/x^{k+1}$ & the next coefficient; the germ \\
+22. maps $\to$ the one with $f' = f$ & select, arrow & nothing chosen (blur of $E_c$, W4) & $\exp$, with its law from ``only one'' & the construction \\
+23. polynomials over $\mathbb{C}$ $\to$ roots & blur & $(x - a)^{k+1} \sim 0$ & nothing new: $\mathbb{C}$ is closed & $k$-th roots over $\R$ \\
 24. maps on $\R^n$ $\to$ highest and lowest points & blur & flat to order $2$ at a point & value, covector, quadratic part & the answer, when $Q$ is $0$ in some direction \\
 25. maps $\R^n \to \R^n$ $\to$ inverses nearby & select & nothing new (tangent blur of 13) & the inverse, with tangent $(DF)^{-1}$ & ``can be inverted'', on a whole bag \\
 26. maps on a stretch $\to$ maps up to a null set & blur & differ only on a null set & none; nothing continuous is glued & the value at a point; ``continuous'' \\
 27. $C[b,c]$ $\to$ $L^1$ & build, select, blur & difference fades in the mean & integrable maps; length, last & $\times$; the value at a point; ``continuous'' \\
 28. $C[b,c]$ $\to$ $L^2$ & build, select, blur & difference fades in the mean square & $\langle\,,\rangle$, right angles, nearest points & $\times$ \\
-29. maps on $\mathbb{T}$ $\to$ lists on $\Z$ & survey, arrow, ladder & nothing new (questions $\widehat f(n)$) & every arrow $\mathbb{T} \to S$; the average of rungs comes back & $\times$ (becomes convolution); one rung overshoots \\
+29. maps on $\mathbb{T}$ $\to$ lists on $\Z$ & table, arrow & nothing new (questions $\widehat f(n)$) & every arrow $\mathbb{T} \to S$; the average of rungs comes back & $\times$ (becomes convolution); one rung overshoots \\
 30. $L^2(\mathbb{T})$ $\to$ $\ell^2(\Z)$ & arrow & nothing (an inside) & a matching keeping energy; $\sum 1/n^2 = \pi^2/6$ & the value at a point; ``continuous'' \\
-31. maps $\mathbb{C} \to \mathbb{C}$ $\to$ holomorphic & blur, select & flat at $a$ (Chapter 11 over $\mathbb{C}$) & tangent commutes with $i$; angles kept & angles, where $f' = 0$ \\
-32. holomorphic maps $\to$ closed $f\,dz$ & arrow & nothing new (Chapter 16's blur) & Cauchy; the residue as a normal form & loop integrals, for $\bar z$; ``no hole'' \\
-33. holomorphic maps $\to$ germs & blur & nothing (the germ blur is equality) & power series; Liouville; highest point only on the edge & rigidity, without ``one piece'' \\
-34. germs at $a$ $\to$ their order & blur, build & rungs $\operatorname{ord}(f - g) \ge k$ & $\operatorname{ord}_a$, the twin of $v_p$; poles; residues add; zeros counted by turns & ``has an order'' ($\exp(1/z)$) \\
-35. $k^3$ without $0$ $\to$ its lines & blur & the size, $v \sim \lambda v$ & $\mathbb{P}^2$: a point known by its lines; no parallels & the value $F(v)$ \\
-36. polynomials $\to$ functions on a cubic & build, blur & $y^2 \sim x^3 + ax + b$ & the third point on a line; weights, the twin of $\operatorname{ord}$ & weight $1$; smoothness, when $\Delta = 0$ \\
-37. $\mathbb{C} \to \mathbb{C}/\Lambda$ & blur, select & two periods & the torus; $\wp$, pinned by one double pole; the cubic & $\times$; a single simple pole \\
+31. maps $\mathbb{C} \to \mathbb{C}$ $\to$ $\mathbb{C}$-straight & blur, select & flat at $a$ (Chapter 11 over $\mathbb{C}$) & tangent commutes with $i$; angles kept & angles, where $f' = 0$ \\
+32. $\mathbb{C}$-straight maps $\to$ closed $f\,dz$ & arrow & nothing new (Chapter 16's blur) & Stokes for one slope; Cauchy; one number round a hole & loop integrals, for $\bar z$; ``no hole'' \\
+33. $\mathbb{C}$-straight maps $\to$ germs & blur & $e \sim 0$ when $e = 0$ near $a$ & power series; Liouville; highest point only on the edge & rigidity, without ``one piece'' \\
+34. germs at $a$ $\to$ their order & blur, build & $(z - a)^k \sim 0$ & $\operatorname{ord}_a$, the twin of $v_p$; poles; residues add; zeros counted by turns & ``has an order'' ($\exp(1/z)$) \\
+35. $k^3$ without $0$ $\to$ its lines & blur & the size, $v \sim \lambda v$ & $\mathbb{P}^2$: a point known by its planes; no parallels & the value $F(v)$ \\
+36. polynomials $\to$ functions on a cubic & blur & $y^2 \sim x^3 + ax + b$ & the third point on a line; weights, the twin of $\operatorname{ord}$ & weight $1$; smoothness, when $\Delta = 0$ \\
+37. $\mathbb{C} \to \mathbb{C}/\Lambda$ & blur, select, build & two periods & the torus; $\wp$, pinned by one double pole; the cubic & $\times$; a single simple pole \\
 \end{longtable}
 }
 
@@ -166,7 +166,9 @@ Every arrow puts the old numbers \emph{inside} the new ones, except Chapters 3, 
 
 \textbf{How to read a chapter.} Chapter 0 gives the rules: what may be built, what a blur is, and what each line of a chapter claims.
 
-\textbf{The fork.} Up to $\R$ the path is forced: each chapter closes up something missing. Chapter 5 adds no numbers: it finds nearness on $\R$, and every later chapter on limits cites it. After $\R$ the map branches: Chapter 6 builds lists, Chapter 7 builds words, Chapter 8 only blurs. Chapter 9 starts from $\R^2$ and uses the product of Chapter 7; it reaches angles a second way. Chapter 10 builds all maps and shows the two ways meet; Chapter 11 blurs them down to their tangents, and Chapter 12 finds area as the one rule with four properties. Chapters 13 to 16 carry this to several variables and forms, and end by measuring holes. Chapter 17 sorts sequences by size. Chapters 18 and 19 return to $\Z$: divisibility is a one-way blur, and the ladder mod $p^k$ is a nearness whose rungs chain, closing $\Z$ up to $\Z_p$. Chapter 20 puts two nearnesses on maps and finds what survives a limit; Chapter 21 is the ladder of Chapter 11 at every order, the twin of Chapter 19. Chapter 22 selects $\exp$ by what it must do, and so pays what Chapter 10 owed. Chapter 23 goes back to Chapter 7 and shows that gluing $x^2 \sim -1$ was enough: every polynomial has a root in $\mathbb{C}$. Chapter 24 takes the ladder of Chapter 21 to rung $2$ on $\R^n$ and reads highest and lowest points off it. Chapter 25 asks the tangent of Chapter 13 whether a map can be inverted nearby.
+\textbf{The fork.} Up to $\R$ the path is forced: each chapter closes up something missing. Chapter 5 adds no numbers: it finds nearness on $\R$, and every later chapter on limits cites it. After $\R$ the map branches: Chapter 6 builds lists, Chapter 7 builds words, Chapter 8 only blurs. Chapter 9 starts from $\R^2$ and uses the product of Chapter 7; it reaches angles a second way. Chapter 10 builds all maps and shows the two ways meet; Chapter 11 blurs them down to their tangents, and Chapter 12 finds area as the one rule with four properties. Chapters 13 to 16 carry this to several variables and forms, and end by measuring holes. Chapter 17 sorts sequences by size. Chapters 18 and 19 return to $\Z$: divisibility is a one-way blur, and the ladder mod $p^k$ is a nearness whose rungs chain, closing $\Z$ up to $\Z_p$. Chapter 20 puts two nearnesses on maps and finds what survives a limit; Chapter 21 is the ladder of Chapter 11 at every order, the twin of Chapter 19. Chapter 22 selects $\exp$ by what it must do, and so pays what Chapter 10 owed. Chapter 23 goes back to Chapter 7 and shows that gluing $x^2 \sim -1$ was enough: every polynomial has a root in $\mathbb{C}$. Chapter 24 takes the ladder of Chapter 21 to rung $2$ on $\R^n$ and reads highest and lowest points off it. Chapter 25 asks the tangent of Chapter 13 whether a map can be inverted nearby. Chapters 26 to 30 close up the continuous maps in the mean and read them by waves; Chapters 31 to 34 run the tangent over $\mathbb{C}$; Chapters 35 to 37 put a cubic in the plane and find it again as a torus.
+
+\textbf{Five stretches.} The numbers are only for citing; by subject the first floor falls into five stretches. \emph{Numbers}: Chapters 1--9, 17--19. \emph{Maps}: 10--16, 20--25. \emph{In the mean}: 26--30. \emph{Over $\mathbb{C}$}: 31--34. \emph{Curves}: 35--37.
 
 \textbf{Part II.} Its Chapter 1 goes one level up: its things are the systems $\N$, $\Z$, $\Z/n$, $\Q$, $\R$, $\R^n$ themselves, and its tests are the laws they pass. There the words \emph{ring}, \emph{field} and \emph{complete} appear, and Part II opens with its own map, of the second floor.
 
@@ -590,7 +592,7 @@ So $\sim$ is exactly the blur at which the question ``is $a + c$ positive in the
 \section*{Chapter 5. Nearness}
 \phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter 5. Nearness \quad cells of $\R \to$ likenesses}{Chapter 5. Nearness}}
 \begin{center}
-{\normalsize cells of $\R \to$ likenesses \quad$\cdot$\quad from: Chapter 4 \quad$\cdot$\quad blur, picture}\\[4pt]
+{\normalsize cells of $\R \to$ likenesses \quad$\cdot$\quad from: Chapter 4 \quad$\cdot$\quad blur}\\[4pt]
 {\small Cut the line into cells. Ask the cells to respect $+$. They cannot: what is left is nearness, a sameness that does not chain.}
 \end{center}
 
@@ -973,7 +975,7 @@ No limit is taken. The product rule $(pq)' = p'q + pq'$ is the multiplication of
 \section*{Chapter 8. The circle}
 \phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter 8. The circle \quad $\R \to \R/\Z$}{Chapter 8. The circle}}
 \begin{center}
-{\normalsize $\R \to \R/\Z$ \quad$\cdot$\quad from: Chapter 4 \quad$\cdot$\quad blur only}\\[4pt]
+{\normalsize $\R \to \R/\Z$ \quad$\cdot$\quad from: Chapter 4 \quad$\cdot$\quad blur}\\[4pt]
 {\small Forget how many whole turns were made. What is left is an angle.}
 \end{center}
 
@@ -1206,8 +1208,7 @@ This is the first use of M7: $F$ is far larger than $\R$ (R1).
 \subsection*{Blur}
 
 \begin{lines}
-\item[\lab{B1}] (From below, L5.) Gluings: $f \sim g$ whenever $f$ and $g$ agree on $\operatorname{near}_k(a)$ for some rung $k$. \ Respects: $+$, $\times$. \ Call this blur $\sim$. \\
-Here the gluings are the bag test; this blur is made from above (B2).
+\item[\lab{B1}] (From below, L5.) Gluings: $e \sim 0$ for each $e$ that is $0$ on $\operatorname{near}_k(a)$ for some rung $k$. \ Respects: $+$, $\times$. \ Call this blur $\sim$. ($+$ spreads the gluings: $f \sim g$ exactly when $f - g$ is such an $e$.)
 \item[\lab{B2}] (From above, L6.) Question: $\operatorname{zero}_a$. \ Respects: $+$, $\times$. \ Call this blur $\approx$. \\
 By Z3: \ $f \approx g \iff$ for every $h$: \ $\operatorname{zero}_a(f + h) \Leftrightarrow \operatorname{zero}_a(g + h)$, together with the contexts made with $\times$.
 \item[] Blur $C$. A bag of $\sim$ is a \emph{germ at $a$}. Write $\bag{f}_a$ for the germ of $f$.
@@ -1336,8 +1337,7 @@ Given $C$, the continuous maps, with $+$, $\times$, $\circ$, constants and $\ope
 \subsection*{Blur}
 
 \begin{lines}
-\item[\lab{B1}] (From below, L5.) Gluings: $f \sim g$ whenever $f - g$ is flat at $a$. \ Respects: $+$, $\times$. \ Call this blur $\sim$. \\
-Here the gluings are the bag test; this blur is made from above (B2).
+\item[\lab{B1}] (From below, L5.) Gluings: $e \sim 0$ for each $e$ flat at $a$. \ Respects: $+$, $\times$. \ Call this blur $\sim$. ($+$ spreads the gluings: $f \sim g$ exactly when $f - g$ is flat at $a$.)
 \item[\lab{B2}] (From above, L6.) Question: $\operatorname{flat}_a$. \ Respects: $+$, $\times$. \ Call this blur $\approx$. \\
 By Z3: \ $f \approx g \iff$ for every $h$: \ $\operatorname{flat}_a(f + h) \Leftrightarrow \operatorname{flat}_a(g + h)$, together with the contexts made with $\times$.
 \item[] Blur $C$. A bag of $\sim$ is a \emph{tangent class at $a$}. Write $\bag{f}$ for the class of $f$.
@@ -1546,8 +1546,7 @@ A map $f : \R^n \to \R$ is \emph{continuous at $a$} if it respects nearness at $
 \subsection*{Blur}
 
 \begin{lines}
-\item[\lab{B1}] (From below, L5.) Gluings: $f \sim g$ whenever $f - g$ is flat at $a$. \ Respects: $+$, $\times$. \ Call this blur $\sim$. \\
-Here the gluings are the bag test; this blur is made from above (B2).
+\item[\lab{B1}] (From below, L5.) Gluings: $e \sim 0$ for each $e$ flat at $a$. \ Respects: $+$, $\times$. \ Call this blur $\sim$. ($+$ spreads the gluings: $f \sim g$ exactly when $f - g$ is flat at $a$.)
 \item[\lab{B2}] (From above, L6.) Question: $\operatorname{flat}_a$. \ Respects: $+$, $\times$. \ Call this blur $\approx$.
 \item[] Blur $C(\R^n)$. A bag is a \emph{tangent class at $a$}.
 \end{lines}
@@ -1992,7 +1991,7 @@ for every real $0 < s < 1$, with $n^s := \exp(s\, L(n))$.
 \section*{Chapter 18. Divisibility and primes}
 \phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter 18. Divisibility and primes \quad $\Z$ under $\times \to$ sizes by division}{Chapter 18. Divisibility and primes}}
 \begin{center}
-{\normalsize $\Z$ under $\times \to$ sizes by division \quad$\cdot$\quad from: Chapters 1 and 3 \quad$\cdot$\quad one-way blur, blur}\\[4pt]
+{\normalsize $\Z$ under $\times \to$ sizes by division \quad$\cdot$\quad from: Chapters 1 and 3 \quad$\cdot$\quad blur}\\[4pt]
 {\small Order the integers by ``goes into''. The order runs both ways only between $a$ and $-a$: forget the sign, and what is left is ordered by primes.}
 \end{center}
 
@@ -2117,7 +2116,7 @@ So, by G3, the bags of this chapter list every blur of $\Z$ respecting $+$, and 
 \section*{Chapter 19. Mod $p^k$ and the $p$-adic numbers}
 \phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter 19. Mod $p^k$ and the $p$-adic numbers \quad $\Z \to \Z_p$}{Chapter 19. Mod p to the k and the p-adic numbers}}
 \begin{center}
-{\normalsize $\Z \to \Z_p$ \quad$\cdot$\quad from: Chapters 3, 4, 5 and 18 \quad$\cdot$\quad blur ladder, build, select, blur}\\[4pt]
+{\normalsize $\Z \to \Z_p$ \quad$\cdot$\quad from: Chapters 3, 4, 5 and 18 \quad$\cdot$\quad blur, build, select, blur}\\[4pt]
 {\small The twin of Chapters 4 and 5, with one change: here the rungs chain. Close up $\Z$ under them and every new number has exactly one way to be written, with infinitely many digits to the left.}
 \end{center}
 
@@ -2294,11 +2293,12 @@ $x \times x = 3$ has none: the squares in $\Z/7$ are $0, 1, 2, 4$, and $\pi_1$ r
 
 \begin{lines}
 \item[\lab{D5}] (Build, M2; Select, M4.) Sequences $f_0, f_1, \dots$ in $C[b,c]$ that come near themselves in $M$: for every $k$, eventually $f_n \mathrel{M_k} f_m$.
-\item[\lab{B1}] (From below, L5.) Gluings: $(e_n) \sim 0$ for every selected sequence that comes near $0$ in $M$. \ Respects: $+$. \ Call this blur $\sim$.
-\item[\lab{B2}] (From above, L6.) Question: ``comes near $0$ in $M$''. \ Respects: $+$. \ Call this blur $\approx$.
+\item[\lab{B1}] (From below, L5.) Gluings: $(e_n) \sim 0$ for every selected sequence that comes near $0$ in $M$. \ Respects: $+$, $\times$. \ Call this blur $\sim$.
+\item[\lab{B2}] (From above, L6.) Question: ``comes near $0$ in $M$''. \ Respects: $+$, $\times$. \ Call this blur $\approx$.
 \item[\lab{P11}] (Appears.) $\sim \;=\; \approx$. (As Chapter 19, P9: the separating context for $(f_n) \not\sim (g_n)$ is $-(g_n)$.)
 \item[\lab{P12}] (Normal forms.) None is offered: no rule picks one sequence from each bag. (Chapter 4 needed decimals for this; maps have no digits.)
-\item[\lab{T1}] (Closed, F5.) Every sequence in $C[b,c]$ that comes near itself in $M$ comes near some $f$ in $C[b,c]$. So the Arrow from $C[b,c]$ to the new bags (constant sequences) is an inside and a picture: the chapter adds nothing. $C[b,c]$ is already closed. \ (Point by point, G1 gives a limit $f$; letting $m$ grow at each point in $f_n \mathrel{M_{k+1}} f_m$ shows the sequence comes near $f$ in $M$; P6 puts $f$ in $C[b,c]$.)
+\item[\lab{N2}] (Notation.) The bags: the closing-up of $C[b,c]$ in $M$, with $+$, $\times$ carried over (P1, P3, Z6).
+\item[\lab{T1}] (Closed, F5; the Arrow.) Every sequence in $C[b,c]$ that comes near itself in $M$ comes near some $f$ in $C[b,c]$. So the Arrow from $C[b,c]$ to the new bags (constant sequences), respecting $+$ and $\times$, is an inside and a picture: the chapter adds nothing. $C[b,c]$ is already closed. C3 for $+$, $\times$: lifted on sequences place by place, survive (P1, P3), descend, agree here. \ (Point by point, G1 gives a limit $f$; letting $m$ grow at each point in $f_n \mathrel{M_{k+1}} f_m$ shows the sequence comes near $f$ in $M$; P6 puts $f$ in $C[b,c]$.)
 \end{lines}
 
 \subsection*{The derivative, repaired}
@@ -2348,7 +2348,7 @@ $x \times x = 3$ has none: the squares in $\Z/7$ are $0, 1, 2, 4$, and $\pi_1$ r
 \section*{Chapter 21. Taylor}
 \phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter 21. Taylor \quad germs $\to$ jets of every order}{Chapter 21. Taylor}}
 \begin{center}
-{\normalsize germs $\to$ jets of every order \quad$\cdot$\quad from: Chapters 7, 10, 11, 12, 20 \quad$\cdot$\quad blur ladder, select}\\[4pt]
+{\normalsize germs $\to$ jets of every order \quad$\cdot$\quad from: Chapters 7, 10, 11, 12, 20 \quad$\cdot$\quad blur, select}\\[4pt]
 {\small Run Chapter 11 at every order. Each rung is a true blur, and the rungs make the same ladder as $\Z/p^k$, with $x - a$ in place of $p$. But the ladder never reaches the germ.}
 \end{center}
 
@@ -2374,8 +2374,7 @@ $x \times x = 3$ has none: the squares in $\Z/7$ are $0, 1, 2, 4$, and $\pi_1$ r
 \subsection*{Blur: one rung for each $k$}
 
 \begin{lines}
-\item[\lab{B1}] (From below, L5.) Gluings: $f \sim_k g$ whenever $f - g$ is flat to order $k$ at $a$. \ Respects: $+$, $\times$. \\
-Here the gluings are the bag test; this blur is made from above (B2).
+\item[\lab{B1}] (From below, L5.) Gluings: $e \sim_k 0$ for each $e$ flat to order $k$ at $a$. \ Respects: $+$, $\times$.
 \item[\lab{B2}] (From above, L6.) Question: $\operatorname{flat}_{a,k}$. \ Respects: $+$, $\times$.
 \end{lines}
 
@@ -2383,7 +2382,7 @@ Here the gluings are the bag test; this blur is made from above (B2).
 
 \begin{lines}
 \item[\lab{P1}] (Each rung is a true blur.) $\sim_k$ chains, and respects $+$ and $\times$. \ (For $\times$: $f g - f' g' = f (g - g') + g' (f - f')$, and $f$, $g'$ stay below some bound near $a$.)
-\item[\lab{P2}] (Appears.) B1 $=$ B2. (Separating context $h = -g$, as in Chapter 11, P5.)
+\item[\lab{P2}] (Bags; Appears.) $f \sim_k g \iff f - g$ is flat to order $k$ ($+$ spreads the gluings, Z2), and B1 $=$ B2: Z4 by P1; Z5 with the separating context $x \mapsto x - g$, as in Chapter 11, P5.
 \item[\lab{P3}] (The bottom rungs.) $\sim_0$ is the value blur: $f(a) = g(a)$ (on $C$). $\sim_1$ is the blur of Chapter 11.
 \item[\lab{P4}] (A ladder.) $f \sim_{k+1} g \Rightarrow f \sim_k g$: each rung is less blurry than the one below it. \\
 Dies at rung $k$: the next coefficient. $(x - a)^{k+1} \sim_k 0$, and the two differ at rung $k + 1$.
@@ -2458,11 +2457,11 @@ In other words: the left side, without the bars, is $f^{(k+1)}(t)\,(x - a)^{k+1}
 \section*{Chapter 22. The exponential, selected}
 \phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter 22. The exponential, selected \quad maps $\to$ the one that is its own derivative}{Chapter 22. The exponential, selected}}
 \begin{center}
-{\normalsize maps $\to$ the one that is its own derivative \quad$\cdot$\quad from: Chapters 10, 11, 20 \quad$\cdot$\quad select}\\[4pt]
+{\normalsize maps $\to$ the one that is its own derivative \quad$\cdot$\quad from: Chapters 10, 11, 20 \quad$\cdot$\quad select, arrow}\\[4pt]
 {\small Say what the exponential must do. Only one map does it, and its laws follow from ``only one'', with no series to multiply.}
 \end{center}
 
-This is a Select chapter, like Chapters 12 and 15. Chapter 10, T5 built $\exp$ from its series and left two exchanges of limits unpaid. Here the series is used once, for existence, and then forgotten.
+A select (Chapter 0, K3), like Chapters 12 and 15, then the arrow it gives. Chapter 10, T5 built $\exp$ from its series and left two exchanges of limits unpaid. Here the series is used once, for existence, and then forgotten.
 
 \subsection*{Given}
 
@@ -2476,22 +2475,22 @@ This is a Select chapter, like Chapters 12 and 15. Chapter 10, T5 built $\exp$ f
 
 \begin{lines}
 \item[\lab{D0}] For $f : \R \to \mathbb{C}$, $f = (u, v)$, put $f' := (u', v')$, place by place. Then G1 holds for such maps too: T1 and T7 in each place.
-\item[\lab{D1}] (Select, M7 and M4.) Fix $c$ in $\mathbb{C}$. A \emph{$c$-rule} is a map $f : \R \to \mathbb{C}$ with a derivative at every point such that
+\item[\lab{D1}] (Tests; Select, M7 and M4.) Fix $c$ in $\mathbb{C}$. A \emph{$c$-rule} is a map $f : \R \to \mathbb{C}$ with a derivative at every point such that
 \[
 f' = c\,f \qquad\text{and}\qquad f(0) = 1 .
 \]
 \end{lines}
 
-\subsection*{Theorems on the rule}
+\subsection*{At most one, at least one, read off}
 
 \begin{lines}
 \item[\lab{T1}] (At most one.) If $f$ and $g$ are $c$-rules, then $f = g$. \\
 (Put $h(x) := f(-x)$; then $h' = -c\,h$. So $(f h)' = c f h - c f h = 0$, and by G1 $f h$ is constant: $f(x) f(-x) = 1$. In the same way $(g h)' = 0$, so $g(x) f(-x) = 1$. Hence $g = f$.) \\
 On the way: $f(x) \neq 0$ for every $x$, and $f(-x) = 1/f(x)$.
-\item[\lab{T2}] (At least one.) $\sum_{n \ge 0} c^n x^n / n!$ is a $c$-rule. \ (Both of its places are power series with $R$ ``no bound''; differentiate term by term, G2.) Call the one $c$-rule $E_c$.
+\item[\lab{T2}] (At least one.) $\sum_{n \ge 0} c^n x^n / n!$ is a $c$-rule. \ (Both of its places are power series with $R$ ``no bound''; differentiate term by term, G2.) \\ \textbf{Notation.} Write $E_c$ for the one $c$-rule.
 \item[\lab{T3}] (The law, from ``only one''.) $E_c(s + t) = E_c(s)\,E_c(t)$. \\
 (Fix $s$. The map $x \mapsto E_c(s + x)/E_c(s)$ is a $c$-rule. By T1 it is $E_c$.)
-\item[\lab{T4}] (One map of a complex number.) $E_c(x) = E_{c x}(1)$. \ (For fixed $x$, $t \mapsto E_c(x t)$ is a $(c x)$-rule.) \ So put $\exp(z) := E_z(1)$. Then
+\item[\lab{T4}] (One map of a complex number.) $E_c(x) = E_{c x}(1)$. \ (For fixed $x$, $t \mapsto E_c(x t)$ is a $(c x)$-rule.) \ \textbf{Notation.} $\exp(z) := E_z(1)$. It agrees with the $\exp$ of Chapter 10, T5 (C3, agree): both are the series of T2 at $x = 1$. Then
 \[
 \exp(z + w) = \exp(z)\,\exp(w) \qquad\text{for all } z, w \text{ in } \mathbb{C}.
 \]
@@ -2537,11 +2536,11 @@ This is the law of Chapter 10, T5, with nothing owed: no two series were multipl
 \section*{Chapter 23. $\mathbb{C}$ is closed}
 \phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter 23. $\mathbb{C}$ is closed \quad polynomials over $\mathbb{C}$ $\to$ their roots}{Chapter 23. C is closed}}
 \begin{center}
-{\normalsize polynomials over $\mathbb{C}$ $\to$ their roots \quad$\cdot$\quad from: Chapters 7, 8, 10, 13 \quad$\cdot$\quad survives, dies}\\[4pt]
-{\small A lowest point exists because closed boxes survive. It cannot sit where $p \neq 0$, because ``can be lowered'' survives the blur that keeps the first two terms. So the lowest point is a root.}
+{\normalsize polynomials over $\mathbb{C}$ $\to$ their roots \quad$\cdot$\quad from: Chapters 7, 8, 10, 13 \quad$\cdot$\quad blur}\\[4pt]
+{\small A lowest point exists because closed boxes survive. It cannot sit where $p \neq 0$, because ``can be lowered'' is kept on the bag of the first two terms. So the lowest point is a root.}
 \end{center}
 
-No new object is made in this chapter. Two Survives lines meet, as in the mean value theorem (Chapter 11, T6), and the result is what Chapter 10, T11 stated.
+No new object is made in this chapter. The blur is Chapter 7's $x^2 \sim 0$, one rung higher and moved to $a$. Two lines meet, ``closed boxes survive'' and ``can be lowered is kept on a bag'', as in the mean value theorem (Chapter 11, T6), and the result is what Chapter 10, T11 stated.
 
 \subsection*{Given}
 
@@ -2563,35 +2562,47 @@ p(a + h) = c_0 + c_k\,h^k + (\text{higher powers of } h), \qquad c_0 = p(a),
 where $c_k$ is the first coefficient after $c_0$ that is not $0$. Call $c_0 + c_k h^k$ the \emph{first two terms of $p$ at $a$}.
 \end{lines}
 
-\subsection*{The blur}
+\subsection*{Blur}
 
-Operations $O$: $+$ and $\times$ of polynomials. Fix a point $a$ and a rung $k \ge 1$.
+On polynomials over $\mathbb{C}$. Fix a point $a$ and a rung $k \ge 1$.
 
 \begin{lines}
-\item[\lab{B1}] (From below.) Glue $p \sim q$ whenever $p(a + h) - q(a + h)$ has only powers of $h$ above $k$.
-\item[\lab{B2}] (From above.) Keep the questions ``what is the coefficient of $h^j$ in $p(a + h)$'', for $j = 0, \dots, k$.
+\item[\lab{B1}] (From below, L5.) Gluing: the single pair $(x - a)^{k+1} \sim 0$. \ Respects: $+$, $\times$.
+\item[\lab{B2}] (From above, L6.) Questions: ``the coefficient of $h^j$ in $p(a + h)$'', for $j = 0, \dots, k$. \ Respects: $+$, $\times$.
 \end{lines}
 
-Here the gluings are the bag test, so the two agree at once. This is the rung of Chapter 21 for polynomials, and it is exact: no limit is taken. Chapter 7, T7 is the rung $k = 1$.
+This is the rung of Chapter 21 for polynomials, and it is exact: no limit is taken. Chapter 7, T7 is the rung $k = 1$ at $a = 0$.
 
 \subsection*{Propositions}
 
 \begin{lines}
-\item[\lab{P1}] (Normal forms.) Each bag holds exactly one polynomial of degree $\le k$ in $h$. For the $k$ of D2 it is the first two terms of $p$ at $a$.
+\item[\lab{P1}] (Bags; normal forms; Appears.) $p \sim q$ $\iff$ $p - q = (x - a)^{k+1} r$ for a polynomial $r$ $\iff$ $p(a + h) - q(a + h)$ has only powers of $h$ above $k$ (P2). Each bag holds exactly one polynomial of degree $\le k$ in $h$; for the $k$ of D2 it is the first two terms of $p$ at $a$. B1 $=$ B2: Z4, since $(x - a)^{k+1} r$ has no power of $h$ up to $k$, in any context; Z5, if $p \not\sim q$, some coefficient $j \le k$ of $p - q$ is not $0$, and the context $x \mapsto x - q$ with that question separates.
 \item[\lab{P2}] (Re-centring is exact.) $p(a + h)$ is a polynomial in $h$ of the same degree as $p$, with the same leading coefficient. So if $p$ has degree $\ge 1$, the $k$ of D2 exists. \ (Substitute $a + h$ for $x$ in the normal form and multiply out: Chapter 7, T1.)
-\item[\lab{P3}] (Appears: $k$-th roots.) Every $u \neq 0$ in $\mathbb{C}$ has exactly $k$ members $z$ with $z^k = u$. \\
+\item[\lab{P3}] ($k$-th roots.) Every $u \neq 0$ in $\mathbb{C}$ has exactly $k$ members $z$ with $z^k = u$. \\
 (Write $u = r\,w(t)$ with $r = |u| > 0$, by G3. There is exactly one $s > 0$ with $s^k = r$: intervals survive $x \mapsto x^k$, and it rises. The circle part has exactly $k$ roots $w(y)$, $k \cdot y = t$ in $\mathbb{T}$.)
-\item[\lab{P4}] (Dies over $\R$.) P3 is false with $\R$ in place of $\mathbb{C}$: $-1$ has no square root there, since squares are not negative (from Chapter 2, G7). Witness for the whole chapter: over $\R$, $x^2 + 1$ has a lowest point at $0$ with value $1$, and no root.
+\item[\lab{P4}] (Fails over $\R$.) P3 is false with $\R$ in place of $\mathbb{C}$: $-1$ has no square root there, since squares are not negative (from Chapter 2, G7). Witness for the whole chapter: over $\R$, $x^2 + 1$ has a lowest point at $0$ with value $1$, and no root.
 \item[\lab{P5}] (Far away is large.) Let $p = a_0 + a_1 x + \dots + a_n x^n$ with $n \ge 1$, $a_n \neq 0$, and put $R := \max\bigl(1,\; 2(|a_0| + \dots + |a_{n-1}|)/|a_n|\bigr)$. Then
 \[
 |p(z)| \;\ge\; \tfrac12\,|a_n|\,|z|^n \qquad\text{whenever } |z| \ge R .
 \]
 \end{lines}
 
+\subsection*{Notation}
+
+\begin{lines}
+\item[\lab{N1}] The bag of $p$ at rung $k$ is written by its normal form, a polynomial of degree $\le k$ in $h$.
+\end{lines}
+
+\subsection*{Arrow}
+
+\begin{lines}
+\item[\lab{P6}] Bags at rung $k$ $\to$ $\mathbb{C}[h]/h^{k+1}$, read off the normal form: one-to-one, onto, respecting $+$ and $\times$ (multiply, then drop the powers above $k$). The same arrow as Chapter 21, P5, over $\mathbb{C}$ and with no limit.
+\end{lines}
+
 \subsection*{Theorems}
 
 \begin{lines}
-\item[\lab{T1}] (Survives: ``can be lowered''.) Let $p(a) \neq 0$. For the normal form $c_0 + c_k h^k$ the question ``is there $h$ with $|p(a + h)| < |p(a)|$'' has the answer yes, and the answer is kept by the blur at rung $k$. So $a$ is not a lowest point of $p$. \\
+\item[\lab{T1}] (Kept on the bag: ``can be lowered''.) Let $p(a) \neq 0$. For the normal form $c_0 + c_k h^k$ the question ``is there $h$ with $|p(a + h)| < |p(a)|$'' has the answer yes, and so has every polynomial in its bag at rung $k$ (Chapter 0, C7). So $a$ is not a lowest point of $p$. \\
 (Pick $h_0$ with $c_k h_0^k = -c_0$, by P3. On the normal form, $h = s\,h_0$ with $0 < s \le 1$ gives $c_0(1 - s^k)$. What was glued away is at most $K s^{k+1}$ in size, where $K$ is the sum of the $|c_j|\,|h_0|^j$ for $j > k$. So $|p(a + s h_0)| \le |c_0|(1 - s^k) + K s^{k+1} < |c_0|$ as soon as $s < |c_0|/K$.)
 \item[\lab{T2}] (A lowest point exists.) Every polynomial of degree $\ge 1$ has a lowest point. \\
 (By P5 there is a closed box outside which $|p(z)| > |p(0)|$. On the box, $|p|$ is continuous and takes a smallest value: G4. That value is $\le |p(0)|$, so it is the smallest on all of $\mathbb{C}$.)
@@ -2605,7 +2616,7 @@ Here the gluings are the bag test, so the two agree at once. This is the rung of
 \subsection*{Remarks}
 
 \begin{lines}
-\item[\lab{R1}] (Where existence came from.) Once: closed boxes survive, which rests on G3 of Chapter 5. The rest is ``this is kept'' and ``only one''. The blur did not produce the root; it showed where a lowest point cannot be.
+\item[\lab{R1}] (Where existence came from.) Once: closed boxes survive, which rests on G3 of Chapter 5. The rest is ``kept on a bag'' and ``only one''. The blur did not produce the root; it showed where a lowest point cannot be.
 \item[\lab{R2}] (Not a recipe.) T3 does not say where the root is. Repeating the step of T1 does walk downhill, and in the machine check it arrived every time, but that it always arrives is not proved here.
 \item[\lab{R3}] (Why $\mathbb{C}$ and not $\R$.) The only line that uses $\mathbb{C}$ is P3, and P4 is its witness. Chapter 7 made $\mathbb{C}$ by gluing $x^2 \sim -1$, one equation. T3 says that one gluing was enough for every equation.
 \item[\lab{R4}] (The same shape as Chapter 11, T6.) There: closed stretches survive, and ``rising'' survives where the slope is not $0$. Here: closed boxes survive, and ``can be lowered'' survives where the value is not $0$.
@@ -2635,7 +2646,7 @@ Here the gluings are the bag test, so the two agree at once. This is the rung of
 {\small Chapter 11 read ``rising'' off the tangent, and lost it where the slope is $0$. One rung up the question comes back, and is lost again in exactly one case.}
 \end{center}
 
-This chapter only blurs. It is Chapter 21 at rung $2$, run on $\R^n$. Its theorems are one table of Survives and Dies lines, the twin of Chapter 11, T5.
+This chapter only blurs. It is Chapter 21 at rung $2$, run on $\R^n$. Its theorems say on which bags one question is kept, the twin of Chapter 11, T5.
 
 \subsection*{Given}
 
@@ -2659,19 +2670,17 @@ Fix a point $a$ of $\R^n$.
 
 \subsection*{The blur}
 
-Operations $O$: $+$ and $\times$ of maps, place by place.
+On maps $\R^n \to \R$.
 
 \begin{lines}
-\item[\lab{B1}] (From below.) Glue $f \sim_2 g$ whenever $f - g$ is flat to order $2$ at $a$.
-\item[\lab{B2}] (From above.) Keep the questions ``what is the bag of $f \times h$'', one for each map $h$.
+\item[\lab{B1}] (From below, L5.) Gluings: $e \sim_2 0$ for each $e$ flat to order $2$ at $a$. \ Respects: $+$, $\times$, place by place.
+\item[\lab{B2}] (From above, L6.) Question: ``flat to order $2$ at $a$''. \ Respects: $+$, $\times$.
 \end{lines}
-
-As in Chapters 11, 13 and 21, the gluings here are the bag test; this blur is made from above (B2).
 
 \subsection*{Propositions}
 
 \begin{lines}
-\item[\lab{P1}] (A true blur, and a rung.) $\sim_2$ chains and respects $+$ and $\times$. If $f \sim_2 g$ then $f$ and $g$ share a bag in Chapter 13. For $n = 1$ this is $\sim_2$ of Chapter 21.
+\item[\lab{P1}] (Bags; Appears; a rung.) $f \sim_2 g \iff f - g$ is flat to order $2$ at $a$, and B1 $=$ B2: the separating context for $f \not\sim_2 g$ is $x \mapsto x - g$ (as Chapter 21, P2). $\sim_2$ chains and respects $+$ and $\times$. If $f \sim_2 g$ then $f$ and $g$ share a bag in Chapter 13. For $n = 1$ this is $\sim_2$ of Chapter 21.
 \item[\lab{P2}] (Normal forms: at most one.) A bag holds at most one polynomial of order $2$ at $a$. Call the bag \emph{straight at rung $2$} if it holds one. \ (If $c + L + Q$ is flat to order $2$ then $c = 0$, then $L = 0$ along each line, then $Q = 0$.)
 \item[\lab{P3}] (When: three orders of slopes are enough.) If $f$ has continuous slopes up to order $3$ near $a$, its bag is straight at rung $2$, with
 \[
@@ -2683,17 +2692,29 @@ c = f(a), \qquad L = df_a, \qquad q_{ij} = \tfrac12\,\partial_i \partial_j f(a) 
 \item[\lab{P5}] (Reading $Q$ for $n = 2$.) Put $D := q_{11} q_{22} - q_{12}^2$, the $\det$ of the rows of $Q$. Then $Q$ is positive $\iff q_{11} > 0$ and $D > 0$; \ negative $\iff q_{11} < 0$ and $D > 0$; \ of both signs $\iff D < 0$.
 \end{lines}
 
+\subsection*{Notation}
+
+\begin{lines}
+\item[\lab{N1}] A bag straight at rung $2$ is written by its normal form $c + L + Q$.
+\end{lines}
+
+\subsection*{Arrow}
+
+\begin{lines}
+\item[\lab{P6}] The straight bags at rung $2$ go to the triples $(c, L, Q)$ one-to-one and onto, respecting $+$; $\times$ goes to $(c, L, Q)(c', L', Q') = (cc',\ cL' + c'L,\ cQ' + c'Q + LL')$, with the part of degree $3$ and $4$ dropped. For $n = 1$ this is Chapter 21, P5 at $k = 2$.
+\end{lines}
+
 \subsection*{Theorems}
 
 Let the bag of $f$ at $a$ be straight at rung $2$, with normal form $c + L + Q$.
 
 \begin{lines}
 \item[\lab{T1}] ($L \neq 0$: rung $1$ already answers.) Then $a$ is neither a lowest nor a highest point nearby. \ (G3 along a line $t \mapsto a + t\,h$ with $L(h) \neq 0$.) \ So only the points with $df_a = 0$ are left.
-\item[\lab{T2}] (Survives: $Q$ positive.) If $L = 0$ and $Q$ is positive, the answer to ``is $a$ a strict lowest point nearby'' is yes for the normal form, and it is kept by $\sim_2$. \\
+\item[\lab{T2}] (Kept on the bag: $Q$ positive.) If $L = 0$ and $Q$ is positive, the answer to ``is $a$ a strict lowest point nearby'' is yes for the normal form, and for every map in its bag (Chapter 0, C7). \\
 (By P4 the normal form is at least $c + m\,s^2$. What is glued away is smaller than $m\,s^2$ near $a$, by D1.) \\
 If $Q$ is negative: a strict highest point nearby.
-\item[\lab{T3}] (Survives: $Q$ of both signs.) If $L = 0$ and $Q$ is of both signs, the answer ``neither'' is kept by $\sim_2$. \ (Go along $h$, and along $h'$.)
-\item[\lab{T4}] (Dies: every other case.) If $L = 0$ and $Q$ is neither positive, nor negative, nor of both signs, the question is not kept: the bag holds maps with different answers. \\
+\item[\lab{T3}] (Kept on the bag: $Q$ of both signs.) If $L = 0$ and $Q$ is of both signs, the answer ``neither'' holds for every map in the bag. \ (Go along $h$, and along $h'$.)
+\item[\lab{T4}] (Not kept: every other case.) If $L = 0$ and $Q$ is neither positive, nor negative, nor of both signs, the question is not kept: the bag holds maps with different answers. \\
 Witnesses for $n = 1$, all in the bag of $0$: $x^4$ (lowest), $-x^4$ (highest), $x^3$ (neither). \ For $n = 2$, in one bag: $x^2 + y^4$ (lowest) and $x^2 - y^4$ (neither). \\
 (In general, say $Q \ge 0$ with $Q(h_0) = 0$, $h_0 \neq 0$. Adding $|h|^4$ gives a strict lowest point; taking away the fourth power of $h \cdot h_0$ gives a map that goes below $c$ along $h_0$. Both are glued to the normal form.)
 \item[\lab{T5}] (Where to look.) A continuous $f$ on a closed box has a lowest point there (G1). If $f$ has a straight bag at each inside point, the lowest point is on the boundary of the box or at a point where $df = 0$. \ (T1.)
@@ -2733,7 +2754,7 @@ Witnesses for $n = 1$, all in the bag of $0$: $x^4$ (lowest), $-x^4$ (highest), 
 {\small A straight map can be inverted exactly when its determinant is not $0$. That answer does not survive the tangent blur on a whole bag. It does survive on the maps whose tangent changes continuously.}
 \end{center}
 
-No new blur is made here. The chapter reads the tangent blur of Chapter 13 once more, asks one question of its normal form, and finds that the question dies on the bag and survives after a Select. It is the first chapter where a Select is what rescues a Survives line.
+No new blur is made here. The chapter reads the tangent blur of Chapter 13 once more, asks one question of its normal form, and finds that the answer is not kept on the whole bag, and is kept once the maps are selected (D1). It is the first chapter where a select is what makes a question kept (Chapter 0, C7).
 
 \subsection*{Given}
 
@@ -2752,7 +2773,7 @@ No new blur is made here. The chapter reads the tangent blur of Chapter 13 once 
 \item[\lab{D3}] A \emph{contraction} of a closed box $B$ is a map $T : B \to B$ with $|T(x) - T(y)| \le q\,|x - y|$ for all $x, y$ in $B$ and one fixed $q < 1$.
 \end{lines}
 
-\subsection*{The blur, and the question}
+\subsection*{The question on the normal form}
 
 The blur is the tangent blur at $a$ of Chapter 13, with its normal forms $c + L(x - a)$. Nothing new is glued. The question is: ``can the map be inverted near $a$?''
 
@@ -2761,12 +2782,12 @@ The blur is the tangent blur at $a$ of Chapter 13, with its normal forms $c + L(
 \begin{lines}
 \item[\lab{P1}] (The normal form answers.) The map $x \mapsto c + L(x - a)$ can be inverted $\iff \det L \neq 0$, and then its inverse is $y \mapsto a + L^{-1}(y - c)$. \\
 (If $L$ has an inverse $M$ then $\det L \cdot \det M = 1$. If $\det L \neq 0$ the arrows $L e_1, \dots, L e_n$ are independent, so $L$ glues nothing and by rank and nullity reaches all of $\R^n$. G2.)
-\item[\lab{P2}] (Survives: tangents of inverses are inverse.) If $F$ and $G$ are inverse to each other, $F$ is straight at $a$ and $G$ is straight at $F(a)$, then $DG_{F(a)} \circ DF_a$ is the identity. So $\det DF_a \neq 0$. \ (G1: composing survives.) \\
+\item[\lab{P2}] (Tangents of inverses are inverse.) If $F$ and $G$ are inverse to each other, $F$ is straight at $a$ and $G$ is straight at $F(a)$, then $DG_{F(a)} \circ DF_a$ is the identity. So $\det DF_a \neq 0$. \ (G1: composing survives.) \\
 Read backwards: where $\det DF_a = 0$, no inverse of $F$ has a tangent at $F(a)$.
-\item[\lab{P3}] (Dies on the whole bag.) Let $f(x) := x + 2x^2 \sin(1/x)$ for $x \neq 0$, and $f(0) := 0$. Then $f$ has a slope at every point, $f'(0) = 1$, so $f$ shares the bag of $x \mapsto x$ at $0$; and $f$ is one-to-one on no interval around $0$. \\
+\item[\lab{P3}] (Not kept on the whole bag.) Let $f(x) := x + 2x^2 \sin(1/x)$ for $x \neq 0$, and $f(0) := 0$. Then $f$ has a slope at every point, $f'(0) = 1$, so $f$ shares the bag of $x \mapsto x$ at $0$; and $f$ is one-to-one on no interval around $0$. \\
 (For $x \neq 0$, $f'(x) = 1 + 4x \sin(1/x) - 2\cos(1/x)$, which is $-1$ at every $x = 1/(2\pi m)$ and $3$ at every $x = 1/((2m + 1)\pi)$. So $f$ falls in some places and rises in others, as near $0$ as you like; by Chapter 10, T1 it takes some value twice.) \\
 So the answer ``yes'' of the normal form is not kept by the tangent blur at one point.
-\item[\lab{P4}] (Dies where $\det = 0$.) At $0$, the maps $x^3$ and $x^2$ share the bag of $0$. $x^3$ is one-to-one, and its inverse has no slope at $0$, as P2 says. $x^2$ is not one-to-one near $0$. So there the tangent does not even answer ``one-to-one''.
+\item[\lab{P4}] (Not kept where $\det = 0$.) At $0$, the maps $x^3$ and $x^2$ share the bag of $0$. $x^3$ is one-to-one, and its inverse has no slope at $0$, as P2 says. $x^2$ is not one-to-one near $0$. So there the tangent does not even answer ``one-to-one''.
 \end{lines}
 
 \subsection*{Theorems}
@@ -2780,7 +2801,7 @@ g'(f(x)) = \frac{1}{f'(x)} .
 \item[\lab{T2}] (Contraction: exactly one fixed point.) A contraction $T$ of a closed box has exactly one $x$ with $T(x) = x$, and from any start $x_0$ the sequence $x_0, T(x_0), T(T(x_0)), \dots$ comes near it. \\
 (At most one: if $T(x) = x$ and $T(y) = y$ then $|x - y| \le q\,|x - y|$, so $x = y$. \ At least one: the steps shrink like $q^k$, so the sequence settles; its limit is in the box, G4, and $T$ respects nearness.)
 \item[\lab{T2.1}] (The same for maps.) Let $B$ be a part of $C[b,c]$ that holds the limit in $M$ of each of its sequences, and $T : B \to B$ with the largest gap between $T(f)$ and $T(g)$ at most $q$ times the largest gap between $f$ and $g$, $q < 1$. Then exactly one $f$ in $B$ has $T(f) = f$. \ (As T2, with Chapter 20, T1 in place of G3 of Chapter 5.)
-\item[\lab{T3}] (Survives on $C^1$: inverting.) If $F$ is $C^1$ near $a$ and $\det DF_a \neq 0$, then $F$ can be inverted near $a$, and $DG_{F(x)} = (DF_x)^{-1}$ for $x$ near $a$. \\
+\item[\lab{T3}] (Kept on the selected bags: inverting.) If $F$ is $C^1$ near $a$ and $\det DF_a \neq 0$, then $F$ can be inverted near $a$, and $DG_{F(x)} = (DF_x)^{-1}$ for $x$ near $a$. \\
 (Follow $F$ by the inverse of $DF_a$; now the tangent at $a$ is the identity. Put $\varphi(x) := x - F(x)$. Its tangent at $a$ is $0$ and changes continuously, so on a small closed box $B$ around $a$: $|\varphi(x) - \varphi(y)| \le \tfrac12 |x - y|$, by Chapter 11, T6 along the segment from $x$ to $y$. Then $|F(x) - F(y)| \ge \tfrac12 |x - y|$: one-to-one. For $y$ near $F(a)$, the map $x \mapsto \varphi(x) + y$ is a contraction of $B$, and its fixed point is the $x$ with $F(x) = y$: T2.)
 \item[\lab{T4}] (Level sets are graphs.) Let $F : \R^2 \to \R$ be $C^1$ near $(a, b)$, with $F(a, b) = 0$ and $\partial_y F(a, b) \neq 0$. Then near $(a, b)$ the points with $F = 0$ are the graph of exactly one $C^1$ map $y = g(x)$, and
 \[
@@ -2844,11 +2865,11 @@ This chapter only blurs. It has one hard line, T1, and that line is not imported
 
 \subsection*{The blur}
 
-On $F[b,c]$. \ $O$: $+$, $\times$, $h \circ$ (follow by any map $h : \R \to \R$), limit point by point of a sequence.
+On $F[b,c]$.
 
 \begin{lines}
-\item[\lab{B1}] (From below.) Glue $f \sim g$ when $f = g$ almost everywhere.
-\item[\lab{B2}] (From above.) Postponed. The questions that make this blur from above are integrals, and they are Chapter 27's. Until then the gluings are the bag test.
+\item[\lab{B1}] (From below, L5.) Gluings: $e \sim 0$ for each $e$ that is $0$ almost everywhere. \ Respects: $+$, $\times$, and $h \circ$ (follow by $h$) for each map $h : \R \to \R$. \ Limits (L10): point by point, almost everywhere.
+\item[\lab{B2}] (From above.) Postponed. The question that makes this blur from above is an integral, $\int |f - g| = 0$, and integrals of such maps are Chapter 27's. So this chapter makes no Appears claim; Chapter 27, T4 makes it.
 \end{lines}
 
 \subsection*{Propositions}
@@ -2859,15 +2880,21 @@ On $F[b,c]$. \ $O$: $+$, $\times$, $h \circ$ (follow by any map $h : \R \to \R$)
 \item[\lab{P2}] (A sequence of null sets.) If $N_0, N_1, N_2, \dots$ are null, the set of all their members is null. \ (Give $N_i$ a cover for rung $k + i + 1$; the lengths add to less than $10^{-k}/9$.) \\
 Honest note: this picks one cover for each $N_i$, a sequence of choices. For a set listed by a sequence (P3) the covers are written down and nothing is chosen.
 \item[\lab{P3}] ($\Q$ is null.) So is every set listed by a sequence: give its $i$-th member the open stretch of length $10^{-(k+i+1)}$ around it.
-\item[\lab{P4}] (A true blur.) $\sim$ chains (P2 for two sets), respects $+$ and $\times$, and $f \sim g$ gives $h \circ f \sim h \circ g$ for every $h$.
+\item[\lab{P4}] (Bags; a true blur.) $f \sim g$ $\iff$ $f = g$ almost everywhere (Z2: $+$ spreads the gluings). $\sim$ chains (P2 for two sets), respects $+$ and $\times$, and $f \sim g$ gives $h \circ f \sim h \circ g$ for every $h$.
 \item[\lab{P5}] (Dies.) Let $e$ be $1$ at $\tfrac12$ and $0$ elsewhere, on $0 \le x \le 1$. Then $e \sim 0$, and
   (i) the value at a point dies;
   (ii) the largest value dies ($1$ against $0$);
   (iii) composing in front dies: with $h$ the constant $\tfrac12$, $e \circ h = 1$ while $0 \circ h = 0$;
   (iv) ``continuous'' dies: $\chi \sim 0$ (P3), and $\chi$ is continuous at no point.
-\item[\lab{P6}] (Survives: limits.) If $f_n \sim g_n$ for every $n$, and $f_n$ comes near $f$ point by point almost everywhere, then so does $g_n$. \ (The bad points of all $n$ together: P2.)
+\item[\lab{P6}] (Limits are respected, L10.) If $f_n \sim g_n$ for every $n$, and $f_n$ comes near $f$ point by point almost everywhere, then so does $g_n$. \ (The bad points of all $n$ together: P2.)
 \item[\lab{P7}] (One-way.) ``$f \le g$ almost everywhere'' chains and respects $+$ (L8). Its two-way part is $\sim$.
 \item[\lab{P8}] (Why not a smaller blur.) ``Differ at finitely many points'' is also a true blur respecting $+$ and $\times$. It does not respect limits: let $f_n$ be $1$ at the first $n$ rationals of P0 in the stretch and $0$ elsewhere. Each $f_n$ is glued to $0$; their limit point by point is $\chi$, which is not. So P6 is what the word ``sequence'' in D2 buys.
+\end{lines}
+
+\subsection*{Notation}
+
+\begin{lines}
+\item[\lab{N1}] $F[b,c]/{\sim}$: \emph{maps up to null sets}, with $+$, $\times$, $h \circ$ carried over (P4, Z6).
 \end{lines}
 
 \subsection*{Theorems}
@@ -2877,7 +2904,7 @@ Honest note: this picks one cover for each $N_i$, a sequence of choices. For a s
 (a) Finitely many already hold it. Let $P(x, y)$ say ``finitely many of the given stretches hold all of $x \le t \le y$''. $P$ chains. Each point $a$ lies in one given stretch, so some $\operatorname{near}_k(a)$ does too, and there one stretch is enough. Chapter 5, T8. \\
 (b) Finitely many: start at $b$; take a stretch holding the current point; move to its right end; repeat. The right ends pass $c$ after finitely many steps, and the lengths used add to more than $c - b$.
 \item[\lab{T2}] (Nothing continuous is glued.) If $f, g$ are in $C[b,c]$ and $f \sim g$, then $f = g$. \ (If $f(a) \ne g(a)$, continuity gives a whole stretch around $a$ where they differ: T1 and P1.) \\
-So $C[b,c] \to$ bags is an inside, and the integral of Chapter 12 is untouched.
+So the Arrow $C[b,c] \to F[b,c]/{\sim}$, $f \mapsto \bag{f}$, respecting $+$ and $\times$, is an inside (C3 for $+$, $\times$: lifted place by place, survive by P4, descend, agree here), and the integral of Chapter 12 is untouched.
 \item[\lab{T3}] (No gap.) If $N$ is null, every open stretch holds a point outside $N$. \ (T1.)
 \item[\lab{T4}] (Over $\Q$ everything is glued.) Run this chapter on $\Q$ in place of $\R$: every set of rationals is null (P3), so all maps share one bag. \\
 Twin: $\Q$ can be cut and its stretches are null; $\R$ cannot be cut and its stretches are not. Length needs the closing-up of Chapter 4.
@@ -2938,9 +2965,8 @@ Chapter 4 run a third time. No measure is built first: the integral is the quest
 On the sequences of D2. \ $O$: $+$, scaling, $|\cdot|$ (place by place).
 
 \begin{lines}
-\item[\lab{B1}] (From below.) Gluings: $(e_n) \sim 0$ for each selected sequence that comes near $0$ in $I$.
-\item[\lab{B2}] (From above.) Question: ``comes near $0$ in $I$''.
-\item[\lab{N1}] (Name.) A bag is an \emph{integrable map}. All bags: $L^1[b,c]$. A continuous $f$ sits inside as the bag of $(f, f, f, \dots)$.
+\item[\lab{B1}] (From below, L5.) Gluings: $(e_n) \sim 0$ for each selected sequence that comes near $0$ in $I$. \ Respects: $+$, scaling, $|\cdot|$.
+\item[\lab{B2}] (From above, L6.) Question: ``comes near $0$ in $I$''. \ Respects: $+$, scaling, $|\cdot|$.
 \end{lines}
 
 \subsection*{Propositions}
@@ -2956,6 +2982,18 @@ On the sequences of D2. \ $O$: $+$, scaling, $|\cdot|$ (place by place).
 \item[\lab{P8}] (Dies: ``continuous''.) Let $s_n$ be $0$ up to $\tfrac12$, rise straight to $1$ at $\tfrac12 + \tfrac1n$, and stay $1$. It comes near itself in $I$. No constant sequence $(g, g, \dots)$ with $g$ continuous shares its bag: that would give $\int_0^{1/2} |g| = 0$ and $\int_{1/2 + \delta}^1 |g - 1| = 0$ for every $\delta > 0$, so $g$ jumps at $\tfrac12$.
 \end{lines}
 
+\subsection*{Notation}
+
+\begin{lines}
+\item[\lab{N1}] A bag is an \emph{integrable map}. All bags: $L^1[b,c]$, with $+$, scaling, $|\cdot|$ carried over (P4, Z6), and the questions $\int$ and $\int |\cdot|$ (P5).
+\end{lines}
+
+\subsection*{Arrow}
+
+\begin{lines}
+\item[\lab{P9}] $C[b,c] \to L^1[b,c]$, $f \mapsto$ the bag of $(f, f, f, \dots)$, respects $+$, scaling, $|\cdot|$, and $\int$. It is an inside (P2) and not a picture (P8). \ C3 for $+$, scaling, $|\cdot|$: lifted place by place on sequences (M6), survive (P4), descend (Z6), agree (this line). For $\int$: a question, kept (P5), and on a constant sequence it is the $\int$ of Chapter 12.
+\end{lines}
+
 \subsection*{Theorems}
 
 \begin{lines}
@@ -2963,7 +3001,11 @@ On the sequences of D2. \ $O$: $+$, scaling, $|\cdot|$ (place by place).
 \item[\lab{T2}] (Each bag holds a map. The one existence line.) In every bag there is a sequence $(f_n)$ and a map $f$ on the stretch such that $f_n$ comes near $f$ point by point almost everywhere. \\
 (a) (A size bounds a length.) If $g$ in $C[b,c]$ is $\ge 0$ and $t > 0$, the points where $g > t$ are held by open stretches with lengths adding to at most $\tfrac1t \int g$. \ (Those points form open stretches, each holding a rational, so they are listed by Chapter 26, P0; on finitely many of them $t \cdot \text{length} \le \int g$, by A1, A3, A4.) \\
 (b) Take members with $\int |f_{n+1} - f_n| < 4^{-n}$. By (a), the points where $|f_{n+1} - f_n| > 2^{-n}$ are held by stretches of total length $\le 2^{-n}$. Outside the stretches for all $n \ge m$, the sum of the steps settles, so $f_n(x)$ comes near a limit (G1, T6). The points left over for every $m$ have total $\le 2^{1-m}$ for each $m$: a null set.
-\item[\lab{T3}] (At most one, up to Chapter 26. Classical; the proof is longer and is deferred with the others.) Two sequences in the same bag give maps glued by Chapter 26; sequences in different bags give maps not glued. So $L^1[b,c]$ is a bag of maps up to null sets, not only of sequences.
+\item[\lab{T3}] (At most one, up to Chapter 26.) Two sequences in the same bag give, by T2, maps glued by Chapter 26; sequences in different bags give maps not glued. So $L^1[b,c]$ is a bag of maps up to null sets, not only of sequences. \\
+(a) (A falling sequence that fades almost everywhere fades in the mean.) If $\phi_n$ in $C[b,c]$ have $\phi_1 \ge \phi_2 \ge \dots \ge 0$ and $\phi_n(x)$ comes near $0$ outside a null set $N$, then $\int \phi_n$ comes near $0$. \ (Given $t > 0$, hold $N$ by open stretches of total length $< t$. Each other point $x$ has an $n$ with $\phi_n(x) < t$, and then a whole open stretch around $x$ with $\phi_n < t$ (continuity). These stretches and those for $N$ hold the closed stretch, so finitely many do (Chapter 26, T1(a)); as the $\phi_n$ fall, one $n$ serves them all. Then $\int \phi_n \le t\,(c - b) + t \max \phi_1$.) \\
+(b) (Glued at $0$ in the mean and almost everywhere.) If $e_n$ in $C[b,c]$ have $\int |e_n|$ coming near $0$ and $e_n(x)$ coming near $e(x)$ outside a null set, then $e = 0$ almost everywhere. \ (For $t > 0$, a point with $|e(x)| > 2t$ has $|e_n(x)| > t$ for all large $n$. For each $m$, the points with $|e_n(x)| > t$ for every $n \ge m$ lie, for every $n \ge m$, in stretches of total length $\le \int |e_n| / t$ (T2(a)), so they form a null set. Over all $m$ and all $t = 10^{-k}$: a null set, Chapter 26, P2.) \\
+(c) Same bag, then glued. If $(f_n)$ and $(g_n)$ share a bag and T2 gives $f$ along members $f_{n_j}$ and $g$ along $g_{m_j}$, then $e_j := f_{n_j} - g_{m_j}$ has $\int |e_j|$ coming near $0$ (P2 twice) and comes near $f - g$ almost everywhere; by (b), $f = g$ almost everywhere. \ (With one sequence twice, this also says T2's map does not depend on the members chosen.) \\
+(d) Glued, then same bag. Take $e_j$ as in (c), chosen with $\int |e_{j+1} - e_j| < 4^{-j}$, and suppose $f = g$ almost everywhere, so $e_j$ comes near $0$ almost everywhere. For $j \le m$ put $\phi_m := \max\bigl(|e_j| - \sum_{i=j}^{m-1} |e_{i+1} - e_i|,\ 0\bigr)$: continuous, falling in $m$, and $\phi_m \le |e_m|$, which comes near $0$ almost everywhere. By (a), $\int \phi_m$ comes near $0$. Since $|e_j| \le \phi_m + \sum_{i=j}^{m-1} |e_{i+1} - e_i|$, \ $\int |e_j| \le \int \phi_m + \sum_{i \ge j} 4^{-i}$, and letting $m$ grow, $\int |e_j| \le 2 \cdot 4^{-j}$. So $\int |f_{n_j} - g_{m_j}|$ comes near $0$, and the two sequences share a bag.
 \item[\lab{T4}] (Appears: Chapter 26's blur from above.) For maps $f, g$ given by bags (T2, T3): \ $f \sim g$ in the sense of Chapter 26 \ $\iff$ \ $\int |f - g| = 0$. \ This is the question that Chapter 26, B2 postponed.
 \item[\lab{T5}] (The integral through limits: one table.) Three nearnesses of Chapter 20 and this chapter, two questions:
 \begin{center}
@@ -2973,16 +3015,16 @@ continuous & survives (Ch.\ 20, P6) & dies (P8) & dies (Ch.\ 20, P5) \\
 $\int$ & survives (Ch.\ 20, P7) & survives (P5) & dies (Ch.\ 20, P9) \\
 \end{tabular}
 \end{center}
-The last entry is rescued in two ways (both classical, proofs deferred):
-\item[\lab{T5.1}] (Survives under a roof.) If $f_n$ comes near $f$ point by point almost everywhere and $|f_n| \le G$ for one integrable $G$, then $f$ is integrable and $\int f_n$ comes near $\int f$. \ Dies without the roof: the tents of Chapter 20, P9 ($\int = 1$, limit $0$).
-\item[\lab{T5.2}] (Survives when only rising.) If $f_n \le f_{n+1}$ and the $\int f_n$ have a bound, the limit is integrable and $\int f_n$ comes near its integral. \ Dies without the bound: $\min(1/x, n)$ on $0 < x \le 1$ has $\int = 1 + \log n$.
+The last entry is rescued in two ways. Both are classical, their proofs are deferred, and no later line uses them:
+\item[\lab{T5.1}] (Under a roof.) If $f_n$ comes near $f$ point by point almost everywhere and $|f_n| \le G$ for one integrable $G$, then $f$ is integrable and $\int f_n$ comes near $\int f$. \ Dies without the roof: the tents of Chapter 20, P9 ($\int = 1$, limit $0$).
+\item[\lab{T5.2}] (When only rising.) If $f_n \le f_{n+1}$ and the $\int f_n$ have a bound, the limit is integrable and $\int f_n$ comes near its integral. \ Dies without the bound: $\min(1/x, n)$ on $0 < x \le 1$ has $\int = 1 + \log n$.
 \item[\lab{T6}] (Length appears last.) For a set $A$ in the stretch whose $0/1$ map $\chi_A$ is integrable, its \emph{length} is $\int \chi_A$. A stretch gets $c' - b'$; a null set gets $0$. The map $\chi$ of Chapter 12, R3 is glued to $0$, so $\int \chi = 0$, with no rule of choice.
 \end{lines}
 
 \subsection*{Remarks}
 
 \begin{lines}
-\item[\lab{R1}] (Where existence came from.) Once: T2, from ``a size bounds a length'' and $\R$ closed. Everything else is a Survives or Dies line of the nearness $I$.
+\item[\lab{R1}] (Where existence came from.) Once: T2, from ``a size bounds a length'' and $\R$ closed. T3 is ``at most one'' in both directions; its one hard step, (a), is ``the line cannot be cut'' again (Chapter 26, T1). Everything else is a Survives or Dies line of the nearness $I$.
 \item[\lab{R2}] (Chapter 12, R3 answered.) The area rules there could not decide $\chi$. Here $\chi$ is decided by closing up, not by choosing.
 \item[\lab{R3}] (Sets with no length.) Some sets $A$ have $\chi_A$ in no bag. Showing one exists needs a rule of choice (not in Chapter 0).
 \item[\lab{R4}] (Next.) Probability is this chapter again with $\int 1 = 1$. Chapter 28 squares the size: $\int |f - g|^2$.
@@ -3033,12 +3075,12 @@ Chapter 27 again, with $\int |f - g|^2$ in place of $\int |f - g|$. The new thin
 
 \subsection*{The blur}
 
-On the sequences of D3. \ $O$: $+$, scaling, $\langle\,,\rangle$.
+On the sequences of D3.
 
 \begin{lines}
-\item[\lab{B1}] (From below.) $(e_n) \sim 0$ for each selected sequence that comes near $0$ in $S$.
-\item[\lab{B2}] (From above.) Question: ``comes near $0$ in $S$''.
-\item[\lab{N1}] (Name.) The bags: $L^2[b,c]$, the \emph{square-integrable maps}.
+\item[\lab{B1}] (From below, L5.) Gluings: $(e_n) \sim 0$ for each selected sequence that comes near $0$ in $S$. \ Respects: $+$, scaling.
+\item[\lab{B2}] (From above, L6.) Question: ``comes near $0$ in $S$''. \ Respects: $+$, scaling. \\
+The product $\langle\,,\rangle$ is a question of two things, not an operation; P5 shows it is kept.
 \end{lines}
 
 \subsection*{Propositions}
@@ -3048,9 +3090,21 @@ On the sequences of D3. \ $O$: $+$, scaling, $\langle\,,\rangle$.
 \item[\lab{P2}] (The product's laws are carried.) $\langle\,,\rangle$ is symmetric, respects $+$ and scaling in each place, and $\langle f, f \rangle \ge 0$, with $0$ only for $f = 0$ on $C[b,c]$ (Chapter 27, P2). The same four laws hold for $x \cdot y$ on $\R^n$.
 \item[\lab{P3}] (Right angles: sizes add.) If $f \perp g$ then $\|f + g\|^2 = \|f\|^2 + \|g\|^2$. \ (Open the bracket.)
 \item[\lab{P4}] (Cancellation survives at right angles. The repair of Chapter 17, P6.3.) On $0 \le x \le 1$ the maps $u_j(x) = \sin(2\pi j x)$, $j = 1, 2, \dots$, are at right angles in pairs, each with $\|u_j\|^2 = \tfrac12$. So for every choice of signs, $\|\pm u_1 \pm u_2 \pm \dots \pm u_N\|^2 = N/2$. The sizes do not see the signs; the squares of sizes add exactly, whatever cancels.
-\item[\lab{P5}] (Survives: $+$, scaling, $\langle\,,\rangle$.) By T1 below: $\|f + g\| \le \|f\| + \|g\|$, and $|\langle f, g \rangle - \langle f', g' \rangle| \le \|f - f'\|\,\|g\| + \|f'\|\,\|g - g'\|$. So the product is a question on pairs of bags.
+\item[\lab{P5}] (Survives: $+$, scaling; the question $\langle\,,\rangle$ is kept.) By T1 below: $\|f + g\| \le \|f\| + \|g\|$, and $|\langle f, g \rangle - \langle f', g' \rangle| \le \|f - f'\|\,\|g\| + \|f'\|\,\|g - g'\|$. So the product is a question on pairs of bags.
 \item[\lab{P6}] (Dies: $\times$.) $f(x) = x^{-1/3}$ on $0 < x \le 1$ (closed up from $\min(x^{-1/3}, n)$) has $\|f\|^2 = 3$, but $f \cdot f = x^{-2/3}$ has $\int (x^{-2/3})^2 = \int x^{-4/3}$ with no bound.
 \item[\lab{P7}] (Inside $L^1$; not the reverse.) $\int |f| \le \sqrt{c - b}\,\|f\|$ (T1 with $g = 1$). So a sequence that comes near itself in $S$ does so in $I$, and $L^2[b,c]$ sits inside $L^1[b,c]$. Reverse dies: $x^{-1/2}$ is integrable, its square $1/x$ is not (Chapter 27, P6).
+\end{lines}
+
+\subsection*{Notation}
+
+\begin{lines}
+\item[\lab{N1}] The bags: $L^2[b,c]$, the \emph{square-integrable maps}, with $+$, scaling (Z6) and the question $\langle\,,\rangle$.
+\end{lines}
+
+\subsection*{Arrow}
+
+\begin{lines}
+\item[\lab{P8}] $C[b,c] \to L^2[b,c]$ (constant sequences) is an inside respecting $+$, scaling and $\langle\,,\rangle$ (Chapter 27, P2 for the square). $L^2[b,c] \to L^1[b,c]$, a bag to the bag of the same sequence, respects $+$ and scaling (P7); it is not a picture (P7). That it is an inside is Chapter 27, T3 run with $S$; it is not used. C3 for $+$, scaling: lifted on sequences, survive (P5), descend, agree here.
 \end{lines}
 
 \subsection*{Theorems}
@@ -3064,7 +3118,7 @@ So the triangle law $\|f + g\| \le \|f\| + \|g\|$ holds, and the debt of Chapter
 At most one, and the right angle: the middle-point law $\|p + q\|^2 + \|p - q\|^2 = 2\|p\|^2 + 2\|q\|^2$ (open the brackets). Two nearest points would have a nearer middle point. \\
 At least one: take $v_n$ in $V$ with $\|f - v_n\|$ coming near the least value; the middle-point law makes $(v_n)$ come near itself in $S$; $V$ holds its limit (T2). Existence comes from ``closed'', once.
 \item[\lab{T4}] (The blur of Chapter 6, road one, again.) For $V$ as in T3, ``$f \sim_V g \iff f - g \in V$'' is a blur respecting $+$ and scaling, and each bag holds exactly one member at right angles to $V$: the normal form is $f - v$, the twin of Chapter 6, P9.
-\item[\lab{T5}] (The test that picks out a product.) A size comes from a product $\langle\,,\rangle$ exactly when it passes the middle-point law (classical: Jordan and von Neumann; reported, not used). The size $\int |f|$ of Chapter 27 fails it: on $0 \le x \le 1$, with $p = 1$ on the first half and $q = 1$ on the second (or continuous maps near them), $\int|p + q| = \int |p - q| = 1$ and $\int|p| = \int|q| = \tfrac12$, so $1^2 + 1^2 \ne 2 (\tfrac12)^2 + 2 (\tfrac12)^2$.
+\item[\lab{T5}] (The size of Chapter 27 has no product.) The size $\int |f|$ of Chapter 27 fails the middle-point law of T3, which every size from a product passes: on $0 \le x \le 1$, with $p = 1$ on the first half and $q = 1$ on the second (or continuous maps near them), $\int|p + q| = \int |p - q| = 1$ and $\int|p| = \int|q| = \tfrac12$, so $1^2 + 1^2 \ne 2 (\tfrac12)^2 + 2 (\tfrac12)^2$.
 \end{lines}
 
 \subsection*{Remarks}
@@ -3072,9 +3126,10 @@ At least one: take $v_n$ in $V$ with $\|f - v_n\|$ coming near the least value; 
 \begin{lines}
 \item[\lab{R1}] (Why squares.) Chapter 17, R2 named cancellation as the edge of the method: sizes forget signs. Here sizes still forget signs, but at right angles their squares add exactly (P3, P4). The repair was a change of floor, not a sharper estimate. Chapter 29 uses it.
 \item[\lab{R2}] (Where existence came from.) T3, once, from ``closed''. T1 is a Survives line of the four laws of P2: one proof serves every row that has them.
-\item[\lab{R3}] (A second road to T1.) Suppose only $\langle f, g \rangle \le C\,\|f\|\,\|g\|$ were known, for one constant $C$. Apply it to $f(x_1) \cdots f(x_m)$ and $g(x_1) \cdots g(x_m)$ on the $m$-fold box: $\langle f, g \rangle^m \le C\,\|f\|^m\,\|g\|^m$. Take $m$-th roots and let $m$ grow: $C$ dies. This is the Amplify draft (Building 2).
+\item[\lab{R3}] (A second road to T1.) Suppose only $\langle f, g \rangle \le C\,\|f\|\,\|g\|$ were known, for one constant $C$. Apply it to $f(x_1) \cdots f(x_m)$ and $g(x_1) \cdots g(x_m)$ on the $m$-fold box: $\langle f, g \rangle^m \le C\,\|f\|^m\,\|g\|^m$. Take $m$-th roots and let $m$ grow: $C$ dies. This is Amplify (Field notes: the edge, Note 2, line A).
 \item[\lab{R4}] (Old names.) $\langle\,,\rangle$: the $L^2$ inner product. T1: Cauchy--Schwarz. T2: $L^2$ is complete (a Hilbert space). T3: the projection theorem. P3: Pythagoras. The middle-point law: the parallelogram law. P4: orthogonality of the sine system.
 \item[\lab{R5}] (Machine check, \texttt{checks/ch28-check.py}.) P4 exactly for $j, k \le 6$, and for all sign choices with $N \le 8$; P6; P7; T1 on random polynomials and random lists; T5's witness.
+\item[\lab{R6}] (The converse, reported.) A size that passes the middle-point law comes from a product (classical: Jordan and von Neumann). No line uses it.
 \end{lines}
 
 \subsection*{Exercises}
@@ -3095,11 +3150,11 @@ At least one: take $v_n$ in $V$ with $\|f - v_n\|$ coming near the least value; 
 \section*{Chapter 29. Waves on the circle}
 \phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter 29. Waves on the circle \quad maps on the circle $\to$ lists indexed by $\Z$}{Chapter 29. Waves on the circle}}
 \begin{center}
-{\normalsize maps on the circle $\to$ lists indexed by $\Z$ \quad$\cdot$\quad from: Chapters 8, 10, 12, 20, 28 \quad$\cdot$\quad survey, arrow, ladder}\\[4pt]
+{\normalsize maps on the circle $\to$ lists indexed by $\Z$ \quad$\cdot$\quad from: Chapters 8, 10, 12, 20, 28 \quad$\cdot$\quad table, arrow}\\[4pt]
 {\small List every arrow from the circle to itself that respects $+$. Ask a map how much of each it holds. One rung of the answer can overshoot; the average of the rungs never does, and that is enough to come back.}
 \end{center}
 
-A survey chapter. It finds all the arrows of one kind (T1), uses them as questions, and climbs the ladder of answers. Nothing is imported: the one place the old route needed Weierstrass is replaced by a Survives line about averages (T5).
+A table, then an arrow. The table is one column long: all the arrows of one kind (T1). The arrow uses them as questions, and climbs the ladder of answers. No blur is claimed. Nothing is imported: the one place the old route needed Weierstrass is replaced by a line about averages (T5).
 
 \subsection*{Given}
 
@@ -3121,11 +3176,11 @@ A survey chapter. It finds all the arrows of one kind (T1), uses them as questio
 \item[\lab{D5}] (The ladder.) Rung $N$: \ $S_N f := \sum_{|n| \le N} \widehat{f}(n)\, e_n$. \ The average of the first $N + 1$ rungs: $\sigma_N f := \frac{1}{N+1}(S_0 f + \dots + S_N f)$.
 \end{lines}
 
-\subsection*{The survey}
+\subsection*{The table}
 
 \begin{lines}
 \item[\lab{T1}] (Every arrow from the circle to the circle.) The continuous maps $\chi : \mathbb{T} \to S$ that respect $+$ are exactly the $e_n$, one for each $n$ in $\Z$. \\
-(Near $0$, $\chi$ stays near $1$, so it lifts through $w$ by a continuous $\lambda$ with $\chi = w \circ \lambda$ and $\lambda(s + t) = \lambda(s) + \lambda(t)$ for small $s, t$; such a $\lambda$ is $t \mapsto c\,t$ (rationals first, then continuity). Then $\chi(1) = 1$ gives $c \in \Z$: G2.) Chapter 10, T10 is the cases $n = \pm 1$.
+(Near $0$, $\chi$ stays near $1$, where $w$ has a continuous inverse $\ell$ with $\ell(1) = 0$: near $t = 0$ the map $t \mapsto \operatorname{Im} w(t)$ has slope $2\pi \ne 0$, so it can be inverted (Chapter 25, T1), and a point of $S$ near $1$ is fixed by its second entry. Put $\lambda := \ell \circ \chi$ on a small stretch $|t| \le \delta$: continuous, $\chi = w \circ \lambda$, and $\lambda(s + t) = \lambda(s) + \lambda(t)$ when $s$, $t$, $s + t$ are in the stretch, since both sides are near $0$ and $w$ sends both to $\chi(s)\chi(t)$. Then $\lambda(m \delta / n) = (m/n)\lambda(\delta)$ for whole $|m| \le n$, and by continuity $\lambda(t) = c\,t$ on the stretch. So $\chi(t) = w(c\,t)$ near $0$, hence everywhere, as every $t$ is a sum of small steps. Then $\chi(1) = 1$ gives $c \in \Z$: G2.) Chapter 10, T10 is the cases $n = \pm 1$.
 \end{lines}
 
 \subsection*{Propositions}
@@ -3133,28 +3188,28 @@ A survey chapter. It finds all the arrows of one kind (T1), uses them as questio
 \begin{lines}
 \item[\lab{P1}] (The waves are at right angles.) $\langle e_m, e_n \rangle = 1$ if $m = n$ and $0$ otherwise. \ ($\int_0^1 w(k t) = 0$ for $k \ne 0$: an antiderivative is $w(kt)/(2\pi i k)$, which takes the same value at $0$ and $1$.)
 \item[\lab{P2}] (Rung $N$ is the nearest point.) $S_N f$ is the member of the span of $e_{-N}, \dots, e_N$ nearest to $f$ (Chapter 28, T3; here the span is finite, so nothing has to be closed). So $\sum_{|n| \le N} |\widehat{f}(n)|^2 \le \|f\|^2$ for every $N$: the sizes squared of the list settle.
-\item[\lab{P3}] (Survives: turning.) Let $f_a(t) := f(t - a)$. Then $\widehat{f_a}(n) = w(-n a)\, \widehat{f}(n)$. Turning the circle becomes multiplying place by place.
-\item[\lab{P4}] (Survives: the derivative.) If $f$ has a continuous derivative, $\widehat{f'}(n) = 2\pi i n\, \widehat{f}(n)$. \ (Parts, Chapter 12, T4; the end terms cancel because $f(1) = f(0)$.)
-\item[\lab{P5}] (Dies: $\times$.) $\widehat{f g}$ is not $\widehat f\, \widehat g$ place by place: $f = g = e_1$ gives $\widehat{fg}(2) = 1$ while $\widehat f(2)\, \widehat g(2) = 0$. What survives is the convolution $\sum_m \widehat f(m)\, \widehat g(n - m)$: the same loss as $\ast$ in Chapter 6.
+\item[\lab{P3}] (The arrow sends turning to multiplying.) Let $f_a(t) := f(t - a)$. Then $\widehat{f_a}(n) = w(-n a)\, \widehat{f}(n)$. Turning the circle becomes multiplying place by place.
+\item[\lab{P4}] (The arrow sends the derivative to multiplying by $2\pi i n$.) If $f$ has a continuous derivative, $\widehat{f'}(n) = 2\pi i n\, \widehat{f}(n)$. \ (Parts, Chapter 12, T4; the end terms cancel because $f(1) = f(0)$.)
+\item[\lab{P5}] (Dies through the arrow: $\times$.) $\widehat{f g}$ is not $\widehat f\, \widehat g$ place by place: $f = g = e_1$ gives $\widehat{fg}(2) = 1$ while $\widehat f(2)\, \widehat g(2) = 0$. What survives is the convolution $\sum_m \widehat f(m)\, \widehat g(n - m)$: the same loss as $\ast$ in Chapter 6.
 \item[\lab{P6}] (One rung can overshoot.) For the square wave ($1$ on $0 < t < \tfrac12$, $-1$ on $\tfrac12 < t < 1$), the largest value of $S_N f$ near the jump comes near $1.179$, not $1$, as $N$ grows. A single rung does not keep ``$|f| \le 1$''.
 \end{lines}
 
 \subsection*{Theorems}
 
 \begin{lines}
-\item[\lab{T2}] (The average is a positive blur.) $\sigma_N f(t) = \int_0^1 F_N(t - s)\, f(s)\, ds$ with \[ F_N(t) = \frac{1}{N+1}\,\Bigl|\sum_{k=0}^{N} w(k t)\Bigr|^2 \ \ge\ 0, \qquad \int_0^1 F_N = 1. \] One rung has the weight $D_N = \sum_{|n| \le N} e_n$, which takes negative values; the average does not.
-\item[\lab{T3}] (Survives the average: bounds.) If $m \le f \le M$ (real $f$), then $m \le \sigma_N f \le M$. \ (T2: a positive weight of total $1$.) Contrast P6.
+\item[\lab{T2}] (The average is a positive weight.) $\sigma_N f(t) = \int_0^1 F_N(t - s)\, f(s)\, ds$ with \[ F_N(t) = \frac{1}{N+1}\,\Bigl|\sum_{k=0}^{N} w(k t)\Bigr|^2 \ \ge\ 0, \qquad \int_0^1 F_N = 1. \] One rung has the weight $D_N = \sum_{|n| \le N} e_n$, which takes negative values; the average does not.
+\item[\lab{T3}] (The average keeps bounds.) If $m \le f \le M$ (real $f$), then $m \le \sigma_N f \le M$. \ (T2: a positive weight of total $1$.) Contrast P6.
 \item[\lab{T4}] (The weight piles up at $0$.) For $\delta \le |t| \le \tfrac12$: \ $F_N(t) \le \dfrac{1}{(N+1)\, \sin^2(\pi \delta)}$.
 \item[\lab{T5}] (The average comes back, for every continuous map.) If $f$ is in $C(\mathbb{T})$, $\sigma_N f$ comes near $f$ in $M$. \\
 (Split $f(t) - \sigma_N f(t) = \int F_N(t - s)(f(t) - f(s))\,ds$ into $|t - s| < \delta$, where $f$ barely moves (Chapter 5, T7: one rung serves the whole circle), and the rest, where T4 makes the weight small.) An estimate carried through a positive average; no existence is used.
-\item[\lab{T6}] (At most one.) If $f$ is in $C(\mathbb{T})$ and every $\widehat f(n) = 0$, then $f = 0$. \ (Every $\sigma_N f = 0$; T5.) So $f \mapsto \widehat f$ is an inside on $C(\mathbb{T})$: a continuous map is fixed by its list.
+\item[\lab{T6}] (At most one.) If $f$ is in $C(\mathbb{T})$ and every $\widehat f(n) = 0$, then $f = 0$. \ (Every $\sigma_N f = 0$; T5.) So the blur of the arrow $f \mapsto \widehat f$ (W4) glues nothing on $C(\mathbb{T})$: it is an inside, and a continuous map is fixed by its list.
 \item[\lab{T7}] (Smooth maps: one rung is enough.) If $f$ has two continuous derivatives, $|\widehat f(n)| \le \|f''\| / (4\pi^2 n^2)$ for $n \ne 0$ (P4 twice, and $|\langle g, e_n \rangle| \le \|g\|$). So $\sum |\widehat f(n)|$ settles, $S_N f$ comes near some continuous $g$ in $M$ (Chapter 20, T3), $g$ has the same list as $f$, and $g = f$ by T6.
 \end{lines}
 
 \subsection*{Remarks}
 
 \begin{lines}
-\item[\lab{R1}] (What the method did here.) Chapter 17 lost cancellation; Chapter 28 got it back at right angles (P1, P2). The return T5 is a Survives line of a positive blur: ``$\ge 0$ is kept by averaging rungs, not by one rung''. That is why the overshoot of P6 does not spoil it.
+\item[\lab{R1}] (What the method did here.) Chapter 17 lost cancellation; Chapter 28 got it back at right angles (P1, P2). The return T5 is a line about a positive weight: ``$\ge 0$ is kept by averaging rungs, not by one rung''. The weight is not a blur in the sense of L1; it is an average. That is why the overshoot of P6 does not spoil it.
 \item[\lab{R2}] (An import removed.) The plan for this chapter needed ``a continuous map with every $\widehat f(n) = 0$ is $0$'' from Weierstrass on the circle. T5 gives it. With the cosine substitution and the series of $\exp$, T5 also gives the polynomial form, so Chapter 20, R4 can now be earned (the proof is deferred with the others).
 \item[\lab{R3}] (The honest edge.) For merely continuous $f$ the rungs $S_N f(t)$ need not come near $f(t)$ at every point (classical, du Bois-Reymond; not proved here). Chapter 30 changes the floor so that the question has a clean answer.
 \item[\lab{R4}] (Old names.) $e_n$: the characters of $\mathbb{T}$. $\widehat f(n)$: Fourier coefficients. $S_N f$: partial sums of the Fourier series. P2: Bessel's inequality. $D_N$: Dirichlet kernel. $F_N$: Fejér kernel. T5: Fejér's theorem. P6: the Gibbs phenomenon. P5: the convolution theorem.
@@ -3204,9 +3259,9 @@ No new blur. One arrow, read on the right floor. The twin of Chapter 10, T8, whe
 
 \begin{lines}
 \item[\lab{P1}] (The arrow is defined on bags.) $\sum_n |\widehat f(n) - \widehat g(n)|^2 \le \|f - g\|^2$ (Chapter 29, P2 for $f - g$). So the arrow respects nearness in the mean square with the same rung, and D2 does not depend on the sequence chosen.
-\item[\lab{P2}] (Survives: $+$, scaling, turning, $\langle\,,\rangle$.) From Chapter 29, P3, and T1 below.
-\item[\lab{P3}] (Dies: the value at a point.) The map $1$ at $t = 0$ and $0$ elsewhere has the same list as $0$. A list cannot ask what a map does at one point (G3).
-\item[\lab{P4}] (Dies: ``continuous''.) The square wave of Chapter 29, P6 has a list in $\ell^2(\Z)$ ($|\widehat f(n)| = 2/(\pi |n|)$ for odd $n$, $0$ for even), and no continuous map has that list (Chapter 27, P8 on the circle).
+\item[\lab{P2}] (The arrow respects $+$, scaling, turning, $\langle\,,\rangle$.) From Chapter 29, P3, and T1 below.
+\item[\lab{P3}] (Dies through the arrow: the value at a point.) The map $1$ at $t = 0$ and $0$ elsewhere has the same list as $0$. A list cannot ask what a map does at one point (G3).
+\item[\lab{P4}] (Dies through the arrow: ``continuous''.) The square wave of Chapter 29, P6 has a list in $\ell^2(\Z)$ ($|\widehat f(n)| = 2/(\pi |n|)$ for odd $n$, $0$ for even), and no continuous map has that list (Chapter 27, P8 on the circle).
 \end{lines}
 
 \subsection*{Theorems}
@@ -3215,7 +3270,7 @@ No new blur. One arrow, read on the right floor. The twin of Chapter 10, T8, whe
 \item[\lab{T1}] (Energy is kept.) For every $f$ in $L^2(\mathbb{T})$: \ $\sum_n |\widehat f(n)|^2 = \|f\|^2$, and $S_N f$ comes near $f$ in the mean square. \\
 (For continuous $f$: $\sigma_N f$ comes near $f$ in $M$, hence in the mean square (Chapter 29, T5). $\sigma_N f$ lies in the span of $e_{-N}, \dots, e_N$, so the nearest point $S_N f$ is nearer still (Chapter 29, P2). Then Chapter 28, P3 with $f = S_N f + (f - S_N f)$ at right angles gives the sum. For a bag: P1 carries the line from continuous members to every bag.)
 \item[\lab{T2}] (The two homes are one.) The arrow $f \mapsto \widehat f$ is an inside and a picture from $L^2(\mathbb{T})$ onto $\ell^2(\Z)$, and it keeps the product: $\langle \widehat f, \widehat g \rangle = \langle f, g \rangle$. \\
-Inside: T1 with $f - g$. \ Picture: for $c$ in $\ell^2(\Z)$, the sums $\sum_{|n| \le N} c_n e_n$ come near themselves in the mean square (right angles, Chapter 29, P1), and their limit, which exists because $L^2(\mathbb{T})$ is closed (Chapter 28, T2), has the list $c$. Existence comes from ``closed'', once. The product: from energy, by $4\langle f, g \rangle = \sum_{k=0}^{3} i^k \|f + i^k g\|^2$.
+Inside: T1 with $f - g$; so the blur of the arrow (W4) glues nothing. \ Picture: for $c$ in $\ell^2(\Z)$, the sums $\sum_{|n| \le N} c_n e_n$ come near themselves in the mean square (right angles, Chapter 29, P1), and their limit, which exists because $L^2(\mathbb{T})$ is closed (Chapter 28, T2), has the list $c$. Existence comes from ``closed'', once. The product: from energy, by $4\langle f, g \rangle = \sum_{k=0}^{3} i^k \|f + i^k g\|^2$.
 \item[\lab{T3}] (A sum read off.) The sawtooth $f(t) = t - \tfrac12$ on $0 \le t < 1$ has $\widehat f(n) = \dfrac{i}{2\pi n}$ for $n \ne 0$ and $\widehat f(0) = 0$, and $\|f\|^2 = \tfrac1{12}$. T1 gives \[ \sum_{n \ge 1} \frac{1}{n^2} = \frac{\pi^2}{6}. \] Chapter 29, E5 gave only ``$\le$''; the matching turns it into ``$=$''.
 \end{lines}
 
@@ -3247,10 +3302,10 @@ Inside: T1 with $f - g$. \ Picture: for $c$ in $\ell^2(\Z)$, the sums $\sum_{|n|
 \phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter 31. The complex derivative \quad maps $\mathbb{C} \to \mathbb{C}$ $\to$ those whose tangent is a number}{Chapter 31. The complex derivative}}
 \begin{center}
 {\normalsize maps $\mathbb{C} \to \mathbb{C}$ $\to$ those whose tangent is a number \quad$\cdot$\quad from: Chapters 7, 9, 11, 13, 25 \quad$\cdot$\quad blur, select}\\[4pt]
-{\small Run Chapter 11 with $\mathbb{C}$ in place of $\R$. Seen as a map of the plane, the tangent is a straight map; Select those that commute with $i$. Then angles survive.}
+{\small Run Chapter 11 with $\mathbb{C}$ in place of $\R$. Seen as a map of the plane, the tangent is a straight map; select those that commute with $i$. Then angles survive.}
 \end{center}
 
-The blur is Chapter 11's, word for word. The new thing is a Select, and it is a question about the normal form: does the straight map of the tangent commute with turning by a right angle?
+The blur is Chapter 11's, word for word. The select asks one question of its normal form: does the straight map of the tangent commute with turning by a right angle?
 
 \subsection*{Given}
 
@@ -3259,90 +3314,107 @@ The blur is Chapter 11's, word for word. The new thing is a Select, and it is a 
 \item[\lab{G2}] (Chapter 11.) Flat, the tangent blur, straight bags, P9 (into the dual numbers), T1, T2 (sum, product, composing).
 \item[\lab{G3}] (Chapter 13; Chapter 25, G1.) For $F : \R^2 \to \R^2$, place by place: the straight bag at $a$ holds $F(a) + DF_a(x - a)$ with $DF_a$ a straight map of $\R^2$. Chapter 25, T3: inverting.
 \item[\lab{G4}] (Chapter 9.) Corners; gluing (i) of B1, $(u, v) \sim (zu, zv)$; the angle question $q$; P5.
-\item[\lab{G5}] (Chapter 10, T5.) $\exp$ on $\mathbb{C}$, $\exp(z + w) = \exp(z)\exp(w)$.
+\item[\lab{G5}] (Chapter 22, T4.) $\exp$ on $\mathbb{C}$, $\exp(z + w) = \exp(z)\exp(w)$.
 \end{lines}
 
 \subsection*{Definitions}
 
 \begin{lines}
-\item[\lab{D1}] Fix $a$ in $\mathbb{C}$. $e : \mathbb{C} \to \mathbb{C}$ is \emph{flat at $a$} if $e(a) = 0$ and $e(z)/(z - a)$ comes near $0$ as $z$ comes near $a$ (rungs on $|z - a|$, as Chapter 13, D1).
+\item[\lab{D1}] Fix $a$ in $\mathbb{C}$. $e : \mathbb{C} \to \mathbb{C}$ is \emph{flat at $a$} if $e(a) = 0$ and $e(z)/(z - a)$ comes near $0$ as $z$ comes near $a$ (rungs on $|z - a|$, as Chapter 13, D1). \ $\operatorname{flat}_a(e)$: $e$ is flat at $a$.
 \item[\lab{D2}] A \emph{complex line at $a$}: $z \mapsto c + m(z - a)$ with $c, m$ in $\mathbb{C}$.
 \item[\lab{D3}] An \emph{open region} $U$: a set of complex numbers holding, with each of its points, all points at some rung near it.
 \end{lines}
 
-\subsection*{The blur}
+\subsection*{Blur}
 
-On maps $\mathbb{C} \to \mathbb{C}$. \ $O$: $+$, $\times$.
+On maps $\mathbb{C} \to \mathbb{C}$.
 
 \begin{lines}
-\item[\lab{B1}] (From below.) $f \sim g$ when $f - g$ is flat at $a$.
-\item[\lab{B2}] (From above.) Question: ``flat at $a$''.
+\item[\lab{B1}] (From below, L5.) Gluings: $e \sim 0$ for each $e$ flat at $a$. \ Respects: $+$, $\times$. \ Call this blur $\sim$.
+\item[\lab{B2}] (From above, L6.) Question: $\operatorname{flat}_a$. \ Respects: $+$, $\times$. \ Call this blur $\approx$.
 \end{lines}
 
 \subsection*{Propositions}
 
 \begin{lines}
-\item[\lab{P1}] (Appears; Chapter 11 again.) $\sim\ =\ \approx$. Each bag holds at most one complex line. The value survives; bending dies.
-\item[\lab{P2}] (Select, M4.) A bag is \emph{straight over $\mathbb{C}$} if it holds a complex line $f(a) + m(z - a)$. Then $f$ is \emph{complex-differentiable at $a$} and $f'(a) := m$. Straight bags go into $\mathbb{C}[\varepsilon]$ by $f(a) + f'(a)\varepsilon$, respecting $+$ and $\times$ (Chapter 11, P9 with $\mathbb{C}$ for $\R$).
-\item[\lab{P3}] (Survives: sum, product, composing.) Chapter 11, T1 and T2, with the same words.
-\item[\lab{P4}] (Two blurs on the same map.) Write $f = u + iv$ and read $f$ as $F = (u, v) : \R^2 \to \R^2$. Every complex line is a straight map of $\R^2$; so a bag straight over $\mathbb{C}$ is straight in the sense of Chapter 13. Not the reverse (P5).
-\item[\lab{P5}] (Dies: ``straight over $\mathbb{C}$'' is more than ``straight''.) $z \mapsto \bar z$ is a straight map of $\R^2$, $(x, y) \mapsto (x, -y)$, at every point; it is complex-differentiable at none: $(\overline{a + h} - \bar a)/h = \bar h / h$ is $1$ for real $h$ and $-1$ for $h$ on the line of $i$.
-\item[\lab{P6}] (Survives: $\exp$, polynomials, $1/z$.) $\exp' = \exp$ on $\mathbb{C}$: $\exp(a + h) - \exp(a) - \exp(a)h = \exp(a)(\exp(h) - 1 - h)$, and $|\exp(h) - 1 - h| \le |h|^2 \exp(|h|)$ from the sums of G5. Polynomials by P3. $1/z$ on $z \ne 0$ with derivative $-1/z^2$.
+\item[\lab{P1}] (Bags; Appears.) $f \sim g \iff f - g$ is flat at $a$, and $\sim\ =\ \approx$: the separating context for $f \not\sim g$ is $z \mapsto z - g$ (Chapter 11, P5, with $\mathbb{C}$ for $\R$). \ Each bag holds at most one complex line. The value survives; bending dies.
+\item[\lab{P2}] ($+$, $\times$, composing survive.) Chapter 11, T1 and T2, with the same words.
+\item[\lab{P3}] (Two blurs on the same map.) Write $f = u + iv$ and read $f$ as $F = (u, v) : \R^2 \to \R^2$. Every complex line is a straight map of $\R^2$; so a bag that holds a complex line is straight in the sense of Chapter 13. Not the reverse (P4).
+\item[\lab{P4}] (Dies: ``holds a complex line'' is more than ``straight''.) $z \mapsto \bar z$ is a straight map of $\R^2$, $(x, y) \mapsto (x, -y)$, at every point; its bag holds a complex line at none: $(\overline{a + h} - \bar a)/h = \bar h / h$ is $1$ for real $h$ and $-1$ for $h$ on the line of $i$.
+\end{lines}
+
+\subsection*{Select: the bags that hold a complex line}
+
+\begin{lines}
+\item[\lab{D4}] (Tests, M4.) A bag is \emph{straight over $\mathbb{C}$} if it holds a complex line $f(a) + m(z - a)$. Then $f'(a) := m$, the one $m$ (P1).
+\item[\lab{T1}] (The test is a commuting question.) The bag of $f$ at $a$ is straight over $\mathbb{C}$ \ $\iff$ \ $F$ is straight at $a$ and $DF_a$ commutes with turning by a right angle, $J(x, y) = (-y, x)$. \ In entries: \[ DF_a = \begin{pmatrix} p & -q \\ q & p \end{pmatrix}, \qquad \text{that is} \quad \partial_x u = \partial_y v, \ \ \partial_y u = -\partial_x v . \] Then $f'(a) = p + iq$. \ (A straight map $L$ of $\R^2$ commutes with $J$ exactly when it is ``multiply by one complex number'': $L(1) = m$ forces $L(i) = L(J 1) = J L(1) = im$.)
+\item[\lab{P5}] (Which maps pass.) $\exp$: $\exp(a + h) - \exp(a) - \exp(a)h = \exp(a)(\exp(h) - 1 - h)$, and $|\exp(h) - 1 - h| \le |h|^2 \exp(|h|)$ from the series of Chapter 10, T5; so $\exp' = \exp$. Polynomials, by P2. $1/z$ on $z \ne 0$, with derivative $-1/z^2$.
+\item[\lab{D5}] (Tests on a region, M4.) $f$ is \emph{$\mathbb{C}$-straight on an open region $U$} if its bag is straight over $\mathbb{C}$ at every point of $U$ and $z \mapsto f'(z)$ is continuous on $U$.
+\end{lines}
+
+\subsection*{Notation}
+
+\begin{lines}
+\item[\lab{N1}] $H(U)$: the $\mathbb{C}$-straight maps on $U$. Straight bags at $a$ go into $\mathbb{C}[\varepsilon]$ by $f(a) + f'(a)\varepsilon$ (Chapter 11, P9 with $\mathbb{C}$ for $\R$).
+\end{lines}
+
+\subsection*{Arrow}
+
+\begin{lines}
+\item[\lab{P6}] The map $f \mapsto f(a) + f'(a)\varepsilon$, from the maps whose bag at $a$ is straight over $\mathbb{C}$ to $\mathbb{C}[\varepsilon]$, respects $+$ and $\times$ (P2), and reaches every member (the complex lines). Its blur (W4) is $\sim$. \ C3 for $'$: lifted by D4, survives by P2, descends to the straight bags, and agrees with Chapter 11's $'$ on maps that send $\R$ into $\R$.
 \end{lines}
 
 \subsection*{Theorems}
 
 \begin{lines}
-\item[\lab{T1}] (The Select is a commuting question.) $f$ is complex-differentiable at $a$ \ $\iff$ \ $F$ is straight at $a$ and $DF_a$ commutes with turning by a right angle, $J(x, y) = (-y, x)$. \ In entries: \[ DF_a = \begin{pmatrix} p & -q \\ q & p \end{pmatrix}, \qquad \text{that is} \quad \partial_x u = \partial_y v, \ \ \partial_y u = -\partial_x v . \] Then $f'(a) = p + iq$. \ (A straight map $L$ of $\R^2$ commutes with $J$ exactly when it is ``multiply by one complex number'': $L(1) = m$ forces $L(i) = L(J 1) = J L(1) = im$.)
-\item[\lab{T2}] (Survives: angles, where $f' \ne 0$.) If $f'(a) = m \ne 0$, the tangent sends each corner $(u, v)$ at $a$ to $(mu, mv)$, which is glued to $(u, v)$ by Chapter 9, B1 (i). So the angle question $q$ is kept. \\
-Dies where $f'(a) = 0$: $z^2$ at $0$ sends the corner $(1, i)$ to $(1, -1)$; a right angle becomes a half turn. \\
-Dies for $\bar z$: $q(\bar u, \bar v) = \overline{q(u, v)}$; the angle is turned back (Chapter 9, P4).
-\item[\lab{T3}] (Survives the Select: inverting.) If $f$ is complex-differentiable near $a$ with $f'$ continuous and $f'(a) \ne 0$, then $f$ can be inverted near $a$ (Chapter 25, T3: $\det DF_a = p^2 + q^2 = |f'(a)|^2 > 0$), and the inverse is complex-differentiable with derivative $1/f'$. \ (The inverse of a map that commutes with $J$ commutes with $J$.) \\
+\item[\lab{T2}] (Angles are kept, where $f' \ne 0$.) If $f'(a) = m \ne 0$, the tangent sends each corner $(u, v)$ at $a$ to $(mu, mv)$, which is glued to $(u, v)$ by Chapter 9, B1 (i). So the angle question $q$ of Chapter 9 takes the same value on a corner and on its image. \\
+Not where $f'(a) = 0$: $z^2$ at $0$ sends the corner $(1, i)$ to $(1, -1)$; a right angle becomes a half turn. \\
+Not for $\bar z$: $q(\bar u, \bar v) = \overline{q(u, v)}$; the angle is turned back (Chapter 9, P4).
+\item[\lab{T3}] (Inverting, for $\mathbb{C}$-straight maps.) If $f$ is in $H(U)$, $a$ in $U$, and $f'(a) \ne 0$, then $f$ can be inverted near $a$ (Chapter 25, T3: $\det DF_a = p^2 + q^2 = |f'(a)|^2 > 0$), and the inverse is $\mathbb{C}$-straight with derivative $1/f'$. \ (The inverse of a map that commutes with $J$ commutes with $J$.) \\
 So near every $b \ne 0$ there is a map $\log$ with $\exp(\log z) = z$ and $\log' = 1/z$, and a square root.
-\item[\lab{D4}] (Select, M4.) $f$ is \emph{holomorphic} on an open region $U$ if it is complex-differentiable at every point of $U$ and $f'$ is continuous on $U$. Write $H(U)$.
-\item[\lab{T4}] ($H(U)$ is a floor.) Closed under $+$, $\times$, composing, and $1/f$ where $f \ne 0$ (P3). The arrow $f \mapsto f'$ respects $+$.
+\item[\lab{T4}] ($H(U)$ is a floor.) Closed under $+$, $\times$, composing, and $1/f$ where $f \ne 0$ (P2). The arrow $f \mapsto f'$ respects $+$.
 \end{lines}
 
 \subsection*{Remarks}
 
 \begin{lines}
-\item[\lab{R1}] (What the method did.) T1 is not a formula to learn: the Cauchy--Riemann equations are the entries of ``commutes with $J$''. The Select asks one question of the normal form of Chapter 13.
-\item[\lab{R2}] (Why ``continuous'' is in D4.) Goursat showed it is automatic: complex-differentiable at every point of $U$ already gives $f'$ continuous. That is a long classical proof; this book does not use it.
-\item[\lab{R3}] (Old names.) Complex-differentiable: holomorphic at a point. T1: the Cauchy--Riemann equations. T2: holomorphic maps are conformal. T3: holomorphic inverse function theorem; branches of $\log$.
-\item[\lab{R4}] (Machine check, \texttt{checks/ch31-check.py}.) T1 on random polynomials, $\exp$ and $1/z$ (finite differences); P5; T2 on three maps and many corners; the $z^2$ witness; T3 for $\exp$ and $z^3$.
+\item[\lab{R1}] (What the method did.) T1 is not a formula to learn: its two equations are the entries of ``commutes with $J$''. The select asks one question of the normal form of Chapter 13.
+\item[\lab{R2}] (Why ``continuous'' is in D5.) Goursat showed it is automatic: a bag straight over $\mathbb{C}$ at every point of $U$ already gives $f'$ continuous. That is a long classical proof (reported); this book does not use it.
+\item[\lab{R3}] (Where existence came from.) Nowhere: every line is a Survives, a Dies or an ``at most one'', except T3, which is Chapter 25's ``closed''.
+\item[\lab{R4}] (Old names.) Straight over $\mathbb{C}$: complex-differentiable. $\mathbb{C}$-straight on $U$, $H(U)$: holomorphic. T1: the Cauchy--Riemann equations. T2: holomorphic maps are conformal. T3: holomorphic inverse function theorem; branches of $\log$.
+\item[\lab{R5}] (Machine check, \texttt{checks/ch31-check.py}.) T1 on random polynomials, $\exp$ and $1/z$ (finite differences); P4; T2 on three maps and many corners; the $z^2$ witness; T3 for $\exp$ and $z^3$.
 \end{lines}
 
 \subsection*{Exercises}
 
 \begin{lines}
-\item[\lab{E1}] Where is $|z|^2$ complex-differentiable?
+\item[\lab{E1}] At which points is the bag of $|z|^2$ straight over $\mathbb{C}$?
 \item[\lab{E2}] Write $u, v$ for $\exp$ and check T1 at every point.
 \item[\lab{E3}] Compute the derivative of $z^3$ in $\mathbb{C}[\varepsilon]$: expand $(a + \varepsilon)^3$.
 \item[\lab{E4}] At which points does $z^2 + 2z$ keep angles?
 \item[\lab{E5}] Show that $\exp$ cannot be inverted on all of $\mathbb{C} \setminus \{0\}$ by one map, though T3 inverts it near every point. (Chapter 16 counts the turns.)
 \end{lines}
-
 \newpage
 
 %% ==================================================================
 %%  Chapter 32  (Cauchy as a Survives line of Stokes)
 %% ==================================================================
-\section*{Chapter 32. Loops around a holomorphic map}
-\phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter 32. Loops around a holomorphic map \quad holomorphic maps $\to$ closed forms $f\,dz$}{Chapter 32. Loops around a holomorphic map}}
+\section*{Chapter 32. Loops around a $\mathbb{C}$-straight map}
+\phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter 32. Loops around a $\mathbb{C}$-straight map \quad $\mathbb{C}$-straight maps $\to$ closed forms $f\,dz$}{Chapter 32. Loops around a C-straight map}}
 \begin{center}
-{\normalsize holomorphic maps $\to$ closed forms $f\,dz$ \quad$\cdot$\quad from: Chapters 15, 16, 31 \quad$\cdot$\quad arrow}\\[4pt]
-{\small A map is holomorphic exactly when $f\,dz$ is closed. Then Chapter 16 applies as it stands: loop integrals are kept when a loop is deformed, and around one hole only one number survives.}
+{\normalsize $\mathbb{C}$-straight maps $\to$ closed forms $f\,dz$ \quad$\cdot$\quad from: Chapters 5, 11, 12, 13, 15, 16, 20, 31 \quad$\cdot$\quad arrow}\\[4pt]
+{\small A map is $\mathbb{C}$-straight exactly when $f\,dz$ is closed. Then Chapter 16 applies, once its one-slope case is earned: loop integrals are kept when a loop is deformed, and around one hole one number is left.}
 \end{center}
 
-No new blur. One arrow, $f \mapsto f\,dz$, from Chapter 31 into the closed forms of Chapter 15. Everything else is Chapter 16 read through that arrow.
+No new blur. One arrow, $f \mapsto f\,dz$, from Chapter 31 into the closed forms of Chapter 15. Chapters 15 and 16 asked for smooth coefficients; a map of $H(U)$ is only known to have one continuous slope. So the chapter first earns, for one continuous slope, the four lines of Chapters 15 and 16 it uses (S1--S4). No line here relies on the smooth versions.
 
 \subsection*{Given}
 
 \begin{lines}
-\item[\lab{G1}] (Chapter 31.) $H(U)$; T1: $\partial_x u = \partial_y v$, $\partial_y u = -\partial_x v$.
-\item[\lab{G2}] (Chapter 15.) $d$, closed and exact forms; T4: on a ball every closed form is exact.
-\item[\lab{G3}] (Chapter 16.) Integrals over paths; T1 (Stokes); T3; the blur B1/B2 and P2 ($H^1$: a closed 1-form is known up to exact forms by its loop integrals); T5 (one hole); T6 (turns are whole).
-\item[\lab{G4}] (To be checked when proofs are written.) Chapters 15 and 16 ask for smooth coefficients. For 1-forms, Stokes (Chapter 16, T1 with $k = 2$) and Chapter 15, T4 use only first derivatives of the coefficients. Chapter 33 shows holomorphic maps are smooth in any case.
+\item[\lab{G1}] (Chapter 31.) $H(U)$ (N1); T1: $\partial_x u = \partial_y v$, $\partial_y u = -\partial_x v$.
+\item[\lab{G2}] (Chapter 15.) $d$, closed and exact forms, the formulas of T1 there for $d$ of a 1-form (they ask only for first slopes).
+\item[\lab{G3}] (Chapter 16.) Paths, loops, cubes (D1), the integral over a cube as one integral of Chapter 12 for each variable (D2), edges (D3); T3 (exact forms see no loops: for $\omega = dF$ with $F$ having one continuous slope it is Chapter 13, T2 and Chapter 12, T3 along the path); the turning form $\theta$ (T5) and T6 (turns are whole).
+\item[\lab{G4}] (Chapter 5, T7; Chapter 11, T7; Chapter 12, T1, T3; Chapter 13, T2, T3, T5; Chapter 20, P7.) One rung serves every point of a closed stretch (run on a closed box by halving one place at a time, as Chapter 13, T7 runs Chapter 10, T2); same derivative, then same map up to a constant; $\int_b^x f$ has derivative $f$; the chain rule; slices are enough; order does not matter; the integral respects $M$.
 \end{lines}
 
 \subsection*{Definitions}
@@ -3352,122 +3424,170 @@ No new blur. One arrow, $f \mapsto f\,dz$, from Chapter 31 into the closed forms
 \item[\lab{D2}] For $a$ in $\mathbb{C}$ and $r > 0$, the circle $\gamma_{a,r}(t) := a + r\,w(t)$, $0 \le t \le 1$.
 \end{lines}
 
-\subsection*{Theorems}
+\subsection*{Stokes for one continuous slope}
 
 \begin{lines}
-\item[\lab{T1}] (The arrow.) $f$ is in $H(U)$ \ $\iff$ \ $f\,dz$ is closed on $U$. \\
-($d(u\,dx - v\,dy) = -(\partial_x v + \partial_y u)\,dx \wedge dy$ and $d(v\,dx + u\,dy) = (\partial_x u - \partial_y v)\,dx \wedge dy$. Both vanish exactly when Chapter 31, T1 holds.)
-\item[\lab{T2}] (No hole: Cauchy.) If $U$ is a ball (or any region with $H^1(U) = 0$) and $f$ is in $H(U)$, then $\int_\gamma f\,dz = 0$ for every loop $\gamma$ in $U$, and $f = F'$ for some $F$ in $H(U)$. \ (T1, Chapter 15, T4, Chapter 16, T3. $F$ is holomorphic because $dF = f\,dz$ says its tangent is ``multiply by $f$''.)
-\item[\lab{T3}] (Survives: deforming a loop.) If two loops in $U$ are the two ends of a 2-cube in $U$ whose side edges cancel, their integrals of $f\,dz$ agree. \ (Chapter 16, T1: $\int$ over the edge of the 2-cube is $\int$ of $d(f\,dz) = 0$.)
-\item[\lab{T4}] (One hole: the residue appears.) On $U = \mathbb{C} \setminus \{a\}$, \[ \frac{dz}{z - a} = d \log|z - a| \;+\; i\,\theta_a , \] with $\theta_a$ the turning form of Chapter 16, T5 moved to $a$. So every closed $f\,dz$ on $U$ is glued (Chapter 16, B1) to exactly one $c\,\dfrac{dz}{z - a}$, and \[ c = \frac{1}{2\pi i} \int_{\gamma_{a,r}} f\,dz \] for any $r$. Name $c$ the \emph{residue} $\operatorname{res}_a f$. It is the normal-form coordinate of $H^1(U)$, not a computing trick.
-\item[\lab{T5}] (Cauchy's formula: the residue of $f/(z - a)$ is $f(a)$.) If $f$ is holomorphic on a disc $D$ holding $\gamma_{a,r}$ and $a$, then \[ f(a) = \frac{1}{2\pi i} \int_{\gamma_{a,r}} \frac{f(z)}{z - a}\,dz . \] (The integral does not depend on $r$ (T3). Split $f(z) = f(a) + (f(z) - f(a))$. The first part gives $f(a)$ (T4). The second has $|(f(z) - f(a))/(z - a)|$ bounded near $a$, so its integral is at most $2\pi r$ times a bound, which comes near $0$ as $r$ shrinks; being independent of $r$, it is $0$.) \\
-For a loop $\gamma$ in $D \setminus \{a\}$ turning $n$ times around $a$, the integral is $2\pi i\, n\, f(a)$ (Chapter 16, T6).
-\item[\lab{T6}] (At most one: the edge decides the inside.) Two maps holomorphic on a disc that agree on a circle in it agree at every point inside that circle. \ (T5.)
+\item[\lab{S1}] (Two orders of integration agree.) For $h$ continuous on a box $b \le x \le c$, $d \le y \le e$: \ $\int_d^e \int_b^c h \, dx \, dy = \int_b^c \int_d^e h \, dy \, dx$. \\
+(Put $A(t) := \int_b^c \int_d^t h \, dy\, dx$ and $B(t) := \int_d^t \int_b^c h \, dx\, dy$. Then $B'(t) = \int_b^c h(x, t)\, dx$ (Chapter 12, T1). For $A$: the quotient $\frac1s \int_t^{t+s} h(x, y)\,dy$ lies between the least and largest value of $h(x, \cdot)$ on that piece (A3), so it comes near $h(x, t)$ in $M$ as $s$ comes near $0$, one rung for every $x$ (G4); the integral respects $M$ (Chapter 20, P7), so $A'(t) = \int_b^c h(x, t)\, dx$ too. $A(d) = B(d) = 0$, so $A = B$ (Chapter 11, T7).)
+\item[\lab{S2}] (Green on a box.) Let $P, Q$ have continuous first slopes on an open set holding the box $R$. Then $\int_{\text{edge of } R} (P\,dx + Q\,dy) = \int\!\!\int_R (\partial_x Q - \partial_y P)$. \\
+(The inner integral of $\partial_x Q$ in $x$ is $Q(c, y) - Q(b, y)$, by Chapter 12, T3. Swap the order for $\partial_y P$ (S1); its inner integral in $y$ is $P(x, e) - P(x, d)$. The four edges give exactly these four terms.)
+\item[\lab{S3}] (Closed on a disc, then exact.) Let $P\,dx + Q\,dy$ have continuous first slopes on a disc $D$ with centre $a$, and $\partial_x Q = \partial_y P$ there. Then it is $dF$ for an $F$ on $D$ with continuous first slopes. \\
+(Let $F(z)$ be the integral along two straight legs from $a$ to $z$: first in $x$, then in $y$. The box with corners $a$ and $z$ lies in $D$ (its other corners are no farther from $a$ than $z$ is). By S2 the legs in the other order, first $y$ then $x$, give the same number. Differentiate the first form in $y$ and the second in $x$ (Chapter 12, T1): $\partial_y F = Q$, $\partial_x F = P$. Then Chapter 13, T3.)
+\item[\lab{S4}] (Stokes for a $2$-cube.) Let $\phi : [0,1]^2 \to U$ have continuous slopes up to order $2$, and let $P\,dx + Q\,dy$ be closed on $U$ with continuous first slopes. Then its integral over the edge of $\phi$ is $0$. \\
+(Pulled back, it is $A\,ds + B\,dt$ with $A = P(\phi)\,\partial_s \phi_1 + Q(\phi)\,\partial_s \phi_2$ and $B$ the same with $t$. By the chain rule (Chapter 13, T2), $\partial_s B - \partial_t A = (\partial_x Q - \partial_y P)(\phi)\,\det D\phi$ plus terms in $\partial_s \partial_t \phi - \partial_t \partial_s \phi$, which are $0$ (Chapter 13, T5). So $\partial_s B - \partial_t A = 0$, and S2 on the unit square.)
 \end{lines}
 
-\subsection*{Propositions}
+\subsection*{The arrow}
 
 \begin{lines}
-\item[\lab{P1}] (The powers.) $\int_{\gamma_{0,1}} z^n\,dz = 0$ for every $n$ in $\Z$ except $n = -1$, where it is $2\pi i$. For $n \ge 0$ this is T2; for $n \le -2$, $z^n = (z^{n+1}/(n+1))'$ on $\mathbb{C} \setminus \{0\}$.
-\item[\lab{P2}] (Dies: $\bar z$.) $\bar z\,dz$ is not closed, and $\int_{\gamma_{0,r}} \bar z\,dz = 2\pi i\,r^2 \ne 0$. T2 needs the Select of Chapter 31.
-\item[\lab{P3}] (Dies: the hole.) $1/z$ is holomorphic on $\mathbb{C} \setminus \{0\}$ and $\int_{\gamma_{0,1}} dz/z = 2\pi i$. So T2 needs ``no hole''; and $1/z$ has no antiderivative on all of $\mathbb{C} \setminus \{0\}$: there is no one $\log$ there.
+\item[\lab{T1}] ($f \mapsto f\,dz$.) Let $f$ have a straight bag at each point of $U$ (Chapter 13) with continuous first slopes. Then $f$ is in $H(U)$ \ $\iff$ \ $f\,dz$ is closed on $U$. \\
+($d(u\,dx - v\,dy) = -(\partial_x v + \partial_y u)\,dx \wedge dy$ and $d(v\,dx + u\,dy) = (\partial_x u - \partial_y v)\,dx \wedge dy$. Both are $0$ exactly when Chapter 31, T1 holds.) \\
+The arrow respects $+$ and multiplying by a number. Its blur (W4) glues nothing: $f\,dz$ gives back $f$ as its coefficient of $dx$. It is an inside, not a picture: $\bar z\,dz$ is not of the form $f\,dz$ with $f$ in $H$ (P2).
+\item[\lab{P1}] (The powers.) $\int_{\gamma_{0,1}} z^n\,dz = 0$ for every $n$ in $\Z$ except $n = -1$, where it is $2\pi i$. \ (For $n \ne -1$, $z^n$ is $(z^{n+1}/(n+1))'$ on $\mathbb{C} \setminus \{0\}$, and G3. For $n = -1$: $\int_0^1 (r\,w(t))^{-1}\, r\,w'(t)\, dt = \int_0^1 2\pi i \, dt$.)
+\end{lines}
+
+\subsection*{What the arrow carries}
+
+\begin{lines}
+\item[\lab{T2}] (No hole.) If $U$ is a disc and $f$ is in $H(U)$, then $\int_\gamma f\,dz = 0$ for every loop $\gamma$ in $U$, and $f = F'$ for some $F$ in $H(U)$. \ (T1, S3, G3. $F$ is $\mathbb{C}$-straight because $dF = f\,dz$ says its tangent is ``multiply by $f$''.)
+\item[\lab{T3}] (Deforming a loop keeps the integral.) If two loops in $U$ are the two ends of a $2$-cube in $U$ with continuous slopes up to order $2$, whose side edges cancel, their integrals of $f\,dz$ agree. \ (T1 and S4.)
+\item[\lab{T4}] (One hole: one number is left.) Let $f$ be in $H(\mathbb{C} \setminus \{a\})$, or in $H$ of a ring $\rho_0 < |z - a| < \rho_1$. The number \[ c := \frac{1}{2\pi i} \int_{\gamma_{a,r}} f\,dz \] is the same for every $r$ in the ring (T3, with the $2$-cube $(s, t) \mapsto a + ((1 - s) r + s r')\,w(t)$, whose side edges cancel). It is the one number for which $f - c/(z - a)$ has integral $0$ round every circle about $a$ (P1 moved to $a$).
+\item[\lab{T5}] (The number left by $f/(z - a)$ is $f(a)$.) If $f$ is in $H(D)$ for a disc $D$ holding $\gamma_{a,r}$ and $a$, then \[ f(a) = \frac{1}{2\pi i} \int_{\gamma_{a,r}} \frac{f(z)}{z - a}\,dz . \] (The integral does not depend on $r$ (T4). Split $f(z) = f(a) + (f(z) - f(a))$. The first part gives $f(a)$ (P1). The second has $|(f(z) - f(a))/(z - a)|$ bounded near $a$, so its integral is at most $2\pi r$ times a bound, which comes near $0$ as $r$ shrinks; being the same for every $r$, it is $0$.)
+\item[\lab{T6}] (The edge decides the inside.) If $f$ is in $H(D)$, $\gamma_{a,r}$ lies in $D$ with its inside, and $|b - a| < r$, then \[ f(b) = \frac{1}{2\pi i} \int_{\gamma_{a,r}} \frac{f(\zeta)}{\zeta - b}\,d\zeta . \] So two maps in $H(D)$ that agree on the circle agree at every point inside it. \ (T5 at $b$ on a small $\gamma_{b,\rho}$, and T3 for $f(\zeta)/(\zeta - b)$ with the $2$-cube $(s, t) \mapsto (1 - s)\,\gamma_{a,r}(t) + s\,\gamma_{b,\rho}(t)$: it misses $b$, because its distance from $b$ is at least $(1 - s)(r - |a - b|) + s\rho > 0$.)
+\end{lines}
+
+\subsection*{What dies through the arrow}
+
+\begin{lines}
+\item[\lab{P2}] (Dies: $\bar z$.) $\bar z\,dz$ is not closed, and $\int_{\gamma_{0,r}} \bar z\,dz = 2\pi i\,r^2 \ne 0$. T2 needs the select of Chapter 31.
+\item[\lab{P3}] (Dies: the hole.) $1/z$ is in $H(\mathbb{C} \setminus \{0\})$ and $\int_{\gamma_{0,1}} dz/z = 2\pi i$. So T2 needs ``no hole''; and $1/z$ has no antiderivative on all of $\mathbb{C} \setminus \{0\}$: there is no one $\log$ there.
+\end{lines}
+
+\subsection*{Notation}
+
+\begin{lines}
+\item[\lab{N1}] The number $c$ of T4 is written $\operatorname{res}_a f$.
 \end{lines}
 
 \subsection*{Remarks}
 
 \begin{lines}
-\item[\lab{R1}] (What the method did.) Cauchy's theorem is Stokes plus one line (T1). The residue is a normal form (T4). Cauchy's formula is ``the bounded part dies on small circles'' (T5). No new idea was needed beyond Chapters 15, 16 and 31.
-\item[\lab{R2}] (Avoided.) The Jordan curve theorem: loops are counted by turns (Chapter 16, T6), never by ``inside''.
-\item[\lab{R3}] (Old names.) T1: $f$ holomorphic iff $f\,dz$ closed. T2: Cauchy's theorem (Cauchy--Goursat), primitives. T3: homotopy invariance. T4: residue; $H^1$ of the punctured plane. T5: Cauchy's integral formula; $n$: winding number. T6: a case of the identity theorem.
-\item[\lab{R4}] (Machine check, \texttt{checks/ch32-check.py}.) T1 symbolically for polynomials, $\exp$, $1/z$; P1 for $-5 \le n \le 5$; P2; P3; T4 residues of three maps on several radii; T5 for $\exp$, $\cos$, $1/(z - 3)$ at random points; T3 on a family of squashed loops.
+\item[\lab{R1}] (What the method did.) T2 is Stokes plus one line (T1). The number of T4 is what the loop integrals keep around one hole. T5 is ``the bounded part dies on small circles''. No new idea beyond Chapters 15, 16 and 31, once S1--S4 are earned.
+\item[\lab{R2}] (The normal form, read later.) Chapter 33, T2 shows every map of $H(U)$ has slopes of every order. Then Chapter 16, T5 applies as it stands: on $\mathbb{C} \setminus \{a\}$ the form $f\,dz$ is glued (Chapter 16, B1) to exactly one $c\,dz/(z - a)$, with the $c$ of T4. So $\operatorname{res}_a f$ is the normal-form coordinate of $H^1$. This is a pointer ahead; no line of this chapter relies on it.
+\item[\lab{R3}] (Avoided.) The Jordan curve theorem: loops are counted by turns (Chapter 16, T6), never by ``inside''.
+\item[\lab{R4}] (Old names.) S1: Fubini for continuous maps. S2: Green's theorem for a rectangle. S3: the Poincar\'e lemma on a disc. T1: $f$ holomorphic iff $f\,dz$ closed. T2: Cauchy's theorem, primitives. T3: homotopy invariance. N1: the residue. T5: Cauchy's integral formula; $n$: winding number. T6: a case of the identity theorem.
+\item[\lab{R5}] (Machine check, \texttt{checks/ch32-check.py}.) T1 symbolically for polynomials, $\exp$, $1/z$; P1 for $-5 \le n \le 5$; P2; P3; T4 for three maps on several radii; T5 for $\exp$, $\cos$, $1/(z - 3)$ at random points; T3 on a family of squashed loops.
 \end{lines}
 
 \subsection*{Exercises}
 
 \begin{lines}
 \item[\lab{E1}] Compute $\int_{\gamma_{0,2}} e^z/(z - 1)\,dz$ by T5.
-\item[\lab{E2}] Find the residue of $1/(z^2 + 1)$ at $i$. (Write it as $g(z)/(z - i)$.)
+\item[\lab{E2}] Find $\operatorname{res}_i$ of $1/(z^2 + 1)$. (Write it as $g(z)/(z - i)$.)
 \item[\lab{E3}] Check T1 for $f = z^2$ by writing $u$ and $v$.
-\item[\lab{E4}] Show that $\int_{\gamma_{0,2}} dz/(z^2 + 1) = 0$, using E2 and the residue at $-i$.
-\item[\lab{E5}] Why does T5 not say anything for $\gamma_{a,r}$ when $f$ is only holomorphic on $D \setminus \{a\}$?
+\item[\lab{E4}] Show that $\int_{\gamma_{0,2}} dz/(z^2 + 1) = 0$, using E2 and the number at $-i$.
+\item[\lab{E5}] Why does T5 not say anything for $\gamma_{a,r}$ when $f$ is only in $H(D \setminus \{a\})$?
+\item[\lab{E6}] In S1, where is ``one rung for every $x$'' used? What goes wrong for a map that is continuous in each variable separately?
 \end{lines}
-
 \newpage
 
 %% ==================================================================
 %%  Chapter 33  (rigidity)
 %% ==================================================================
 \section*{Chapter 33. Rigidity}
-\phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter 33. Rigidity \quad holomorphic maps $\to$ their germs}{Chapter 33. Rigidity}}
+\phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter 33. Rigidity \quad $\mathbb{C}$-straight maps $\to$ their germs}{Chapter 33. Rigidity}}
 \begin{center}
-{\normalsize holomorphic maps $\to$ their germs \quad$\cdot$\quad from: Chapters 10, 20, 21, 23, 32 \quad$\cdot$\quad blur}\\[4pt]
-{\small Over $\R$ the ladder of Chapter 21 stops short of the germ. Over $\mathbb{C}$ it reaches it. So the germ blur glues nothing: holomorphic maps are as rigid as polynomials.}
+{\normalsize $\mathbb{C}$-straight maps $\to$ their germs \quad$\cdot$\quad from: Chapters 5, 10, 17, 20, 21, 23, 32 \quad$\cdot$\quad blur}\\[4pt]
+{\small Over $\R$ the ladder of Chapter 21 stops short of the germ. Over $\mathbb{C}$ it reaches it. So the germ blur and the blur by the list agree, and the germ decides the map: $\mathbb{C}$-straight maps are as rigid as polynomials.}
 \end{center}
-
-This chapter only blurs, and the answer is that the blur glues nothing. That is a result, and every line below is a reading of it.
 
 \subsection*{Given}
 
 \begin{lines}
-\item[\lab{G1}] (Chapter 32.) $H(U)$; T3 (deforming loops); T5 (Cauchy's formula); the circles $\gamma_{a,r}$.
+\item[\lab{G1}] (Chapter 32.) $H(U)$; T3 (deforming loops); T4 (one number round a hole); T6 (the edge decides the inside); the circles $\gamma_{a,r}$.
 \item[\lab{G2}] (Chapter 21.) The rungs $\sim_k$ (flat to order $k$), the ladder; P8: over $\R$ the bottom of the ladder is not the germ.
 \item[\lab{G3}] (Chapter 10.) The germ blur; T4: polynomials are rigid.
-\item[\lab{G4}] (Chapter 20.) T3 (comparison in $M$), T4 (power series).
-\item[\lab{G5}] (Chapter 23.) P5 (far away is large).
+\item[\lab{G4}] (Chapter 20.) P7 (the integral respects $M$), T3 (comparison in $M$). (Chapter 17.) $\sum n^j q^n$ settles for $0 \le q < 1$.
+\item[\lab{G5}] (Chapter 23.) P5 (far away is large). (Chapter 13, T7.) Closed boxes survive. (Chapter 5, T1.) The line cannot be cut.
 \end{lines}
 
-\subsection*{The blur}
-
-On $H(U)$, $U$ an open region, $a$ in $U$. \ $O$: $+$, $\times$, $f \mapsto f'$.
+\subsection*{Definitions}
 
 \begin{lines}
-\item[\lab{B1}] (From below.) The germ blur: $f \sim g$ when $f = g$ on some disc around $a$.
-\item[\lab{B2}] (From above.) The bottom of the ladder of Chapter 21 run over $\mathbb{C}$: keep every $f^{(n)}(a)$.
+\item[\lab{D1}] $U$ an open region, $a$ in $U$, and $R > 0$ with the disc $|z - a| < R$ inside $U$.
+\item[\lab{D2}] (The list.) For $f$ in $H(U)$ and $n \ge 0$: \ $c_n(f) := \dfrac{1}{2\pi i} \displaystyle\int_{\gamma_{a,r}} \frac{f(\zeta)}{(\zeta - a)^{n+1}}\, d\zeta$, \ for any $r < R$ (the same for all such $r$: Chapter 32, T4).
+\item[\lab{D3}] $U$ is \emph{in one piece} if any two of its points are joined by a path in $U$: a continuous map from $0 \le s \le 1$ into $U$.
 \end{lines}
 
-\subsection*{Theorems}
+\subsection*{Blur}
+
+On $H(U)$.
 
 \begin{lines}
-\item[\lab{T1}] (The ladder reaches the germ.) If $f$ is holomorphic on a disc $|z - a| < R$, then on that disc \[ f(z) = \sum_{n \ge 0} c_n (z - a)^n, \qquad c_n = \frac{1}{2\pi i} \int_{\gamma_{a,r}} \frac{f(\zeta)}{(\zeta - a)^{n+1}}\, d\zeta \quad (\text{any } r < R). \] (Cauchy's formula on $\gamma_{a,r}$ with $|z - a| < r$; write $\frac{1}{\zeta - z} = \sum_n \frac{(z - a)^n}{(\zeta - a)^{n+1}}$, which comes near itself in $M$ on the circle (Chapter 20, T3); exchange sum and integral (Chapter 20, P7).)
-\item[\lab{T2}] (Smooth, for free.) A holomorphic map has derivatives of every order, all holomorphic, and $c_n = f^{(n)}(a)/n!$. \ (Chapter 20, T4: a power series may be differentiated term by term; its proof runs the same over $\mathbb{C}$, with discs for stretches.) This pays Chapter 32, G4.
-\item[\lab{T3}] (Appears: the two blurs agree, and both glue only what is equal near $a$.) $f \sim g$ \ $\iff$ \ $f^{(n)}(a) = g^{(n)}(a)$ for every $n$. \ ($\Leftarrow$: T1 on a disc.) Contrast Chapter 21, P8: over $\R$, $\exp(-1/x^2)$ and $0$ agree on every rung and are not glued.
-\item[\lab{T4}] (At most one: one piece.) If $U$ is in one piece and $f, g$ in $H(U)$ have the same germ at one point, then $f = g$ on all of $U$. \ (The points where the germs agree form an open set; by T1 so do the points where they differ; a region in one piece is not two open parts: Chapter 5, T8 along paths.) \\
-Dies without ``one piece'': $0$ on one disc and $1$ on another, apart.
-\item[\lab{T5}] (Zeros stand alone.) If $f$ in $H(U)$ is not $0$ near $a$ and $f(a) = 0$, then $f = (z - a)^k g$ with $g$ holomorphic and $g(a) \ne 0$, for exactly one $k \ge 1$. So the zeros of $f$ are apart from each other. \ (T1: $k$ is the first $n$ with $c_n \ne 0$.)
-\item[\lab{T6}] (Cauchy's bound.) If $|f| \le B$ on $\gamma_{a,r}$, then $|c_n| \le B / r^n$. \ (T1.)
-\item[\lab{T7}] (At most one: Liouville.) A holomorphic map on all of $\mathbb{C}$ with $|f| \le B$ everywhere is constant. \ (T6 with $r$ as large as one likes: $c_n = 0$ for $n \ge 1$.)
-\item[\lab{T8}] (Dies inside: the highest point.) If $U$ is in one piece and $|f|$ takes a highest value at a point $a$ of $U$, then $f$ is constant. \ ($f(a)$ is the average of $f$ over each small $\gamma_{a,r}$ (Chapter 32, T5); an average of numbers of size $\le |f(a)|$ equals $f(a)$ only if all equal $f(a)$; then T4.) \\
-This is Chapter 23, T1 again (``can be lowered''), turned upside down.
-\item[\lab{T9}] (Chapter 23 in two lines.) If a polynomial $p$ of degree $\ge 1$ had no root, $1/p$ would be holomorphic on $\mathbb{C}$ and bounded (Chapter 23, P5 outside a disc; a closed disc inside: Chapter 13, T7). By T7 it would be constant. So $p$ has a root.
+\item[\lab{B1}] (From below, L5.) Gluings: $e \sim 0$ for each $e$ that is $0$ on some disc around $a$. \ Respects: $+$, $\times$. \ This is the germ blur of Chapter 10.
+\item[\lab{B2}] (From above, L6.) Questions: $c_0, c_1, c_2, \dots$ \ Respects: $+$, $\times$. \ Call this blur $\approx$.
 \end{lines}
 
 \subsection*{Propositions}
 
 \begin{lines}
-\item[\lab{P1}] (Survives: $+$, $\times$, $'$; the arrow to lists.) $f \mapsto (c_n)$ respects $+$, sends $\times$ to the product of lists of Chapter 7 (Cauchy product), and $'$ to $(n+1)c_{n+1}$.
-\item[\lab{P2}] (How far the list reaches.) The list of T1 comes near $f$ on every disc around $a$ inside $U$. $1/(1 + z^2)$ at $0$: the list reaches $|z| < 1$ and no further, though on $\R$ the map has no trouble at $\pm 1$. The obstruction is at $\pm i$, off the line.
-\item[\lab{P3}] (Real and imaginary parts.) $u = \operatorname{Re} f$ has $\partial_x^2 u + \partial_y^2 u = 0$, and $u(a)$ is the average of $u$ on each small circle around $a$. \ (T2 and Chapter 31, T1; Chapter 32, T5.)
+\item[\lab{P1}] (The ladder reaches the germ.) If $|z - a| < r < R$, then \[ f(z) = \sum_{n \ge 0} c_n(f)\, (z - a)^n . \] (Chapter 32, T6 at $z$; write $\frac{1}{\zeta - z} = \sum_n \frac{(z - a)^n}{(\zeta - a)^{n+1}}$, which comes near itself in $M$ on the circle, since $|z - a|/r < 1$ (Chapter 20, T3); exchange sum and integral, real and imaginary parts apart (Chapter 20, P7).)
+\item[\lab{P2}] (Bags.) $f \sim g$ \ $\iff$ \ $f = g$ near $a$ \ $\iff$ \ $c_n(f) = c_n(g)$ for every $n$. \ (Left to right: the circle integrals see only values near $a$, for small $r$. Right to left: P1.)
+\item[\lab{P3}] (Appears.) $\sim\ =\ \approx$. \ By Z4: a gluing $e \sim 0$ is kept by every $c_n$ in every context, since a context changes $e$ only by terms that are $0$ near $a$. By Z5: if $f \not\sim g$, some $c_n(f - g) \ne 0$ (P2); the separating context is $x \mapsto x - g$ with the question $c_n$.
+\item[\lab{P4}] (Cauchy's bound.) If $|f| \le B$ on $\gamma_{a,r}$, then $|c_n(f)| \le B / r^n$. \ (D2: the circle has length $2\pi r$.)
+\item[\lab{P5}] ($'$ survives, and slopes of every order.) Every $f$ in $H(U)$ has $f'$ in $H(U)$; so $f$ has slopes of every order, and $c_n(f) = f^{(n)}(a)/n!$. \\
+(On $|z - a| \le \rho < r$: for $|z - a|, |w - a| \le \rho$, \ $\bigl|(z - a)^n - (w - a)^n - n (w - a)^{n-1}(z - w)\bigr| \le \tfrac{n(n-1)}{2} \rho^{n-2} |z - w|^2$, term by term. With P1 and P4, $\bigl|f(z) - f(w) - g(w)(z - w)\bigr| \le K |z - w|^2$, where $g := \sum n\,c_n (z - a)^{n-1}$ and $K := \sum \tfrac{n(n-1)}{2} \tfrac{B}{r^n} \rho^{n-2}$, which settles (G4). So $f' = g$ near $a$, and $g$ is continuous (Chapter 20, T3) and is again a series with the same kind of bound: repeat.) \\
+So $f \mapsto f'$ is an operation on $H(U)$, and $\sim$ respects it: $c_n(f') = (n + 1)\,c_{n+1}(f)$.
+\item[\lab{P6}] ($+$, $\times$ survive; the product of lists.) $c_n(f + g) = c_n(f) + c_n(g)$, and $c_n(f g) = \sum_{j \le n} c_j(f)\, c_{n-j}(g)$, the product of lists of Chapter 7. \ ($fg$ is in $H(U)$ (Chapter 31, T4), so P5 gives $c_n(fg) = (fg)^{(n)}(a)/n!$. The product rule (Chapter 11, T1, over $\mathbb{C}$: Chapter 31, P2) used $n$ times gives $(fg)^{(n)} = \sum_{j \le n} \binom{n}{j} f^{(j)} g^{(n-j)}$; divide by $n!$ and use P5 for $f$ and $g$. No double series is rearranged.)
+\item[\lab{P7}] (How far the list reaches.) The list of P1 comes near $f$ on every disc around $a$ inside $U$. $1/(1 + z^2)$ at $0$: the list reaches $|z| < 1$ and no further, though on $\R$ the map has no trouble at $\pm 1$. The obstruction is at $\pm i$, off the line.
+\end{lines}
+
+\subsection*{Notation}
+
+\begin{lines}
+\item[\lab{N1}] $H_a := H(U)/{\sim}$, the germs at $a$, with $+$, $\times$, $'$ carried over by P5, P6 (Z6). \ $\mathbb{C}[[z - a]]$: lists $(c_0, c_1, \dots)$ with the product of Chapter 7 and no question of coming near.
+\end{lines}
+
+\subsection*{Arrow}
+
+\begin{lines}
+\item[\lab{P8}] $H_a \to \mathbb{C}[[z - a]]$, $\bag{f} \mapsto (c_n(f))$, respects $+$, $\times$ (P6) and $'$ (P5, read as $(c_n) \mapsto ((n+1) c_{n+1})$). It is an inside (P2), and not a picture: the list $c_n = n!$ comes near nothing off $a$. \ C3 for $+$, $\times$, $'$: lifted on $H(U)$, survive (P5, P6), descend (Z6), agree (this line).
+\end{lines}
+
+\subsection*{Theorems}
+
+\begin{lines}
+\item[\lab{T1}] (The ladder loses nothing.) $f \sim g$ \ $\iff$ \ $f$ and $g$ are glued at every rung $\sim_k$ of Chapter 21, run over $\mathbb{C}$. \ (P5: rung $k$ keeps $c_0, \dots, c_k$; P2.) Contrast Chapter 21, P8: over $\R$, $\exp(-1/x^2)$ and $0$ agree on every rung and are not glued.
+\item[\lab{T2}] (Slopes of every order, for free.) P5, said as a theorem: a $\mathbb{C}$-straight map has slopes of every order, all $\mathbb{C}$-straight. So the smooth hypotheses of Chapters 15 and 16 hold for $u$ and $v$, and Chapter 16 applies to $f\,dz$ as it stands (Chapter 32, R2).
+\item[\lab{T3}] (Zeros stand alone.) If $f$ in $H(U)$ is not $0$ near $a$ and $f(a) = 0$, then $f = (z - a)^k g$ near $a$ with $g$ in $H$ and $g(a) \ne 0$, for exactly one $k \ge 1$. So near $a$, $f$ has no other zero. \ (P1: $k$ is the first $n$ with $c_n \ne 0$.)
+\item[\lab{T4}] (At most one: one piece.) If $U$ is in one piece and $f, g$ in $H(U)$ have the same germ at one point, then $f = g$ on all of $U$. \\
+(Join that point to any $b$ by a path $p$. Glue $s \sim s'$ on $0 \le s \le 1$ when ``the germs of $f$ and $g$ agree at $p(s)$'' has the same answer as at $p(s')$. Each $s$ has a rung on which the answer does not change: if the germs agree at $p(s)$ they agree on a disc around it; if they differ, T3 for $f - g$ gives a disc around $p(s)$ with no other zero of $f - g$, so no germ agreement there. The line cannot be cut (Chapter 5, T1): one bag.) \\
+Dies without ``one piece'': $0$ on one disc and $1$ on another, apart.
+\item[\lab{T5}] (At most one: bounded on all of $\mathbb{C}$.) A map in $H(\mathbb{C})$ with $|f| \le B$ everywhere is constant. \ (P4 with $r$ as large as one likes: $c_n = 0$ for $n \ge 1$.)
+\item[\lab{T6}] (No highest point inside.) If $U$ is in one piece and $|f|$ takes a highest value at a point $a$ of $U$, then $f$ is constant. \ ($f(a)$ is the average of $f$ over each small $\gamma_{a,r}$ (Chapter 32, T5); an average of numbers of size $\le |f(a)|$ equals $f(a)$ only if all equal $f(a)$; then T4.) \\
+This is Chapter 23, T1 again (``can be lowered''), turned upside down.
+\item[\lab{T7}] (Chapter 23 in two lines.) If a polynomial $p$ of degree $\ge 1$ had no root, $1/p$ would be in $H(\mathbb{C})$ and bounded (Chapter 23, P5 outside a disc; a closed box inside: Chapter 13, T7). By T5 it would be constant. So $p$ has a root.
+\item[\lab{T8}] (Real and imaginary parts.) $u = \operatorname{Re} f$ has $\partial_x^2 u + \partial_y^2 u = 0$, and $u(a)$ is the average of $u$ on each small circle around $a$. \ (T2 and Chapter 31, T1; Chapter 32, T5.)
 \end{lines}
 
 \subsection*{Remarks}
 
 \begin{lines}
-\item[\lab{R1}] (A ladder with a bottom.) Chapter 19: the ladder of $\Z/p^k$ has bottom $\Z_p$ and loses nothing. Chapter 21: the ladder of jets over $\R$ has a bottom that is not the germ. This chapter: over $\mathbb{C}$ the bottom is the germ. Rigidity is ``the ladder loses nothing''.
-\item[\lab{R2}] (Where existence came from.) Nowhere new. T1 is Cauchy's formula plus a series that comes near itself; every other line is an ``at most one'' or a ``dies''.
-\item[\lab{R3}] (Old names.) T1: holomorphic implies analytic (Taylor series). T2: holomorphic maps are infinitely differentiable. T4: the identity theorem; analytic continuation is unique. T5: isolated zeros. T6: Cauchy's estimates. T7: Liouville's theorem. T8: the maximum modulus principle. T9: the fundamental theorem of algebra via Liouville. P3: harmonic functions, mean value property.
-\item[\lab{R4}] (Machine check, \texttt{checks/ch33-check.py}.) T1 for $\exp$, $1/(1 - z)$, $\cos$ (coefficients by the circle integral, sums against values); T5 on $\sin(z)^2 z$; T6; T8 on random polynomials over a grid of a disc (largest $|p|$ on the edge); P2; P3.
+\item[\lab{R1}] (A ladder with a bottom.) Chapter 19: the ladder of $\Z/p^k$ has bottom $\Z_p$ and loses nothing. Chapter 21: the ladder of jets over $\R$ has a bottom that is not the germ. This chapter: over $\mathbb{C}$ the bottom is the germ (T1). Rigidity is ``the ladder loses nothing''.
+\item[\lab{R2}] (Where existence came from.) Nowhere new. P1 is Chapter 32's formula plus a series that comes near itself; every other line is an ``at most one'', a Survives or a Dies.
+\item[\lab{R3}] (Old names.) P1: holomorphic implies analytic (Taylor series). P4: Cauchy's estimates. T2: holomorphic maps are infinitely differentiable. T3: isolated zeros. T4: the identity theorem; analytic continuation is unique. T5: Liouville's theorem. T6: the maximum modulus principle. T7: the fundamental theorem of algebra via Liouville. T8: harmonic functions, mean value property. $\mathbb{C}[[z - a]]$: formal power series.
+\item[\lab{R4}] (Machine check, \texttt{checks/ch33-check.py}.) P1 for $\exp$, $1/(1 - z)$, $\cos$ (coefficients by the circle integral, sums against values); T3 on $\sin(z)^2 z$; P4; T6 on random polynomials over a grid of a disc (largest $|p|$ on the edge); P7; T8.
 \end{lines}
 
 \subsection*{Exercises}
 
 \begin{lines}
-\item[\lab{E1}] Find the list of T1 for $1/(1 - z)$ at $0$ by the circle integral, and compare with Chapter 17's geometric series.
-\item[\lab{E2}] What is the $k$ of T5 for $\sin(z) - z$ at $0$?
-\item[\lab{E3}] Show that $\exp$ is not bounded on $\mathbb{C}$ without computing: use T7.
+\item[\lab{E1}] Find the list of P1 for $1/(1 - z)$ at $0$ by the circle integral, and compare with Chapter 17's geometric series.
+\item[\lab{E2}] What is the $k$ of T3 for $\sin(z) - z$ at $0$?
+\item[\lab{E3}] Show that $\exp$ is not bounded on $\mathbb{C}$ without computing: use T5.
 \item[\lab{E4}] On $|z| \le 1$, where does $|z^2 + 1|$ take its largest value?
 \item[\lab{E5}] Why does T4 not contradict Chapter 21, P8?
 \end{lines}
-
 \newpage
 
 %% ==================================================================
@@ -3476,8 +3596,8 @@ This is Chapter 23, T1 again (``can be lowered''), turned upside down.
 \section*{Chapter 34. Poles and valuations}
 \phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter 34. Poles and valuations \quad germs at $a$ $\to$ their order}{Chapter 34. Poles and valuations}}
 \begin{center}
-{\normalsize germs at $a$ $\to$ their order \quad$\cdot$\quad from: Chapters 2, 18, 19, 32, 33 \quad$\cdot$\quad blur, build}\\[4pt]
-{\small Ask at which rung a germ stops being glued to $0$. The answer behaves like the number of times $p$ goes into an integer. Allow fractions, and the residue is one coefficient of the list.}
+{\normalsize germs at $a$ $\to$ their order \quad$\cdot$\quad from: Chapters 2, 16, 18, 19, 32, 33 \quad$\cdot$\quad blur, build}\\[4pt]
+{\small Glue $(z - a)^k$ to $0$ and ask at which rung a germ stops being glued to $0$. The answer behaves like the number of times $p$ goes into an integer. Allow fractions, and the number left round a hole is one coefficient of the list.}
 \end{center}
 
 Chapters 18 and 19 again, with $z - a$ in the place of $p$. The ladder is the one of Chapter 33, whose bottom is the germ; the fractions are Chapter 2 run once more.
@@ -3485,61 +3605,85 @@ Chapters 18 and 19 again, with $z - a$ in the place of $p$. The ladder is the on
 \subsection*{Given}
 
 \begin{lines}
-\item[\lab{G1}] (Chapter 33.) T1: a holomorphic germ is its list $\sum c_n (z - a)^n$; T3: the germ blur is ``the same list''; T5: zeros stand alone.
-\item[\lab{G2}] (Chapter 18, D4, T5; Chapter 19, D1, T3, R3.) $v_p$; the rungs $\equiv_k$; inverses in $\Z_p$; fractions give $\Q_p$.
-\item[\lab{G3}] (Chapter 32.) P1 ($\int z^n dz$), T4 (the residue), T5; (Chapter 16, T6) turns are whole.
-\item[\lab{G4}] (Chapter 2.) Pairs, blurred by $(a, b) \sim (ac, bc)$: fractions of a floor with no zero divisors.
+\item[\lab{G1}] (Chapter 33.) $H_a$, the germs at $a$ (N1); P1: a germ is its list $\sum c_n (z - a)^n$; P2: the germ blur is ``the same list''; P6: the product of lists; T3: zeros stand alone; T2: slopes of every order.
+\item[\lab{G2}] (Chapter 18, D4, T5; Chapter 19, D1, T3, R3.) $v_p$; the rungs $\equiv_k$ mod $p^k$; inverses in $\Z_p$; fractions give $\Q_p$.
+\item[\lab{G3}] (Chapter 32.) P1 ($\int z^n dz$), T2 (no hole), T4 (one number round a hole), T6 (the edge decides the inside). (Chapter 16, T5, T6.) The turning form; turns are whole.
+\item[\lab{G4}] (Chapter 2.) Pairs, blurred by $(f, g) \sim (fh, gh)$: fractions of a floor with no zero divisors.
 \end{lines}
 
 \subsection*{Definitions}
 
 \begin{lines}
-\item[\lab{D1}] $\mathcal{O}_a$: the germs at $a$ of holomorphic maps, with $+$ and $\times$.
-\item[\lab{D2}] (The order.) For $f \ne 0$ in $\mathcal{O}_a$: $\operatorname{ord}_a(f)$ is the first $n$ with $c_n \ne 0$. $\operatorname{ord}_a(0) := \infty$.
-\item[\lab{D3}] (Rungs.) $f \equiv_k g$: \ $\operatorname{ord}_a(f - g) \ge k$. \ Its bags are the lists cut after $k$ terms: $\mathbb{C}[z]/(z - a)^k$.
+\item[\lab{D1}] Fix $a$ in $\mathbb{C}$ and $k \ge 1$. On $H_a$: $O = \{+, \times\}$.
+\item[\lab{D2}] For $f$ in $H(D \setminus \{a\})$, $D$ a disc around $a$: \ $c_n(f) := \frac{1}{2\pi i}\int_{\gamma_{a,r}} f\,(z - a)^{-n-1}dz$ for every $n$ in $\Z$, any small $r$ (Chapter 32, T4).
+\end{lines}
+
+\subsection*{Blur: one rung for each $k$}
+
+\begin{lines}
+\item[\lab{B1}] (From below, L5.) Gluing: the single pair $(z - a)^k \sim_k 0$. \ Respects: $+$, $\times$.
+\item[\lab{B2}] (From above, L6.) Questions: $c_0, \dots, c_{k-1}$. \ Respects: $+$, $\times$.
 \end{lines}
 
 \subsection*{Propositions}
 
 \begin{lines}
-\item[\lab{P1}] (The twin of $v_p$.) $\operatorname{ord}_a(fg) = \operatorname{ord}_a f + \operatorname{ord}_a g$; \ $\operatorname{ord}_a(f + g) \ge \min(\operatorname{ord}_a f, \operatorname{ord}_a g)$, with equality when the two orders differ. \ (Lists: the first terms multiply; Chapter 7.) \\
-So $\mathcal{O}_a$ has no zero divisors, and $\operatorname{ord}_a(f) = $ the first rung at which $f$ is not glued to $0$: a depth, as $v_p$ is (Chapter 19, D1).
-\item[\lab{P2}] (Units.) $f$ has an inverse in $\mathcal{O}_a$ $\iff$ $\operatorname{ord}_a f = 0$, that is $f(a) \ne 0$. The twin of Chapter 19, T3. Every $f \ne 0$ is $(z - a)^k u$ with $u$ a unit and $k = \operatorname{ord}_a f$, in one way only.
-\item[\lab{P3}] (A ladder with a bottom.) The rungs $\equiv_k$ are true blurs respecting $+$ and $\times$; each rung's floor is a picture of the next; the bottom is $\mathcal{O}_a$ itself (Chapter 33, T3). Over $\R$ the same ladder had a bottom that was not the germ (Chapter 21, P8); here it is like $\Z_p$, whose ladder loses nothing.
-\item[\lab{P4}] (Build: fractions. Chapter 2 on $\mathcal{O}_a$.) The pairs $f/g$, $g \ne 0$, glued by $(f, g) \sim (fh, gh)$: the \emph{meromorphic germs}. Put $\operatorname{ord}_a(f/g) := \operatorname{ord}_a f - \operatorname{ord}_a g$; it is well defined and P1 still holds. Each one is a list starting at a negative place: $\sum_{n \ge -m} c_n (z - a)^n$. The twin of $\Q_p$ (Chapter 19, R3).
-\item[\lab{P5}] (Names.) If $\operatorname{ord}_a f = -m < 0$, $f$ has a \emph{pole of order $m$} at $a$. The part $\sum_{n < 0} c_n (z - a)^n$ is the \emph{principal part}.
-\item[\lab{P6}] (Dies: ``has an order''.) $\exp(1/z)$ is holomorphic on $\mathbb{C} \setminus \{0\}$, and its list at $0$, $\sum_{n \ge 0} z^{-n}/n!$, has no first term. It is in no bag of P4.
+\item[\lab{P1}] (Bags; Appears.) $f \sim_k g$ \ $\iff$ \ $f - g = (z - a)^k h$ for some $h$ in $H_a$ \ $\iff$ \ $c_n(f) = c_n(g)$ for $n < k$. \ (Z2: respecting $\times$ and $+$, the gluing spreads to every multiple of $(z - a)^k$. Z4: $c_n((z - a)^k h) = 0$ for $n < k$, by the product of lists. Z5: if $c_j(f - g) \ne 0$ for some $j < k$, the question $c_j$ in the context $x \mapsto x - g$ separates. If all are $0$, the list of $f - g$ starts at $(z - a)^k$, and $h$ is the rest of the list.) \\
+So the rung's normal forms are the lists cut after $k$ terms: the floor is $\mathbb{C}[z]/(z - a)^k$, the twin of $\Z/p^k$.
+\item[\lab{P2}] (A ladder with a bottom.) $\sim_{k+1}$ is less blurry than $\sim_k$; each rung's floor is a picture of the next; glued at every rung means the same germ (Chapter 33, T1). Over $\R$ the same ladder had a bottom that was not the germ (Chapter 21, P8); here it is like $\Z_p$, whose ladder loses nothing.
+\item[\lab{P3}] (The depth.) For $f \ne 0$ in $H_a$ let $\operatorname{ord}_a(f)$ be the first $k$ at which $f$ is not glued to $0$ at rung $k + 1$: the first $n$ with $c_n(f) \ne 0$. Put $\operatorname{ord}_a(0) := \infty$. Then $\operatorname{ord}_a(fg) = \operatorname{ord}_a f + \operatorname{ord}_a g$ and $\operatorname{ord}_a(f + g) \ge \min(\operatorname{ord}_a f, \operatorname{ord}_a g)$, with equality when the two differ. \ (Lists: the first terms multiply.) \\
+So $H_a$ has no zero divisors. The twin of $v_p$ (Chapter 19, D1).
+\item[\lab{P4}] (Units.) $f$ has an inverse in $H_a$ $\iff$ $\operatorname{ord}_a f = 0$, that is $f(a) \ne 0$. The twin of Chapter 19, T3. Every $f \ne 0$ is $(z - a)^k u$ with $u$ a unit and $k = \operatorname{ord}_a f$, in one way only.
+\end{lines}
+
+\subsection*{Build: fractions}
+
+\begin{lines}
+\item[\lab{P5}] (Chapter 2 on $H_a$.) The pairs $f/g$, $g \ne 0$, glued by $(f, g) \sim (fh, gh)$. Put $\operatorname{ord}_a(f/g) := \operatorname{ord}_a f - \operatorname{ord}_a g$; it is the same for glued pairs, and P3 still holds. Each fraction is $(z - a)^{-m} u$ with $u$ a unit, so a list starting at a negative place: $\sum_{n \ge -m} c_n (z - a)^n$, with these $c_n$ the ones of D2. The twin of $\Q_p$ (Chapter 19, R3). \\
+Carried: the equations of a field (Z7 on the fractions). Not carried: nothing new; P3 is checked again (Z8) in one line.
+\item[\lab{P6}] (Dies: ``has an order''.) $\exp(1/z)$ is in $H(\mathbb{C} \setminus \{0\})$, and its list at $0$, $\sum_{n \ge 0} z^{-n}/n!$, has no first term. It is in no bag of P5.
+\end{lines}
+
+\subsection*{Notation}
+
+\begin{lines}
+\item[\lab{N1}] $M_a$: the fractions of P5. If $\operatorname{ord}_a f = -m < 0$, say $f$ has a \emph{pole of order $m$} at $a$. The part $\sum_{n < 0} c_n (z - a)^n$ is the \emph{negative part} of $f$ at $a$. A map is in $M(U)$ if at each point of $U$ it is in $H$ near that point or its germ there is in $M_a$.
+\end{lines}
+
+\subsection*{Arrow}
+
+\begin{lines}
+\item[\lab{P7}] $\operatorname{ord}_a : M_a \setminus \{0\} \to \Z$ respects $\times$ (sent to $+$); its blur (W4) glues $f$ and $g$ when $f/g$ is a unit; it is a picture. The inside $H_a \to M_a$, $f \mapsto f/1$, respects $+$ and $\times$ (C3: lift by D1, survive by Chapter 33, P6, descend, agree here).
 \end{lines}
 
 \subsection*{Theorems}
 
 \begin{lines}
-\item[\lab{T1}] (The residue is a coefficient.) For $f$ with a pole at $a$ (or holomorphic near $a$ except at $a$, with order), $\operatorname{res}_a f = c_{-1}$. \ (Integrate the list term by term on a small circle: Chapter 32, P1 kills every term but $c_{-1}(z - a)^{-1}$.) The normal-form coordinate of Chapter 32, T4 is read straight off the list.
-\item[\lab{T2}] (Removable: bounded means no pole.) If $f$ is holomorphic near $a$ except at $a$, and bounded there, then $f$ is the germ of a holomorphic map at $a$. \ ($c_{-n} = \frac{1}{2\pi i}\int_{\gamma_{a,r}} f\,(z - a)^{n-1}dz$ is at most a bound times $r^n$, which comes near $0$.) Example: $\sin(z)/z$ at $0$.
-\item[\lab{T3}] (Several holes: residues add.) If $f$ is holomorphic on a disc $D$ except at finitely many points $a_1, \dots, a_s$, each a pole, and $\gamma$ is a circle in $D$ missing them, then \[ \int_\gamma f\,dz = 2\pi i \sum_{a_j \text{ inside } \gamma} \operatorname{res}_{a_j} f . \] (Take away each principal part; what is left is bounded near each $a_j$, so holomorphic on $D$ by T2, and its integral is $0$ (Chapter 32, T2). Each principal part gives its residue by T1, if $a_j$ is inside $\gamma$, and $0$ otherwise.)
-\item[\lab{T4}] (The order appears as a residue; counting by turns.) $\operatorname{res}_a (f'/f) = \operatorname{ord}_a f$. So for $f$ as in T3 with no zero or pole on $\gamma$, \[ \frac{1}{2\pi i}\int_\gamma \frac{f'}{f}\,dz \;=\; \sum_{\text{inside}} \operatorname{ord} f \;=\; (\text{zeros}) - (\text{poles}), \text{ each counted by its order,} \] and it is the number of turns of the loop $f \circ \gamma$ around $0$ (Chapter 16, T6). \ ($f = (z - a)^k u$ gives $f'/f = k/(z - a) + u'/u$, and $u'/u$ is holomorphic at $a$.)
+\item[\lab{T1}] (The number left round a hole is a coefficient.) For $f$ in $M_a$, $\operatorname{res}_a f = c_{-1}$. \ (D2 with $n = -1$ is the number of Chapter 32, T4.)
+\item[\lab{T2}] (Bounded means no pole.) If $f$ is in $H(D \setminus \{a\})$ and bounded near $a$, then, with $f(a) := c_0$, $f$ is in $H(D)$. \ ($|c_{-n}| \le$ a bound times $r^n$ for every small $r$, so $c_{-n} = 0$ for $n \ge 1$; then $f = \sum_{n \ge 0} c_n (z - a)^n$ near $a$, as in Chapter 33, P1, run on a ring.) Example: $\sin(z)/z$ at $0$.
+\item[\lab{T3}] (Several holes: the numbers add.) Let $f$ be in $H(D)$ for a disc $D$ except at finitely many points $a_1, \dots, a_s$, each a pole, and let $\gamma$ be a circle in $D$ missing them. Then \[ \int_\gamma f\,dz = 2\pi i \sum_{a_j \text{ inside } \gamma} \operatorname{res}_{a_j} f . \] (Take away each negative part; what is left is bounded near each $a_j$, so in $H(D)$ by T2, and its integral is $0$ (Chapter 32, T2). A term $(z - a_j)^{-n}$ with $n \ge 2$ has an antiderivative off $a_j$: integral $0$. For $n = 1$: if $a_j$ is inside $\gamma$, Chapter 32, T6 with the map $1$ gives $2\pi i$; if outside, $1/(z - a_j)$ is in $H$ of a disc holding $\gamma$ and its inside, so $0$.)
+\item[\lab{T4}] (The order is a number left round a hole; counting by turns.) $\operatorname{res}_a (f'/f) = \operatorname{ord}_a f$. So for $f$ as in T3 with no zero or pole on $\gamma$, \[ \frac{1}{2\pi i}\int_\gamma \frac{f'}{f}\,dz \;=\; \sum_{\text{inside}} \operatorname{ord} f \;=\; (\text{zeros}) - (\text{poles}), \text{ each counted by its order,} \] and it is the number of turns of the loop $f \circ \gamma$ around $0$. \ ($f = (z - a)^k u$ gives $f'/f = k/(z - a) + u'/u$, and $u'/u$ is in $H$ near $a$. For the turns: $f \circ \gamma$ has slopes of every order (G1), $\int_\gamma f'/f\,dz = \int_{f \circ \gamma} dw/w$, and $dw/w = d\log|w| + i\,\theta$; Chapter 16, T6.)
 \end{lines}
 
 \subsection*{Remarks}
 
 \begin{lines}
-\item[\lab{R1}] (The twins, as a table.) $\Z \;\cdot\; p \;\cdot\; v_p \;\cdot\; \Z/p^k \;\cdot\; \Z_p \;\cdot\; \Q_p$ \ match \ $H(U) \;\cdot\; z - a \;\cdot\; \operatorname{ord}_a \;\cdot\; \mathbb{C}[z]/(z - a)^k \;\cdot\; \mathcal{O}_a \;\cdot\; $ meromorphic germs. One difference: every residue field here is $\mathbb{C}$, while $\Z/p$ changes with $p$.
-\item[\lab{R2}] (All the orders.) On the fractions of polynomials, every way of measuring size with the laws of P1 is some $\operatorname{ord}_a$ or the order at infinity, $-\deg$ (classical; the twin of Ostrowski, Chapter 19, R4; reported).
-\item[\lab{R3}] (Where the road goes.) Blur $\mathbb{C}$ by a lattice $\Lambda = \Z\omega_1 + \Z\omega_2$, the twin of Chapter 8 with two directions: the bags form a torus. A map on it with one pole of order $2$ is Selected as $\exp$ was in Chapter 22 (the $\wp$ of Weierstrass): Chapter 37. The group law of the cubic it draws belongs to Building 1.
-\item[\lab{R4}] (Old names.) $\operatorname{ord}_a$: order of vanishing; a discrete valuation. P4: Laurent series, meromorphic functions. P6: essential singularity. T1: residue as Laurent coefficient. T2: Riemann's removable singularity theorem. T3: the residue theorem. T4: the argument principle.
-\item[\lab{R5}] (Machine check, \texttt{checks/ch34-check.py}.) P1 on random germs; P2; P6; T1 for $1/(z^2(z - 1))$ and $\cot$; T2 for $\sin(z)/z$; T3 for three rational maps on circles of several sizes; T4 counting zeros of random polynomials inside circles, against their roots.
+\item[\lab{R1}] (The twins, as a table.) $\Z \;\cdot\; p \;\cdot\; v_p \;\cdot\; \Z/p^k \;\cdot\; \Z_p \;\cdot\; \Q_p$ \ match \ $H(U) \;\cdot\; z - a \;\cdot\; \operatorname{ord}_a \;\cdot\; \mathbb{C}[z]/(z - a)^k \;\cdot\; H_a \;\cdot\; M_a$. One difference: every rung-one floor here is $\mathbb{C}$, while $\Z/p$ changes with $p$.
+\item[\lab{R2}] (All the orders, reported.) On the fractions of polynomials, every way of measuring size with the laws of P3 is some $\operatorname{ord}_a$ or the order at infinity, $-\deg$ (classical; the twin of Ostrowski, Chapter 19, R4). No line uses it.
+\item[\lab{R3}] (Where the road goes.) Blur $\mathbb{C}$ by a lattice $\Lambda = \Z\omega_1 + \Z\omega_2$, the twin of Chapter 8 with two directions: the bags form a torus. A map on it with one pole of order $2$ is selected as $\exp$ was in Chapter 22: Chapter 37. The law of the cubic it draws belongs to Building 1.
+\item[\lab{R4}] (Old names.) $H_a$: $\mathcal{O}_a$, germs of holomorphic functions. $\operatorname{ord}_a$: order of vanishing; a discrete valuation. $M_a$, $M(U)$: meromorphic germs and functions; P5: Laurent series. Negative part: principal part. P6: essential singularity. T1: residue as Laurent coefficient. T2: Riemann's removable singularity theorem. T3: the residue theorem. T4: the argument principle.
+\item[\lab{R5}] (Machine check, \texttt{checks/ch34-check.py}.) P3 on random germs; P4; P6; T1 for $1/(z^2(z - 1))$ and $\cot$; T2 for $\sin(z)/z$; T3 for three rational maps on circles of several sizes; T4 counting zeros of random polynomials inside circles, against their roots.
 \end{lines}
 
 \subsection*{Exercises}
 
 \begin{lines}
 \item[\lab{E1}] Find $\operatorname{ord}_0$ of $\sin(z)^3$, of $1 - \cos z$, and of $z / \sin(z)^2$.
-\item[\lab{E2}] Find the residue of $1/(z^2(z - 1))$ at $0$ and at $1$; check that they add to the integral over $|z| = 2$, which is $0$.
-\item[\lab{E3}] Show that $\cot z = \cos z / \sin z$ has residue $1$ at every $k\pi$.
+\item[\lab{E2}] Find $\operatorname{res}$ of $1/(z^2(z - 1))$ at $0$ and at $1$; check that they add to the integral over $|z| = 2$, which is $0$.
+\item[\lab{E3}] Show that $\cot z = \cos z / \sin z$ has $\operatorname{res} = 1$ at every $k\pi$.
 \item[\lab{E4}] Use T4 to count the zeros of $z^5 + 3z + 1$ inside $|z| = 1$ (compare $3z$ with the rest on the circle).
-\item[\lab{E5}] Why can no fraction $f/g$ of P4 equal $\exp(1/z)$ near $0$?
+\item[\lab{E5}] Why can no fraction $f/g$ of P5 equal $\exp(1/z)$ near $0$?
 \end{lines}
-
 \newpage
 
 %% ==================================================================
@@ -3548,7 +3692,7 @@ So $\mathcal{O}_a$ has no zero divisors, and $\operatorname{ord}_a(f) = $ the fi
 \section*{Chapter 35. The plane with no parallels}
 \phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter 35. The plane with no parallels \quad $k^3$ without $0$ $\to$ its lines}{Chapter 35. The plane with no parallels}}
 \begin{center}
-{\normalsize $k^3$ without $0$ $\to$ its lines \quad$\cdot$\quad from: Chapters 3, 6, 7, 8, 14 \quad$\cdot$\quad blur only}\\[4pt]
+{\normalsize $k^3$ without $0$ $\to$ its lines \quad$\cdot$\quad from: Chapters 3, 6, 7, 8, 14 \quad$\cdot$\quad blur}\\[4pt]
 {\small Forget the size of a list of three, keep its direction. The bags are a plane with a line added at the edge, and in it any two lines meet.}
 \end{center}
 
@@ -3557,19 +3701,28 @@ Chapter 8 glued $r$ to $r + 1$. Here the gluing is by scaling, and only the zero
 \subsection*{Given}
 
 \begin{lines}
-\item[\lab{G1}] $k$: one of $\Q$, $\R$, $\mathbb{C}$, $\Z/p$ with $p$ prime (Chapters 2, 4, 7 T5, 3 T4). Each has $0$, $1$, $+$, $-$, $\times$, and every $c \ne 0$ has an inverse.
-\item[\lab{G2}] (Chapter 6.) Lists $k^3$, with $+$ and scaling; the dot $a \cdot v = a_1 v_1 + a_2 v_2 + a_3 v_3$.
-\item[\lab{G3}] (Chapter 14.) $\det$ of three lists of three; $\det = 0$ exactly when one list is a sum of multiples of the others. Its formula is a sum of products, so its laws, being equations, hold over every $k$ of G1 (Chapter 0, Z7).
+\item[\lab{G1}] $k$: one of $\Q$, $\R$, $\mathbb{C}$, $\Z/p$ with $p$ prime (Chapters 2, 4; Chapter 7, T5; Chapter 3, T4). Each has $0$, $1$, $+$, $-$, $\times$, and every $c \ne 0$ has an inverse.
+\item[\lab{G2}] (Chapter 6.) Lists $k^3$, with $+$ and scaling; the dot $a \cdot v = a_1 v_1 + a_2 v_2 + a_3 v_3$. (Chapter 6 is over $\R$; its definitions are formulas and run over any $k$.)
+\item[\lab{G3}] (Chapter 14.) $\det$ of three lists of three, as the formula of T1 there.
 \item[\lab{G4}] (Chapter 7, run over $k$.) Polynomials in letters; a polynomial $F$ is \emph{homogeneous of degree $d$} when every term has degree $d$; then $F(\lambda v) = \lambda^d F(v)$.
 \end{lines}
 
-\subsection*{The blur}
-
-On $k^3 \setminus \{0\}$. \ $O$: the dot with a fixed $a$, read as ``is it $0$?''.
+\subsection*{Definitions}
 
 \begin{lines}
-\item[\lab{B1}] (From below.) Gluing: $v \sim \lambda v$ for each $\lambda \ne 0$. \ Write $(x : y : z)$ for the bag of $(x, y, z)$, and $\mathbb{P}^2(k)$ for the bags.
-\item[\lab{B2}] (From above.) Questions: for each $a$ in $k^3 \setminus \{0\}$, ``is $a \cdot v = 0$?''. \ That is: which planes through $0$ hold $v$.
+\item[\lab{D1}] (The cross list.) For $v, w$ in $k^3$: \ $v \times w := (v_2 w_3 - v_3 w_2,\ v_3 w_1 - v_1 w_3,\ v_1 w_2 - v_2 w_1)$.
+\item[\lab{D2}] (Three equations.) For all $u, v, w, b$ in $k^3$: \ (i) $(v \times w) \cdot v = 0$ and $(v \times w) \cdot w = 0$; \ (ii) $\det(u, v, w) = (u \times v) \cdot w$; \ (iii) $b \times (v \times w) = (b \cdot w)\, v - (b \cdot v)\, w$. \\
+Each is an equation between polynomials with whole-number coefficients, true over $\Z$ (multiply out), so it holds over every $k$ of G1 (Z7). This is the only use of Z7 in the chapter.
+\item[\lab{D3}] (One law that is not an equation, checked here, Z8.) If $v \ne 0$ and $v \times w = 0$, then $w = c\,v$ for one $c$ in $k$. \ (Say $v_1 \ne 0$; the entries of $v \times w = 0$ give $w_i v_1 = w_1 v_i$; put $c := w_1 / v_1$, using the inverse of G1. The other cases are the same.)
+\end{lines}
+
+\subsection*{Blur}
+
+On $k^3 \setminus \{0\}$. \ $O$: scaling by each $\lambda \ne 0$. (Adding is not an operation here: $v + (-v) = 0$ leaves the bag.)
+
+\begin{lines}
+\item[\lab{B1}] (From below, L5.) Gluings: $v \sim \lambda v$ for each $\lambda \ne 0$. \ Respects: scaling.
+\item[\lab{B2}] (From above, L6.) Questions: for each $a$ in $k^3 \setminus \{0\}$, ``is $a \cdot v = 0$?'', that is, which planes through $0$ hold $v$. \ Respects: scaling.
 \end{lines}
 
 \subsection*{Propositions}
@@ -3577,31 +3730,45 @@ On $k^3 \setminus \{0\}$. \ $O$: the dot with a fixed $a$, read as ``is it $0$?'
 \begin{lines}
 \item[\lab{P1}] (Survives: ``$F(v) = 0$'' for homogeneous $F$.) $F(\lambda v) = \lambda^d F(v)$, and $\lambda^d \ne 0$. So B2 is kept by B1, and so is every homogeneous equation.
 \item[\lab{P2}] (Dies: the value.) $F(v)$ itself is not kept unless $d = 0$: $x$ at $(1, 0, 0)$ is $1$, at $(2, 0, 0)$ is $2$. Not kept either: $x + 1 = 0$, which is not homogeneous.
-\item[\lab{P3}] (Appears.) B1 and B2 agree: $v \sim w$ exactly when every plane through $0$ holding $v$ holds $w$. \ (If $w$ is not a multiple of $v$, the planes through $v$ are the $a$ with $a \cdot v = 0$; they are $2$ free directions, and the $a$ with $a \cdot v = a \cdot w = 0$ only $1$. So some $a$ separates them.) A point is known by the lines through it.
-\item[\lab{P4}] (Normal forms.) Each bag holds exactly one of \ $(x, y, 1)$; \ $(x, 1, 0)$; \ $(1, 0, 0)$. \ (Scale by the inverse of the last entry that is not $0$.) So $\mathbb{P}^2(k)$ is the plane $k^2$ (the $(x : y : 1)$), with one more line $z = 0$ at the edge, which is itself a line $k$ with one more point.
+\item[\lab{P3}] (Appears.) $\sim$ from B1 equals $\approx$ from B2. Z4 is P1. Z5: let $w$ not be a multiple of $v$. Then $v \times w \ne 0$ (D3); pick a place $i$ with $(v \times w)_i \ne 0$ and put $a := e_i \times v$. Then $a \cdot v = 0$ (D2 (i)) and $a \cdot w = \det(e_i, v, w) = (v \times w)_i \ne 0$ (D2 (ii), and $\det$ does not change when the three lists turn round). The separating question is ``is $a \cdot v = 0$?'', in the context that does nothing. A point is known by the planes through it.
+\item[\lab{P4}] (Normal forms.) Each bag holds exactly one of \ $(x, y, 1)$; \ $(x, 1, 0)$; \ $(1, 0, 0)$. \ (Scale by the inverse of the last entry that is not $0$.) So the bags are the plane $k^2$ (the $(x : y : 1)$), with one more line $z = 0$ at the edge, which is itself a line $k$ with one more point.
 \item[\lab{P5}] (Counting.) Over $\Z/p$: $p^2 + p + 1$ bags. \ (P4: $p^2 + p + 1$; or $(p^3 - 1)/(p - 1)$.)
-\item[\lab{P6}] (Lines.) A \emph{line} is the set of bags with $a \cdot v = 0$, for one $a \ne 0$; $a$ and $\lambda a$ give the same line. So the lines are the bags of the same blur run on the $a$: a second $\mathbb{P}^2(k)$. \ In P4's picture: $a_1 x + a_2 y + a_3 = 0$ is a line of $k^2$ with its one point on the edge, $(-a_2 : a_1 : 0)$, added; and $z = 0$ is the edge.
+\item[\lab{P6}] (Lines.) A \emph{line} is the set of bags with $a \cdot v = 0$, for one $a \ne 0$; $a$ and $\lambda a$ give the same line. So the lines are the bags of the same blur run on the $a$. In P4's picture: $a_1 x + a_2 y + a_3 = 0$ is a line of $k^2$ with its one point on the edge, $(-a_2 : a_1 : 0)$, added; and $z = 0$ is the edge.
+\end{lines}
+
+\subsection*{Notation}
+
+\begin{lines}
+\item[\lab{N1}] Write $(x : y : z)$ for the bag of $(x, y, z)$, and $\mathbb{P}^2(k)$ for the bags. $\mathbb{P}^1(k)$: the same blur run on $k^2 \setminus \{0\}$.
+\end{lines}
+
+\subsection*{Arrow}
+
+\begin{lines}
+\item[\lab{P7}] $k^2 \to \mathbb{P}^2(k)$, $(x, y) \mapsto (x : y : 1)$, is an inside (P4); it sends the lines of $k^2$ into lines, and is not a picture: the edge $z = 0$ is missed. No sign is reused on the new floor: it has no $+$.
 \end{lines}
 
 \subsection*{Theorems}
 
 \begin{lines}
-\item[\lab{T1}] (Two points, one line.) Two different points lie on exactly one line. \ (The $a$ with $a \cdot v = a \cdot w = 0$: one free direction, by G3 and P3.)
+\item[\lab{T1}] (Two points, one line.) Two different points $(v)$, $(w)$ lie on exactly one line, the line of $v \times w$. \ ($v \times w \ne 0$ by D3, and it lies on both by D2 (i). If also $b \cdot v = b \cdot w = 0$, then $b \times (v \times w) = 0$ by D2 (iii), so $b$ is a multiple of $v \times w$ by D3.)
 \item[\lab{T2}] (Two lines, one point: no parallels.) Two different lines meet in exactly one point. \ (T1 run on the $a$: P6.) \\
 Dies in $k^2$: $y = 0$ and $y = 1$ do not meet there. In $\mathbb{P}^2$ they meet at $(1 : 0 : 0)$, the point on the edge in their shared direction.
-\item[\lab{T3}] (Three on a line.) $(u)$, $(v)$, $(w)$ lie on one line $\iff$ $\det(u, v, w) = 0$. \ (G3: there is an $a \ne 0$ with $a \cdot u = a \cdot v = a \cdot w = 0$ exactly when the three lists do not fill $k^3$.)
-\item[\lab{T4}] (A line, parametrised.) If $P = (u)$ and $Q = (w)$ are different, the points of their line are the bags of $s\,u + t\,w$, $(s, t) \ne (0, 0)$, and $(s : t) \mapsto (s u + t w)$ matches the line one-to-one with $\mathbb{P}^1(k)$, the same blur run on $k^2$. \ So a homogeneous $F$ of degree $d$, put on the line, becomes $f(s, t) = F(s u + t w)$, homogeneous of degree $d$ in two letters.
+\item[\lab{T3}] (Three on a line.) $(u)$, $(v)$, $(w)$ lie on one line $\iff$ $\det(u, v, w) = 0$. \\
+($\Leftarrow$: if $u \times v \ne 0$, the line of $u \times v$ holds all three, since $(u \times v) \cdot w = \det(u, v, w) = 0$ (D2). If $u \times v = 0$, then $(u) = (v)$ (D3), and two points always lie on a line (T1). \ $\Rightarrow$: if $(u) = (v)$, $\det = 0$ (a repeated list, an equation). Otherwise the line is the line of $u \times v$ (T1), so $(u \times v) \cdot w = 0$, which is $\det(u, v, w)$.)
+\item[\lab{T4}] (A line, parametrised.) If $P = (u)$ and $Q = (w)$ are different, the points of their line are the bags of $s\,u + t\,w$, $(s, t) \ne (0, 0)$, and $(s : t) \mapsto (s u + t w)$ matches the line one-to-one with $\mathbb{P}^1(k)$. \ (Put $c := u \times w$, not $0$ (D3). A point $(b)$ of the line has $c \cdot b = 0$. Pick $i$ with $c_i \ne 0$. D2 (iii) twice: $c \times (e_i \times b) = (c \cdot b)\, e_i - c_i\, b = -c_i\, b$, and $x \times c = (x \cdot w)\,u - (x \cdot u)\,w$ for every $x$; with $x := e_i \times b$ this writes $b$ as $s u + t w$. One-to-one by D3.) So a homogeneous $F$ of degree $d$, put on the line, becomes $f(s, t) = F(s u + t w)$, homogeneous of degree $d$ in two letters.
 \item[\lab{T5}] (Moves.) A $3 \times 3$ matrix $A$ with $\det A \ne 0$ sends bags to bags and lines to lines, and keeps T3. $A$ and $\lambda A$ do the same. Any four points, no three on a line, can be sent to any other such four. \ (Send the first three to the corner lists, scale the columns to put the fourth at $(1 : 1 : 1)$; Chapter 14.)
 \end{lines}
 
 \subsection*{Remarks}
 
 \begin{lines}
-\item[\lab{R1}] (Pictures over $\R$ and $\mathbb{C}$.) $\mathbb{P}^1(\R)$: the slope $t$ of each line in $\R^2$, plus the upright one; as $t$ grows the line turns back to where it began, so $\mathbb{P}^1(\R)$ is the circle of Chapter 8, of half-turns. $\mathbb{P}^1(\mathbb{C})$ is $\mathbb{C}$ with one point $\infty$ added: the place where Chapter 34 measured the order at infinity.
-\item[\lab{R2}] (The edge is not special.) T5 moves the edge line $z = 0$ to any other line. Which line is ``at infinity'' is a choice of picture (P4), not a fact about the plane.
-\item[\lab{R3}] (Where the road goes.) Chapter 36 puts a cubic in this plane. A line meets it in $3$ points (T4: a cubic in two letters), and that is the beginning of a group law, drawn in Building 1.
-\item[\lab{R4}] (Old names.) $\mathbb{P}^2(k)$: the projective plane; $(x : y : z)$: homogeneous coordinates; P6: duality; T5: projective transformations, $\mathrm{PGL}_3(k)$; P5: the finite projective plane of order $p$ (for $p = 2$, the Fano plane, $7$ points and $7$ lines).
-\item[\lab{R5}] (Machine check, \texttt{checks/ch35-check.py}.) Over $\Z/p$ for $p = 2, 3, 5, 7$: P4 normal forms are one per bag and P5 counts; every line has $p + 1$ points, every point is on $p + 1$ lines; T1 and T2 for all pairs; T3 against direct listing; T5 for random matrices; P3 by brute force.
+\item[\lab{R1}] (Why the cross list.) An earlier draft used ``$\det = 0$ exactly when the lists are dependent, over every field, by Z7''. That is not an equation, so Z7 does not carry it (Z8). D2 keeps Z7 for three true equations, and D3 checks the one law that is not.
+\item[\lab{R2}] (Pictures over $\R$ and $\mathbb{C}$.) $\mathbb{P}^1(\R)$: the slope $t$ of each line in $\R^2$, plus the upright one; as $t$ grows the line turns back to where it began, so $\mathbb{P}^1(\R)$ is the circle of Chapter 8, of half-turns. $\mathbb{P}^1(\mathbb{C})$ is $\mathbb{C}$ with one point $\infty$ added: the place where Chapter 34 measured the order at infinity.
+\item[\lab{R3}] (The edge is not special.) T5 moves the edge line $z = 0$ to any other line. Which line is ``at infinity'' is a choice of picture (P4), not a fact about the plane.
+\item[\lab{R4}] (Where the road goes.) Chapter 36 puts a cubic in this plane. A line meets it in $3$ points (T4: a cubic in two letters), and that is the beginning of a law of adding points, drawn in Building 1.
+\item[\lab{R5}] (Old names.) $\mathbb{P}^2(k)$: the projective plane; $(x : y : z)$: homogeneous coordinates; $v \times w$: the cross product; P6: duality; T5: projective transformations, $\mathrm{PGL}_3(k)$; P5: the finite projective plane of order $p$ (for $p = 2$, the Fano plane, $7$ points and $7$ lines).
+\item[\lab{R6}] (Machine check, \texttt{checks/ch35-check.py}.) Over $\Z/p$ for $p = 2, 3, 5, 7$: P4 normal forms are one per bag and P5 counts; every line has $p + 1$ points, every point is on $p + 1$ lines; T1 and T2 for all pairs; T3 against direct listing; T5 for random matrices; P3 by brute force.
 \end{lines}
 
 \subsection*{Exercises}
@@ -3611,8 +3778,8 @@ Dies in $k^2$: $y = 0$ and $y = 1$ do not meet there. In $\mathbb{P}^2$ they mee
 \item[\lab{E2}] Where do $x - 2y + 3 = 0$ and $2x - 4y + 1 = 0$ meet in $\mathbb{P}^2(\Q)$?
 \item[\lab{E3}] Which points of $\mathbb{P}^2(\R)$ satisfy $x^2 + y^2 = z^2$ and $z = 0$? Which satisfy $x^2 - y^2 = z^2$ and $z = 0$?
 \item[\lab{E4}] Why is $\{(x : y : z) : x + y = 1\}$ not a set of bags?
+\item[\lab{E5}] Check D2 (iii) for $b = e_1$, $v = e_1$, $w = e_2$.
 \end{lines}
-
 \newpage
 
 %% ==================================================================
@@ -3621,11 +3788,11 @@ Dies in $k^2$: $y = 0$ and $y = 1$ do not meet there. In $\mathbb{P}^2$ they mee
 \section*{Chapter 36. A cubic in the plane}
 \phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter 36. A cubic in the plane \quad polynomials $\to$ functions on a cubic}{Chapter 36. A cubic in the plane}}
 \begin{center}
-{\normalsize polynomials $\to$ functions on a cubic \quad$\cdot$\quad from: Chapters 7, 23, 34, 35 \quad$\cdot$\quad build, blur}\\[4pt]
+{\normalsize polynomials $\to$ functions on a cubic \quad$\cdot$\quad from: Chapters 7, 23, 34, 35 \quad$\cdot$\quad blur}\\[4pt]
 {\small A line meets a cubic in three points; two in $k$ force the third. Glue $y^2$ to the cubic and the polynomials become functions on the curve, each with a weight, and no function has weight $1$.}
 \end{center}
 
-Two lines of work. The first builds a point from two (T1). The second is Chapter 7 again: glue a polynomial to $0$, and read the bags.
+Two lines of work. The first finds a third point from two (T1); nothing is built, a root is split off. The second is the blur: Chapter 7 again, glue a polynomial to $0$, and read the bags.
 
 \subsection*{Given}
 
@@ -3656,10 +3823,10 @@ Two lines of work. The first builds a point from two (T1). The second is Chapter
 \subsection*{Theorems}
 
 \begin{lines}
-\item[\lab{T1}] (Build: the third point.) If a line meets $C$ at two points of $\mathbb{P}^2(k)$ (one point counted twice, for a tangent), then it meets $C$ at a third point of $\mathbb{P}^2(k)$, and the meeting numbers add to exactly $3$. \ ($f$ has two roots in $\mathbb{P}^1(k)$; split them off (G2, T4); a factor of degree $1$ over $k$ is left, and its root is in $k$.) \\
+\item[\lab{T1}] (The third point.) If a line meets $C$ at two points of $\mathbb{P}^2(k)$ (one point counted twice, for a tangent), then it meets $C$ at a third point of $\mathbb{P}^2(k)$, and the meeting numbers add to exactly $3$. \ ($f$ has two roots in $\mathbb{P}^1(k)$; split them off (G2, T4); a factor of degree $1$ over $k$ is left, and its root is in $k$.) \\
 For $(x_1, y_1)$, $(x_2, y_2)$ with $x_1 \ne x_2$: \ $m = \dfrac{y_2 - y_1}{x_2 - x_1}$, \ $x_3 = m^2 - x_1 - x_2$, \ $y_3 = y_1 + m(x_3 - x_1)$. \ (Put $y = y_1 + m(x - x_1)$ in $y^2 = g(x)$: a cubic in $x$ with $-x^3 + m^2 x^2 + \dots$, whose three roots add to $m^2$.) For a tangent, take $x_2 = x_1$ and $m$ from P4.
 \item[\lab{T2}] (Smooth exactly when $\Delta \ne 0$.) Every point of $C$, over $k$ and over every larger $k$ of G1, is smooth $\iff$ $g$ has no repeated root $\iff$ $\Delta \ne 0$. \ (At an affine point, $\partial_y F = 2y$ and $\partial_x F = -g'(x)$; both are $0$ only where $y = 0 = g(x) = g'(x)$. A repeated root of $g$ is a root of $g'$ too, and eliminating $x$ from $g = g' = 0$ leaves $\Delta = 0$.)
-\item[\lab{T3}] (Dies when $\Delta = 0$.) $y^2 = x^3$: at $(0, 0)$ every line meets $C$ at least twice; through it and any other point of $C$ the third point is $(0, 0)$ again. $y^2 = x^3 + x^2$: two tangents at $(0, 0)$. T1 still builds third points, but $(0,0)$ swallows them.
+\item[\lab{T3}] (What fails when $\Delta = 0$.) $y^2 = x^3$: at $(0, 0)$ every line meets $C$ at least twice; through it and any other point of $C$ the third point is $(0, 0)$ again. $y^2 = x^3 + x^2$: two tangents at $(0, 0)$. T1 still builds third points, but $(0,0)$ swallows them.
 \end{lines}
 
 \subsection*{The blur}
@@ -3667,24 +3834,36 @@ For $(x_1, y_1)$, $(x_2, y_2)$ with $x_1 \ne x_2$: \ $m = \dfrac{y_2 - y_1}{x_2 
 On $k[x, y]$, polynomials in two letters. \ $O$: $+$, $\times$.
 
 \begin{lines}
-\item[\lab{B1}] (From below.) Gluing: $y^2 \sim g(x)$. \ Write $k[C]$ for the bags: the \emph{functions on $C$}.
-\item[\lab{B2}] (From above, for $k$ inside $\mathbb{C}$.) Questions: the value at each point $(x, y)$ of $C$ over $\mathbb{C}$.
+\item[\lab{B1}] (From below, L5.) Gluing: the single pair $y^2 \sim g(x)$. \ Respects: $+$, $\times$.
+\item[\lab{B2}] (From above, L6, for $k$ inside $\mathbb{C}$.) Questions: the value at each point $(x, y)$ of $C$ over $\mathbb{C}$. \ Respects: $+$, $\times$.
 \end{lines}
 
 \begin{lines}
 \item[\lab{P5}] (Normal forms.) Each bag holds exactly one $p(x) + q(x)\,y$. \ (Trade $y^2$ for $g(x)$ until $y$ is to the power $0$ or $1$.)
-\item[\lab{P6}] (Appears, for $k$ inside $\mathbb{C}$.) B1 and B2 agree: two polynomials are glued exactly when they agree on $C$ over $\mathbb{C}$. \ (If $p + qy$ is $0$ on $C$: for every $x$ with $g(x) \ne 0$ there are two $y$, opposite, by G3; so $p(x) = 0$ and $q(x) = 0$ at infinitely many $x$, and $p = q = 0$ by G2, T4.)
-\item[\lab{P7}] (The mirror, and the size.) $y \mapsto -y$ respects the gluing; write $\bar f$. Then $N(f) := f \bar f = p^2 - q^2 g$ lies in $k[x]$.
+\item[\lab{P6}] (Appears, for $k$ inside $\mathbb{C}$.) B1 and B2 agree: two polynomials are glued exactly when they agree on $C$ over $\mathbb{C}$. \ (Z4: $y^2 - g(x)$ is $0$ at every point of $C$, in every context. Z5, context $x \mapsto x - h$ for the second polynomial $h$: if $p + qy$ is $0$ on $C$: for every $x$ with $g(x) \ne 0$ there are two $y$, opposite, by G3; so $p(x) = 0$ and $q(x) = 0$ at infinitely many $x$, and $p = q = 0$ by G2, T4.)
+\item[\lab{P7}] (The mirror, and the size.) $y \mapsto -y$ respects the gluing; write $\bar f$ for the image of the bag $f$. Then $N(f) := f \bar f = p^2 - q^2 g$ lies in $k[x]$.
 \item[\lab{P8}] (Weight.) $w(p + qy) := \max(2 \deg p,\; 2 \deg q + 3)$; $w(0) := -\infty$. \ The two candidates are even and odd, so they never tie, and $\deg N(f) = w(f)$.
-\item[\lab{P9}] (Survives: weights add.) $w(fg) = w(f) + w(g)$. \ ($\deg N(fg) = \deg N(f) + \deg N(g)$, since $N(fg) = N(f) N(g)$ and G2, T2.) The twin of $\operatorname{ord}$ (G4) with the sign turned: $w(f)$ is the order of the pole of $f$ at $O$.
-\item[\lab{P10}] (Dies: weight $1$.) The weights that occur are $0, 2, 3, 4, 5, 6, \dots$: \ $1, x, y, x^2, xy, x^3, \dots$. \ Weight $1$ never occurs: \emph{no function on $C$ has a single simple pole at $O$ and no other}. And $w(f) = 0$ only for the non-zero constants, so these are the only $f$ with an inverse in $k[C]$.
+\item[\lab{P9}] (Weights add.) $w(fg) = w(f) + w(g)$. \ ($\deg N(fg) = \deg N(f) + \deg N(g)$, since $N(fg) = N(f) N(g)$ and G2, T2.) The twin of $\operatorname{ord}$ (G4) with the sign turned: $w(f)$ is the order of the pole of $f$ at $O$.
+\item[\lab{P10}] (No weight $1$.) The weights that occur are $0, 2, 3, 4, 5, 6, \dots$, from $1, x, y, x^2, xy, x^3, \dots$ So \emph{no function on $C$ has a single simple pole at $O$ and no other}. And $w(f) = 0$ only for the non-zero constants, so these are the only $f$ with an inverse in $k[C]$.
 \item[\lab{P11}] (Weight counts meetings, for lines.) $y - mx - c$ has weight $3$ and meets $C$ at $3$ affine points, counted (P2, P1: never at $O$). $x - c$ has weight $2$ and meets $C$ at $2$ affine points and once at $O$.
+\end{lines}
+
+\subsection*{Notation}
+
+\begin{lines}
+\item[\lab{N1}] $k[C] := k[x, y]/{\sim}$, the \emph{functions on $C$}, with $+$ and $\times$ carried over (Z6). $w$ of P8 is a question on $k[C]$: it is read off the normal form.
+\end{lines}
+
+\subsection*{Arrow}
+
+\begin{lines}
+\item[\lab{P12}] $k[x] \to k[C]$, $p \mapsto \bag{p}$, is an inside (P5: $p$ is its own normal form) respecting $+$ and $\times$; not a picture ($y$ is missed). C3 for $+$, $\times$: lifted on polynomials (Chapter 7), survive (B1 respects them), descend (Z6), agree (this line). The mirror $f \mapsto \bar f$ is an arrow $k[C] \to k[C]$ respecting $+$ and $\times$, and its own inverse.
 \end{lines}
 
 \subsection*{Remarks}
 
 \begin{lines}
-\item[\lab{R1}] (What the method did.) T1 is a construction: two points build a third. The functions on $C$ are a blur of polynomials, and their weight is a size of the kind Chapters 18 and 34 met. P10 is the one ``Dies'' line the group law needs.
+\item[\lab{R1}] (What the method did.) T1 is a root split off: two points give a third. The functions on $C$ are a blur of polynomials, and their weight is a size of the kind Chapters 18 and 34 met. P10 is the one ``never occurs'' line the law of adding points needs.
 \item[\lab{R2}] (Where the road goes.) Building 1 glues the points of $C$ by lines ($P + Q + R \sim 3O$ when $P, Q, R$ lie on one line) and reads off a move system. Associativity comes free from the blur; ``at most one point per bag'' is P10. Chapter 37 finds the same curve over $\mathbb{C}$ as a torus.
 \item[\lab{R3}] (Reported.) Over $\mathbb{C}$, every $f \ne 0$ in $k[C]$ has exactly $w(f)$ zeros on the affine part of $C$, counted by order (P11 is the case of lines). The ``order'' at a point of $C$ is Chapter 34's run on the curve; proof deferred.
 \item[\lab{R4}] (Old names.) $C$: an elliptic curve in Weierstrass form (when $\Delta \ne 0$); $O$: the point at infinity, a flex. D2: intersection multiplicity; P2: B\'ezout for a line and a cubic. T1: the chord-and-tangent construction. $\Delta$: the discriminant ($-16\Delta$ in other books). $k[C]$: the coordinate ring. $N$: the norm to $k[x]$. P10: $\ell(nO) = n$ for $n \ge 1$ (a case of Riemann--Roch). T3: cusp, node.
@@ -3709,18 +3888,18 @@ On $k[x, y]$, polynomials in two letters. \ $O$: $+$, $\times$.
 \section*{Chapter 37. The torus}
 \phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter 37. The torus \quad $\mathbb{C} \to \mathbb{C}/\Lambda$}{Chapter 37. The torus}}
 \begin{center}
-{\normalsize $\mathbb{C} \to \mathbb{C}/\Lambda$ \quad$\cdot$\quad from: Chapters 8, 17, 20, 32, 33, 34, 36 \quad$\cdot$\quad blur, select}\\[4pt]
+{\normalsize $\mathbb{C} \to \mathbb{C}/\Lambda$ \quad$\cdot$\quad from: Chapters 8, 17, 20, 32, 33, 34, 36 \quad$\cdot$\quad blur, select, build}\\[4pt]
 {\small Chapter 8 in two directions. Maps on the bags cannot have one simple pole, so the first one worth having has a double pole, and it is pinned by that pole alone. It draws the cubic of Chapter 36.}
 \end{center}
 
-The blur is Chapter 8's. The new work is on the maps that live on the bags: two ``at most one'' lines, one Dies line, and one Select.
+The blur is Chapter 8's, in two directions. The new work is on the maps that live on the bags: two ``at most one'' lines, one Dies line, one select and one build.
 
 \subsection*{Given}
 
 \begin{lines}
 \item[\lab{G1}] (Chapter 8.) $\R/\Z$; $+$ survives, $\times$ dies.
-\item[\lab{G2}] (Chapters 32--34.) Holomorphic and meromorphic maps; Chapter 32, T2, T3 (no hole; deforming); Chapter 33, T7 (Liouville); Chapter 34, T1--T4 (residues, residues add, the argument principle).
-\item[\lab{G3}] (Chapters 17, 20.) Sizes of sums; a series of maps that comes near itself in $M$ on a set has a limit there, holomorphic if its terms are, differentiated term by term (Chapter 20, T3, T4; Chapter 33, T2).
+\item[\lab{G2}] (Chapters 32--34.) $H(U)$ and $M(U)$ (Chapter 34, N1); Chapter 32, T2, T3, P1 (no hole; deforming; the powers); Chapter 33, T5 (bounded on $\mathbb{C}$ means constant); Chapter 34, T1--T4 (the coefficient $c_{-1}$, the numbers add, bounded means no pole, counting by turns). (Chapter 12, T4.) Changing the variable.
+\item[\lab{G3}] (Chapters 17, 20, 32, 33.) Sizes of sums. A series of maps in $H$ that comes near itself in $M$ on each closed disc of an open region comes near a map in $H$ there, and may be differentiated term by term: each sum obeys Chapter 32, T6 on a circle; the integral respects $M$ (Chapter 20, P7), so the limit obeys it too; then the proofs of Chapter 33, P1 and P5 use only that formula. (Chapter 20, T3: comparison in $M$.)
 \item[\lab{G4}] (Chapter 36.) The cubic $y^2 = g(x)$, its point $O$, and T2 (smooth exactly when $\Delta \ne 0$).
 \end{lines}
 
@@ -3729,48 +3908,51 @@ The blur is Chapter 8's. The new work is on the maps that live on the bags: two 
 On $\mathbb{C}$. Fix $\omega_1, \omega_2$ in $\mathbb{C}$, not on one line through $0$, and $\Lambda := \{m \omega_1 + n \omega_2 : m, n \in \Z\}$. \ $O$: $+$.
 
 \begin{lines}
-\item[\lab{B1}] (From below.) Gluing: $z \sim z + \omega_1$, \ $z \sim z + \omega_2$. \ Write $\mathbb{C}/\Lambda$ for the bags.
-\item[\lab{B2}] (From above.) Write $z = s\,\omega_1 + t\,\omega_2$ with $s, t$ real. Questions: the bags of $s$ and of $t$ in $\R/\Z$ (G1).
+\item[\lab{B1}] (From below, L5.) Gluings: $\omega_1 \sim 0$, \ $\omega_2 \sim 0$. \ Respects: $+$.
+\item[\lab{B2}] (From above, L6.) Write $z = s\,\omega_1 + t\,\omega_2$ with $s, t$ real. Questions: the bags of $s$ and of $t$ in $\R/\Z$ (G1). \ Respects: $+$.
 \end{lines}
 
 \subsection*{Propositions}
 
 \begin{lines}
-\item[\lab{P1}] (Appears; normal forms.) B1 and B2 agree. Each bag holds exactly one $z$ with $0 \le s, t < 1$: a parallelogram with its far edges left off. $\mathbb{C}/\Lambda$ matches $\R/\Z \times \R/\Z$, keeping $+$: a torus.
+\item[\lab{P1}] (Bags; Appears; normal forms.) From below, $z \sim z'$ exactly when $z - z'$ is in $\Lambda$ (Z2: respecting $+$ spreads the two gluings to all of $\Lambda$). B1 and B2 agree: Z4, since $s$ and $t$ of $\omega_1$, $\omega_2$ are whole; Z5, if $z - z' \notin \Lambda$ then $s$ or $t$ of $z - z'$ is not whole, and the context $x \mapsto x - z'$ with that question separates. Each bag holds exactly one $z$ with $0 \le s, t < 1$: a parallelogram with its far edges left off.
 \item[\lab{P2}] (Dies: $\times$.) As in Chapter 8: $0 \sim \omega_1$, but $\tfrac12 \cdot 0$ and $\tfrac12 \omega_1$ are not glued.
-\item[\lab{P3}] (Maps on the bags.) A map on $\mathbb{C}/\Lambda$ is a map $f$ on $\mathbb{C}$ with $f(z + \lambda) = f(z)$ for all $\lambda$ in $\Lambda$. Call $f$ \emph{elliptic} if it is meromorphic on $\mathbb{C}$ (Chapter 34, P4, at every point) and such a map.
+\item[\lab{P3}] (Maps on the bags.) A map on the bags is a map $f$ on $\mathbb{C}$ with $f(z + \lambda) = f(z)$ for all $\lambda$ in $\Lambda$ (Z6 for a question). Call $f$ a \emph{torus map} if also $f$ is in $M(\mathbb{C})$.
+\item[\lab{P4}] (The edge of a parallelogram turns once.) Let $Q$ be a closed parallelogram and $a$ a point off its edge $\partial Q$, run round once. Then $\int_{\partial Q} dz/(z - a) = 2\pi i$ if $a$ is inside $Q$ and $0$ if outside. \\
+(Outside: $Q$ lies in a disc that misses $a$ (a large disc on $Q$'s side of an edge line that $a$ is beyond), and Chapter 32, T2. Inside: run $\partial Q$ as a loop $p(t)$ with slopes of every order, slowing to rest at each corner (Chapter 12, T4: the integral does not change). The $2$-cube $(s, t) \mapsto a + \bigl((1 - s) + s\,r/|p(t) - a|\bigr)(p(t) - a)$ misses $a$, its side edges cancel, its near end is $p$, and its far end runs once round $\gamma_{a,r}$, in order, since $Q$ is convex. Chapter 32, T3 and P1.)
 \end{lines}
 
 \subsection*{Theorems}
 
 \begin{lines}
-\item[\lab{T1}] (At most one: no pole means constant.) An elliptic map with no pole is constant. \ (It is bounded on the closed parallelogram (Chapter 13, T7), so on all of $\mathbb{C}$ by P3; Chapter 33, T7.)
-\item[\lab{T2}] (Residues on the torus add to $0$.) For elliptic $f$, the residues at the poles in one parallelogram add to $0$. \ (Integrate $f$ around the edge of a parallelogram moved so that no pole lies on it. Opposite edges cancel, by P3. By Chapter 34, T3, run with that edge in place of a circle, the integral is $2\pi i$ times the sum of residues inside.)
-\item[\lab{T3}] (Dies: one simple pole.) No elliptic map has exactly one pole per bag, of order $1$. \ (Its residue would be the only one, so $0$ by T2; then there is no pole, and T1.) \\
+\item[\lab{T1}] (At most one: no pole means constant.) A torus map with no pole is constant. \ (It is bounded on the closed parallelogram (Chapter 13, T7), so on all of $\mathbb{C}$ by P3; Chapter 33, T5.)
+\item[\lab{T2}] (The numbers $\operatorname{res}$ on the torus add to $0$.) For a torus map $f$, the numbers $\operatorname{res}_a f$ at the poles in one parallelogram add to $0$. \\ (Move the parallelogram $Q$ so that no pole lies on its edge; a disc $D$ holding $Q$ holds finitely many poles, since each stands alone (Chapter 34, N1) and closed boxes survive. Opposite edges of $Q$ cancel, by P3, so $\int_{\partial Q} f\,dz = 0$. Now compute it as in Chapter 34, T3, with $\partial Q$ for the circle: take away the negative parts at the poles in $D$; the rest is in $H(D)$ (Chapter 34, T2) and gives $0$ (Chapter 32, T2); terms $(z - a)^{-n}$, $n \ge 2$, give $0$; the terms $c_{-1}/(z - a)$ give $2\pi i\,c_{-1}$ for $a$ inside $Q$ and $0$ outside (P4). So $0 = 2\pi i \sum_{\text{inside}} \operatorname{res}_a f$.)
+\item[\lab{T3}] (No single simple pole.) No torus map has exactly one pole per bag, of order $1$. \ (Its $\operatorname{res}$ would be the only one, so $0$ by T2; then there is no pole, and T1.) \\
 The twin of Chapter 36, P10, where no function had weight $1$.
-\item[\lab{T4}] (Counting zeros, and where they sit.) For elliptic $f \ne$ constant, in one parallelogram: the zeros and the poles are equal in number, counted by order; and the sum of the zeros minus the sum of the poles lies in $\Lambda$. \ (T2 on $f'/f$, by Chapter 34, T4. For the sum: integrate $z\, f'/f$ on the edge; opposite edges no longer cancel but differ by $\omega$ times $\int f'/f$ along one edge, which is $2\pi i$ times a whole number of turns (Chapter 16, T6).)
-\item[\lab{T5}] (Select: the map with one double pole.) There is at most one elliptic $\wp$ whose only poles are at the points of $\Lambda$, with list $z^{-2} + 0 + c_1 z + c_2 z^2 + \cdots$ at $0$. \ (Two such differ by an elliptic map with at most a simple pole per bag: by T3 no pole; by T1 a constant; its value at $0$ is $0$.)
-\item[\lab{T6}] (Build: it exists.) \[ \wp(z) := \frac{1}{z^2} + \sum_{\lambda \in \Lambda,\ \lambda \ne 0} \Big( \frac{1}{(z - \lambda)^2} - \frac{1}{\lambda^2} \Big). \] (The term for $\lambda$ is at most a constant times $|z| / |\lambda|^3$ on a bounded set; there are about $n$ points of $\Lambda$ with $n \le |\lambda| < n + 1$, so the sum of the sizes is like $\sum n / n^3$, which is finite (Chapter 17); G3. Periodic: $\wp' = -2 \sum_{\lambda} (z - \lambda)^{-3}$ plainly is, so $\wp(z + \omega_i) - \wp(z)$ is a constant; $\wp$ is even (the sum is unchanged by $\lambda \mapsto -\lambda$); at $z = -\omega_i / 2$ the constant is $\wp(\omega_i/2) - \wp(-\omega_i/2) = 0$.) \\
+\item[\lab{T4}] (Counting zeros, and where they sit.) For a torus map $f \ne$ constant, in one parallelogram: the zeros and the poles are equal in number, counted by order; and the sum of the zeros minus the sum of the poles lies in $\Lambda$. \ (T2 for the torus map $f'/f$, whose $\operatorname{res}$ at each point is the order there, by Chapter 34, T4. For the sum: integrate $z\, f'/f$ on the edge; opposite edges no longer cancel but differ by $\omega$ times $\int f'/f$ along one edge, which is $2\pi i$ times a whole number of turns (Chapter 16, T6).)
+\item[\lab{T5}] (Select, at most one: the map with one double pole.) Tests: a torus map whose only poles are at the points of $\Lambda$, with list $z^{-2} + 0 + c_1 z + c_2 z^2 + \cdots$ at $0$. There is at most one. \ (Two such differ by a torus map with at most a simple pole per bag: by T3 no pole; by T1 a constant; its value at $0$ is $0$.)
+\item[\lab{T6}] (At least one: a build.) \[ \wp(z) := \frac{1}{z^2} + \sum_{\lambda \in \Lambda,\ \lambda \ne 0} \Big( \frac{1}{(z - \lambda)^2} - \frac{1}{\lambda^2} \Big). \] (The term for $\lambda$ is at most a constant times $|z| / |\lambda|^3$ on a bounded set; there are about $n$ points of $\Lambda$ with $n \le |\lambda| < n + 1$, so the sum of the sizes is like $\sum n / n^3$, which is finite (Chapter 17); G3. Periodic: $\wp' = -2 \sum_{\lambda} (z - \lambda)^{-3}$ plainly is, so $\wp(z + \omega_i) - \wp(z)$ is a constant; $\wp$ is even (the sum is unchanged by $\lambda \mapsto -\lambda$); at $z = -\omega_i / 2$ the constant is $\wp(\omega_i/2) - \wp(-\omega_i/2) = 0$.) \\
 So the map is pinned by its pole (T5) and then found (T6), as $\exp$ was in Chapter 22.
-\item[\lab{T7}] (Appears: the cubic.) With $g_2 := 60 \sum' \lambda^{-4}$ and $g_3 := 140 \sum' \lambda^{-6}$, \[ \wp'(z)^2 = 4\,\wp(z)^3 - g_2\, \wp(z) - g_3 . \] (The lists at $0$: $\wp = z^{-2} + \tfrac{g_2}{20} z^2 + \tfrac{g_3}{28} z^4 + \cdots$. The difference of the two sides is elliptic, its only possible poles are at $\Lambda$, and its list at $0$ starts at $z^2$. T1: a constant; it is $0$ at $z = 0$. An identity, proved by ``at most one''.)
+\item[\lab{N1}] (Notation, after the select and the build.) $\mathbb{C}/\Lambda$: the bags, a torus, matched with $\R/\Z \times \R/\Z$ keeping $+$ (P1). $\wp$: the one map of T5 and T6.
+\item[\lab{T7}] (The cubic.) With $g_2 := 60 \sum' \lambda^{-4}$ and $g_3 := 140 \sum' \lambda^{-6}$, \[ \wp'(z)^2 = 4\,\wp(z)^3 - g_2\, \wp(z) - g_3 . \] (The lists at $0$: $\wp = z^{-2} + \tfrac{g_2}{20} z^2 + \tfrac{g_3}{28} z^4 + \cdots$. The difference of the two sides is a torus map, its only possible poles are at $\Lambda$, and its list at $0$ starts at $z^2$. T1: a constant; it is $0$ at $z = 0$. An identity, proved by ``at most one''.)
 \item[\lab{T8}] (The arrow to the cubic.) $z \mapsto (\wp(z) : \wp'(z) : 1)$, with $0 \mapsto (0 : 1 : 0)$, matches $\mathbb{C}/\Lambda$ one-to-one with the points over $\mathbb{C}$ of the cubic $y^2 = 4x^3 - g_2 x - g_3$, and that cubic is smooth. \ (Onto: for each $x$, $\wp - x$ has a double pole per bag, so two zeros (T4), at $z$ and $-z$ ($\wp$ is even), where $\wp'$ takes the two values $\pm y$. One-to-one: $z$ and $-z$ are glued only at the three half periods $\omega_1/2$, $\omega_2/2$, $(\omega_1 + \omega_2)/2$, where $\wp' = 0$ ($\wp'$ is odd and periodic). Smooth: at a half period $\wp - \wp(\omega/2)$ has a double zero, so the three values $e_i = \wp(\text{half period})$ differ, and they are the three roots of $4x^3 - g_2 x - g_3$: Chapter 36, T2.)
 \end{lines}
 
 \subsection*{Remarks}
 
 \begin{lines}
-\item[\lab{R1}] (What the method did.) Two blurs agree (P1). The rest is three lines used again and again: no pole means constant (T1); residues add to $0$ (T2); so no single simple pole (T3). T5 and T7 are ``at most one'' turned into an existence-free identity. The only Build is T6, a sum that comes near itself.
-\item[\lab{R2}] (Twins.) Chapter 36 found the same Dies line by weights: no polynomial function with one simple pole at $O$. Here it is found by residues. T8 says the two are about one object: the arrow sends the pole at $0$ to $O$, the double pole of $\wp$ to the weight $2$ of $x$, the triple pole of $\wp'$ to the weight $3$ of $y$.
+\item[\lab{R1}] (What the method did.) Two blurs agree (P1). The rest is three lines used again and again: no pole means constant (T1); the numbers $\operatorname{res}$ add to $0$ (T2); so no single simple pole (T3). T5 and T7 are ``at most one'' turned into an existence-free identity. The only Build is T6, a sum that comes near itself.
+\item[\lab{R2}] (Twins.) Chapter 36 found the same line by weights: no polynomial function with one simple pole at $O$. Here it is found by the numbers $\operatorname{res}$. T8 says the two are about one object: the arrow sends the pole at $0$ to $O$, the double pole of $\wp$ to the weight $2$ of $x$, the triple pole of $\wp'$ to the weight $3$ of $y$.
 \item[\lab{R3}] (Where the road goes.) The torus has $+$ (P1). Building 1 shows that T8 carries it to the chord law of the cubic: $z_1 + z_2 + z_3 \in \Lambda$ exactly when the three images lie on one line (T4 on $a\wp + b\wp' + c$, which has one triple pole).
 \item[\lab{R4}] (Reported, not proved here.) Every smooth cubic over $\mathbb{C}$ is reached this way, by some $\Lambda$ (the uniformisation of elliptic curves; classical). The book uses it nowhere.
-\item[\lab{R5}] (Old names.) $\Lambda$: a lattice; elliptic map: elliptic function; T1: Liouville's theorem for elliptic functions; T2--T4: Liouville's second and third theorems, Abel's theorem for the torus; T5, T6: the Weierstrass $\wp$-function; $g_2$, $g_3$: Eisenstein series $60 G_4$, $140 G_6$; T7: the differential equation of $\wp$; T8: the Weierstrass parametrisation of an elliptic curve.
+\item[\lab{R5}] (Old names.) $\Lambda$: a lattice; torus map: elliptic function; P4: winding number of a parallelogram; T1: Liouville's theorem for elliptic functions; T2--T4: Liouville's second and third theorems, Abel's theorem for the torus; T5, T6: the Weierstrass $\wp$-function; $g_2$, $g_3$: Eisenstein series $60 G_4$, $140 G_6$; T7: the differential equation of $\wp$; T8: the Weierstrass parametrisation of an elliptic curve.
 \item[\lab{R6}] (Machine check, \texttt{checks/ch37-check.py}.) With $\omega_1 = 1$, $\omega_2 = 0.3 + 1.1i$ and the sum cut at $|m|, |n| \le 160$: T7 at random points (relative error $10^{-4}$); periodicity of $\wp'$; $\wp$ even; T8: the half-period values are the three roots, distinct; T2 for $\wp$ and T4 for $\wp - c$ by integrating round a moved parallelogram (zeros minus poles $= 0$; sum of zeros minus poles $= \omega_1$).
 \end{lines}
 
 \subsection*{Exercises}
 
 \begin{lines}
-\item[\lab{E1}] Show that an elliptic map with no zeros is constant.
+\item[\lab{E1}] Show that a torus map with no zeros is constant.
 \item[\lab{E2}] Why is $\wp'$ odd? Where are its zeros in one parallelogram?
 \item[\lab{E3}] Using T4, show $\wp(z) = \wp(w)$ only when $z \sim w$ or $z \sim -w$.
 \item[\lab{E4}] Find the first three terms of the list of $\wp'$ at $0$ from those of $\wp$.

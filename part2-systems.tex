@@ -136,7 +136,7 @@ Modules, arrows, counting in every finite row, and machines between classes were
 \section*{Chapter II.1. The table}
 \phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter II.1. The table \quad systems $\to$ classes}{Chapter II.1. The table}}
 \begin{center}
-{\normalsize systems $\to$ classes \quad$\cdot$\quad from: all of Part I \quad$\cdot$\quad table, blur, class}\\[4pt]
+{\normalsize systems $\to$ classes \quad$\cdot$\quad from: all of Part I \quad$\cdot$\quad table, blur}\\[4pt]
 {\small The things are now the number systems themselves. Forget which system; keep which laws it passes.}
 \end{center}
 
@@ -188,7 +188,8 @@ $\checkmark$ passes, $\cdot$ fails, $\circ$ cannot be asked (counts as fails). E
 \subsection*{Blur}
 
 \begin{lines}
-\item[\lab{B1}] Choose a set $U$ of tests. The blur is $\sim_U$ (D10): forget which system, keep its answers on $U$.
+\item[\lab{B1}] (From below.) None (made from above, Chapter 0, C9): a table has no gluings to list but the ones its answers already make.
+\item[\lab{B2}] (From above, F3.) Choose a set $U$ of tests. Questions: the answers on $U$. The blur is $\sim_U$ (D10): forget which system, keep its answers on $U$. No operations on rows, so $O$ is empty.
 \item[] Example: $U = \{\mathsf{neg}, \mathsf{inv}\}$ gives three bags: $\{\N\}$, $\ \{\Z, \Z/6, \R^2\}$, $\ \{\Z/7, \Q, \R\}$.
 \end{lines}
 
@@ -214,9 +215,9 @@ I.6. $\R \to \R^2$ & nothing & $\mathsf{nzd}$, $\mathsf{inv}$, $\mathsf{ord}$, $
 \item[\lab{P5}] (Never together in the table.) $\mathsf{ord}$ and $\mathsf{fin}$; \ $\mathsf{least}$ and $\mathsf{dense}$; \ $\mathsf{inv}$ and $\mathsf{least}$.
 \end{lines}
 
-\subsection*{Appears}
+\subsection*{Classes read off (F4)}
 
-The classes of P2 are what appears. Eight of them have old names.
+The classes of P2 are what the tests pick out. Eight of them have old names; the names come only after the class.
 \begin{lines}
 \item[\lab{N1}] $\operatorname{class}(\mathsf{semi})$: all seven. \emph{Commutative semiring.}
 \item[\lab{N2}] $\operatorname{class}(\mathsf{semi}, \mathsf{neg})$: $\Z, \Z/6, \Z/7, \Q, \R, \R^2$. \emph{Commutative ring.}
@@ -381,7 +382,7 @@ In Chapter I.3, $G = \{n\}$.
 \section*{Chapter II.3. Vector spaces}
 \phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter II.3. Vector spaces \quad a second table $\to$ one variable row $V$}{Chapter II.3. Vector spaces}}
 \begin{center}
-{\normalsize a second table $\to$ one variable row $V$ \quad$\cdot$\quad from: Chapters I.6, I.7, I.10, with II.1 and II.2 \quad$\cdot$\quad table, class, blur}\\[4pt]
+{\normalsize a second table $\to$ one variable row $V$ \quad$\cdot$\quad from: Chapters I.6, I.7, I.10, with II.1 and II.2 \quad$\cdot$\quad table, blur}\\[4pt]
 {\small Many systems of Part I can be added and stretched. Name what they share, then blur any one of them.}
 \end{center}
 
@@ -505,7 +506,7 @@ Given $V$, any system in $\operatorname{class}(\mathsf{add}, \mathsf{scale})$.
 \section*{Chapter II.4. Metric spaces}
 \phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter II.4. Metric spaces \quad systems with a distance $\to$ classes}{Chapter II.4. Metric spaces}}
 \begin{center}
-{\normalsize systems with a distance $\to$ classes \quad$\cdot$\quad from: Chapters I.4, I.5, I.8, I.10, I.18, I.19, I.20 \quad$\cdot$\quad table, class, blur}\\[4pt]
+{\normalsize systems with a distance $\to$ classes \quad$\cdot$\quad from: Chapters I.4, I.5, I.8, I.10, I.18, I.19, I.20 \quad$\cdot$\quad table, blur}\\[4pt]
 {\small Part I met a distance five times. Put the five side by side, read the classes off the table, and ask which tests survive when two rows are glued by an arrow.}
 \end{center}
 
@@ -598,7 +599,7 @@ Fix a row $X$ that passes $\mathsf{dist}$.
 \item[\lab{P5}] (Its nearness.) The rungs $N_k$ are a nearness (I.5, D4): nested, two steps for one by the triangle law, and the bottom is equality. ``Respects nearness'' for a map between two rows is I.5, N4, with the rungs of each row on its side.
 \item[\lab{D7}] (Run Chapter I.4 on $X$.) Build sequences in $X$ (M2); select those that come near themselves (M4); glue $a \sim b$ when $d(a_i, b_i)$ comes near $0$. \ Respects: nothing ($X$ has no operations). Here the gluing is the bag test. Call the bags $\widehat X$, with $d(\bag{a}, \bag{b}) :=$ the limit of $d(a_i, b_i)$.
 \item[\lab{T3}] (The closing-up is closed, F5.) $\widehat X$ passes $\mathsf{dist}$ and $\mathsf{complete}$. The arrow $X \to \widehat X$, $x \mapsto \bag{(x, x, \dots)}$, is one-to-one and keeps $d$. Running D7 on $\widehat X$ gives nothing new. $X$ passes $\mathsf{complete}$ iff the arrow also reaches every bag.
-\item[\lab{T4}] (Three closings-up from Part I.) $\widehat{\Q} = \R$ (I.4). $\widehat{(\Z, d_p)} = \Z_p$ (I.19). For the polynomials, read as maps on a stretch with the largest gap: $\widehat{\ } = C[b,c]$ (I.20, R4; classical, Weierstrass, long, not proved here).
+\item[\lab{T4}] (Three closings-up from Part I.) $\widehat{\Q} = \R$ (I.4). $\widehat{(\Z, d_p)} = \Z_p$ (I.19). For the polynomials, read as maps on a stretch with the largest gap: $\widehat{\ } = C[b,c]$ (I.20, R4; earnable from Fejér's average, I.29, T5 and R2; the proof is deferred, and no later line uses it).
 \item[\lab{T5}] (Contraction; Chapter 25, T2 is the case of a closed box.) If $X$ passes $\mathsf{complete}$, and $f : X \to X$ has $d(f(x), f(y)) \le q\, d(x, y)$ for a fixed $q < 1$, then exactly one $x$ has $f(x) = x$, and from any start, $x_0$, $f(x_0)$, $f(f(x_0))$, \dots comes near it. \\
 Examples: $\cos$ on $0 \le x \le 1$ ($q = \sin 1$); \ $x \mapsto p x + 1$ on $\Z_p$ ($q = 1/p$), whose fixed point is $1/(1 - p)$ of I.19, T2.
 \end{lines}
@@ -662,7 +663,7 @@ A rerun chapter, in the style of II.2: the Given of three Part I chapters is rep
 \subsection*{Fractions (Chapter I.2 again)}
 
 \begin{lines}
-\item[\lab{P1}] (Survives when $K$ passes $\mathsf{nzd}$.) On pairs $(a, b)$ with $b \ne 0$, ``$ad = bc$'' chains, and $+$, $\times$ of Chapter I.2, D3, D4 survive. The bags form a field, $\operatorname{Frac}(K)$, with $K$ inside. \ $\operatorname{Frac}(\Z) = \Q$; $\operatorname{Frac}(K[x]) = K(x)$, the fractions of polynomials.
+\item[\lab{P1}] (Checked again, Z8: when $K$ passes $\mathsf{nzd}$.) On pairs $(a, b)$ with $b \ne 0$, ``$ad = bc$'' chains, and $+$, $\times$ of Chapter I.2, D3, D4 survive. The bags form a field, $\operatorname{Frac}(K)$, with $K$ inside. \ $\operatorname{Frac}(\Z) = \Q$; $\operatorname{Frac}(K[x]) = K(x)$, the fractions of polynomials.
 \item[\lab{P2}] (Dies without $\mathsf{nzd}$.) In $\Z/6$: $(2, 1) \sim (0, 3)$ and $(0, 3) \sim (0, 1)$, but not $(2, 1) \sim (0, 1)$. ``$ad = bc$'' does not chain, so Chapter I.2, P1 (``bags'') fails at its first line.
 \item[\lab{P3}] (Closed, F5.) $\operatorname{Frac}$ of a field is the field again: Chapter II.1, T5 with $\mathsf{inv}$.
 \end{lines}
@@ -670,20 +671,20 @@ A rerun chapter, in the style of II.2: the Given of three Part I chapters is rep
 \subsection*{Polynomials (Chapter I.7 again)}
 
 \begin{lines}
-\item[\lab{P4}] (Survives, all $K$.) Chapter I.7, B1 and P1 with $K$ for $\R$: $K[x]$, normal forms $\sum a_i x^i$, a commutative ring. The value arrows $p \mapsto p(t)$ respect $+$, $\times$.
+\item[\lab{P4}] (Free, Z7, all $K$.) Chapter I.7, B1 and P1 with $K$ for $\R$: $K[x]$, normal forms $\sum a_i x^i$, a commutative ring. The value arrows $p \mapsto p(t)$ respect $+$, $\times$.
 \item[\lab{P5}] (Degrees add: needs $\mathsf{nzd}$.) If $K$ passes $\mathsf{nzd}$, Chapter I.7, T2 holds, and $K[x]$ passes $\mathsf{nzd}$. Dies in $\Z/4$: $(2x + 1)(2x + 1) = 1$, degrees $1 + 1 \ne 0$; and $2x + 1$ has an inverse.
 \item[\lab{P6}] (Division with remainder: by monic $d$, all $K$; by any $d \ne 0$, when $K$ is a field.) Chapter I.7, T3 holds for $d$ with leading coefficient a unit. Dies in $\Z[x]$ for $d = 2x$: $x = q \cdot 2x + r$ has no answer with $r$ constant.
 \item[\lab{P7}] (Roots: at most $\deg p$, needs $\mathsf{nzd}$.) Chapter I.7, T4: $p(t) = 0 \iff (x - t) \mid p$ holds for all $K$ (divide by the monic $x - t$). The count ``at most $\deg p$ roots'' needs $\mathsf{nzd}$: in $\Z/8$, $x^2 - 1$ has the four roots $1, 3, 5, 7$.
-\item[\lab{P8}] (All blurs of $K[x]$, $K$ a field.) Chapter I.7, P9.1 survives: every blur respecting $+$, $\times$ is $\sim_d$ for exactly one $d$ that is $0$ or monic. \ (P6: the ideal is the multiples of its monic member of least degree.)
+\item[\lab{P8}] (All blurs of $K[x]$, $K$ a field.) Chapter I.7, P9.1 is checked again and holds: every blur respecting $+$, $\times$ is $\sim_d$ for exactly one $d$ that is $0$ or monic. \ (P6: the ideal is the multiples of its monic member of least degree.)
 \end{lines}
 
 \subsection*{Determinants (Chapter I.14 again)}
 
 \begin{lines}
-\item[\lab{P9}] (Survives, all $K$: one alternating rule.) On lists of $n$ columns in $K^n$ there is exactly one map that respects $+$ and scaling in each column, is $0$ when two columns are equal, and gives $1$ on $e_1, \dots, e_n$: \ $\det A = \sum_{\sigma \in S_n} \operatorname{sgn}(\sigma) \prod_i a_{\sigma(i), i}$ where $\sigma$ runs over the one-to-one maps of $\{1, \dots, n\}$ and $\operatorname{sgn}(\sigma) = (-1)^{m}$, $m$ the number of pairs $i < j$ that $\sigma$ turns over.
+\item[\lab{P9}] (Checked again, all $K$: one alternating rule.) On lists of $n$ columns in $K^n$ there is exactly one map that respects $+$ and scaling in each column, is $0$ when two columns are equal, and gives $1$ on $e_1, \dots, e_n$: \ $\det A = \sum_{\sigma \in S_n} \operatorname{sgn}(\sigma) \prod_i a_{\sigma(i), i}$ where $\sigma$ runs over the one-to-one maps of $\{1, \dots, n\}$ and $\operatorname{sgn}(\sigma) = (-1)^{m}$, $m$ the number of pairs $i < j$ that $\sigma$ turns over.
 \item[\lab{P10}] (Equations are carried. Z7.) $\det(AB) = \det A \det B$, and $A \operatorname{adj}(A) = \det(A)\, I$ with $\operatorname{adj}$ the matrix of signed minors, hold over every $K$. \ (Each is an equation between polynomials in the entries with whole-number coefficients. It holds over $\R$ (Chapter I.14, T4), so the two polynomials are the same (Chapter I.7, P5: a polynomial is known by its values), and an arrow from the polynomials in the entries to any $K$ carries the equation.)
 \item[\lab{P11}] (Changes: ``$\det \ne 0$'' becomes ``$\det$ is a unit''.) $A$ has an inverse over $K$ \ $\iff$ \ $\det A$ has an inverse in $K$. \ (P10 in both directions.) Over $\Z$, $\det \begin{pmatrix} 2 & 0 \\ 0 & 1 \end{pmatrix} = 2 \ne 0$, and the matrix has no inverse with whole-number entries.
-\item[\lab{P12}] (Cayley--Hamilton, an equation.) For $\chi_A(x) := \det(xI - A)$ in $K[x]$: $\chi_A(A) = 0$, over every $K$. \ (An equation in the entries; true over $\mathbb{C}$ for matrices with $n$ different eigenvalues, which come near every matrix (classical); carried by P10's argument. The proof is deferred with the others.)
+\item[\lab{P12}] (Cayley--Hamilton, an equation.) For $\chi_A(x) := \det(xI - A)$ in $K[x]$: $\chi_A(A) = 0$, over every $K$. \ (Equations only. $M \cdot \operatorname{adj} M = \det M \cdot I$ is an equation in the entries, true over $\Z$ (Chapter I.14), so over every $K$ (Z7). Put $M := xI - A$ over $K[x]$, write $\operatorname{adj} M = \sum_k B_k x^k$ with $B_k$ matrices over $K$, and compare the coefficients of $x^k$ on the two sides: $B_{k-1} - A B_k = c_k I$, where $\chi_A = \sum c_k x^k$. Multiply the $k$-th by $A^k$ and add: the left side telescopes to $0$, the right side is $\chi_A(A)$. No limit and no choice of eigenvalues.)
 \end{lines}
 
 \subsection*{Theorems}
@@ -718,7 +719,7 @@ A rerun chapter, in the style of II.2: the Given of three Part I chapters is rep
 \section*{Chapter II.6. Sizes on vector spaces}
 \phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter II.6. Sizes on vector spaces \quad vector spaces with a size $\to$ classes}{Chapter II.6. Sizes on vector spaces}}
 \begin{center}
-{\normalsize vector spaces with a size $\to$ classes \quad$\cdot$\quad from: Chapters I.13, I.20, I.27, I.28, I.30, II.3, II.4 \quad$\cdot$\quad table, class, blur}\\[4pt]
+{\normalsize vector spaces with a size $\to$ classes \quad$\cdot$\quad from: Chapters I.13, I.20, I.27, I.28, I.30, II.3, II.4 \quad$\cdot$\quad table, blur}\\[4pt]
 {\small Chapters II.3 and II.4 together: rows with $+$, scaling and a size. One law, the parallelogram, sorts the rows that have right angles; and in finitely many directions every size is glued to every other.}
 \end{center}
 
@@ -796,7 +797,7 @@ Where each entry comes from:
 \item[\lab{T2}] (In finitely many directions, every size is glued to every other.) On $\R^n$, for any two sizes there are $c, C > 0$ with $c\,|x| \le |x|' \le C\,|x|$ for all $x$. \ (Compare each with $|\,|_2$. $|x| \le \sum |x_i|\,|e_i| \le B\,|x|_2$. The other way: $|\,|$ is continuous for $|\,|_2$ by the first step, so it has a lowest value $c > 0$ on the sphere $|x|_2 = 1$ (I.13, T7), and scale.) For $\R^n_\infty$ and $\R^n_2$: $c = 1$, $C = \sqrt n$.
 \item[\lab{T3}] (Dies without $\mathsf{findim}$.) On $C[0, 1]$, $|\,|_\infty$ and $\int |f|$ are not within constant factors: a tent of height $1$ and width $2/k$ has largest value $1$ and integral $1/k$.
 \item[\lab{T4}] (Appears in a Hilbert row: arrows to $\R$ are right-angle questions.) In a row of N3, every linear arrow $\phi$ to $\R$ with $|\phi(x)| \le C|x|$ is $x \mapsto \langle x, y\rangle$ for exactly one $y$. \ (If $\phi \ne 0$: its zero bag $Z$ is closed; take $w \notin Z$ and its nearest point $z$ in $Z$ (I.28); $u = w - z$ is at right angles to $Z$; then $y = \phi(u)\, u / |u|^2$. At most one: $\langle x, y - y'\rangle = 0$ for all $x$, take $x = y - y'$.)
-\item[\lab{T5}] (The two infinite Hilbert rows are one.) $L^2(\mathbb{T})$ and $\ell^2$ are matched by a linear arrow keeping size: the list of Fourier coefficients (I.30). Every Hilbert row with a countable list whose span is dense is $\R^n_2$ or $\ell^2$ (classical, reported).
+\item[\lab{T5}] (The two infinite Hilbert rows are one.) $L^2(\mathbb{T})$ and $\ell^2$ are matched by a linear arrow keeping size: the list of Fourier coefficients (I.30). Every Hilbert row with a countable list whose span is dense is $\R^n_2$ or $\ell^2$ (classical, reported; no line uses it).
 \end{lines}
 
 \subsection*{Blur: glue two rows by an arrow}
