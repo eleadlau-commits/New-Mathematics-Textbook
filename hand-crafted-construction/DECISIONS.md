@@ -30,3 +30,7 @@ Ideas E reached while reading Chapter 0. Starting points, open to change.
 ## 13 Nov 2026, 18:04
 
 8. A question is a map X → S, nothing more. A question comparing two things is a question on the built floor X × X (M1); Carry and Descend handle keeping it. E: "perfect, lets reorganise". S2 loses "or from X × X"; L3 loses its two-thing sentence.
+
+## 13 Nov 2026, 18:42
+
+9. Carry, in E's notation: for any tool t (an operation o or a question q), t carries if (xᵢ ∼ yᵢ) implies t(xᵢ,) ∼ t(yᵢ,); for a question, ∼ on the answers is =. E: "so for any q or o, f as above would carry." Carry is a question asked of each tool, for a fixed blur. Old L2 and L3 are its two cases.
