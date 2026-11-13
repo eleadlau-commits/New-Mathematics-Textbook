@@ -26,3 +26,7 @@ Ideas E reached while reading Chapter 0. Starting points, open to change.
 ## 13 Nov 2026, 17:57
 
 7. M5 inside Abstraction. E: "so M5 would simply be a part of the abstraction, since you have to choose a floor for the next chapter always." Then: "lets do this". Every floor is X/∼ (a plain built bag is X/=, Z1), so every chapter enters its floor through Abstraction. The rest of Chapter 0 groups as: how to state a blur (L4–L10, Z1–Z5, Z9–Z10); free and checked (Z7, Z8); bookkeeping (W, K, C, F). The working doc "Chapter 0, by hand" was reorganised to this shape; the Abstraction clauses there are a draft for E to reword.
+
+## 13 Nov 2026, 18:04
+
+8. A question is a map X → S, nothing more. A question comparing two things is a question on the built floor X × X (M1); Carry and Descend handle keeping it. E: "perfect, lets reorganise". S2 loses "or from X × X"; L3 loses its two-thing sentence.
