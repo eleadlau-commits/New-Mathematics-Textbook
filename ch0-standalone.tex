@@ -1,0 +1,194 @@
+% Chapter 0 on its own, for review. Built from rules.tex (unchanged) by:
+%   pdflatex ch0-standalone.tex   (run twice, from textbook/)
+% Part A: every rule in one line. Part B: three rules proposed, NOT adopted.
+% Part C: duplicates, gaps, and places the buildings do not follow the rules.
+% Part D: rules.tex exactly as it stands (\input).
+\input{preamble}
+\begin{document}
+
+\begin{center}
+{\Large\bfseries Chapter 0, on its own}\\[4pt]
+{\small Every rule in one line, three proposed rules, and what does not fit. 13 November 2026.}\\[2pt]
+{\small Source: \texttt{rules.tex} on \texttt{main}, unchanged. Nothing here is adopted until E says so.}
+\end{center}
+
+\tableofcontents
+
+\section*{A. The rules, one line each}
+\addcontentsline{toc}{section}{A. The rules, one line each}
+
+In the order of \texttt{rules.tex}. The full wording is Part D.
+
+\subsection*{Background}
+\begin{lines}
+\item[\lab{S1}] A bag is a set; sets, maps and logic as usual.
+\item[\lab{S2}] A floor: a bag $X$, operations $O$, questions $Q$.
+\item[\lab{S3}] A law is a statement about a floor; an equation is ``$s = t$ for all letters'', made from letters and operations.
+\end{lines}
+
+\subsection*{Build: six ways, nothing else}
+\begin{lines}
+\item[\lab{M1}] Pairs $X \times Y$; lists $X^n$.
+\item[\lab{M2}] Sequences $\N \to X$.
+\item[\lab{M3}] Words from names with numbers of inputs; equal only if written the same; maps out by recursion.
+\item[\lab{M4}] Select: the $x$ in $X$ meeting a condition.
+\item[\lab{M5}] Bags of a blur: $X/{\sim}$.
+\item[\lab{M7}] Sub-bags: all sub-bags of $X$. Far larger; say so. Maps and blurs are bags by M1, M7, M4.
+\item[\lab{M6}] Lifting: an operation goes up place by place, or by a formula in a Definition; a selected bag keeps it only if closed.
+\end{lines}
+
+\subsection*{Blur}
+\begin{lines}
+\item[\lab{L1}] Blur: $x \sim x$, runs back, chains. Bag $\bag{x}$.
+\item[\lab{L2}] Respects $f$: glued in, glued out.
+\item[\lab{L3}] Keeps $q$: glued $\Rightarrow$ same answer (one thing or two).
+\item[\lab{L4}] Blurrier: glues at least what the other glues.
+\item[\lab{L5}] From below: least blur gluing $G$, respecting $O$.
+\item[\lab{L6}] From above: blurriest blur keeping $Q$, respecting $O$.
+\item[\lab{L7}] Every Blur line names its $O$; other $O$, other blur.
+\item[\lab{L8}] One-way blur: $x \preceq x$, chains, respects as L2; its two-way part is a blur, ordered by $\preceq$.
+\item[\lab{L9}] Likeness: $x \mathrel{N} x$, runs back, need not chain.
+\item[\lab{L10}] Limits: $O$ holds finite-input operations only; a blur may respect limits for a stated nearness, in a slot \emph{Limits:}; no limit and no question in $O$.
+\end{lines}
+
+\subsection*{Theorems about blurs}
+\begin{lines}
+\item[\lab{Z1}] Equality is least, one bag is blurriest; both respect everything.
+\item[\lab{Z2}] From below exists, by a process: close $G$ up under back, $O$, chain; repeat.
+\item[\lab{Z3}] From above exists: glue $x, y$ iff $q(c(x)) = q(c(y))$ for all $q$ in $Q$ and all contexts $c$.
+\item[\lab{Z4}] Sandwich: gluings kept in every context $\Rightarrow$ below no blurrier than above.
+\item[\lab{Z5}] Appears: below $=$ above once every unglued pair is split by one context and one question.
+\item[\lab{Z6}] Descent: respected operations and kept questions go down to $X/{\sim}$.
+\item[\lab{Z7}] Equations are free: on $X^n$, sequences, closed selections, $X/{\sim}$.
+\item[\lab{Z8}] Every other law is checked again, or its loss recorded.
+\item[\lab{Z9}] Normal form $\nu$: $\nu\nu = \nu$; one fixed member per bag.
+\item[\lab{Z10}] A likeness is a blur seen through a picture; every likeness arises so.
+\end{lines}
+
+\subsection*{Arrows}
+\begin{lines}
+\item[\lab{W1}] Arrow: a map between floors, with the list of what it respects.
+\item[\lab{W2}] Inside: one-to-one. Picture: reaches all.
+\item[\lab{W3}] $x \mapsto \bag{x}$ is a picture.
+\item[\lab{W4}] Every arrow is its own blur, then an inside.
+\end{lines}
+
+\subsection*{Kinds of chapter}
+\begin{lines}
+\item[\lab{K1}] \emph{blur}: one new floor $X/{\sim}$; slots of the table below.
+\item[\lab{K2}] \emph{build}: new bag by M1--M7, Blur ``none''; carried / not carried.
+\item[\lab{K3}] \emph{select}: Tests; At most one; At least one (Build, or ``closed''); Read off.
+\item[\lab{K4}] \emph{arrow}: the arrow; respects and dies; its blur; inside or picture.
+\item[\lab{K5}] \emph{count}: what is counted, the count, why it forces; Theorems only.
+\item[\lab{K6}] \emph{table}: rows, tests, entries; read-offs are conjectures.
+\item[\lab{K7}] \emph{rerun}: earlier chapter, new Given; free (Z7) and checked again (Z8).
+\end{lines}
+
+\subsection*{Slots of a blur chapter}
+A or G (Given) $\cdot$ D (Definitions: Build, lift, questions) $\cdot$ B1 (from below: $G$, $O$) $\cdot$ B2 (from above: $Q$, same $O$) $\cdot$ P (Bags, Normal forms, Survives, Dies, Appears, Arrow) $\cdot$ N (Notation, only after the blur) $\cdot$ T (Theorems) $\cdot$ R (Remarks) $\cdot$ E (Exercises).
+
+\subsection*{Conventions}
+\begin{lines}
+\item[\lab{C1}] Every Given cites the earlier line that proves it (Chapter 1 axioms apart).
+\item[\lab{C2}] Survives and Dies name only what is defined on the floor blurred.
+\item[\lab{C3}] A reused sign: lift, survive, descend, agree.
+\item[\lab{C4}] Dies follows from the Blur line; write only the traps.
+\item[\lab{C5}] Blur ``none'': Survives/Dies become carried/not carried.
+\item[\lab{C6}] The first choice of gluings or questions is open; the rest is forced.
+\item[\lab{C7}] Reserved words: Survives (L2, L3 only); ``kept on those bags'' is a Theorem; glued never means near.
+\item[\lab{C8}] Imported: a Given ``(Imported: source.) statement. Used by: lines.'', listed in the building's ledger; unused classics are ``reported''.
+\item[\lab{C9}] Made from above: if the only gluings are the question's own, write ``B1: none (made from above)'' and claim no Appears.
+\end{lines}
+
+\subsection*{The second floor}
+\begin{lines}
+\item[\lab{F1}] Notation gives a system, Arrow an arrow, Theorems yes/no facts.
+\item[\lab{F2}] Test: a law askable of every system. Table: systems $\times$ tests.
+\item[\lab{F3}] Blur on a table: same answers on the tests $U$.
+\item[\lab{F4}] Class: the rows passing the tests $T$.
+\item[\lab{F5}] Closed: running the chapter on the system gives an inside and a picture.
+\item[\lab{F6}] The table suggests; proof or a new row decides.
+\item[\lab{F7}] Floor two reads floor one, never back.
+\item[\lab{F8}] Loop: build $X$, blur by an earlier $S$; $S$ comes back closed, changed or wild; a theorem of the later chapter.
+\end{lines}
+
+\subsection*{Remarks (not rules)}
+\begin{lines}
+\item[\lab{R1}] S1, M1--M5, M7 are a small part of set theory.
+\item[\lab{R2}] Below makes, above justifies; Appears is their agreement.
+\item[\lab{R3}] On $\R^n$ the choice of $O$ separates four roads.
+\item[\lab{R4}] ``No zero divisors'' is lost by Blur ($\Z/6$) and by Build ($\R^2$).
+\item[\lab{R5}] Old names.
+\item[\lab{R6}] A rule relies on nothing after Chapter 0; so Amplify is not a rule (Field notes, Note 2, line A). F8 stays.
+\end{lines}
+
+\textbf{Count.} Background 3, Build 7, Blur 10, Theorems 10, Arrows 4, Kinds 7, Conventions 9, Second floor 8: \textbf{58 rules}, plus 6 remarks and 4 exercises. Retired: Z11 (Amplify, now Field notes line A). There is no Z12 in Chapter 0 or in any building.
+
+%=====================================================================
+\section*{B. Proposed, awaiting E}
+\addcontentsline{toc}{section}{B. Proposed, awaiting E}
+
+Proposed today for stating most of mathematics (\texttt{plans/BUILD-ORDER-MOST.md}, Stage 0). \textbf{Not adopted.} Labels X1--X3 are temporary. For each: a draft line in the style of Part A, what it unlocks, and whether the existing rules already make it.
+
+\begin{lines}
+\item[\lab{X1}] (Chosen.) From a bag of non-empty bags: one member of each. Written as a Given: \emph{(Chosen: one at a time / a sequence / any bag of bags.) statement. Used by: lines.} Listed in the ledger beside Imported lines (C8).
+\end{lines}
+\emph{Unlocks:} Zorn, Hahn--Banach, a basis of every vector space, Tychonoff. \\
+\emph{Made from existing rules?} No: no line of M1--M7 picks. \\
+\emph{Already needed now:} Chapter 26 picks one cover for each $N_i$ (its ``honest note''), and Chapter 27, T1 picks ``one continuous member, rung $n$ for the $n$-th''. Both need a sequence of choices only. Chapter 27, R3 and Chapter II.3, R4 say outright that a rule of choice is missing (C, items 13--14). \\
+\emph{Fit with the method:} a chosen member is never a normal form (Z9) and never gives Appears; blur proves ``at most one'', choice gives ``at least one'' with no recipe. Natural home: a third way to fill K3's \emph{At least one} (Build / closed / Chosen). \\
+\emph{For E:} one strength or three? (a sequence of choices covers Chapters 26--27; full choice is needed for Zorn and Hahn--Banach).
+
+\begin{lines}
+\item[\lab{X2}] (Charts.) Given open pieces $U_i$ of $\R^n$ ($i$ in a bag $I$) and change maps $\varphi_{ji}$ of a stated kind (continuous, smooth, $\mathbb{C}$-straight) with $\varphi_{ii} = \mathrm{id}$ and $\varphi_{kj}\varphi_{ji} = \varphi_{ki}$: the bag glued from the pieces along the changes.
+\end{lines}
+\emph{Unlocks:} manifolds, Riemann surfaces, varieties, bundles. \\
+\emph{Made from existing rules?} Very nearly, and in the blur's own way: build the pairs $(i, x)$ with $x$ in $U_i$ (M1, M4); blur from below by $(i, x) \sim (j, \varphi_{ji}(x))$ (L5), respecting nothing, \emph{Limits:} the nearness of $\R^n$ (L10). What is new is only (a) the word ``kind'' for the change maps and (b) one theorem: the two conditions on $\varphi$ make each bag meet each piece at most once. ``Two points never pulled apart'' (the line with two origins) is a Dies line, not automatic. \\
+\emph{For E:} a new Build line, or a convention plus one theorem about L5?
+
+\begin{lines}
+\item[\lab{X3}] (Countable closure.) From $X$ and a list of sub-bags: the smallest bag of sub-bags of $X$ holding them and closed under complement and under the union of a sequence.
+\end{lines}
+\emph{Unlocks:} measure, probability, Borel sets. \\
+\emph{Made from existing rules?} Yes, as a select: among the sub-bags of the sub-bags of $X$ (M7 twice), take the meet of all families that hold the list and are closed (M4). It is a from-above object: there is no process (a process needs stages past every sequence, and ordinals are not built). Chapter 26 already uses unions of sequences of covers. \\
+\emph{For E:} a new line, or a named select (K3) with its cost (M7 twice) said openly?
+
+%=====================================================================
+\section*{C. Duplicates, gaps, and the buildings}
+\addcontentsline{toc}{section}{C. Duplicates, gaps, and the buildings}
+
+Each item: what, where, and the choices. Merge decisions are E's. Sources: \texttt{rules.tex}, all part files of Buildings 0--2 on \texttt{main} (13 Nov).
+
+\subsection*{Inside Chapter 0}
+\begin{lines}
+\item[\lab{1}] (Order of Build.) ``Six ways'' are M1--M5, M7; M6 (lifting) sits after M7 in its own list, and is not a way to build. M2 is a case of M7, M1, M4, as M7 itself says. \emph{Choices:} renumber (M6 $\leftrightarrow$ M7); M2 to a remark; leave.
+\item[\lab{2}] (Likeness twice.) L9 defines likeness as a rule; Z10 says it ``is not a new primitive''. \emph{Choices:} keep L9 as a definition only; fold it into Z10.
+\item[\lab{3}] (Duplicates.) C5 $=$ K2 (carried / not carried). C1 and C8 are both about Given lines. The table row \emph{Survives} restates C2 and C7. C7's last sentence (a theorem with a hypothesis is a Theorem) restates its second. \emph{Choices:} merge C5 into K2; one ``Given'' rule from C1 + C8.
+\item[\lab{4}] (``Closed'' has four meanings.) M6: closed under an operation. K3: ``closed'' as the reason for \emph{At least one} (complete). F5: a system on which the chapter returns an inside and a picture. F8: the verdict ``closed''. \emph{Choices:} keep one, rename three.
+\item[\lab{5}] (``Carried'' has two.) C5/K2 reserve it for build chapters, but about 25 Notation lines in all three buildings say ``carried over (Z6)'' for C3's \emph{descend}. \emph{Choices:} write ``descended'' in Notation lines; or widen C5.
+\item[\lab{6}] (Rules that point ahead.) L10 needs the nearness of Chapter 5, and C7 cites Chapter 5, P5, T1; R6 says a rule relies on nothing after Chapter 0. \emph{Choices:} state nearness in Background (a ladder of likenesses, as Chapter 5, D4); or allow the forward reference as a reading convention, like F8.
+\item[\lab{7}] (Missing existence lines.) Z3 handles questions of one thing; L3 and L6 also allow questions of two things. Z2, Z3 give existence for L5, L6 only: nothing for a one-way blur from below or above (L8), nor for a blur that respects limits (L10), which Chapter 26, B1 uses. Z2's ``repeat until nothing new'' needs ``take the union of all stages'' when $X$ is infinite. Each is one line (the meet of all such relations exists). \emph{Choice:} add them to Z2--Z3, or leave.
+\item[\lab{8}] (Table vs C9.) The slot table says Appears is ``B1 $=$ B2, by Z4, Z5''; C9 removes Appears when B1 is none. Only C9 says so. \emph{Choice:} one clause in the table.
+\item[\lab{9}] (Opening line.) ``Every later chapter uses these rules and adds none.'' True today; X1--X3 would add the first new rules since F8.
+\end{lines}
+
+\subsection*{How the buildings use the rules}
+\begin{lines}
+\item[\lab{10}] (L7: Blur lines without $O$.) Building 1: the B1 lines of Ch1, Ch2, II.2, II.3, II.4, II.5, II.7, II.8, II.9, II.10, II.13, III.1 give gluings but no \emph{Respects:}. Building 0, Chapter 6, B1 ($x \sim_W y \iff x - y \in W$) has neither \emph{From below} nor $O$. Building 0 elsewhere and Building 2 comply.
+\item[\lab{11}] (C9: every glued pair listed as ``from below''.) Chapter 17, B1 glues $a \sim b$ whenever $c\,a_n \le b_n \le K a_n$: that is the whole blur. Building 2, Ch1, B1 ($A \sim B$ when $\vdash A \leftrightarrow B$) and Ch2, B1 ($\vdash \square A \leftrightarrow \square B$): each list is already the blur. Building 1, II.1 calls the table blur ``B1'', while Building 0, II.1 writes ``B1: None (made from above, C9)''.
+\item[\lab{12}] (Kinds line: ``these words and no others''.) Chapters 7 and 14 write ``build (words)'', Chapter 10 ``build (sub-bags)''. Chapter II.2 is marked \emph{blur} though it reruns I.3, and II.5 calls itself ``a rerun chapter, in the style of II.2''.
+\item[\lab{13}] (Choice used with no rule.) Chapter 26 (one cover per $N_i$) and Chapter 27, T1 (one member from each bag, the $n$-th at rung $n$). Not in either ledger. This is a gap today, whatever is decided on X1.
+\item[\lab{14}] (Choice called for.) Chapter 27, R3 (sets with no length) and II.3, R4 (a basis of $C$) say ``needs a rule of choice (not in Chapter 0)''.
+\item[\lab{15}] (Stale citation.) Building 1, Ch1, G1 cites ``blur L1--L9''; L10 came later.
+\item[\lab{16}] (Shadowed labels.) Chapter 32 labels its earned Stokes lines S1--S4, the same labels as Background S1--S3. Cosmetic; \texttt{build.py} does not catch it.
+\end{lines}
+
+%=====================================================================
+\section*{D. Chapter 0 as it stands}
+\addcontentsline{toc}{section}{D. Chapter 0 as it stands}
+{\small \texttt{rules.tex}, unchanged, as it appears in every building.}
+\let\oldsection\section
+\renewcommand{\section}{\subsection}
+\input{rules}
+
+\end{document}
