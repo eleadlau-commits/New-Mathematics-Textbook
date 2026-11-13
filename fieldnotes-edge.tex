@@ -1,0 +1,165 @@
+% Field notes: the edge.  Not a book and not a part of a building.
+% Formerly Building 2, Part II (Chapters 3-6).  Each note begins with a banner and \section*.
+\input{preamble}
+\begin{document}
+\sloppy
+\begin{center}
+{\Large\bfseries Looking Away}\\[4pt]
+{\large Field notes: the edge}\\[4pt]
+{\small Where the method stops proving and starts sorting.}
+\end{center}
+\renewcommand{\contentsname}{Contents}
+\tableofcontents
+\bigskip
+
+These are field notes, kept beside the three buildings. They are not a part of any building, and nothing in a building depends on them. A note makes no floor: it runs lines of the books on the map of mathematics near the primes and records what happened.
+
+Every line carries one status.
+\begin{lines}
+\item[\lab{[proved]}] earned here from the books, with the reason given;
+\item[\lab{[machine]}] checked by a computer on finitely many cases, and no more;
+\item[\lab{[reported]}] someone else's theorem, not earned in the books; an import if anything leaned on it;
+\item[\lab{[unchecked]}] found in this project; whether it is new has not been checked against the literature.
+\end{lines}
+Old names, and what is known, are kept in a closing line of each note. Nothing here is a new theorem about the primes.
+
+The notes use two lines of the books. \emph{Loop} is rule F8 of Building 0, Chapter 0. \emph{Amplify} was drafted as a rule (Z11) and is a theorem resting on Building 0, Chapters 17, 20, 33 and 34, so it left Chapter 0 and Note 2 states and proves it here (line A).
+
+\newpage
+%% ==================================================================
+%%  Note 1  (loops)
+%% ==================================================================
+\section*{Note 1. Loops}
+\phantomsection\addcontentsline{toc}{section}{Note 1. Loops}
+\begin{center}
+{\small Build something late, let something early act on it, and blur by the action. Sometimes the early system comes back exactly. Sometimes nearness dies and the bags cannot be told apart: then keep the moves. One prime alone is tame; two primes together are already wild.}
+\end{center}
+
+\subsection*{The line run}
+
+\begin{lines}
+\item[\lab{L}] (Loop, rule F8.) A chapter builds $X$ and blurs it by the action of an earlier system $S$ (an orbit blur, Building 1, Chapter II.5). A loop is a line saying that $S$ comes back as a question on the bags. Verdicts: \emph{closed} ($S$ comes back exactly), \emph{changed}, \emph{wild} (no rung of nearness keeps the bags apart: keep the moves).
+\end{lines}
+
+\subsection*{Found}
+
+\begin{lines}
+\item[\lab{F1}] [proved] Closed: $\Z$ acting on $\R$ by $+$. The turns of loops in $\R/\Z$ are whole numbers and every one occurs (Building 0, Chapter 16, T6).
+\item[\lab{F2}] [proved] Tame: one prime. The powers of $p$ acting on $(0, \infty)$ by $\times$, read through $\log$ (Building 0, Chapter 22), give a circle of length $\log p$. The units of $\Z_p$ acting on $\Z/p^k$ by $\times$ leave exactly $k + 1$ bags, one per valuation (Building 0, Chapter 19).
+\item[\lab{F3}] [proved] Wild: two primes. $2$ and $3$ acting on $(0, \infty)$ by $\times$: the orbit of $1$ read through $\log$ is $\{a \log 2 + b \log 3\}$, and $\log 3 / \log 2$ is not a fraction ($2^a = 3^b$ has no answer with $a, b \ge 1$, Building 0, Chapter 18). So the orbit is dense (Building 0, Chapter 8, T7), and every rung of nearness glues every bag to every other. [machine] The smallest gap below $L$ falls as $L = 10, 20, 40, 80$.
+\item[\lab{F4}] [proved] Moves kept on $\Z/p$. Mix the waves $\psi(x) = e^{2\pi i x/p}$ of $+$ with a character $\chi \ne 1$ of the clock $(\Z/p)^\times$ (Building 1, Chapter II.12, T5): $\tau(\chi) := \sum_x \chi(x)\psi(x)$ has $|\tau(\chi)|^2 = p$. (Expand, put $x = ty$, sum over $y$ first: a wave summed over a clock is $p - 1$ or $-1$; then $\sum_t \chi(t) = 0$.) A size comes free from $+$ and $\chi$ respecting $\times$.
+\item[\lab{F5}] [reported] Lands on a known line. The $n \times n$ matrix $R$ with $R_{ij} = 1$ when $j = 1$ or $i \mid j$ has $\det R = \sum_{k \le n} \mu(k)$; the bound $|\det R| \le C_\varepsilon n^{1/2 + \varepsilon}$ is equivalent to the Riemann hypothesis. [machine] $\det R$ for $n \le 40$.
+\item[\lab{F6}] [proved] Wildness is not local. Every single prime gives a tame loop (F2); two primes already give a wild one (F3). So nothing built one prime at a time carries a size on the mixed loop.
+\end{lines}
+
+\subsection*{Placed, not earned}
+
+\begin{lines}
+\item[\lab{K1}] [reported] Sorted by what comes back: loops by $+$ give a mirror (on all closings-up of $\Q$ at once, $\Q$ comes back as its own waves: Tate); loops by $\times$ give the primes (class field theory for $\Q$); the loop mixing them, $\Q^\times$ acting on all closings-up with $+$, is wild, and F3 is its smallest piece (Connes). Three known verdicts placed on the map; no line depends on them.
+\item[\lab{K2}] [machine] On curves over $\Z/p$, every count's error is a sum of mixed sums like F4, each of size $\sqrt p$ (checked for $x^3 + y^3 = 1$, $20$ primes). On $\Z$ the same mixed sums appear in the mirror of a series, not in its zeros.
+\end{lines}
+
+\noindent\emph{Old names.} F4: Gauss sums; K1: Tate's thesis, class field theory, the adele class space; F5: the Redheffer matrix, the Mertens function. \emph{Checks:} \texttt{checks/b2-p2-check.py} (F2--F5).
+
+\newpage
+%% ==================================================================
+%%  Note 2  (amplify)
+%% ==================================================================
+\section*{Note 2. Amplify}
+\phantomsection\addcontentsline{toc}{section}{Note 2. Amplify}
+\begin{center}
+{\small Blur, moves and loops ask ``same or different?''. Amplify asks ``how much?''. Climb the powers of one move, bound every rung with any constant, and blur sequences by growth: the constant dies and the bound becomes sharp.}
+\end{center}
+
+\subsection*{The line}
+
+\begin{lines}
+\item[\lab{A}] [proved] (Amplify.) Let $S_m = \sum_i c_i \alpha_i^m$ with finitely many distinct $\alpha_i$ and every $c_i \ne 0$. Blur sequences one way by growth: $a \preceq b$ when $\limsup |a_m|^{1/m} \le \limsup |b_m|^{1/m}$ (Building 0, Chapter 17). The question ``largest $|\alpha_i|$'' is kept; the constant $C$ and the factor $(m+1)^d$ are not. So if $|S_m| \le C(m + 1)^d \rho^m$ for every $m$, then every $|\alpha_i| \le \rho$. \\
+(The bound makes $\sum_m S_m t^m$ converge for $|t| < 1/\rho$, Building 0, Chapter 20. That sum is $\sum_i c_i \alpha_i t/(1 - \alpha_i t)$, with poles exactly at the $1/\alpha_i$; a fraction of polynomials converges out to its nearest pole, Building 0, Chapters 33 and 34.)
+\item[\lab{A2}] [proved] What Amplify never does: a loss of a fixed factor per rung ($C^m$) is not removed; it changes $\rho$.
+\end{lines}
+
+\subsection*{Found}
+
+\begin{lines}
+\item[\lab{F1}] [proved] Cauchy--Schwarz with constant $1$. Suppose $|\langle x, y \rangle| \le C|x||y|$ for lists of every length, one $C$ for all. On $a^{\otimes k}$, $b^{\otimes k}$ (Building 1, Chapter II.8, T3): $|\langle a, b\rangle| \le C^{1/k}|a||b|$ for every $k$, and $C^{1/k}$ comes near $1$. It fails when the constant grows with the length.
+\item[\lab{F2}] [proved] The trace finds the largest eigenvalue. $\operatorname{tr} A^m = \sum \lambda_i^m$, and by A, $\limsup |\operatorname{tr} A^m|^{1/m} = \max|\lambda_i|$. One entry of $A^m$ can hide an eigenvalue; the trace cannot.
+\item[\lab{F3}] [reported, two inputs] The road to the curve count. Move $x \mapsto x^p$ on a curve over $\mathbb{F}_{p^m}$; $S_m = p^m + 1 - N_{p^m}$. If $S_m = \alpha_1^m + \dots + \alpha_{2g}^m$ with $\alpha_i\alpha_{i+g} = p$ (reported: rationality and the mirror) and $|S_m| \le Cp^{m/2}$ (reported: a rough bound by an auxiliary polynomial), then A gives $|\alpha_i| = \sqrt p$, and for $g = 1$, $|N_p - p - 1| \le 2\sqrt p$. Only the step through A is earned. (Building 1, Chapter III.3 marks the same two inputs Imported.)
+\item[\lab{F4}] [machine] $y^2 = x^5 + 2x + 1$ over $\mathbb{F}_{3^m}$: $N = 7, 15, 19, 83$ for $m = 1$ to $4$; the four $\alpha_i$ from $N_1, N_2$ have size $\sqrt 3$ and predict $N_3$, $N_4$ exactly.
+\item[\lab{F5}] [reported] On $\Z$, one slot is empty. For the zeros of $\zeta$ there are power ladders with a closing step (Li's ladder $s \mapsto 1 - 1/s$; the cut ladder in $\psi(x) - x$; convolution powers of a test map). What nobody has is the weak bound, losing only a constant per rung. Every known bound loses a fixed factor per rung (A2).
+\end{lines}
+
+\noindent\emph{Old names, and what is known.} A: amplification, the tensor power trick; F1: Cauchy--Schwarz by tensor powers; F2: Gelfand's formula, trace form; F3: Hasse's theorem by Weil's route; F5: Li's criterion (Li; Bombieri--Lagarias). The three proofs of the curve line (Stepanov--Bombieri, Weil, Deligne) read as one chain through A. \emph{Checks:} \texttt{checks/b2-p2-check.py} (F1 for $k \le 4$, F2, F4).
+
+\newpage
+%% ==================================================================
+%%  Note 3  (atoms)
+%% ==================================================================
+\section*{Note 3. Atoms}
+\phantomsection\addcontentsline{toc}{section}{Note 3. Atoms}
+\begin{center}
+{\small Forget how a thing was glued from atoms and keep only the bag of atoms. Sometimes the bag tells everything, sometimes only its size, sometimes nothing. A floor with two glues is where the hard lines live.}
+\end{center}
+
+\subsection*{The question asked}
+
+On a floor with one operation whose members are built from atoms: how much does ``the bag of atoms'' tell about a member? This is a question, not a blur: ``the bag of atoms'' is not a function of the member when factorisation is not unique, so it names no gluing under L1--L7. The note sorts floors by the answer.
+
+\subsection*{Found: a ladder of floors}
+
+\begin{lines}
+\item[\lab{F1}] [proved] One bag, one thing: $\Z$ under $\times$ (Building 0, Chapter 18, T3); $K[x]$ (Building 1, Chapter II.7, T2); $\Z[i]$.
+\item[\lab{F2}] [proved] The bag of rungs is kept, the glue is not: finite move systems by ladders of blurs (Building 1, Chapter II.14, T3); $\Z/4$ and $\Z/2 \times \Z/2$ have the same bag. [reported; machine to size $600$] In $\Z[\sqrt{-5}]$ factorisations differ (Building 1, Chapter II.7, P3) but all have the same number of atoms (Carlitz).
+\item[\lab{F3}] [proved] Not even the number is kept: in $\Z[\sqrt{-14}]$, $3$ and $5 \pm 2\sqrt{-14}$ are atoms (no member has size $3$ or $27$), and $81 = 3^4 = (5 + 2\sqrt{-14})(5 - 2\sqrt{-14})$: four atoms against two.
+\item[\lab{F4}] [proved] No atoms: $\Z$ under $+$ ($\Z \supset 2\Z \supset 4\Z \supset \cdots$ never ends); $\Q$, $\R$.
+\item[\lab{F5}] [reported] Undecidable: for move systems given by words and gluings, whether two words are glued cannot be decided in general (Building 1, Chapter 2, R5).
+\end{lines}
+
+\subsection*{Found: floors with two glues}
+
+\begin{lines}
+\item[\lab{F6}] The table. \\
+$\Z$: one bag one thing under $\times$, no atoms under $+$; $+$ does not respect the primes; the line about primes open. \\
+Polynomials over $\Z/p$: $+$ has atoms ($p \cdot 1 = 0$); irreducibles counted exactly (Building 1, Chapter II.12, T8) [proved]. \\
+Curves over $\Z/p$: a move $x \mapsto x^p$ respects both glues; the line holds (Note 2, F3) [reported, two inputs]. \\
+$(0, \infty)$: no atoms under either, and $\log$ turns one into the other. \\
+Atoms with sizes but no exact $+$ (Beurling's primes): the line can fail [reported].
+\item[\lab{F7}] [unchecked; an observation] The line is known where $+$ has atoms and one move respects both glues; open where $\times$ has unique bags and $+$ has no atoms; it can fail with no exact $+$. This is the known gap between characteristic $p$ and characteristic $0$ (the ``field with one element'' programme) written as two columns of one table.
+\end{lines}
+
+\noindent\emph{Old names.} F1: unique factorisation; F2: Jordan--H\"older, half-factorial domains (class number $2$); F3: elasticity; F5: the word problem. \emph{Checks:} \texttt{checks/b2-p2-check.py} (lengths of all factorisations in $\Z[i]$, $\Z[\sqrt{-5}]$ to size $600$; F3).
+
+\newpage
+%% ==================================================================
+%%  Note 4  (the missing move)
+%% ==================================================================
+\section*{Note 4. The missing move}
+\phantomsection\addcontentsline{toc}{section}{Note 4. The missing move}
+\begin{center}
+{\small The Riemann hypothesis written in the books' words: a kept question with no floor to keep it. Each attempt here moves the missing piece somewhere else, and every road ends at one place, an exact cancellation.}
+\end{center}
+
+\subsection*{Wanted}
+
+\begin{lines}
+\item[\lab{W}] A floor $X$ built from $\Z$, with a move $\phi$ respecting both $+$ and $\times$, whose power ladder has a weak bound (Note 2, A), and an arrow back to the primes under which the eigenvalues of $\phi$ are the zeros of $\zeta$. Then A would give the line. Nobody has $X$.
+\end{lines}
+
+\subsection*{Found}
+
+\begin{lines}
+\item[\lab{F1}] [reported] The line is equivalent to: Weil's quadratic form in the primes is $\ge 0$ on every test map. [machine; known: Connes--Consani] Cut at $\lambda^2 = 10$, the lowest test map has its zeros within $10^{-3}$ of the first eight zeros of $\zeta$.
+\item[\lab{F2}] [machine; unchecked] Plant one zero off the line at height $T$: the smallest cut at which the form turns negative is $\lambda^2 \approx T/2\pi$, almost independent of the distance from the line. A bad zero hides by height, not by nearness.
+\item[\lab{F3}] [machine] Remove one prime $p$ well inside the cut: the form drops to about $-\log p/\sqrt p$. Keep finitely many primes: no size at all. The size is global (Note 1, F6).
+\item[\lab{F4}] [machine to $n = 300$; probably known] The characteristic polynomial of $R$ (Note 1, F5) is $(x - 1)^{n - K - 1}Q_n(x - 1)$ with $K = \lfloor \log_2 n\rfloor$ and $Q_n(y) = y^{K+1} - \sum_{k=1}^{K} F_k(n)\,y^{K-k}$, where $F_k(n)$ counts chains $1 < a_1 \mid a_2 \mid \dots \mid a_k \le n$ with proper steps. Random sequences of the same shape fail the line: it is a cancellation, not a shape.
+\item[\lab{F5}] [machine] A series with a mirror but no prime product (Davenport--Heilbronn) fails the cut form at $\lambda^2 \approx 40$; turning its extra weights down does not repair it. Positivity needs the prime data and the mirror in one object.
+\item[\lab{F6}] [unchecked; a reading] Every road ends at cancellation. Building 0, Chapter 17's orders-of-magnitude blur kills cancellation (its P6); Note 2's empty slot needs a bound losing only a constant; F4's condition is an alternating sum of glue counts; F2, F3 say the size is exact and global. One missing piece seen four ways.
+\end{lines}
+
+\subsection*{Corrections kept on record}
+
+``$\Z$ is an island'' (no nearby prime data passes) was too strong: the passing set is convex and other weights pass at every finite cut. ``The primes are the top point of the passing set'' holds only for $2, 3, 5, 7, 11, 13, 19$ at $\lambda^2 \le 100$.
+
+\noindent\emph{Old names.} W: a Hilbert--P\'olya operator, the cohomology of $\operatorname{Spec}\Z$; F1: Weil's explicit formula and positivity criterion; F5: the Davenport--Heilbronn function, the Selberg class. \emph{Sources:} \texttt{riemann/LOOP-RULE.md} and \texttt{riemann/amplify/} in the project folder (11--12 Nov); F4 in \texttt{checks/b2-p2-check.py} for $n = 6, 12, 30, 48$.
+
+\end{document}

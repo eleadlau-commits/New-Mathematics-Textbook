@@ -9,8 +9,8 @@ Check scripts live in checks/, plans and designs in plans/.
 """
 import re, sys, os, shutil, subprocess
 here = os.path.dirname(os.path.abspath(__file__))
-BUILDINGS = ['building0-blur', 'building1-moves', 'building2-loops']
-PARTS = ['rules', 'part1-numbers', 'part2-systems', 'part3-regions', 'moves-part1', 'moves-part2', 'moves-part3', 'loops-part1', 'loops-part2']
+BUILDINGS = ['building0-blur', 'building1-moves', 'building2-loops', 'fieldnotes-edge']
+PARTS = ['rules', 'part1-numbers', 'part2-systems', 'part3-regions', 'moves-part1', 'moves-part2', 'moves-part3', 'loops-part1', 'fieldnotes-edge']
 rd = lambda f: open(os.path.join(here, f + '.tex')).read()
 pre = rd('preamble')
 bad = 0
