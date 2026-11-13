@@ -22,3 +22,7 @@ Ideas E reached while reading Chapter 0. Starting points, open to change.
 6. The hierarchy. E asked: "from object to object you can either use a form of build, or choose one obejct created from blur? And we must use these alternatingly?" Then: "okay, so in that case take out the alternating then we get the rules of the book right." So from any floor you may take either Build (M1–M4, M7, select inside) or Abstraction, in any order; they need not alternate. Candidate one-line theorem beside Abstraction: a blur of a blur is one blur, so in normal form the road alternates anyway.
 
    Open: where the first floor comes from (Chapter 1 axioms or M3 words); choice (X1) as a possible third move.
+
+## 13 Nov 2026, 17:57
+
+7. M5 inside Abstraction. E: "so M5 would simply be a part of the abstraction, since you have to choose a floor for the next chapter always." Then: "lets do this". Every floor is X/∼ (a plain built bag is X/=, Z1), so every chapter enters its floor through Abstraction. The rest of Chapter 0 groups as: how to state a blur (L4–L10, Z1–Z5, Z9–Z10); free and checked (Z7, Z8); bookkeeping (W, K, C, F). The working doc "Chapter 0, by hand" was reorganised to this shape; the Abstraction clauses there are a draft for E to reword.
