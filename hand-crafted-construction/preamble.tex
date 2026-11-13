@@ -1,0 +1,33 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{amsmath,amssymb}
+\usepackage[margin=2.8cm]{geometry}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+% tables that wrap (array), tables that may run onto a second page (longtable),
+% and the two map diagrams (tikz)
+\usepackage{array,longtable}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+% number systems
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Zn}{\Z/n}
+\newcommand{\R}{\mathbb{R}}
+% build floors
+\newcommand{\PP}{\mathbb{P}}   % pairs of naturals (Chapter 1)
+\newcommand{\FF}{\mathbb{F}}   % selected pairs of integers (Chapter 2)
+\newcommand{\Seq}{\mathcal{S}}  % sequences of rationals (Chapter 4)
+\newcommand{\CC}{\mathcal{C}}    % sequences that settle (Chapter 4)
+% questions
+\newcommand{\sett}{\operatorname{sett}}
+\newcommand{\whole}{\operatorname{whole}}
+\newcommand{\mult}{\operatorname{mult}}
+\newcommand{\nul}{\operatorname{null}}
+\newcommand{\pos}{\operatorname{pos}}
+% bags and labels
+\newcommand{\bag}[1]{[#1]}
+\newcommand{\lab}[1]{\textbf{#1}}
+\newenvironment{lines}{\begin{list}{}{\setlength{\leftmargin}{4.2em}\setlength{\labelwidth}{3.4em}\setlength{\labelsep}{0.8em}\setlength{\itemsep}{2pt}\setlength{\topsep}{2pt}}}{\end{list}}
+% links: contents entries and PDF bookmarks become clickable (keep this last)
+\usepackage[colorlinks=true,linkcolor=blue,bookmarksopen=true]{hyperref}

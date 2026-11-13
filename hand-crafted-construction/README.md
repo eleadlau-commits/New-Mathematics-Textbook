@@ -10,3 +10,4 @@ E rebuilds the blur structure by hand, from the first line, as E learns it.
 
 - `DECISIONS.md`: what E has decided, in order, with the date.
 - `00-start.md`: the construction itself, growing line by line.
+- `ch0-working.tex` + `preamble.tex`: E's working copy of Chapter 0, started as an exact copy of `rules.tex`. Upload both to Overleaf and compile `ch0-working.tex`. E edits this copy; `rules.tex` stays as it is.
