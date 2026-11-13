@@ -6,6 +6,10 @@ E rebuilds the blur structure by hand, from the first line, as E learns it.
 - Claude guides, one small step at a time, and offers phrasing only when asked.
 - Nothing here is copied from the book (`rules.tex`, the buildings). The book stays as reference.
 
+## How E works
+
+E writes in a plain editable doc ("Chapter 0, by hand"). When a chapter settles, it is turned into TeX here.
+
 ## Files
 
 - `DECISIONS.md`: what E has decided, in order, with the date.
