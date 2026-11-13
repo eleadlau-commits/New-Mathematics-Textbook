@@ -10,7 +10,7 @@
 \section*{Chapter II.1. The table of move systems}
 \phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter II.1. The table of move systems \quad move systems $\to$ classes}{Chapter II.1. The table of move systems}}
 \begin{center}
-{\normalsize move systems $\to$ classes \quad$\cdot$\quad from: Part I; Building 0, Chapters 1, 3, 8, 9, 14, II.1 \quad$\cdot$\quad table, blur, class}\\[4pt]
+{\normalsize move systems $\to$ classes \quad$\cdot$\quad from: Part I; Building 0, Chapters 1, 3, 8, 9, 14, II.1 \quad$\cdot$\quad table}\\[4pt]
 {\small The rows are now move systems. Every row passes the three laws of moves; the table is about what else they pass.}
 \end{center}
 
@@ -126,7 +126,7 @@ On a move system $G$. \ $O$: for each $g$, the move $x \mapsto g x$ (left only).
 \begin{lines}
 \item[\lab{P1}] (Survey: every such blur.) A blur of $G$ respecting left moves is fixed by its bag of $e$, which is a sub move system $K$; and $x \sim y \iff x^{-1} y \in K$. Conversely every sub move system gives one. So these blurs and the sub move systems match.
 \item[\lab{P2}] (Appears.) B1 for $H$ equals B2 for $K = $ the smallest sub move system holding $H$. Its bags are the $x K$: the \emph{left cosets}.
-\item[\lab{P3}] (Survives: moving a bag.) $x \mapsto g x$ carries the bag $yK$ onto the bag $gyK$, one-to-one. \ (Its undo is $x \mapsto g^{-1} x$.) So all bags have the same size as $K$.
+\item[\lab{P3}] (Moving a bag.) $x \mapsto g x$ carries the bag $yK$ onto the bag $gyK$, one-to-one. \ (Its undo is $x \mapsto g^{-1} x$.) So all bags have the same size as $K$.
 \item[\lab{P4}] (Dies: the right side.) In $S_3$ with $K = \{e, (1\,2)\}$: $e \sim (1\,2)$, but $e (1\,3) = (1\,3)$ and $(1\,2)(1\,3) = (1\,3\,2)$ are in different bags, since $(1\,3)^{-1}(1\,3\,2) = (2\,3) \notin K$.
 \item[\lab{P5}] (Normal form.) None in general: no rule picks one member of each $xK$. For $\Z$ and $K = n\Z$ the normal forms $0, \dots, n - 1$ of Building 0, Chapter 3 are such a rule.
 \end{lines}
@@ -138,14 +138,14 @@ On a move system $G$. \ $O$: for each $g$, the move $x \mapsto g x$ (left only).
 \item[\lab{T2}] (The order of a move divides the size.) For $g$ in a finite $G$, the least $m \ge 1$ with $g^m = e$ divides $|G|$. \ ($K = \{e, g, \dots, g^{m-1}\}$ has $m$ members: T1.)
 \item[\lab{T3}] ($g^{|G|} = e$.) From T2.
 \item[\lab{T4}] (Building 0, Chapter 3, T5, recovered.) For $a$ with $\gcd(a, n) = 1$: $a^{\varphi(n)} \equiv 1 \pmod n$, where $\varphi(n) = |(\Z/n)^\times|$. For $n = p$ prime: $a^{p-1} \equiv 1$. \ (T3 in $(\Z/n)^\times$.)
-\item[\lab{T5}] (Dies: ``every divisor is a size''.) $A_4$ has $12$ members and no sub move system with $6$. \ (Machine-checked; classical.) T1 is ``at most these sizes'', never ``these sizes occur''.
+\item[\lab{T5}] (Dies: ``every divisor is a size''.) $A_4$ has $12$ members and no sub move system with $6$. \ (Machine-checked: a finite listing.) T1 is ``at most these sizes'', never ``these sizes occur''.
 \item[\lab{T6}] (Prime size.) If $|G| = p$ is prime, $G$ matches $\Z/p$. \ (Any $g \ne e$ has order dividing $p$, so $p$: its powers are all of $G$.)
 \end{lines}
 
 \subsection*{Remarks}
 
 \begin{lines}
-\item[\lab{R1}] (What the blur did.) The cosets are the bags of the one blur that respects left moves; their equal size is a Survives line (P3); Lagrange is a count of bags (T1). The method's own split: blur keeps (P3), counting gives existence and sizes.
+\item[\lab{R1}] (What the blur did.) The cosets are the bags of the one blur that respects left moves; their equal size is P3; Lagrange is a count of bags (T1). The method's own split: blur keeps (P3), counting gives existence and sizes.
 \item[\lab{R2}] (Respecting both sides.) If the blur also respects right moves, $K$ must be kept by relabelling, $gKg^{-1} = K$, and the bags themselves form a move system. That is Chapter II.3.
 \item[\lab{R3}] (Old names.) Left cosets; index $= $ number of bags; T1: Lagrange's theorem; T4: Euler's theorem, Fermat's little theorem; T5: the converse of Lagrange fails ($A_4$).
 \item[\lab{R4}] (Machine check, \texttt{checks/b1-p2-ch2-check.py}.) P1 (for every bag $K \ni e$ of $S_3$ and $D_4$: ``$x^{-1}y \in K$'' is a blur exactly when $K$ is a sub move system); P3; P4; T1--T3 on all sub move systems of $S_4$; T4 for $n \le 200$; T5.
@@ -265,7 +265,7 @@ The first of five chapters with one template: a move system acts on matrices, th
 
 \subsection*{The blur}
 
-On $m \times n$ matrices over $R$. \ $O$: none beyond the moves themselves.
+On $m \times n$ matrices over $R$. \ $O$: none (an orbit blur of the moves $A \mapsto PAQ$; L7).
 
 \begin{lines}
 \item[\lab{B1}] (From below.) Gluings: $A \sim PAQ$ for $P$, $Q$ square with $\det$ a unit (G1, P11). Equivalently, by row and column moves: swap two rows; add $r$ times one row to another; scale a row by a unit; and the same for columns.
@@ -276,7 +276,7 @@ On $m \times n$ matrices over $R$. \ $O$: none beyond the moves themselves.
 
 \begin{lines}
 \item[\lab{P1}] (Survives: the $d_k$.) Each $k \times k$ minor of $PA$ is an $R$-combination of $k \times k$ minors of $A$ (an equation in the entries, carried to every $R$: G1, P10). So $d_k(A)$ goes into $d_k(PA)$, and back again by $P^{-1}$: $d_k$ is kept. The same for $AQ$.
-\item[\lab{P2}] (Survives: the module.) $\operatorname{coker}(PAQ)$ matches $\operatorname{coker} A$. \ ($P$ only remixes the relations; $Q$ renames the generators.)
+\item[\lab{P2}] (Survives: B1 keeps the module.) $\operatorname{coker}(PAQ)$ matches $\operatorname{coker} A$. \ ($P$ only remixes the relations; $Q$ renames the generators.)
 \item[\lab{P3}] (Dies: the entries.) $\begin{pmatrix} 2 & 0 \\ 0 & 3 \end{pmatrix} \sim \begin{pmatrix} 1 & 0 \\ 0 & 6 \end{pmatrix}$ over $\Z$: $d_1 = 1$, $d_2 = 6$ for both.
 \item[\lab{P4}] (Normal form; at least one, by Euclid.) Every $A$ is glued to a diagonal \[ \operatorname{diag}(e_1, e_2, \dots, e_r, 0, \dots) \] with $e_1 \mid e_2 \mid \dots \mid e_r$, all $\ne 0$. \ (Move a smallest non-zero entry to the corner; divide with remainder along its row and column; if a remainder is left, it is smaller, and repeat; sizes or degrees cannot fall forever (Building 0, Chapter 1, G8). Then clear the row and column, and make the corner go into every other entry by adding a row.)
 \item[\lab{P5}] (At most one.) $e_1 e_2 \cdots e_k = d_k(A)$ up to a unit, so $e_k = d_k / d_{k-1}$: fixed by the kept questions.
@@ -345,14 +345,15 @@ Chapter II.2 let $G$ move itself. Here it moves anything. Every count in this ch
 On $X$. \ $O$: $x \mapsto g \cdot x$ for each $g$.
 
 \begin{lines}
-\item[\lab{B1}] (From below.) Gluing: $x \sim g \cdot x$ for every $g$ and $x$. The bags are the \emph{orbits}; write $G \cdot x$ and $X / G$.
+\item[\lab{B1}] (From below.) Gluing: $x \sim g \cdot x$ for every $g$ and $x$.
 \item[\lab{B2}] (From above.) Questions: every yes-or-no question $q$ on $X$ with $q(g \cdot x) = q(x)$ for all $g$.
 \end{lines}
 
 \subsection*{Propositions}
 
 \begin{lines}
-\item[\lab{P1}] (Appears.) B1 and B2 agree. \ (The question ``is it in $G \cdot x$?'' is kept, and separates $x$ from every point outside its orbit.)
+\item[\lab{P1}] (Appears.) B1 and B2 agree. \ (B1 keeps every question of B2, by Z4. For $x \not\sim y$, the question ``is it glued to $x$?'' is kept by every move and separates them: Z5.)
+\item[\lab{N1}] (Notation.) The bag of $x$: its \emph{orbit} $G \cdot x$. The bag of bags: $X / G$.
 \item[\lab{P2}] (A sub move system.) $G_x$ is closed under $\circ$ and undo. Along an orbit, $G_{g \cdot x} = g\, G_x\, g^{-1}$: the moves fixing two glued points are relabellings of each other.
 \item[\lab{P3}] (Dies: ``orbits have one size''.) $S_3$ moving the subsets of $\{1, 2, 3\}$: orbit sizes $1, 3, 3, 1$.
 \end{lines}
@@ -362,7 +363,7 @@ On $X$. \ $O$: $x \mapsto g \cdot x$ for each $g$.
 \begin{lines}
 \item[\lab{T1}] (The arrow's own blur: orbit and fixers. W4.) The arrow $g \mapsto g \cdot x$ from $G$ onto $G \cdot x$ glues $g$ and $h$ exactly when $h^{-1} g$ is in $G_x$, that is when $g G_x = h G_x$. So the left cosets of $G_x$ match the orbit one-to-one, and for finite $G$ \[ |G \cdot x| \cdot |G_x| = |G| . \] (G1, T1.) Orbit sizes divide $|G|$.
 \item[\lab{T2}] (Counting the bags.) For finite $G$ and $X$: \[ |X / G| \;=\; \frac{1}{|G|} \sum_{g \in G} |X^g| . \] (Count the pairs $(g, x)$ with $g \cdot x = x$ by $g$, and by $x$: $\sum_x |G_x| = \sum_x |G| / |G \cdot x| = |G|$ for each orbit, by T1.)
-\item[\lab{T3}] (Relabelling as moving.) $G$ moves itself by $g \cdot x := g x g^{-1}$. The orbits are the classes (for $S_n$: the cycle types, Chapter 1), $G_x$ is the set of moves that commute with $x$, and the fixed points of every $g$ are the \emph{centre} $Z(G)$. So \[ |G| \;=\; |Z(G)| + \sum |G| / |G_x| , \] one term for each class of size above $1$, each term dividing $|G|$.
+\item[\lab{T3}] (Relabelling as moving.) $G$ moves itself by $g \cdot x := g x g^{-1}$. The orbits are the classes (for $S_n$: the cycle types, Chapter 1), $G_x$ is the set of moves that commute with $x$, and the points left still by every relabelling are the \emph{still} moves $\operatorname{St}(G)$, the moves that commute with every move. So \[ |G| \;=\; |\operatorname{St}(G)| + \sum |G| / |G_x| , \] one term for each class of size above $1$, each term dividing $|G|$.
 \item[\lab{T4}] (Moving cosets.) $G$ moves its own left cosets $G/K$ by $g \cdot xK := gxK$, giving an arrow $G \to S_{G/K}$ whose blur's bag of $e$ is kept by relabelling and lies inside $K$. If $|G / K|$ is the smallest prime $p$ dividing $|G|$, then $K$ is kept by relabelling. \ (The picture of $G$ in $S_p$ has size dividing $|G|$ and $p!$, so dividing $p$ (G1, T1; no smaller prime divides $|G|$); the bag of $e$ inside $K$ then has index $p$, so it is $K$.)
 \end{lines}
 
@@ -378,7 +379,7 @@ On $X$. \ $O$: $x \mapsto g \cdot x$ for each $g$.
 
 \begin{lines}
 \item[\lab{R1}] (What the method did.) One blur (B1), one W4 line (T1), one count (T2). Chapter II.2 is the case $X = G$, $g \cdot x = gx$, where every orbit is all of $G$.
-\item[\lab{R2}] (Old names.) D1: a group action; orbits; $G_x$: stabiliser; T1: the orbit--stabiliser theorem; T2: Burnside's lemma (Cauchy--Frobenius); T3: the class equation, centralisers; T4: the permutation representation on cosets.
+\item[\lab{R2}] (Old names.) D1: a group action; orbits; $G_x$: stabiliser; T1: the orbit--stabiliser theorem; T2: Burnside's lemma (Cauchy--Frobenius); T3: the class equation, centralisers; $\operatorname{St}(G)$: the centre $Z(G)$; T4: the permutation representation on cosets.
 \item[\lab{R3}] (Machine check, \texttt{checks/b1-p2-ch5-6-check.py}.) T1 and T2 for $S_4$ moving pairs; P4 against brute force for $n \le 8$, $c = 2, 3$; P5; T3 for $S_4$, $D_4$, $A_4$, $D_6$, $A_5$; T4 for $S_3$, $S_4$, $D_5$, $D_6$ over all subgroups of index $p$ generated by two members.
 \end{lines}
 
@@ -400,7 +401,7 @@ On $X$. \ $O$: $x \mapsto g \cdot x$ for each $g$.
 \phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter II.6. One prime at a time \quad orbits $\to$ their sizes mod $p$}{Chapter II.6. One prime at a time}}
 \begin{center}
 {\normalsize orbits $\to$ their sizes mod $p$ \quad$\cdot$\quad from: Chapters II.2, II.3, II.5; Building 0, Chapter 3 \quad$\cdot$\quad count}\\[4pt]
-{\small Let a move system of size $p^n$ move a bag. Every orbit has size $1$ or a multiple of $p$, so the fixed points count the bag mod $p$. From that one line: centres, Cauchy, and all three Sylow lines.}
+{\small Let a move system of size $p^n$ move a bag. Every orbit has size $1$ or a multiple of $p$, so the fixed points count the bag mod $p$. From that one line: still moves, Cauchy, and all three Sylow lines.}
 \end{center}
 
 These are Theorems, not Survives lines: each says something exists, and the existence comes from a count, not from a blur. Each is true in every finite row of the table at once.
@@ -408,7 +409,7 @@ These are Theorems, not Survives lines: each says something exists, and the exis
 \subsection*{Given}
 
 \begin{lines}
-\item[\lab{G1}] (Chapter II.5.) T1 (orbit sizes divide $|G|$), T3 (moving by relabelling; the centre), T4 (moving cosets).
+\item[\lab{G1}] (Chapter II.5.) T1 (orbit sizes divide $|G|$), T3 (moving by relabelling; the still moves), T4 (moving cosets).
 \item[\lab{G2}] (Chapter II.2.) T1 (Lagrange), T6 (prime size means a clock).
 \item[\lab{G3}] (Building 0, Chapter 3.) Arithmetic mod $p$.
 \end{lines}
@@ -417,20 +418,20 @@ These are Theorems, not Survives lines: each says something exists, and the exis
 
 \begin{lines}
 \item[\lab{T1}] (Counting bags mod $p$.) If $|G| = p^n$ and $G$ moves a finite $X$, then \[ |X^G| \;\equiv\; |X| \pmod p , \] where $X^G$ is the set of points every $g$ fixes. \ (Each orbit has size dividing $p^n$ (G1): $1$, or a multiple of $p$. The orbits of size $1$ are $X^G$.)
-\item[\lab{T2}] (A $p$-system has a centre.) If $|G| = p^n$, $n \ge 1$, then $Z(G) \ne \{e\}$. \ (T1 with $G$ moving itself by relabelling: $|Z(G)| \equiv |G| \equiv 0$, and $e$ is in $Z(G)$.)
-\item[\lab{T3}] (Size $p^2$.) A move system of size $p^2$ is $\mathsf{comm}$: $\Z/p^2$ or $\Z/p \times \Z/p$. \ (If $G / Z(G)$ were a clock $\Z/p$, generated by $gZ$, every member would be $g^i z$, and these commute; so $Z(G) = G$ by T2. Then Chapter II.4, T2.)
+\item[\lab{T2}] (A $p$-system has still moves.) If $|G| = p^n$, $n \ge 1$, then $\operatorname{St}(G) \ne \{e\}$. \ (T1 with $G$ moving itself by relabelling: $|\operatorname{St}(G)| \equiv |G| \equiv 0$, and $e$ is in $\operatorname{St}(G)$.)
+\item[\lab{T3}] (Size $p^2$.) A move system of size $p^2$ is $\mathsf{comm}$: $\Z/p^2$ or $\Z/p \times \Z/p$. \ (If $G / \operatorname{St}(G)$ were a clock $\Z/p$, generated by $g\operatorname{St}(G)$, every member would be $g^i z$, and these commute; so $\operatorname{St}(G) = G$ by T2. Then Chapter II.4, T2.)
 \item[\lab{T4}] (Cauchy.) If $p$ divides $|G|$, some $g$ has order $p$. \ (Let $X$ be the lists $(g_1, \dots, g_p)$ with $g_1 g_2 \cdots g_p = e$: $|X| = |G|^{p-1} \equiv 0$. The clock $\Z/p$ moves $X$ by turning a list, which keeps the product $e$ (it relabels it). Fixed points: $(g, \dots, g)$ with $g^p = e$. By T1 their number is $\equiv 0$; $(e, \dots, e)$ is one, so there are at least $p - 1$ others.)
 \item[\lab{T5}] (Sylow I: at least one.) If $|G| = p^a m$ with $p \nmid m$, $G$ has a sub move system of size $p^a$. \ ($G$ moves the subsets of size $p^a$ by $S \mapsto gS$. Their number $\binom{p^a m}{p^a}$ is not divisible by $p$ (count factors of $p$ in top and bottom term by term), so some orbit has size not divisible by $p$. For $S$ in it, $|G_S| = |G| / |G \cdot S|$ is divisible by $p^a$; and $G_S$ moves $S$ without fixed points by $g \cdot s = gs$, each orbit of size $|G_S|$, so $|G_S| \le |S| = p^a$.)
 \item[\lab{T6}] (Sylow II: all alike.) Every sub move system $H$ of size a power of $p$ lies in some relabelling $gPg^{-1}$ of a given $P$ of size $p^a$. In particular all such $P$ are relabellings of each other. \ ($H$ moves the cosets $G/P$, $m$ of them, $m \not\equiv 0$. By T1 some $gP$ is fixed: $HgP = gP$, so $g^{-1} H g \subseteq P$.)
-\item[\lab{T7}] (Sylow III: how many.) The number $n_p$ of sub move systems of size $p^a$ divides $m$ and is $\equiv 1 \pmod p$. \ ($G$ moves them by relabelling, one orbit (T6), so $n_p = |G| / |G_P|$, and $P \subseteq G_P$ gives $n_p \mid m$. $P$ moves them by relabelling; a fixed $Q$ has $P$ and $Q$ both inside $G_Q$, where $Q$ is kept by relabelling, so by T6 in $G_Q$, $P = Q$. T1: $n_p \equiv 1$.)
+\item[\lab{T7}] (Sylow III: how many.) The number $s_p$ of sub move systems of size $p^a$ divides $m$ and is $\equiv 1 \pmod p$. \ ($G$ moves them by relabelling, one orbit (T6), so $s_p = |G| / |G_P|$, and $P \subseteq G_P$ gives $s_p \mid m$. $P$ moves them by relabelling; a fixed $Q$ has $P$ and $Q$ both inside $G_Q$, where $Q$ is kept by relabelling, so by T6 in $G_Q$, $P = Q$. T1: $s_p \equiv 1$.)
 \end{lines}
 
 \subsection*{Propositions}
 
 \begin{lines}
-\item[\lab{P1}] (Size $15$ is a clock.) $n_3 \mid 5$ and $n_3 \equiv 1 \pmod 3$ give $n_3 = 1$; likewise $n_5 = 1$. Both are kept by relabelling, meet only in $e$, and their members commute; so $G$ matches $\Z/3 \times \Z/5 = \Z/15$ (Building 0, Chapter 3, T6).
-\item[\lab{P2}] (Dies: ``every divisor is a size'', again.) $A_4$, size $12$: Sylow gives sub move systems of sizes $4$ and $3$ ($n_3 = 4$), but Chapter II.2, T5 stands: none of size $6$. Sylow reaches the prime powers only.
-\item[\lab{P3}] (Counts.) $S_4$: $n_2 = 3$, $n_3 = 4$. $A_5$: $n_2 = 5$, $n_3 = 10$, $n_5 = 6$. $S_5$: $n_2 = 15$, $n_3 = 10$, $n_5 = 6$.
+\item[\lab{P1}] (Size $15$ is a clock.) $s_3 \mid 5$ and $s_3 \equiv 1 \pmod 3$ give $s_3 = 1$; likewise $s_5 = 1$. Both are kept by relabelling, meet only in $e$, and their members commute; so $G$ matches $\Z/3 \times \Z/5 = \Z/15$ (Building 0, Chapter 3, T6).
+\item[\lab{P2}] (Dies: ``every divisor is a size'', again.) $A_4$, size $12$: Sylow gives sub move systems of sizes $4$ and $3$ ($s_3 = 4$), but Chapter II.2, T5 stands: none of size $6$. Sylow reaches the prime powers only.
+\item[\lab{P3}] (Counts.) $S_4$: $s_2 = 3$, $s_3 = 4$. $A_5$: $s_2 = 5$, $s_3 = 10$, $s_5 = 6$. $S_5$: $s_2 = 15$, $s_3 = 10$, $s_5 = 6$.
 \end{lines}
 
 \subsection*{Remarks}
@@ -438,7 +439,7 @@ These are Theorems, not Survives lines: each says something exists, and the exis
 \begin{lines}
 \item[\lab{R1}] (What the method did.) One line, T1, used five times with five different bags: the members (T2), lists with product $e$ (T4), subsets (T5), cosets (T6), and the $P$'s themselves (T7). The blur of Chapter II.5 supplies the bags; the prime supplies the count.
 \item[\lab{R2}] (One prime at a time.) The table of Chapter II.1 could not separate $S_3$ from $D_4$ by tests. Sylow counts are not tests (they are not laws), but they are kept by matching; they are the first numbers that sort non-$\mathsf{comm}$ rows.
-\item[\lab{R3}] (Old names.) $|G| = p^n$: a $p$-group; T1: the fixed-point congruence; T2: $p$-groups have non-trivial centre; T4: Cauchy's theorem (McKay's proof); T5--T7: the Sylow theorems (T5 by Wielandt's count); $G_P$: the normaliser.
+\item[\lab{R3}] (Old names.) $|G| = p^n$: a $p$-group; T1: the fixed-point congruence; T2: $p$-groups have non-trivial centre; T4: Cauchy's theorem (McKay's proof); T5--T7: the Sylow theorems (T5 by Wielandt's count); $G_P$: the normaliser; $s_p$: $n_p$, the number of Sylow $p$-subgroups.
 \item[\lab{R4}] (Machine check, \texttt{checks/b1-p2-ch5-6-check.py}.) T1 for $D_4$ moving colourings; T2 for $D_4$ and a non-$\mathsf{comm}$ system of size $27$; T4--T7 for $S_4$, $A_4$, $A_5$, $S_5$, $D_6$, $D_{10}$ (every element of prime-power order lies in a conjugate of $P$); the binomial count of T5 for $p = 2, 3, 5$; P1.
 \end{lines}
 
@@ -446,7 +447,7 @@ These are Theorems, not Survives lines: each says something exists, and the exis
 
 \begin{lines}
 \item[\lab{E1}] Show that every move system of size $35$ is a clock.
-\item[\lab{E2}] Find $n_2$ and $n_3$ for $D_6$ (the $12$ moves of a hexagon).
+\item[\lab{E2}] Find $s_2$ and $s_3$ for $D_6$ (the $12$ moves of a hexagon).
 \item[\lab{E3}] Show that a move system of size $p^n$ moving a bag of size not divisible by $p$ fixes some point.
 \item[\lab{E4}] Why can T5's count not be done with subsets of size $p^{a+1}$?
 \end{lines}
@@ -494,22 +495,22 @@ On $R$. \ $O$: $\times$.
 \subsection*{Propositions}
 
 \begin{lines}
-\item[\lab{P1}] (Survives: Chapter 18, P8 and P9.) B1 and B2 agree, and $a \sim b$ $\iff$ $a \mid b$ and $b \mid a$. \ ($a = bc$, $b = ad$ give $a(1 - dc) = 0$; for $a \ne 0$, $\mathsf{nzd}$ gives $dc = 1$.) $\mid$ is an order on the bags.
-\item[\lab{P2}] (Survives: prime implies irreducible.) If $p$ is prime and $p = ab$, then $p \mid a$ say, $a = pc$, $p = pcb$, so $cb = 1$ ($\mathsf{nzd}$) and $b$ is a unit.
+\item[\lab{P1}] (Appears; bags. Chapter 18, P8 and P9, rerun.) B1 and B2 agree, and $a \sim b$ $\iff$ $a \mid b$ and $b \mid a$. \ (B1 keeps each ``$d \mid a$?'', since a unit has an undo. If $a \mid b$ and $b \mid a$, then $a = bc$, $b = ad$ give $a(1 - dc) = 0$, and for $a \ne 0$, $\mathsf{nzd}$ gives $dc = 1$: $a \sim b$. Otherwise one of the questions ``$a \mid {\cdot}$?'', ``$b \mid {\cdot}$?'' separates $a$ from $b$: Z5.) $\mid$ is an order on the bags.
+\item[\lab{P2}] (Prime implies irreducible.) If $p$ is prime and $p = ab$, then $p \mid a$ say, $a = pc$, $p = pcb$, so $cb = 1$ ($\mathsf{nzd}$) and $b$ is a unit.
 \item[\lab{P3}] (Dies: Chapter 18, T2 and T3, in $\Z[\sqrt{-5}]$.) Size $\sigma(a + b\sqrt{-5}) := a^2 + 5b^2$ respects $\times$. No member has size $2$ or $3$, so $2$, $3$, $1 \pm \sqrt{-5}$ (sizes $4, 9, 6, 6$) are irreducible, and no two are glued (the only units are $\pm 1$). Yet \[ 2 \cdot 3 \;=\; (1 + \sqrt{-5})(1 - \sqrt{-5}) . \] So $2$ is irreducible and not prime, and factorisation is not unique.
 \end{lines}
 
 \subsection*{Theorems}
 
 \begin{lines}
-\item[\lab{T1}] (Euclidean: every ideal is the multiples of one member.) In a Euclidean $R$, every ideal $I \ne 0$ is $(d) := dR$ for a $d$ of smallest size in $I$. \ (For $a$ in $I$, the remainder of $a$ by $d$ is in $I$ and smaller, so $0$; Building 0, Chapter 1, G8.) So every blur of $R$ respecting $+$ and $\times$ is ``same remainder by $d$''.
+\item[\lab{T1}] (Euclidean: every ideal is the multiples of one member.) In a Euclidean $R$, every ideal $I \ne 0$ is $(d) := dR$ for a $d$ of smallest size in $I$. \ (For $a$ in $I$, the remainder of $a$ by $d$ is in $I$ and smaller, so $0$; a smallest size exists by induction, Building 0, Chapter 1, A6.) So every blur of $R$ respecting $+$ and $\times$ is ``same remainder by $d$''.
 \item[\lab{T2}] (When every ideal is $(d)$: Chapter 18, T1--T3 come back.) If every ideal of $R$ is some $(d)$, then \\
 (a) $\gcd(a, b)$ exists: $(a) + (b) = (d)$, and $d = sa + tb$; \\
 (b) irreducible implies prime: if $p \nmid a$, $\gcd(p, a)$ is a unit, $1 = sp + ta$, so $b = spb + tab$ and $p \mid b$ when $p \mid ab$; \\
 (c) every non-zero non-unit is a product of irreducibles, in one way up to order and units: ``is'', because a chain $(a_1) \subsetneq (a_2) \subsetneq \cdots$ stops (its union is an ideal $(d)$, and $d$ lies in some $(a_n)$); ``only'', by (b), as in Chapter 18.
 \item[\lab{T3}] (Euclidean, by an estimate: $\Z[i]$.) $\Z[i] = \{a + bi\}$ inside $\mathbb{C}$, with $\sigma(z) = |z|^2$, is Euclidean. \ (For $a, b \ne 0$, $a/b$ is in $\Q(i)$; round each coordinate to the nearest whole number to get $q$; then $|a/b - q|^2 \le \tfrac14 + \tfrac14$, so $\sigma(a - qb) \le \tfrac12 \sigma(b)$.) The only estimate in the chapter.
 \item[\lab{T4}] (Two squares.) A prime $p \equiv 1 \pmod 4$ is $a^2 + b^2$. \ ($x = (\tfrac{p-1}{2})!$ has $x^2 \equiv -1$: pair each $j$ with $-j$ in $(p-1)! \equiv -1$, the last by pairing each member of $(\Z/p)^\times$ with its inverse. So $p \mid (x + i)(x - i)$ but divides neither; $p$ is not prime in $\Z[i]$, so not irreducible (T2(b), T3): $p = \alpha\beta$ with $\sigma(\alpha) = \sigma(\beta) = p$.) Dies for $p \equiv 3 \pmod 4$: squares are $0$ or $1 \bmod 4$.
-\item[\lab{T5}] (Survives: the picture $\Z[x] \to (\Z/p)[x]$ keeps ``no zero divisors''. Gauss.) If $p$ goes into every coefficient of $fg$, then it goes into every coefficient of $f$ or of $g$. \ ($(\Z/p)[x]$ passes $\mathsf{nzd}$, G2: the twin of Chapter 18, T2.) Hence: the gcd of the coefficients is kept by $\times$; a polynomial over $\Z$ that factors over $\Q$ factors over $\Z$ with the same degrees; and $\Z[x]$ has unique factorisation (T2(c) for $\Z$ and for $\Q[x]$, glued by this line).
+\item[\lab{T5}] (The picture $\Z[x] \to (\Z/p)[x]$ keeps ``no zero divisors'': Gauss.) If $p$ goes into every coefficient of $fg$, then it goes into every coefficient of $f$ or of $g$. \ ($(\Z/p)[x]$ passes $\mathsf{nzd}$, G2: the twin of Chapter 18, T2.) Hence: the gcd of the coefficients is kept by $\times$; a polynomial over $\Z$ that factors over $\Q$ factors over $\Z$ with the same degrees; and $\Z[x]$ has unique factorisation (T2(c) for $\Z$ and for $\Q[x]$, glued by this line).
 \item[\lab{T6}] (Eisenstein, through the same picture.) If $f = x^n + a_{n-1}x^{n-1} + \dots + a_0$ over $\Z$ has $p \mid a_i$ for all $i$ and $p^2 \nmid a_0$, then $f$ does not factor over $\Q$. \ (By T5 a factoring is $gh$ over $\Z$; mod $p$, $gh = x^n$, so $g$ and $h$ are $x^r$ and $x^s$ mod $p$ (T2(c) in $(\Z/p)[x]$); then $p$ goes into $g(0)$ and $h(0)$, and $p^2 \mid a_0$.) Examples: $x^5 - 4x + 2$; $x^{p-1} + \dots + x + 1$, after $x \mapsto x + 1$.
 \item[\lab{T7}] (Crossing two blurs. Chapter 18, T8.) If every ideal is some $(d)$ and $\gcd(a, b) = 1$, then $R/(ab)$ matches $R/(a) \times R/(b)$, respecting $+$ and $\times$. \ ($1 = sa + tb$; the pair $(x, y)$ comes from $x\,tb + y\,sa$.)
 \end{lines}
@@ -518,13 +519,13 @@ On $R$. \ $O$: $\times$.
 
 \begin{lines}
 \item[\lab{P4}] (Dies: ``every ideal is some $(d)$'' in $\Z[x]$.) The ideal of $2$ and $x$ is not one $(d)$ (G4). Yet $\Z[x]$ has unique factorisation (T5). So: Euclidean $\Rightarrow$ every ideal is $(d)$ $\Rightarrow$ unique factorisation, and the second arrow does not reverse.
-\item[\lab{P5}] (Reported.) The first arrow does not reverse either: in $\Z[\tfrac{1 + \sqrt{-19}}{2}]$ every ideal is some $(d)$, but there is no size with division with remainder (classical).
 \end{lines}
 
 \subsection*{Remarks}
 
 \begin{lines}
 \item[\lab{R1}] (What the method did.) The blur is an orbit blur. Lines that are equations or ``$\mathsf{nzd}$'' survived; ``unique factorisation'' needed a construction (division) or a picture that keeps $\mathsf{nzd}$ (T5). The one estimate is T3.
+\item[\lab{R4}] (Reported, not used.) The first arrow of P4 does not reverse either: in $\Z[\tfrac{1 + \sqrt{-19}}{2}]$ every ideal is some $(d)$, but there is no size with division with remainder (classical).
 \item[\lab{R2}] (Old names.) B1: associates; D3: Euclidean domain; T1, T2: principal ideal domains; T2(c): unique factorisation domain; T3: Gaussian integers; T4: Fermat's two-squares theorem (via Wilson); T5: Gauss's lemma; T6: Eisenstein's criterion; T7: the Chinese remainder theorem.
 \item[\lab{R3}] (Machine check, \texttt{checks/b1-p2-ch7-check.py}.) P3 (sizes in $\Z[\sqrt{-5}]$); T3 on $2000$ random divisions; T4 and Wilson for $p < 2000$; T5 on $200$ random products (content); T6 on three examples; T7.
 \end{lines}
@@ -560,7 +561,7 @@ On $R$. \ $O$: $\times$.
 
 \subsection*{The blur}
 
-On $m \times n$ matrices over a field $K$. \ $O$: none beyond the moves.
+On $m \times n$ matrices over a field $K$. \ $O$: none (an orbit blur of the moves $A \mapsto PAQ$; L7).
 
 \begin{lines}
 \item[\lab{B1}] (From below.) $A \sim PAQ$, $P$, $Q$ with $\det \ne 0$ (Chapter II.4, B1 with $R = K$).
@@ -626,7 +627,7 @@ Appears: B1 and B2 agree. Read aloud: the maps out of $V \times W$ linear in eac
 
 \subsection*{The blur}
 
-On $n \times n$ matrices over a field $K$. \ $O$: none beyond the moves (L7: $+$ and $\times$ are not respected; $\times$ by $P$ on one side only would break the gluing).
+On $n \times n$ matrices over a field $K$. \ $O$: none (an orbit blur of the moves $M \mapsto PMP^{-1}$; L7: $+$ and $\times$ are not respected; $\times$ by $P$ on one side only would break the gluing).
 
 \begin{lines}
 \item[\lab{B1}] (From below.) $M \sim PMP^{-1}$, $\det P \ne 0$.
@@ -740,7 +741,7 @@ On symmetric $n \times n$ matrices over $K$ ($2 \ne 0$), read as forms $Q(v) = v
 \section*{Chapter II.11. A field inside a field}
 \phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter II.11. A field inside a field \quad $K \to$ fields around it}{Chapter II.11. A field inside a field}}
 \begin{center}
-{\normalsize $K \to$ fields around it \quad$\cdot$\quad from: Chapters II.7, II.8; Building 0, Chapters 7, 23, II.3, II.5 \quad$\cdot$\quad build, ladder, select}\\[4pt]
+{\normalsize $K \to$ fields around it \quad$\cdot$\quad from: Chapters II.7, II.8; Building 0, Chapters 7, 23, II.3, II.5 \quad$\cdot$\quad build, select}\\[4pt]
 {\small Building 0, Chapter 7 built $\mathbb{C}$ by gluing $x^2 \sim -1$. Do it with any irreducible $f$ over any field. Degrees multiply up a ladder, which kills the old construction problems; and a ladder of one root per rung builds a field where $f$ splits, unique up to matching.}
 \end{center}
 
@@ -772,7 +773,7 @@ $\sqrt[3]{2}$ has degree $3$ ($x^3 - 2$, Eisenstein): the cube cannot be doubled
 \item[\lab{T6}] (Build: a field where $f$ splits.) For $f$ of degree $n$ over $K$, a ladder $K = K_0 \subseteq K_1 \subseteq \cdots$ where each rung adds one root of an irreducible factor of what is left (T2) ends with a field $L$ in which $f$ is a product of factors $x - \alpha_i$ and which is generated by the $\alpha_i$. $[L : K] \le n!$.
 \item[\lab{T7}] (At most one, by lifting through the ladder.) If $L$ and $L'$ are two such fields for $f$, a matching $\phi : K \to K$ lifts to a matching $L \to L'$. The number of lifts from $K(\alpha)$ to $L'$ is the number of distinct roots of $\phi(m_\alpha)$ in $L'$: at most $\deg m_\alpha$, and exactly that when $m_\alpha$ is separable. \ (A lift is fixed by where $\alpha$ goes (T3), and it must go to a root of $\phi(m_\alpha)$. Then the next rung.) \\
 So if $f$ is separable, there are exactly $[L : K]$ moves of $L$ that fix $K$ (multiply the counts up the ladder, T1).
-\item[\lab{T8}] (Separable, and when it is automatic.) $f$ is separable $\iff$ $f$ has no repeated root in any field holding $K$. Over $\Q$, or any $K$ holding $\Q$, every irreducible $f$ is separable: $f' \ne 0$ has lower degree, so $\gcd(f, f') = 1$. \ Dies over $\Z/p(t)$ (fractions of $(\Z/p)[t]$): $x^p - t$ is irreducible and $(x^p - t)' = 0$ (reported).
+\item[\lab{T8}] (Separable, and when it is automatic.) $f$ is separable $\iff$ $f$ has no repeated root in any field holding $K$. Over $\Q$, or any $K$ holding $\Q$, every irreducible $f$ is separable: $f' \ne 0$ has lower degree, so $\gcd(f, f') = 1$. \ Dies over $\Z/p(t)$ (fractions of $(\Z/p)[t]$): $x^p - t$ is irreducible (Eisenstein at the prime $t$: Chapter II.7, T5 and T6, run over $(\Z/p)[t]$ in place of $\Z$, with $t$ in place of $p$) and $(x^p - t)' = 0$.
 \end{lines}
 
 \subsection*{Remarks}
@@ -800,7 +801,7 @@ So if $f$ is separable, there are exactly $[L : K]$ moves of $L$ that fix $K$ (m
 \section*{Chapter II.12. Fields with $p^n$ members}
 \phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter II.12. Fields with $p^n$ members \quad $\Z/p \to$ its finite fields}{Chapter II.12. Fields with p\^{}n members}}
 \begin{center}
-{\normalsize $\Z/p \to$ its finite fields \quad$\cdot$\quad from: Chapters II.2, II.5, II.11; Building 0, Chapters 3, II.5 \quad$\cdot$\quad survives, build, count}\\[4pt]
+{\normalsize $\Z/p \to$ its finite fields \quad$\cdot$\quad from: Chapters II.2, II.5, II.11; Building 0, Chapters 3, II.5 \quad$\cdot$\quad build, arrow, count}\\[4pt]
 {\small In a field where $p = 0$, raising to the $p$-th power respects $+$. Its fixed points after $n$ steps are a field with $p^n$ members, and there is only one. Its non-zero members are a clock, by a count.}
 \end{center}
 
@@ -817,7 +818,7 @@ So if $f$ is separable, there are exactly $[L : K]$ moves of $L$ that fix $K$ (m
 
 \begin{lines}
 \item[\lab{T1}] (Size.) A finite field $F$ holds a copy of $\Z/p$ for exactly one prime $p$ (the blur of the arrow $\Z \to F$ is $\equiv_p$, $p$ prime by $\mathsf{nzd}$), and $|F| = p^n$, $n = [F : \Z/p]$.
-\item[\lab{T2}] (Survives: the $p$-th power.) In $F$, $(a + b)^p = a^p + b^p$ and $(ab)^p = a^p b^p$. \ ($p$ goes into $\binom{p}{j}$ for $0 < j < p$.) So $\operatorname{Fr}(a) := a^p$ is an arrow $F \to F$ respecting $+$ and $\times$; it is one-to-one ($a^p = 0$ only for $a = 0$), so onto. It fixes exactly $\Z/p$ (G4, and G2 for at most $p$ roots of $x^p - x$).
+\item[\lab{T2}] (Arrow: the $p$-th power.) In $F$, $(a + b)^p = a^p + b^p$ and $(ab)^p = a^p b^p$. \ ($p$ goes into $\binom{p}{j}$ for $0 < j < p$.) So $\operatorname{Fr}(a) := a^p$ is an arrow $F \to F$ respecting $+$ and $\times$; it is one-to-one ($a^p = 0$ only for $a = 0$), so onto. It fixes exactly $\Z/p$ (G4, and G2 for at most $p$ roots of $x^p - x$).
 \item[\lab{T3}] (Build: a field with $p^n$ members.) In the splitting field of $x^{p^n} - x$ over $\Z/p$ (G1), the roots are $p^n$ distinct members ($\gcd$ with the derivative $-1$ is $1$), and they form a field: the fixed points of $\operatorname{Fr}^n$, which respects $+$ and $\times$ (T2).
 \item[\lab{T4}] (At most one.) Every field $F$ with $q = p^n$ members is a splitting field of $x^q - x$ over $\Z/p$, so any two match (G1, T7). \ (Lagrange on $F^\times$: $a^{q-1} = 1$, so every member is a root of $x^q - x$, and there are $q$ of them.) Write $\mathbb{F}_q$.
 \item[\lab{T5}] (The non-zero members are a clock. A count.) $\mathbb{F}_q^\times$ matches $\Z/(q - 1)$. \ (For $d \mid q - 1$, at most $d$ members have $a^d = 1$ (G2), so at most $\varphi(d)$ have order exactly $d$, if any have; the orders add to $q - 1 = \sum_{d \mid q - 1} \varphi(d)$ (Building 0, Chapter 3); so every $d$ has exactly $\varphi(d)$, and $d = q - 1$ has $\varphi(q - 1) \ge 1$.)
@@ -829,7 +830,7 @@ So if $f$ is separable, there are exactly $[L : K]$ moves of $L$ that fix $K$ (m
 \subsection*{Remarks}
 
 \begin{lines}
-\item[\lab{R1}] (What the method did.) T2 is a Survives line that holds only when $p = 0$: in $\Q$, $(a + b)^2 \ne a^2 + b^2$. T3 is a Build (splitting field), T4 ``at most one'', T5 a count. T6 is the first full Galois example: the moves are a clock, and the fields inside (T7) are its sub move systems turned upside down.
+\item[\lab{R1}] (What the method did.) T2 is an arrow that exists only when $p = 0$: in $\Q$, $(a + b)^2 \ne a^2 + b^2$. T3 is a Build (splitting field), T4 ``at most one'', T5 a count. T6 is the first full Galois example: the moves are a clock, and the fields inside (T7) are its sub move systems turned upside down.
 \item[\lab{R2}] (Twins.) T8 is the count of necklaces of Chapter II.5, P4, with only the necklaces that no turn fixes: a monic irreducible of degree $n$ is a bag of $n$ roots that $\operatorname{Fr}$ turns round. And Chapter III.3 now has its ladder: the floors $\mathbb{F}_{p^m}$, on which the counts $N_{p^m}$ live.
 \item[\lab{R3}] (Old names.) $\operatorname{Fr}$: the Frobenius map; T3, T4: existence and uniqueness of finite fields $\mathbb{F}_q = \mathrm{GF}(q)$; T5: the multiplicative group is cyclic (primitive roots); T6: $\operatorname{Gal}(\mathbb{F}_{p^n}/\mathbb{F}_p) \cong \Z/n$; T8: Gauss's formula, Möbius inversion.
 \item[\lab{R4}] (Machine check, \texttt{checks/b1-p2-ch11-12-check.py}.) For $\mathbb{F}_8$, $\mathbb{F}_9$, $\mathbb{F}_{16}$, $\mathbb{F}_{25}$, $\mathbb{F}_{27}$ built from an irreducible: T2 on random pairs, $\operatorname{Fr}$ onto; every member a root of $x^q - x$; T5 (exactly $\varphi(d)$ members of each order $d$); $\operatorname{Fr}^k \ne$ identity for $k < n$; T8 by listing irreducibles over $\Z/2$ ($n \le 5$) and $\Z/3$ ($n \le 3$).
@@ -852,7 +853,7 @@ So if $f$ is separable, there are exactly $[L : K]$ moves of $L$ that fix $K$ (m
 \section*{Chapter II.13. The moves of a field and the fields they fix}
 \phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter II.13. The moves of a field and the fields they fix \quad sub move systems $\leftrightarrow$ middle fields}{Chapter II.13. The moves of a field and the fields they fix}}
 \begin{center}
-{\normalsize sub move systems $\leftrightarrow$ middle fields \quad$\cdot$\quad from: Chapters II.2, II.3, II.8, II.11, II.12 \quad$\cdot$\quad blur, picture, count}\\[4pt]
+{\normalsize sub move systems $\leftrightarrow$ middle fields \quad$\cdot$\quad from: Chapters II.2, II.3, II.8, II.11, II.12 \quad$\cdot$\quad blur, arrow, count}\\[4pt]
 {\small For a middle field $M$, ask each move what it does on $M$. For a sub move system $H$, glue $H$ to $e$. The two blurs are the same blur: that is the whole correspondence. Two counts make it true.}
 \end{center}
 
@@ -867,7 +868,7 @@ So if $f$ is separable, there are exactly $[L : K]$ moves of $L$ that fix $K$ (m
 \subsection*{Definitions}
 
 \begin{lines}
-\item[\lab{D1}] $L$: the splitting field of a separable $f$ over $K$. $G := \operatorname{Gal}(L/K)$, the moves of $L$ respecting $+$ and $\times$ and fixing every member of $K$. By G1, $|G| = [L : K]$. $G$ moves the roots of $f$, so sits inside $S_n$.
+\item[\lab{D1}] $L$: the splitting field of a separable $f$ over $K$. $G := \operatorname{Mov}(L/K)$, the moves of $L$ respecting $+$ and $\times$ and fixing every member of $K$. By G1, $|G| = [L : K]$. $G$ moves the roots of $f$, so sits inside $S_n$.
 \item[\lab{D2}] For a sub move system $H$: $L^H := \{ a : \sigma(a) = a \text{ for all } \sigma \in H \}$, a middle field. For a middle field $K \subseteq M \subseteq L$: $G_M :=$ the $\sigma$ in $G$ that fix every member of $M$.
 \end{lines}
 
@@ -887,7 +888,7 @@ On $G$. \ $O$: $\sigma \mapsto \tau\sigma$ (moving on the left).
 \item[\lab{T2}] (The second count.) For a middle field $M$: $|G_M| = [L : M]$. \ (G1 over $M$: $L$ is the splitting field of $f$ over $M$.)
 \item[\lab{T3}] (Appears: the two blurs agree.) For $M = L^H$: $\sigma|_M = \tau|_M$ $\iff$ $\sigma H = \tau H$. So B1 for $H$ is B2 for $L^H$, and the cosets of $H$ match the arrows $M \to L$ that lift to $G$. \ ($\sigma|_M = \tau|_M$ means $\tau^{-1}\sigma \in G_M$; and $G_{L^H} = H$: $H \subseteq G_{L^H}$, and both have size $[L : L^H]$ by T1, T2.)
 \item[\lab{T4}] (The correspondence.) $H \mapsto L^H$ and $M \mapsto G_M$ are inverse matchings between the sub move systems of $G$ and the middle fields; bigger $H$ goes to smaller $L^H$; and $[M : K] = |G| / |G_M|$, the number of bags. \ ($G_{L^H} = H$ by T3; $L^{G_M} \supseteq M$ and $[L : L^{G_M}] = |G_M| = [L : M]$ by T1, T2, so equal.)
-\item[\lab{T5}] (Survives: both sides, exactly when $M$ is itself a splitting field.) $G_M$ is kept by relabelling $\iff$ $\sigma(M) = M$ for every $\sigma$ in $G$ $\iff$ $M$ is the splitting field over $K$ of some polynomial. Then restricting to $M$ is a picture $G \to \operatorname{Gal}(M/K)$, onto (G1, lifting), whose own blur is $G_M$ (W4): \[ \operatorname{Gal}(M/K) \text{ matches } G / G_M . \] ($G_{\sigma(M)} = \sigma G_M \sigma^{-1}$, and T4.)
+\item[\lab{T5}] (Theorem: both sides exactly when $M$ is itself a splitting field.) $G_M$ is kept by relabelling $\iff$ $\sigma(M) = M$ for every $\sigma$ in $G$ $\iff$ $M$ is the splitting field over $K$ of some polynomial. Then restricting to $M$ is a picture $G \to \operatorname{Mov}(M/K)$, onto (G1, lifting), whose own blur is $G_M$ (W4): \[ \operatorname{Mov}(M/K) \text{ matches } G / G_M . \] ($G_{\sigma(M)} = \sigma G_M \sigma^{-1}$, and T4.)
 \item[\lab{T6}] (The sign on the roots.) Let $\delta = \prod_{i < j} (\alpha_i - \alpha_j)$ over the roots of $f$. Each $\sigma$ in $G$ sends $\delta$ to $\operatorname{sgn}(\sigma)\delta$ (Chapter 1, P5). So $G \subseteq A_n$ $\iff$ $\delta \in K$ $\iff$ $\delta^2$, the discriminant, is a square in $K$. \ (T4: $\delta$ is fixed by $G \cap A_n$.)
 \end{lines}
 
@@ -904,8 +905,8 @@ On $G$. \ $O$: $\sigma \mapsto \tau\sigma$ (moving on the left).
 \subsection*{Remarks}
 
 \begin{lines}
-\item[\lab{R1}] (What the method did.) The correspondence is an Appears line (T3): ``what $\sigma$ does on $M$'' and ``which coset $\sigma$ is in'' are one blur. What makes it true is two counts (T1, T2), and both are proved. T5 is the Survives line of Chapter II.3, read through T4.
-\item[\lab{R2}] (Old names.) $G$: the Galois group; $L/K$: a Galois extension; T1: Artin's theorem; T4: the fundamental theorem of Galois theory; T5: normal extensions correspond to normal subgroups; T6: the discriminant.
+\item[\lab{R1}] (What the method did.) The correspondence is an Appears line (T3): ``what $\sigma$ does on $M$'' and ``which coset $\sigma$ is in'' are one blur. What makes it true is two counts (T1, T2), and both are proved. T5 is Chapter II.3's both-sides blur, read through T4.
+\item[\lab{R2}] (Old names.) $\operatorname{Mov}(L/K)$: the Galois group $\operatorname{Gal}(L/K)$; $L/K$: a Galois extension; T1: Artin's theorem; T4: the fundamental theorem of Galois theory; T5: normal extensions correspond to normal subgroups; T6: the discriminant.
 \item[\lab{R3}] (Machine check, \texttt{checks/b1-p2-ch13-14-check.py}.) $|G|$ and ``$G \subseteq A_n$ iff the discriminant is a square'' for $x^3 - 2$, $x^3 - 3x + 1$, $x^4 - 2$, $x^4 + x^3 + x^2 + x + 1$, $x^4 - 10x^2 + 1$, $x^5 - 4x + 2$ (Galois groups by a resolvent routine); P1 degrees; P3; P5.
 \end{lines}
 
@@ -925,7 +926,7 @@ On $G$. \ $O$: $\sigma \mapsto \tau\sigma$ (moving on the left).
 \section*{Chapter II.14. Ladders of comm rungs, and roots}
 \phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter II.14. Ladders of comm rungs, and roots \quad move systems $\to$ ladders of blurs}{Chapter II.14. Ladders of comm rungs, and roots}}
 \begin{center}
-{\normalsize move systems $\to$ ladders of blurs \quad$\cdot$\quad from: Chapters 1, II.3, II.5, II.6, II.7, II.13; Building 0, Chapters 10, 24 \quad$\cdot$\quad ladder, blur}\\[4pt]
+{\normalsize move systems $\to$ ladders of blurs \quad$\cdot$\quad from: Chapters 1, II.3, II.5, II.6, II.7, II.13; Building 0, Chapters 10, 24 \quad$\cdot$\quad build, count}\\[4pt]
 {\small Blur a move system to a $\mathsf{comm}$ one, then blur what is glued, and so on. If the ladder reaches a point, adding $n$-th roots can follow it rung by rung; if not, no formula by roots exists. $A_5$ blurs to nothing $\mathsf{comm}$, so the quintic has no formula.}
 \end{center}
 
@@ -941,38 +942,38 @@ On $G$. \ $O$: $\sigma \mapsto \tau\sigma$ (moving on the left).
 \subsection*{Definitions}
 
 \begin{lines}
-\item[\lab{D1}] (The ladder of commutators.) $G^{(0)} := G$; $G^{(k+1)} :=$ the bag of $e$ of the blur of $G^{(k)}$ to $\mathsf{comm}$ (G1, T4): generated by the $xyx^{-1}y^{-1}$. $G$ is \emph{solvable} if some $G^{(k)} = \{e\}$.
+\item[\lab{D1}] (The ladder of commutators.) $G^{(0)} := G$; $G^{(k+1)} :=$ the bag of $e$ of the blur of $G^{(k)}$ to $\mathsf{comm}$ (G1, T4): generated by the $xyx^{-1}y^{-1}$. $G$ \emph{climbs down} if some $G^{(k)} = \{e\}$.
 \item[\lab{D2}] $L/K$ is \emph{by roots} if there is a ladder $K = K_0 \subseteq K_1 \subseteq \cdots \subseteq K_r \supseteq L$ with $K_{i+1} = K_i(\beta_i)$, $\beta_i^{n_i} \in K_i$. (Here $K$ holds $\Q$.)
 \end{lines}
 
 \subsection*{Theorems}
 
 \begin{lines}
-\item[\lab{T1}] (Equivalently: a ladder of $\mathsf{comm}$ rungs.) $G$ is solvable $\iff$ there is a ladder $G = N_0 \supseteq N_1 \supseteq \dots \supseteq N_r = \{e\}$, each $N_{i+1}$ kept by relabelling in $N_i$, with $N_i / N_{i+1}$ $\mathsf{comm}$. Pictures and sub move systems of solvable ones are solvable. \ ($G^{(k)}$ lies in every such $N_k$, by G1, T4.)
-\item[\lab{T2}] (Small $S_n$ climb down; big ones do not.) $S_4 \supseteq A_4 \supseteq \{e, (12)(34), (13)(24), (14)(23)\} \supseteq \{e\}$: rungs $\Z/2$, $\Z/3$, $\Z/2 \times \Z/2$. So $S_n$ is solvable for $n \le 4$. For $n \ge 5$, $A_5$ sits inside $S_n$, is simple (G1, T5) and not $\mathsf{comm}$, so its blur to $\mathsf{comm}$ glues nothing: $A_5^{(1)} = A_5$, and $S_n$ is not solvable.
+\item[\lab{T1}] (Equivalently: a ladder of $\mathsf{comm}$ rungs.) $G$ climbs down $\iff$ there is a ladder $G = N_0 \supseteq N_1 \supseteq \dots \supseteq N_r = \{e\}$, each $N_{i+1}$ kept by relabelling in $N_i$, with $N_i / N_{i+1}$ $\mathsf{comm}$. Pictures and sub move systems of ones that climb down also climb down. \ ($G^{(k)}$ lies in every such $N_k$, by G1, T4.)
+\item[\lab{T2}] (Small $S_n$ climb down; big ones do not.) $S_4 \supseteq A_4 \supseteq \{e, (12)(34), (13)(24), (14)(23)\} \supseteq \{e\}$: rungs $\Z/2$, $\Z/3$, $\Z/2 \times \Z/2$. So $S_n$ climbs down for $n \le 4$. For $n \ge 5$, $A_5$ sits inside $S_n$, is simple (G1, T5) and not $\mathsf{comm}$, so its blur to $\mathsf{comm}$ glues nothing: $A_5^{(1)} = A_5$, and $S_n$ does not climb down.
 \item[\lab{T3}] (At most one list of simple rungs.) In any two ladders whose rungs are simple and cannot be refined, the lists of rungs $N_i / N_{i+1}$ agree up to order and matching. \ (Induction on $|G|$, comparing two first rungs $N$, $N'$ through $N \cap N'$ with Chapter II.3, T3.) For $\Z/12$: $\Z/2, \Z/2, \Z/3$ in every ladder.
-\item[\lab{T4}] (One root, one $\mathsf{comm}$ rung.) If $K$ holds the $n$-th roots of $1$ and $\beta^n = a \in K$, then $\operatorname{Gal}(K(\beta)/K)$ is inside the clock $\Z/n$. \ ($\sigma(\beta) = \zeta_\sigma \beta$ with $\zeta_\sigma^n = 1$, and $\sigma \mapsto \zeta_\sigma$ respects $\circ$ and is one-to-one.) And adding the $n$-th roots of $1$ to $\Q$ has group inside $(\Z/n)^\times$, $\mathsf{comm}$.
-\item[\lab{T5}] (By roots $\Rightarrow$ solvable.) If $L$, the splitting field of $f$ over $K$, is by roots, then $\operatorname{Gal}(L/K)$ is solvable. \ (Add all the roots of $1$ needed first; then each rung is T4. Enlarge the ladder to one of splitting fields (Chapter II.13, T5), read off a ladder of $\mathsf{comm}$ rungs of the big group (Chapter II.13, T4, T5), and pass to the picture $\operatorname{Gal}(L/K)$ (T1).)
+\item[\lab{T4}] (One root, one $\mathsf{comm}$ rung.) If $K$ holds the $n$-th roots of $1$ and $\beta^n = a \in K$, then $\operatorname{Mov}(K(\beta)/K)$ is inside the clock $\Z/n$. \ ($\sigma(\beta) = \zeta_\sigma \beta$ with $\zeta_\sigma^n = 1$, and $\sigma \mapsto \zeta_\sigma$ respects $\circ$ and is one-to-one.) And adding the $n$-th roots of $1$ to $\Q$ has group inside $(\Z/n)^\times$, $\mathsf{comm}$.
+\item[\lab{T5}] (By roots $\Rightarrow$ climbs down.) If $L$, the splitting field of $f$ over $K$, is by roots, then $\operatorname{Mov}(L/K)$ climbs down. \ (Add all the roots of $1$ needed first; then each rung is T4. Enlarge the ladder to one of splitting fields (Chapter II.13, T5), read off a ladder of $\mathsf{comm}$ rungs of the big group (Chapter II.13, T4, T5), and pass to the picture $\operatorname{Mov}(L/K)$ (T1).)
 \item[\lab{T6}] (A quintic with no formula.) $f = x^5 - 4x + 2$ is irreducible (Eisenstein, $p = 2$; Chapter II.7, T6) and has exactly three real roots (Building 0, Chapter 10: $f(-2) < 0 < f(-1)$, $f(1) < 0 < f(2)$, $f(0) > 0$; $f'$ has two real roots, so no more). So $G \subseteq S_5$ holds: \\
 a $5$-cycle (Cauchy, G3: $5 \mid [\Q(\alpha) : \Q] \mid |G|$; an element of order $5$ in $S_5$ is a $5$-cycle); \\
 a swap (taking complex conjugates fixes three roots and swaps two). \\
-A swap $(a\, b)$ and a $5$-cycle $c$ give all of $S_5$: some power of $c$ sends $a \mapsto b$, so renumbering, $c = (1\,2\,3\,4\,5)$ and the swap is $(1\,2)$; relabelling by powers of $c$ gives every adjacent swap; then G4. So $G = S_5$, not solvable (T2), and by T5 the roots of $f$ cannot be written from $\Q$ with $+$, $-$, $\times$, $\div$ and $n$-th roots.
+A swap $(a\, b)$ and a $5$-cycle $c$ give all of $S_5$: some power of $c$ sends $a \mapsto b$, so renumbering, $c = (1\,2\,3\,4\,5)$ and the swap is $(1\,2)$; relabelling by powers of $c$ gives every adjacent swap; then G4. So $G = S_5$, which does not climb down (T2), and by T5 the roots of $f$ cannot be written from $\Q$ with $+$, $-$, $\times$, $\div$ and $n$-th roots.
 \end{lines}
 
 \subsection*{Remarks}
 
 \begin{lines}
-\item[\lab{R1}] (What the method did.) Solvable is a ladder of blurs, each to a $\mathsf{comm}$ floor. ``No formula'' is a Dies line: the ladder of commutators stops at $A_5$, glued by nothing. Its proof is T5, which only climbs ladders already built; the one counting line is Cauchy.
-\item[\lab{R2}] (Reported.) The converse of T5 holds: a solvable group gives a formula by roots (classical; not used).
-\item[\lab{R3}] (Old names.) D1: the derived series; T1: solvable groups; T3: the Jordan--H\"older theorem; T4: Kummer theory, cyclotomic extensions; T5, T6: the Abel--Ruffini theorem, Galois's criterion.
-\item[\lab{R4}] (Machine check, \texttt{checks/b1-p2-ch13-14-check.py}.) $S_n$ solvable exactly for $n \le 4$; $A_5$ equals its commutator; the ladder of $S_4$ has sizes $24, 12, 4, 1$; $x^5 - 4x + 2$ has three real roots and group $S_5$; a swap and a $5$-cycle generate $120$ moves; T4 for $x^3 - 2$ over $\Q(\omega)$ (degree $3$).
+\item[\lab{R1}] (What the method did.) Climbing down is a ladder of blurs, each to a $\mathsf{comm}$ floor. ``No formula'' is a Dies line: the ladder of commutators stops at $A_5$, glued by nothing. Its proof is T5, which only climbs ladders already built; the one counting line is Cauchy.
+\item[\lab{R2}] (Reported.) The converse of T5 holds: a move system that climbs down gives a formula by roots (classical; not used).
+\item[\lab{R3}] (Old names.) D1: the derived series; climbs down: solvable; $\operatorname{Mov}$: $\operatorname{Gal}$; T1: solvable groups; T3: the Jordan--H\"older theorem; T4: Kummer theory, cyclotomic extensions; T5, T6: the Abel--Ruffini theorem, Galois's criterion.
+\item[\lab{R4}] (Machine check, \texttt{checks/b1-p2-ch13-14-check.py}.) $S_n$ climbs down exactly for $n \le 4$; $A_5$ equals its commutator; the ladder of $S_4$ has sizes $24, 12, 4, 1$; $x^5 - 4x + 2$ has three real roots and group $S_5$; a swap and a $5$-cycle generate $120$ moves; T4 for $x^3 - 2$ over $\Q(\omega)$ (degree $3$).
 \end{lines}
 
 \subsection*{Exercises}
 
 \begin{lines}
 \item[\lab{E1}] Write the ladder of commutators of $D_4$ and of $S_3$.
-\item[\lab{E2}] Show that every move system of size $p^n$ is solvable (Chapter II.6, T2).
+\item[\lab{E2}] Show that every move system of size $p^n$ climbs down (Chapter II.6, T2).
 \item[\lab{E3}] Find a quintic with exactly three real roots and check whether Eisenstein applies.
 \item[\lab{E4}] Why does T6's argument fail for $x^5 - 1$?
 \end{lines}
@@ -985,7 +986,7 @@ A swap $(a\, b)$ and a $5$-cycle $c$ give all of $S_5$: some power of $c$ sends 
 \section*{Chapter II.15. Colourings up to symmetry}
 \phantomsection\addcontentsline{toc}{section}{\texorpdfstring{Chapter II.15. Colourings up to symmetry \quad colourings $\to$ their bags under a move system}{Chapter II.15. Colourings up to symmetry}}
 \begin{center}
-{\normalsize colourings $\to$ their bags under a move system \quad$\cdot$\quad from: Chapters 1, II.5 \quad$\cdot$\quad blur, count}\\[4pt]
+{\normalsize colourings $\to$ their bags under a move system \quad$\cdot$\quad from: Chapters 1, II.5 \quad$\cdot$\quad count}\\[4pt]
 {\small A move fixes a colouring exactly when the colouring is constant on each of its cycles. So counting bags needs only the cycle counts of the moves, and one polynomial counts the bags of every colouring at once, by colour.}
 \end{center}
 
