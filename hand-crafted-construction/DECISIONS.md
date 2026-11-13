@@ -10,3 +10,7 @@ Ideas E reached while reading Chapter 0. Starting points, open to change.
 2. Questions make blurs. Laws are checked afterwards.
 3. Select is not a blur. Choice says only "the bag of all picks is non-empty".
 4. "We must work from the blurred floor, and the M only work upon the already-blurred floor." Blur comes before Build. Every floor is X/∼, and a plain bag is X/=.
+
+## 13 Nov 2026, 17:48
+
+5. Blur is a higher-level rule, carried up each Build line (weighed in a separate thread; verdict yes). E: "I dont mind the cost. And M5 is simply the principle that we are working on as a higher level rule."
