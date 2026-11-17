@@ -38,3 +38,10 @@ Ideas E reached while reading Chapter 0. Starting points, open to change.
 ## 13 Nov 2026, 18:54
 
 10. What a blur is. E: "so each blur is only a sorting, but operations and questions might help you choose the sorting that you would like to pay attention to." O and Q belong to the floor beforehand; some are required to survive to pick the sorting, the rest are tested by Carry afterwards (Survives / Dies).
+
+## 17 Nov 2026, 00:31
+
+11. Only one kind of blur. E: "so we only really need blur as sorting, with quotient at the end of the day." A blur is a sorting; Abstraction takes the quotient X/∼ and brings down the tools that carry. The other kinds are not primitives:
+   - One-way blur (old L8) = a blur plus a kept two-thing question that lines up the bags (E, 14 Nov: "a sorting that respects the question 'is |x| bigger than |y|'").
+   - Likeness (old L9) = a two-thing question, yes on (x, x) and symmetric; the blur that keeps it is just equality (E, 14 Nov: "likeness is once again a combination of blur and a question").
+   From below and from above (L5, L6) are two ways of naming which sorting, not new kinds.
